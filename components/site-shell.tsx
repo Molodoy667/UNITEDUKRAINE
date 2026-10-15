@@ -1,0 +1,8 @@
+'use client';
+import Link from 'next/link';
+import {useState} from 'react';
+import {Menu, X, ArrowUpRight, UserRound} from 'lucide-react';
+export const discord='https://discord.gg/GyJnWJXdJ';
+export function Brand(){return <Link href="/" className="brand" aria-label="United Ukraine — головна"><img src="/assets/logo.png" alt=""/><span>UNITED<span>UKRAINE <small>ROLEPLAY</small></span></span></Link>}
+export function Header(){const[open,setOpen]=useState(false);return <header className="header"><Brand/><nav className={open?'nav open':'nav'} onClick={()=>setOpen(false)}><Link href="/" className="home-link">Головна</Link><Link href="/forum">Форум</Link><Link href="/wiki">Вікі</Link><Link href="/donate">Донат <span className="nav-plus">+</span></Link></nav><Link className="account" href="/account"><UserRound size={16}/><span>Особистий кабінет</span><ArrowUpRight size={15}/></Link><button className="menu-toggle" onClick={()=>setOpen(!open)} aria-label={open?'Закрити меню':'Відкрити меню'} aria-expanded={open}>{open?<X/>:<Menu/>}</button></header>}
+export function Footer(){return <footer><div className="footer-top"><Brand/><p>Твоя країна. Твої правила гри.<br/>Твоя нова історія.</p><a href={discord} target="_blank" rel="noreferrer" className="discord-small">Ми в Discord <ArrowUpRight size={16}/></a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} United Ukraine Roleplay</span><div><Link href="/contacts">Контакти</Link><Link href="/terms">Умови користування</Link><Link href="/privacy">Політика конфіденційності</Link></div><span className="made">З любов’ю до України <i>🇺🇦</i></span></div></footer>}
