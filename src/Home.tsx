@@ -1,4 +1,3 @@
-'use client';
 import {useEffect,useRef,useState} from 'react';
 import {ArrowUpRight,ArrowDown,ArrowRight,Download,Copy,Check,RefreshCw,Users,Gamepad2,Globe2,ChevronLeft,ChevronRight,X,Expand,Monitor,MessageCircle,Plus} from 'lucide-react';
 import {Header,Footer,discord} from '@/components/site-shell';
