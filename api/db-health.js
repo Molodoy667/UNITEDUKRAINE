@@ -1,5 +1,20 @@
 import { getMissingDatabaseVariables, getMysqlPool } from "../lib/mysql.js";
 
+const safeDatabaseReasons = new Set([
+  "ER_ACCESS_DENIED_ERROR",
+  "ER_BAD_DB_ERROR",
+  "ER_CON_COUNT_ERROR",
+  "ECONNREFUSED",
+  "ECONNRESET",
+  "ETIMEDOUT",
+  "EHOSTUNREACH",
+  "ENETUNREACH",
+  "ENOTFOUND",
+  "EAI_AGAIN",
+  "DB_PORT_INVALID",
+  "DB_CONFIG_MISSING",
+]);
+
 export default async function handler(request, response) {
   response.setHeader("Cache-Control", "no-store");
 
@@ -27,8 +42,13 @@ export default async function handler(request, response) {
       checkedAt: new Date().toISOString(),
     });
   } catch (error) {
-    console.error("MySQL health check failed", error?.code || "UNKNOWN_ERROR");
-    return response.status(503).json({ ok: false, error: "database_unavailable" });
+    const reason = safeDatabaseReasons.has(error?.code) ? error.code : "UNKNOWN_ERROR";
+    console.error("MySQL health check failed", reason);
+    return response.status(503).json({
+      ok: false,
+      error: "database_unavailable",
+      reason,
+    });
   } finally {
     connection?.release();
   }
