@@ -1,6 +1,6 @@
 {
   "1.7.6": {
-    "cdn": "https://5bf339cf9229c5e2268f2087c1eb01b4.r2.cloudflarestorage.com/united-ukraine-android/game/1.8.9.4",
+    "cdn": "https://pub-713bd1fbe95b48e2bf632fed4e16a48a.r2.dev/game/1.8.9.4",
     "released": true,
     "StandaloneWindows": {
       "version": "1.7.5",
@@ -23,7 +23,7 @@
     }
   },
   "0.0.0": {
-    "cdn": "https://5bf339cf9229c5e2268f2087c1eb01b4.r2.cloudflarestorage.com/united-ukraine-android/game/1.8.9.4",
+    "cdn": "https://pub-713bd1fbe95b48e2bf632fed4e16a48a.r2.dev/game/1.8.9.4",
     "released": true,
     "StandaloneWindows": {
       "version": "1.7.2",
@@ -44,12 +44,5 @@
         "port": 2219
       }
     }
-  },
-  "gameName": "UNITED UKRAINE",
-  "librariesVersion": 1,
-  "userService": "https://united-rp.com",
-  "cdn": [
-    "https://united-rp.com/Project/CRMP/",
-    "https://united-rp.com/Project/CRMP/"
-  ]
+  }
 }
