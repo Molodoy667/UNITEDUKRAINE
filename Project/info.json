@@ -1,0 +1,55 @@
+{
+  "1.7.6": {
+    "cdn": "https://5bf339cf9229c5e2268f2087c1eb01b4.r2.cloudflarestorage.com/united-ukraine-android/game/1.8.9.4",
+    "released": true,
+    "StandaloneWindows": {
+      "version": "1.7.5",
+      "resourcesVersion": 201
+    },
+    "Android": {
+      "version": "1.7.5",
+      "resourcesVersion": 288
+    },
+    "iOS": {
+      "version": "1.7.5",
+      "resourcesVersion": 201
+    },
+    "servers": {
+      "1": {
+        "name": "United Ukraine",
+        "ip": "51.75.44.14",
+        "port": 2219
+      }
+    }
+  },
+  "0.0.0": {
+    "cdn": "https://5bf339cf9229c5e2268f2087c1eb01b4.r2.cloudflarestorage.com/united-ukraine-android/game/1.8.9.4",
+    "released": true,
+    "StandaloneWindows": {
+      "version": "1.7.2",
+      "resourcesVersion": 190
+    },
+    "Android": {
+      "version": "1.7.5",
+      "resourcesVersion": 288
+    },
+    "iOS": {
+      "version": "1.7.5",
+      "resourcesVersion": 209
+    },
+    "servers": {
+      "1": {
+        "name": "United Ukraine",
+        "ip": "51.75.44.14",
+        "port": 2219
+      }
+    }
+  },
+  "gameName": "UNITED UKRAINE",
+  "librariesVersion": 1,
+  "userService": "https://united-rp.com",
+  "cdn": [
+    "https://united-rp.com/Project/CRMP/",
+    "https://united-rp.com/Project/CRMP/"
+  ]
+}
