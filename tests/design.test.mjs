@@ -28,14 +28,15 @@ function loadComponent(relativePath) {
     },
   });
   const localRequire = id => {
+    if (id.endsWith('.css')) return {};
     if (!id.startsWith('@/') && !id.startsWith('.')) return require(id);
     const target = id.startsWith('@/')
       ? path.join(root, id.slice(2))
       : path.resolve(path.dirname(filename), id);
-    return loadComponent(`${target}.tsx`);
+    return loadComponent(existsSync(`${target}.tsx`) ? `${target}.tsx` : `${target}.ts`);
   };
   const execute = vm.runInNewContext(`(function(require, module, exports) {${outputText}\n})`, {
-    window: { location: { pathname: '/' } },
+    window: { location: { pathname: '/', search: '' } }, URLSearchParams,
   }, { filename });
   execute(localRequire, module, module.exports);
   return module.exports;
@@ -43,6 +44,7 @@ function loadComponent(relativePath) {
 
 const Home = loadComponent('src/Home.tsx').default;
 const Section = loadComponent('src/Section.tsx').default;
+const Wiki = loadComponent('src/Wiki.tsx').default;
 const home = renderToStaticMarkup(createElement(Home));
 
 test('home keeps the existing identity and original hero asset', () => {
@@ -88,4 +90,14 @@ test('each existing page and 404 render with a valid skip-link destination', () 
     assert.equal((markup.match(/<h1\b/g) ?? []).length, 1);
     assert.match(markup, /aria-label="United Ukraine — головна"/);
   }
+});
+
+test('wiki renders three accessible category links, size choices and a loading status',()=>{
+  const markup=renderToStaticMarkup(createElement(Wiki));
+  assert.match(markup,/<main id="main-content"/);
+  assert.equal((markup.match(/<h1\b/g)||[]).length,1);
+  for(const tab of ['skins','cars','accessories'])assert.ok(markup.includes(`/wiki?tab=${tab}&amp;size=10&amp;page=1`));
+  for(const size of [10,50,100])assert.match(markup,new RegExp(`<option value="${size}"`));
+  assert.match(markup,/Пошук за ID або назвою/);
+  assert.match(markup,/Завантаження каталогу…/);
 });

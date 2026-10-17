@@ -22,7 +22,8 @@ Vercel runs `npm run deploy:build` to apply forum migrations and then build the 
 
 ## Content
 - `/forum`: MySQL-backed forum with accounts, scoped permissions, topics, appeals, moderation and administration. Setup and operational dependencies: [Forum operations](docs/FORUM_OPERATIONS.md).
-- `/wiki`, `/donate`, `/account`: existing title-only pages.
+- `/wiki`: local skin, vehicle and accessory catalog with previews, ID/name search and 10/50/100-item pagination. Import details and data limits: [Wiki catalog](docs/WIKI.md).
+- `/donate`, `/account`: existing title-only pages.
 - `/contacts`, `/terms`, `/privacy`: contact details and clearly marked draft documents.
 - News are introductory editorial content, not claims of actual game updates.
 - All gallery images are views of the provided concept art.
