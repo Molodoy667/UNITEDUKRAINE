@@ -1,0 +1,48 @@
+{
+  "1.7.6": {
+    "cdn": "https://pub-713bd1fbe95b48e2bf632fed4e16a48a.r2.dev/game/1.8.9.4",
+    "released": true,
+    "StandaloneWindows": {
+      "version": "1.7.5",
+      "resourcesVersion": 201
+    },
+    "Android": {
+      "version": "1.7.5",
+      "resourcesVersion": 288
+    },
+    "iOS": {
+      "version": "1.7.5",
+      "resourcesVersion": 201
+    },
+    "servers": {
+      "1": {
+        "name": "United Ukraine",
+        "ip": "51.75.44.14",
+        "port": 2219
+      }
+    }
+  },
+  "0.0.0": {
+    "cdn": "https://pub-713bd1fbe95b48e2bf632fed4e16a48a.r2.dev/game/1.8.9.4",
+    "released": true,
+    "StandaloneWindows": {
+      "version": "1.7.2",
+      "resourcesVersion": 190
+    },
+    "Android": {
+      "version": "1.7.5",
+      "resourcesVersion": 288
+    },
+    "iOS": {
+      "version": "1.7.5",
+      "resourcesVersion": 209
+    },
+    "servers": {
+      "1": {
+        "name": "United Ukraine",
+        "ip": "51.75.44.14",
+        "port": 2219
+      }
+    }
+  }
+}
