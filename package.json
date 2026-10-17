@@ -9,8 +9,16 @@
     "dev": "vite --host 0.0.0.0 --port 5173",
     "typecheck": "tsc --noEmit",
     "build": "npm run typecheck && vite build",
+    "deploy:build": "npm run forum:migrate && npm run build",
     "preview": "vite preview --host 0.0.0.0 --port 4173",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "forum:api": "node --env-file-if-exists=.env.forum.local scripts/forum-dev.mjs",
+    "forum:migrate": "node --env-file-if-exists=.env.forum.local scripts/forum-manage.mjs migrate",
+    "forum:owner": "node --env-file-if-exists=.env.forum.local scripts/forum-manage.mjs owner",
+    "forum:cleanup": "node --env-file-if-exists=.env.forum.local scripts/forum-manage.mjs cleanup",
+    "test:forum": "node tests/forum.test.mjs",
+    "test:forum:integration": "node tests/forum.integration.mjs",
+    "forum:mail": "node --env-file-if-exists=.env.forum.local scripts/forum-mail.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

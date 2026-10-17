@@ -13,10 +13,16 @@ pnpm preview
 
 The React entry point is `src/main.tsx`; the home and section views live in `src/`. Shared navigation is in `components/site-shell.tsx`, global styles in `app/globals.css`, and branding in `public/assets/`.
 
-Vercel builds with `npm run build`, serves `dist/`, and rewrites page paths to the SPA entry. The server-status function is `api/server.js`, available at `/api/server`.
+## Visual design
+The home page uses a graphite/gold visual theme, a perspective hero frame, pointer-driven card tilt, section entrance transitions and decorative floating elements. The original `world-promo.png` and logo are unchanged. Touch devices do not run pointer tilt, and `prefers-reduced-motion` disables animations. Gallery and article dialogs support Escape, focus return and keyboard focus containment.
+
+Run `node --test tests/design.test.mjs` for component-rendering smoke checks and `npm run build` for TypeScript and production compilation. These checks do not replace browser testing of responsive layout and interactions. Run `npm run forum:api` alongside Vite for local API execution; configure a local database using [the example](config/forum.env.example). Vite proxies `/api` to the local API process.
+
+Vercel runs `npm run deploy:build` to apply forum migrations and then build the Vite application. MySQL variables must be available during the build. It serves `dist/` and rewrites page paths to the SPA entry. The server-status function is `api/server.js`, available at `/api/server`.
 
 ## Content
-- `/forum`, `/wiki`, `/donate`, `/account`: title-only pages as requested.
+- `/forum`: MySQL-backed forum with accounts, scoped permissions, topics, appeals, moderation and administration. Setup and operational dependencies: [Forum operations](docs/FORUM_OPERATIONS.md).
+- `/wiki`, `/donate`, `/account`: existing title-only pages.
 - `/contacts`, `/terms`, `/privacy`: contact details and clearly marked draft documents.
 - News are introductory editorial content, not claims of actual game updates.
 - All gallery images are views of the provided concept art.

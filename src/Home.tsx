@@ -1,21 +1,163 @@
-import {useEffect,useRef,useState} from 'react';
-import {ArrowUpRight,ArrowDown,ArrowRight,Download,Copy,Check,RefreshCw,Users,Gamepad2,Globe2,ChevronLeft,ChevronRight,X,Expand,Monitor,MessageCircle,Plus} from 'lucide-react';
-import {Header,Footer,discord} from '@/components/site-shell';
-type Status={status:'online'|'unavailable';players?:number;maxPlayers?:number;name?:string;updatedAt:string;source?:string};
-const scenes=[{title:'Місто, яке надихає',subtitle:'Київ · атмосфера проєкту',position:'15% 25%'},{title:'Рухайся у своєму ритмі',subtitle:'Дороги · атмосфера проєкту',position:'15% 85%'},{title:'Історії, що об’єднують',subtitle:'Спільнота · атмосфера проєкту',position:'90% 40%'}];
-const articles=[{type:'ПРО ПРОЄКТ',title:'Ласкаво просимо до United Ukraine',text:'Місце, де починається твоя власна історія. Знайомся з атмосферою українського Roleplay.',position:'15% 30%'},{type:'ДЛЯ НОВАЧКІВ',title:'Твій перший крок у новому світі',text:'Як приєднатися до спільноти та підготуватися до першого входу на сервер.',position:'60% 85%'},{type:'СПІЛЬНОТА',title:'Знайди своїх. Грай разом.',text:'Знайомства, спілкування та підтримка — усе починається в нашому Discord.',position:'95% 30%'}];
-export default function Home(){
-const[status,setStatus]=useState<Status|null>(null),[loading,setLoading]=useState(false),[copied,setCopied]=useState(false),[modal,setModal]=useState<string|null>(null),[gallery,setGallery]=useState<number|null>(null),[article,setArticle]=useState<number|null>(null),[filter,setFilter]=useState('Усі матеріали');const hero=useRef<HTMLElement>(null);
-async function refresh(){setLoading(true);try{const res=await fetch('/api/server');if(!res.ok)throw Error();setStatus(await res.json())}catch{setStatus({status:'unavailable',updatedAt:new Date().toISOString()})}finally{setLoading(false)}}
-useEffect(()=>{refresh();const timer=setInterval(refresh,60000);return()=>clearInterval(timer)},[]);
-useEffect(()=>{const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));return()=>observer.disconnect()},[]);
-useEffect(()=>{const active=modal!==null||gallery!==null||article!==null;if(!active)return;const previous=document.activeElement as HTMLElement;document.body.style.overflow='hidden';const dialog=document.querySelector<HTMLElement>('[role="dialog"]');const close=()=>{setModal(null);setGallery(null);setArticle(null)};const handler=(e:KeyboardEvent)=>{if(e.key==='Escape')close();if(e.key==='Tab'&&dialog){const items=dialog.querySelectorAll<HTMLElement>('button,a[href]');const first=items[0],last=items[items.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last?.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus()}}if(gallery!==null&&e.key==='ArrowRight')setGallery((gallery+1)%3);if(gallery!==null&&e.key==='ArrowLeft')setGallery((gallery+2)%3)};dialog?.querySelector<HTMLElement>('button')?.focus();window.addEventListener('keydown',handler);return()=>{document.body.style.overflow='';window.removeEventListener('keydown',handler);previous?.focus()}},[modal,gallery,article]);
-async function copy(){try{await navigator.clipboard.writeText('51.75.44.14:2219');setCopied(true);setTimeout(()=>setCopied(false),2500)}catch{setModal('Адреса сервера: 51.75.44.14:2219')}}
-return <><Header/><main><section className="hero" ref={hero} onPointerMove={e=>{if(e.pointerType==='mouse'&&hero.current){const r=hero.current.getBoundingClientRect();hero.current.style.setProperty('--mx',`${(e.clientX-r.left-r.width/2)/65}deg`);hero.current.style.setProperty('--my',`${-(e.clientY-r.top-r.height/2)/65}deg`)}}}><div className="hero-scene"/><div className="hero-grain"/><div className="hero-content"><div className="eyebrow"><span className="flag"/> УКРАЇНСЬКИЙ ROLEPLAY · КРМП</div><h1>ТВОЯ КРАЇНА.<br/><span>ТВОЯ</span><br/><em>ІСТОРІЯ.</em></h1><p>Знайомі вулиці. Нові можливості.<br/>Створи життя, про яке мрієш,<br className="mobile-break"/> у світі United Ukraine.</p><div className="hero-actions"><a className="btn primary" href="#start"><Gamepad2 size={21}/>Почати гру<ArrowUpRight size={19}/></a><a href={discord} target="_blank" rel="noreferrer" className="btn outline"><MessageCircle size={18}/>Наш Discord</a></div><div className="hero-note"><span/>Створюємо український ігровий світ разом</div></div><a href="#world" className="scroll-cue"><span>ГОРТАЙ. ВІДКРИВАЙ.</span><ArrowDown size={16}/></a><span className="hero-counter">01 <span>/ 04</span></span></section>
-<section className="server-wrap"><div className="server-card"><div className="server-icon"><Globe2 size={27}/></div><div className="server-name"><span className="eyebrow">НАШ ІГРОВИЙ СВІТ</span><h3>United Ukraine <span>01</span></h3></div><div className="server-state"><span className={status?.status==='online'?'dot green':'dot'}/>{loading?'Оновлення…':status?.status==='online'?'Сервер онлайн':'Статус недоступний'}</div><div className="player-count"><Users size={18}/><strong>{status?.status==='online'?status.players:'—'}</strong><span>/ {status?.maxPlayers??'—'} гравців</span></div><button className="server-address" onClick={copy}>{copied?'IP скопійовано':'51.75.44.14:2219'}{copied?<Check size={16}/>:<Copy size={16}/>}</button><button className={`refresh ${loading?'spinning':''}`} onClick={refresh} disabled={loading} aria-label="Оновити статус сервера"><RefreshCw size={17}/></button></div><p className="monitor-note">{status?.status==='online'?`Дані ${status.source==='direct-query'?'сервера':'open.mp'} · автоматичне оновлення щохвилини`:'Моніторинг open.mp · дані сервера поки недоступні'}{status&&` · Перевірено ${new Date(status.updatedAt).toLocaleTimeString('uk-UA',{hour:'2-digit',minute:'2-digit'})}`}</p></section>
-<section id="world" className="world section reveal"><div className="section-top"><span className="eyebrow"><span className="tiny-line"/> БІЛЬШЕ, НІЖ ГРА</span><span className="section-no">01 / СВІТ ПРОЄКТУ</span></div><div className="world-grid"><h2>ЗНАЙОМЕ МІСТО.<br/><span className="blue">НЕЗНАЙОМИЙ</span><br/>ТИ.</h2><div className="world-copy"><p>Тут кожна дорога — початок історії.<br/>А головний герой — ти.</p><p className="muted">Відчуй українську атмосферу у світі КРМП. Знаходь однодумців, обирай свій шлях та створюй моменти, які хочеться згадувати.</p><a href="#gallery" className="text-link">Зазирнути у світ проєкту <ArrowUpRight size={19}/></a></div></div><div className="world-panorama"><img src="/assets/world.jpg" alt="Концепт-арт United Ukraine: українське місто, автомобіль та персонажі" loading="lazy"/><div className="panorama-overlay"><span>ВПІЗНАВАНА АТМОСФЕРА.<br/><strong>БЕЗЛІЧ ВЛАСНИХ ІСТОРІЙ.</strong></span><span className="image-label">КОНЦЕПТ-АРТ ПРОЄКТУ ↗</span></div></div><div className="values"><div><span>01</span><h3>Український характер</h3><p>Своя атмосфера. Своя спільнота.</p></div><div><span>02</span><h3>Свобода бути собою</h3><p>Твій персонаж. Твій вибір.</p></div><div><span>03</span><h3>Історія починається разом</h3><p>Знаходь друзів та спільні пригоди.</p></div></div></section>
-<section className="news section reveal" id="news"><div className="section-top"><span className="eyebrow"><span className="tiny-line"/> ТРИМАЙ РУКУ НА ПУЛЬСІ</span><span className="section-no">02 / НОВИНИ</span></div><div className="section-title"><h2>ЩО <span className="blue">НОВОГО?</span></h2><div className="filters">{['Усі матеріали','Про проєкт','Спільнота'].map(f=><button key={f} className={filter===f?'active':''} onClick={()=>setFilter(f)}>{f}</button>)}</div></div><p className="editorial-note">Знайомство з проєктом · редакційні матеріали</p><div className="news-grid">{articles.map((a,i)=>(filter==='Усі матеріали'||(filter==='Про проєкт'&&i<2)||(filter==='Спільнота'&&i===2))&&<button className="news-card" key={a.title} onClick={()=>setArticle(i)}><div className="news-image"><img src="/assets/world.jpg" style={{objectPosition:a.position}} alt="" loading="lazy"/><span>{a.type}</span><div className="round-arrow"><ArrowUpRight size={20}/></div></div><div className="news-body"><span className="article-index">UNITED UKRAINE · 0{i+1}</span><h3>{a.title}</h3><p>{a.text}</p><span className="read-more">Читати матеріал <ArrowRight size={15}/></span></div></button>)}</div></section>
-<section className="start section reveal" id="start"><div className="start-left"><span className="eyebrow"><span className="tiny-line"/> ТВІЙ НОВИЙ СТАРТ</span><h2>НЕ СПОСТЕРІГАЙ.<br/><em>СТАНЬ ЧАСТИНОЮ.</em></h2><p>Лише кілька кроків — і ти у грі.</p><div className="start-orbit"><img src="/assets/logo.png" alt="Емблема United Ukraine"/><div className="orbit one"/><div className="orbit two"/><span className="orbit-label">YOUR NEXT CHAPTER ↗</span></div></div><div className="steps"><div className="step"><span className="step-num">01</span><div><h3>Завантаж лаунчер</h3><p>Усе необхідне для входу в ігровий світ.</p><button className="btn primary" onClick={()=>setModal('Лаунчер готується до публікації. Стеж за посиланням на завантаження в офіційному Discord.')}><Download size={18}/>Завантажити лаунчер<ArrowUpRight size={18}/></button><small><Monitor size={13}/> Для Windows · посилання незабаром</small></div></div><div className="step"><span className="step-num">02</span><div><h3>Встанови гру</h3><p>Відкрий лаунчер і виконай інструкції встановлення.</p></div></div><div className="step"><span className="step-num">03</span><div><h3>Напиши свою історію</h3><p>Приєднуйся до United Ukraine та обирай свій шлях.</p><button onClick={copy} className="text-link">{copied?'Адресу скопійовано':'Скопіювати IP сервера'} <Copy size={15}/></button></div></div></div></section>
-<section className="gallery section reveal" id="gallery"><div className="section-top"><span className="eyebrow"><span className="tiny-line"/> ВІДЧУЙ АТМОСФЕРУ</span><span className="section-no">03 / ГАЛЕРЕЯ</span></div><div className="section-title"><h2>СВІТ У <span className="blue">ДЕТАЛЯХ.</span></h2><p className="muted">Концепт-арт United Ukraine</p></div><div className="gallery-grid">{scenes.map((s,i)=><button key={s.title} className={`gallery-card scene-${i}`} onClick={()=>setGallery(i)}><img src="/assets/world.jpg" style={{objectPosition:s.position}} alt={s.title} loading="lazy"/><Expand size={20} className="expand"/><div><small>0{i+1} / АТМОСФЕРА ПРОЄКТУ</small><h3>{s.title}</h3></div></button>)}</div></section>
-<section className="community section reveal"><div className="discord-art" aria-hidden="true"><MessageCircle/><Plus className="plus-one"/><Plus className="plus-two"/></div><div><span className="eyebrow">СВОЇ ЗАВЖДИ ПОРУЧ</span><h2>ОДНА СПІЛЬНОТА.<br/><em>ТИСЯЧІ МОЖЛИВОСТЕЙ.</em></h2><p>Спілкуйся, знаходь друзів і дізнавайся про новини першим.<br/>Твоя наступна історія може початися з одного «привіт».</p><a className="btn primary" href={discord} target="_blank" rel="noreferrer"><MessageCircle size={19}/>Приєднатися до Discord<ArrowUpRight size={19}/></a></div><span className="community-watermark">UNITED</span></section></main><Footer/>
-{(modal!==null||gallery!==null||article!==null)&&<div className="modal-backdrop" onClick={()=>{setModal(null);setGallery(null);setArticle(null)}}><div className={`modal ${gallery!==null?'gallery-modal':''}`} role="dialog" aria-modal="true" aria-label={gallery!==null?'Галерея проєкту':article!==null?articles[article].title:'Завантаження та підключення'} onClick={e=>e.stopPropagation()}><button className="modal-close" aria-label="Закрити" onClick={()=>{setModal(null);setGallery(null);setArticle(null)}}><X/></button>{gallery!==null?<><img className="lightbox-image" src="/assets/world.jpg" style={{objectPosition:scenes[gallery].position}} alt={scenes[gallery].title}/><div className="lightbox-bottom"><div><small>{scenes[gallery].subtitle}</small><h3>{scenes[gallery].title}</h3></div><div className="lightbox-nav"><button aria-label="Попереднє зображення" onClick={()=>setGallery((gallery+2)%3)}><ChevronLeft/></button><span>{gallery+1} / 3</span><button aria-label="Наступне зображення" onClick={()=>setGallery((gallery+1)%3)}><ChevronRight/></button></div></div></>:article!==null?<><span className="eyebrow">{articles[article].type}</span><h2>{articles[article].title}</h2><p>{articles[article].text}</p><p>{article===0?'United Ukraine — українська рольова платформа КРМП. Цей сайт допоможе познайомитися з проєктом, знайти спільноту й підготуватися до гри.':article===1?'Почни зі спільноти у Discord. Коли лаунчер стане доступним, завантаж його з офіційного посилання на цьому сайті, встанови гру та додай сервер 51.75.44.14:2219.':'Приєднуйся до офіційного Discord, щоб знайти інших гравців, поставити запитання команді та стежити за оголошеннями.'}</p><a className="btn primary" href={discord} target="_blank" rel="noreferrer">Перейти у Discord<ArrowUpRight size={18}/></a></>:<><Download size={35} className="blue"/><h2>Твій старт у United Ukraine</h2><p>{modal}</p><a href={discord} target="_blank" rel="noreferrer" className="btn primary">Офіційний Discord<ArrowUpRight size={18}/></a></>}</div></div>}</>}
+import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
+import { ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronLeft, ChevronRight, Copy, Download, Expand, Gamepad2, Globe2, MapPin, MessageCircle, Monitor, RefreshCw, Route, Sparkles, Users, X } from 'lucide-react';
+import { Header, Footer, discord } from '@/components/site-shell';
+import { Tilt, usePageMotion } from './motion';
+
+type Status = { status: 'online' | 'unavailable'; players?: number; maxPlayers?: number; updatedAt: string; source?: string };
+const address = '51.75.44.14:2219';
+const scenes = [
+  { title: 'Місто, яке надихає', subtitle: 'Київ · атмосфера проєкту', position: '15% 25%', label: 'МІСТО' },
+  { title: 'Твій власний маршрут', subtitle: 'Дороги · атмосфера проєкту', position: '15% 85%', label: 'СВОБОДА' },
+  { title: 'Знайди своїх', subtitle: 'Спільнота · атмосфера проєкту', position: '90% 30%', label: 'ЛЮДИ' },
+];
+const articles = [
+  { type: 'ПРО ПРОЄКТ', title: 'Твоя країна. Твоя нова історія.', text: 'Знайомся з United Ukraine — світом українського Roleplay, у якому головний герой саме ти.', position: '15% 30%', body: 'United Ukraine — українська рольова платформа КРМП. Знайомі міські пейзажі, власний персонаж і спільнота, з якою можна написати свою історію. Почни знайомство з проєктом тут, а друзів для майбутніх пригод шукай у нашому Discord.' },
+  { type: 'ДЛЯ НОВАЧКІВ', title: 'Велика історія. Простий початок.', text: 'Усе, що потрібно знати перед першою зустріччю з новим ігровим світом.', position: '35% 85%', body: `Почни зі спільноти у Discord. Коли лаунчер стане доступним, завантаж його з офіційного посилання на цьому сайті, встанови гру та додай сервер ${address}. Команда та інші гравці допоможуть із першими кроками.` },
+  { type: 'СПІЛЬНОТА', title: 'Найкращі моменти — разом.', text: 'Знаходь однодумців, ділись враженнями та будь ближче до команди проєкту.', position: '95% 30%', body: 'Приєднуйся до офіційного Discord, щоб познайомитися з іншими гравцями, поставити запитання команді та стежити за оголошеннями. Твоя наступна пригода може початися зі звичайного «привіт».' },
+];
+const filters = ['Усі матеріали', 'Про проєкт', 'Спільнота'];
+
+function SectionLabel({ number, children }: { number: string; children: ReactNode }) {
+  return <div className="section-label"><span className="section-index">{number}</span><span>{children}</span><span className="label-rule" /></div>;
+}
+
+export default function Home() {
+  const [status, setStatus] = useState<Status | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [copied, setCopied] = useState(false);
+  const [modal, setModal] = useState<string | null>(null);
+  const [gallery, setGallery] = useState<number | null>(null);
+  const [article, setArticle] = useState<number | null>(null);
+  const [filter, setFilter] = useState(filters[0]);
+  const request = useRef<AbortController | null>(null);
+  const copyTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const dialogOpen = modal !== null || gallery !== null || article !== null;
+  usePageMotion();
+
+  const refresh = useCallback(async () => {
+    request.current?.abort();
+    const controller = new AbortController();
+    request.current = controller;
+    setLoading(true);
+    try {
+      const response = await fetch('/api/server', { signal: controller.signal });
+      if (!response.ok) throw new Error('Monitoring unavailable');
+      const data: Status = await response.json();
+      if (!controller.signal.aborted) setStatus(data);
+    } catch {
+      if (!controller.signal.aborted) setStatus({ status: 'unavailable', updatedAt: new Date().toISOString() });
+    } finally {
+      if (!controller.signal.aborted) setLoading(false);
+    }
+  }, []);
+  useEffect(() => {
+    void refresh();
+    const timer = setInterval(() => void refresh(), 60000);
+    return () => { clearInterval(timer); request.current?.abort(); clearTimeout(copyTimer.current); };
+  }, [refresh]);
+
+  const closeDialog = useCallback(() => { setModal(null); setGallery(null); setArticle(null); }, []);
+  useEffect(() => {
+    if (!dialogOpen) return;
+    const previous = document.activeElement as HTMLElement | null;
+    const overflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    dialogRef.current?.querySelector<HTMLButtonElement>('button')?.focus();
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') closeDialog();
+      if (event.key !== 'Tab') return;
+      const items = dialogRef.current?.querySelectorAll<HTMLElement>('button:not(:disabled), a[href], [tabindex="0"]');
+      if (!items?.length) return;
+      const first = items[0], last = items[items.length - 1];
+      if (event.shiftKey && (document.activeElement === first || !dialogRef.current?.contains(document.activeElement))) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && (document.activeElement === last || !dialogRef.current?.contains(document.activeElement))) { event.preventDefault(); first.focus(); }
+    };
+    window.addEventListener('keydown', onKey);
+    return () => { document.body.style.overflow = overflow; window.removeEventListener('keydown', onKey); previous?.focus(); };
+  }, [dialogOpen, closeDialog]);
+  useEffect(() => {
+    if (gallery === null) return;
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'ArrowRight') setGallery(value => value === null ? null : (value + 1) % scenes.length);
+      if (event.key === 'ArrowLeft') setGallery(value => value === null ? null : (value + scenes.length - 1) % scenes.length);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [gallery]);
+
+  async function copy() {
+    try {
+      await navigator.clipboard.writeText(address);
+      setCopied(true);
+      clearTimeout(copyTimer.current);
+      copyTimer.current = setTimeout(() => setCopied(false), 2500);
+    } catch { setModal(`Адреса сервера: ${address}`); }
+  }
+
+  return <>
+    <Header />
+    <main id="main-content">
+      <section className="hero" aria-labelledby="hero-title">
+        <div className="hero-ambient" aria-hidden="true" />
+        <div className="hero-intro page-width">
+          <div className="hero-heading"><div className="eyebrow"><span className="flag" /> УКРАЇНСЬКИЙ ROLEPLAY <span className="eyebrow-separator">/</span> UNITED UKRAINE</div><h1 id="hero-title">ТВОЯ КРАЇНА.<br /><span className="hero-gold">ТВОЯ ІСТОРІЯ<span className="title-dot">.</span></span></h1></div>
+          <div className="hero-copy"><span className="intro-cross" aria-hidden="true">✳</span><p>Знайомі вулиці. Нові можливості.<br />Цілий світ, щоб стати собою.</p><div className="hero-actions"><a className="btn primary" href="#start"><Gamepad2 size={19} />Почати гру<ArrowUpRight size={19} /></a><a className="icon-btn discord-link" href={discord} target="_blank" rel="noreferrer" aria-label="Наш Discord"><MessageCircle size={22} /></a></div></div>
+        </div>
+        <div className="hero-visual page-width"><Tilt className="hero-art" intensity={2.4}><div className="hero-art-frame">
+          <img className="hero-image" src="/assets/world-promo.png" alt="United Ukraine на комп’ютері та телефоні на тлі вечірнього українського міста" fetchPriority="high" width="1850" height="850" />
+          <div className="hero-vignette" aria-hidden="true" /><span className="art-corner corner-tl" aria-hidden="true" /><span className="art-corner corner-br" aria-hidden="true" />
+          <div className="art-topline"><span><i /> ВІДКРИЙ СВІЙ СВІТ</span><span>UNITED UKRAINE / ROLEPLAY</span></div>
+          <div className="art-caption"><span className="art-caption-number">01</span><div><small>ТВОЯ НАСТУПНА ПРИГОДА</small><p>Починається тут.</p></div><a href="#world" className="art-explore" aria-label="Відкрити світ проєкту"><ArrowDown size={22} /></a></div>
+        </div></Tilt><div className="visual-bottom"><span>UNITED BY FREEDOM. CONNECTED BY PLAY.</span><a href="#world">ГОРТАЙ, ЩОБ ВІДКРИТИ <ArrowDown size={13} /></a></div></div>
+      </section>
+
+      <section className="server-wrap page-width" aria-label="Ігровий сервер"><div className="server-card">
+        <div className="server-icon"><Globe2 size={26} /></div><div className="server-name"><span className="micro-label">ТВІЙ ІГРОВИЙ СВІТ</span><h2>United Ukraine <span>#01</span></h2></div>
+        <div className="server-state" aria-live="polite"><span className={status?.status === 'online' ? 'status-dot online' : 'status-dot'} />{loading ? 'Оновлення…' : status?.status === 'online' ? 'Сервер онлайн' : 'Статус недоступний'}</div>
+        <div className="player-count"><Users size={17} /><strong>{status?.status === 'online' ? status.players : '—'}</strong><span>/ {status?.maxPlayers ?? '—'}</span><small>ГРАВЦІВ</small></div>
+        <button className="server-address" onClick={copy} aria-label={copied ? 'IP скопійовано' : `Скопіювати IP ${address}`}><span>{copied ? 'IP скопійовано' : address}</span>{copied ? <Check size={16} /> : <Copy size={16} />}</button>
+        <button className="icon-btn refresh" onClick={() => void refresh()} disabled={loading} aria-label="Оновити статус сервера"><RefreshCw size={17} className={loading ? 'spinning' : ''} /></button>
+      </div><p className="monitor-note">{status?.status === 'online' ? 'Живий статус · оновлюється щохвилини' : 'Моніторинг сервера · очікуємо доступні дані'}{status && ` · ${new Date(status.updatedAt).toLocaleTimeString('uk-UA', { hour: '2-digit', minute: '2-digit' })}`}</p></section>
+
+      <section id="world" className="world section page-width" data-reveal><SectionLabel number="01">БІЛЬШЕ, НІЖ ГРА</SectionLabel>
+        <div className="world-heading"><h2>ЗНАЙОМІ МІСЦЯ.<br /><span className="muted-heading">БЕЗМЕЖНІ</span> МОЖЛИВОСТІ.</h2><div><p>Тут кожна дорога — початок історії.<br />А головний герой — ти.</p><a href="#gallery" className="text-link">Відчути атмосферу <ArrowUpRight size={18} /></a></div></div>
+        <div className="world-layout"><Tilt className="world-image-wrap" intensity={2}><img src="/assets/world.jpg" alt="Концепт-арт українського міста та персонажів United Ukraine" loading="lazy" /><div className="world-image-shade" /><span className="image-location"><MapPin size={14} /> НАТХНЕННО УКРАЇНОЮ</span><div className="world-image-title"><span>ВПІЗНАВАЙ СВОЄ.</span><strong>ВІДКРИВАЙ НОВЕ.</strong></div><span className="image-disclaimer">КОНЦЕПТ-АРТ ПРОЄКТУ</span></Tilt>
+          <div className="world-features">{[
+            { icon: MapPin, number: '01', title: 'Своя атмосфера', text: 'Український характер у кожній деталі. Місця, у яких відчуваєш себе вдома.' },
+            { icon: Route, number: '02', title: 'Твій власний шлях', text: 'Створи персонажа, знаходь можливості та вирішуй, ким стане твій герой.' },
+            { icon: Users, number: '03', title: 'Люди, які поруч', text: 'Нові знайомства, спільні пригоди й моменти, які хочеться згадувати.' },
+          ].map(feature => <div className="feature" key={feature.number}><div className="feature-top"><feature.icon size={23} /><span>{feature.number} /</span></div><h3>{feature.title}</h3><p>{feature.text}</p></div>)}</div>
+        </div>
+      </section>
+
+      <div className="manifesto" aria-hidden="true"><div className="manifesto-track">{[0, 1].map(i => <span key={i}>ТВОЯ КРАЇНА <b>✳</b> ТВОЯ ІСТОРІЯ <b>✳</b> UNITED UKRAINE <b>✳</b>&nbsp;</span>)}</div></div>
+
+      <section className="news section page-width" id="news" data-reveal><SectionLabel number="02">НА ЗВ’ЯЗКУ З ПРОЄКТОМ</SectionLabel>
+        <div className="section-title"><h2>У ЦЕНТРІ <span className="gold">ПОДІЙ.</span></h2><div className="filters" aria-label="Фільтр матеріалів">{filters.map(item => <button key={item} className={filter === item ? 'active' : ''} aria-pressed={filter === item} onClick={() => setFilter(item)}>{item}</button>)}</div></div>
+        <p className="editorial-note">Знайомство з проєктом · редакційні матеріали</p>
+        <div className="news-grid">{articles.map((item, index) => (filter === filters[0] || (filter === filters[1] && index < 2) || (filter === filters[2] && index === 2)) && <Tilt className="news-tilt" key={item.title} intensity={3}><button className="news-card" onClick={() => setArticle(index)} aria-label={`Читати: ${item.title}`}><div className="news-image"><img src="/assets/world.jpg" style={{ objectPosition: item.position }} alt="" loading="lazy" /><span className="article-tag">{item.type}</span><span className="round-arrow"><ArrowUpRight size={21} /></span></div><div className="news-body"><span className="micro-label">UNITED JOURNAL <span>/ 0{index + 1}</span></span><h3>{item.title}</h3><p>{item.text}</p><span className="read-more">Читати історію <ArrowRight size={17} /></span></div></button></Tilt>)}</div>
+      </section>
+
+      <section className="start-section" id="start"><div className="start section page-width" data-reveal><SectionLabel number="03">НОВА ІСТОРІЯ ЗА ТРИ КРОКИ</SectionLabel>
+        <div className="start-grid"><div className="start-heading"><h2>ТВІЙ СВІТ.<br />ТВОЇ ПРАВИЛА.<br /><span className="gold">ТВІЙ СТАРТ.</span></h2><p>Не спостерігай за чужими історіями.<br />Почни свою.</p><div className="start-orbit" aria-hidden="true"><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="orbit orbit-three" /><img src="/assets/logo.png" alt="" /><span className="orbit-star">✳</span><span className="orbit-caption">YOUR NEXT CHAPTER</span></div></div>
+          <div className="steps"><div className="step step-featured"><div className="step-top"><span className="step-num">01</span><Download size={24} /></div><h3>Завантаж лаунчер</h3><p>Твій ключ до світу United Ukraine.<br />Усе необхідне для початку гри.</p><button className="btn primary" onClick={() => setModal('Лаунчер готується до публікації. Посилання на завантаження з’явиться на сайті та в офіційному Discord.')}><Download size={18} />Завантажити лаунчер<ArrowUpRight size={18} /></button><small><Monitor size={14} />Для Windows · посилання незабаром</small></div>
+            <div className="step"><span className="step-num">02</span><div><h3>Встанови гру</h3><p>Відкрий лаунчер і виконай прості інструкції встановлення.</p></div><ArrowDown size={20} /></div>
+            <div className="step"><span className="step-num">03</span><div><h3>Увійди у свій світ</h3><p>Приєднуйся до сервера та напиши перший розділ своєї історії.</p><button className="text-link" onClick={copy}>{copied ? 'Адресу скопійовано' : 'Скопіювати IP сервера'}{copied ? <Check size={16} /> : <Copy size={16} />}</button></div><ArrowUpRight size={20} /></div>
+          </div>
+        </div>
+      </div></section>
+
+      <section className="gallery section page-width" id="gallery" data-reveal><SectionLabel number="04">ПОБАЧ. ВІДЧУЙ. ЗАЛИШСЯ.</SectionLabel><div className="section-title"><h2>АТМОСФЕРА,<br /><span className="muted-heading">ЯКУ ВІДЧУВАЄШ.</span></h2><span className="gallery-note"><Sparkles size={16} /> Концепт-арт United Ukraine</span></div>
+        <div className="gallery-grid">{scenes.map((scene, index) => <button className={`gallery-card scene-${index}`} key={scene.title} onClick={() => setGallery(index)} aria-label={`Відкрити зображення: ${scene.title}`}><img src="/assets/world.jpg" style={{ objectPosition: scene.position }} alt={scene.title} loading="lazy" /><span className="gallery-top"><span>0{index + 1} / {scene.label}</span><Expand size={18} /></span><div className="gallery-caption"><h3>{scene.title}</h3><span className="gallery-arrow"><ArrowUpRight size={23} /></span></div></button>)}</div>
+      </section>
+
+      <section className="community page-width" data-reveal><div className="community-grid" aria-hidden="true" /><div className="community-orb" aria-hidden="true"><MessageCircle /><span className="orb-ring" /><span className="orb-star">✳</span></div><div className="community-copy"><div className="eyebrow"><span className="status-dot online" /> СВОЇ ЗАВЖДИ ПОРУЧ</div><h2>ВЕЛИКИЙ СВІТ.<br /><span>ТВОЯ СПІЛЬНОТА.</span></h2><p>Знайди друзів ще до першого входу у гру.<br />Знайомства, новини й підтримка — в нашому Discord.</p><a className="btn primary" href={discord} target="_blank" rel="noreferrer"><MessageCircle size={20} />Приєднатися до Discord<ArrowUpRight size={19} /></a></div><span className="community-word" aria-hidden="true">UNITED</span></section>
+    </main>
+    <Footer />
+    <span className="sr-only" role="status">{copied ? 'Адресу сервера скопійовано' : ''}</span>
+    {dialogOpen && <div className="modal-backdrop" onClick={closeDialog}><div ref={dialogRef} className={`modal ${gallery !== null ? 'gallery-modal' : ''}`} role="dialog" aria-modal="true" aria-labelledby="dialog-title" onClick={event => event.stopPropagation()}><button className="modal-close icon-btn" aria-label="Закрити" onClick={closeDialog}><X size={22} /></button>
+      {gallery !== null ? <><img className="lightbox-image" src="/assets/world.jpg" style={{ objectPosition: scenes[gallery].position }} alt={scenes[gallery].title} /><div className="lightbox-bottom"><div><span className="micro-label">{scenes[gallery].subtitle}</span><h2 id="dialog-title">{scenes[gallery].title}</h2></div><div className="lightbox-nav"><button className="icon-btn" aria-label="Попереднє зображення" onClick={() => setGallery((gallery + scenes.length - 1) % scenes.length)}><ChevronLeft /></button><span aria-live="polite">0{gallery + 1} / 03</span><button className="icon-btn" aria-label="Наступне зображення" onClick={() => setGallery((gallery + 1) % scenes.length)}><ChevronRight /></button></div></div></> : article !== null ? <><span className="eyebrow gold">UNITED JOURNAL / {articles[article].type}</span><h2 id="dialog-title">{articles[article].title}</h2><p>{articles[article].text}</p><p>{articles[article].body}</p><a className="btn primary" href={discord} target="_blank" rel="noreferrer">Перейти у Discord<ArrowUpRight size={18} /></a></> : <><Download size={35} className="gold" /><h2 id="dialog-title">Твій старт у United Ukraine</h2><p>{modal}</p><a href={discord} target="_blank" rel="noreferrer" className="btn primary">Офіційний Discord<ArrowUpRight size={18} /></a></>}
+    </div></div>}
+  </>;
+}
