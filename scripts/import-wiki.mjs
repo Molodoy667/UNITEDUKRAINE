@@ -1,6 +1,7 @@
 import { readdir, readFile, mkdir, copyFile, writeFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import ts from 'typescript';
+import {carAssets} from './wiki-car-assets.mjs';
 
 // Explicit local import; never run against an unreviewed download or execute game JS.
 const source = process.argv[2];
@@ -26,7 +27,7 @@ for (const kind of ['skins','cars','accessories']) {
   const directory = path.join(source, 'images', kind);
   for (const file of (await readdir(directory)).filter(name => /^\d+(?:[_-]\d+)?\.png$/.test(name)).sort((a,b)=>a.localeCompare(b,undefined,{numeric:true}))) {
     const [id, variant] = file.slice(0,-4).split(/[_-]/).map(Number);
-    let input = path.join(directory, 'small', file);
+    let input = kind==='cars'?path.join(directory,file):path.join(directory, 'small', file);
     try { await access(input); } catch { input = path.join(directory,file); }
     await copyFile(input, new URL(`${kind}/${file}`, output));
     const image = `/wiki/${kind}/${file}`;
@@ -37,12 +38,24 @@ for (const kind of ['skins','cars','accessories']) {
     } else manifest[kind].push({id,name:null,image,variant:variant||null});
   }
 }
+const embeddedCars=await carAssets(path.join(source,'assets'));
+for(const asset of embeddedCars){
+  const filename=asset.file;
+  await writeFile(new URL(`cars/${filename}`,output),asset.bytes);
+  let entry=manifest.cars.find(item=>item.id===asset.id);
+  if(!entry){entry={id:asset.id,images:[]};manifest.cars.push(entry);}
+  if(!entry.images.some(image=>image.src===`/wiki/cars/${filename}`))entry.images.push({src:`/wiki/cars/${filename}`,variant:null,...(asset.label?{label:asset.label}:{})});
+}
+await writeFile(new URL('car-sources.json',output),JSON.stringify(embeddedCars.map(({id,file,reference,bundle})=>({id,file,reference,bundle})),null,2)+'\n');
 for (const model of models) {
   let entry = manifest.cars.find(item=>item.id===model.modelid);
   if (!entry) { entry={id:model.modelid,images:[]}; manifest.cars.push(entry); }
   const brand = brands[model.brand]?.[0];
   entry.name = [brand && brand!=='None'?brand:'', String(model.name||'')].filter(Boolean).join(' ') || null;
   entry.year = model.year_issue || null;
+  // Visual audit: resource cars/419.png is Ford-branded, not the Opel in this reference.
+  // Preserve the resource ID, but do not publish the contradictory label as fact.
+  if(model.modelid===419){entry.name=null;entry.year=null;entry.nameNote='Назва у довіднику не відповідає прев’ю';}
 }
 for (const kind of ['skins','cars','accessories']) manifest[kind].sort((a,b)=>a.id-b.id);
 await writeFile(new URL('catalog.json',output), JSON.stringify(manifest,null,2)+'\n');

@@ -1,6 +1,6 @@
 export const categories = ['skins','cars','accessories'] as const;
 export type Category = typeof categories[number];
-export type Entry = {id:number;name?:string|null;image?:string;variant?:number|null;year?:number|null;images?:{src:string;variant:number|null}[]};
+export type Entry = {id:number;name?:string|null;nameNote?:string;image?:string;variant?:number|null;year?:number|null;images?:{src:string;variant:number|null;label?:string}[]};
 export type Catalog = Record<Category,Entry[]>;
 export const labels = {skins:'Скіни',cars:'Автомобілі',accessories:'Аксесуари'};
 export const singular = {skins:'Скін',cars:'Автомобіль',accessories:'Аксесуар'};

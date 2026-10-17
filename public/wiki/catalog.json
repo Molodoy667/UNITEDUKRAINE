@@ -4560,9 +4560,15 @@
     },
     {
       "id": 419,
-      "images": [],
-      "name": "Opel Astra GTC",
-      "year": 2011
+      "images": [
+        {
+          "src": "/wiki/cars/419.png",
+          "variant": null
+        }
+      ],
+      "name": null,
+      "year": null,
+      "nameNote": "Назва у довіднику не відповідає прев’ю"
     },
     {
       "id": 420,
@@ -4687,7 +4693,52 @@
     },
     {
       "id": 436,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/436.png",
+          "variant": null
+        },
+        {
+          "src": "/wiki/cars/436_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/436_carsharing_0_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1 · спереду"
+        },
+        {
+          "src": "/wiki/cars/436_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/436_carsharing_1_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2 · спереду"
+        },
+        {
+          "src": "/wiki/cars/436_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/436_carsharing_2_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3 · спереду"
+        },
+        {
+          "src": "/wiki/cars/436_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        },
+        {
+          "src": "/wiki/cars/436_carsharing_3_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4 · спереду"
+        }
+      ],
       "name": "KIA Rio",
       "year": 2000
     },
@@ -4746,7 +4797,12 @@
     },
     {
       "id": 445,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/445.png",
+          "variant": null
+        }
+      ],
       "name": "SKODA Octavia RS",
       "year": 2000
     },
@@ -4896,6 +4952,46 @@
         {
           "src": "/wiki/cars/466_6.png",
           "variant": 6
+        },
+        {
+          "src": "/wiki/cars/466_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/466_carsharing_0_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1 · спереду"
+        },
+        {
+          "src": "/wiki/cars/466_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/466_carsharing_1_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2 · спереду"
+        },
+        {
+          "src": "/wiki/cars/466_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/466_carsharing_2_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3 · спереду"
+        },
+        {
+          "src": "/wiki/cars/466_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        },
+        {
+          "src": "/wiki/cars/466_carsharing_3_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4 · спереду"
         }
       ],
       "name": "BMW G30",
@@ -4945,7 +5041,52 @@
     },
     {
       "id": 474,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/474.png",
+          "variant": null
+        },
+        {
+          "src": "/wiki/cars/474_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/474_carsharing_0_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1 · спереду"
+        },
+        {
+          "src": "/wiki/cars/474_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/474_carsharing_1_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2 · спереду"
+        },
+        {
+          "src": "/wiki/cars/474_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/474_carsharing_2_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3 · спереду"
+        },
+        {
+          "src": "/wiki/cars/474_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        },
+        {
+          "src": "/wiki/cars/474_carsharing_3_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4 · спереду"
+        }
+      ],
       "name": "Volkswagen",
       "year": 2000
     },
@@ -4975,7 +5116,12 @@
     },
     {
       "id": 479,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/479.png",
+          "variant": null
+        }
+      ],
       "name": "Renalut Logan",
       "year": 2016
     },
@@ -5047,7 +5193,12 @@
     },
     {
       "id": 491,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/491.png",
+          "variant": null
+        }
+      ],
       "name": "Honda Civic Si",
       "year": 2001
     },
@@ -5299,7 +5450,12 @@
     },
     {
       "id": 533,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/533.png",
+          "variant": null
+        }
+      ],
       "name": "Audi TTRS",
       "year": 2018
     },
@@ -5377,7 +5533,12 @@
     },
     {
       "id": 546,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/546.png",
+          "variant": null
+        }
+      ],
       "name": "IG ИЖ Комби",
       "year": 1973
     },
@@ -5431,7 +5592,12 @@
     },
     {
       "id": 555,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/555.png",
+          "variant": null
+        }
+      ],
       "name": "ZAZ 968М",
       "year": 1973
     },
@@ -5461,7 +5627,12 @@
     },
     {
       "id": 560,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/560.png",
+          "variant": null
+        }
+      ],
       "name": "Subaru WRX Sti",
       "year": 2014
     },
@@ -5539,7 +5710,12 @@
     },
     {
       "id": 573,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/573.png",
+          "variant": null
+        }
+      ],
       "name": "Mercedes G65 6x6",
       "year": 2013
     },
@@ -5635,7 +5811,52 @@
     },
     {
       "id": 589,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/589.png",
+          "variant": null
+        },
+        {
+          "src": "/wiki/cars/589_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/589_carsharing_0_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1 · спереду"
+        },
+        {
+          "src": "/wiki/cars/589_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/589_carsharing_1_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2 · спереду"
+        },
+        {
+          "src": "/wiki/cars/589_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/589_carsharing_2_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3 · спереду"
+        },
+        {
+          "src": "/wiki/cars/589_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        },
+        {
+          "src": "/wiki/cars/589_carsharing_3_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4 · спереду"
+        }
+      ],
       "name": "Volkswagen VW Golf GTI 7",
       "year": 2021
     },
@@ -5791,7 +6012,12 @@
     },
     {
       "id": 699,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/699.png",
+          "variant": null
+        }
+      ],
       "name": "MINI WMini JCW GP",
       "year": 2013
     },
@@ -5833,7 +6059,12 @@
     },
     {
       "id": 799,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/799.png",
+          "variant": null
+        }
+      ],
       "name": "GAZ 31105 \"Волга\"",
       "year": 2004
     },
@@ -5996,6 +6227,10 @@
         {
           "src": "/wiki/cars/15077_6.png",
           "variant": 6
+        },
+        {
+          "src": "/wiki/cars/15077.png",
+          "variant": null
         }
       ],
       "name": "Honda Accord",
@@ -6021,7 +6256,12 @@
     },
     {
       "id": 15081,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15081.png",
+          "variant": null
+        }
+      ],
       "name": "Volkswagen Scirocco",
       "year": 2002
     },
@@ -6039,7 +6279,12 @@
     },
     {
       "id": 15084,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15084.png",
+          "variant": null
+        }
+      ],
       "name": "Alfa Romeo 155",
       "year": 1998
     },
@@ -6087,7 +6332,48 @@
     },
     {
       "id": 15092,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15092_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15092_carsharing_0_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15092_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15092_carsharing_1_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15092_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15092_carsharing_2_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15092_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        },
+        {
+          "src": "/wiki/cars/15092_carsharing_3_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4 · спереду"
+        }
+      ],
       "name": "Volvo XC90",
       "year": 2006
     },
@@ -6183,7 +6469,12 @@
     },
     {
       "id": 15108,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15108.png",
+          "variant": null
+        }
+      ],
       "name": "Maserati Levante 201",
       "year": 2011
     },
@@ -6273,6 +6564,46 @@
         {
           "src": "/wiki/cars/15121_6.png",
           "variant": 6
+        },
+        {
+          "src": "/wiki/cars/15121_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15121_carsharing_0_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15121_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15121_carsharing_1_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15121_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15121_carsharing_2_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15121_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        },
+        {
+          "src": "/wiki/cars/15121_carsharing_3_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4 · спереду"
         }
       ],
       "name": "LADA Vesta",
@@ -6292,7 +6623,12 @@
     },
     {
       "id": 15126,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15126.png",
+          "variant": null
+        }
+      ],
       "name": "Tesla X",
       "year": 2015
     },
@@ -6418,7 +6754,12 @@
     },
     {
       "id": 15148,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15148.png",
+          "variant": null
+        }
+      ],
       "name": "Land Rover Range Rover Velar",
       "year": 2017
     },
@@ -6442,7 +6783,12 @@
     },
     {
       "id": 15152,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15152.png",
+          "variant": null
+        }
+      ],
       "name": "Volvo v40",
       "year": 2014
     },
@@ -6466,7 +6812,48 @@
     },
     {
       "id": 15157,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15157_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15157_carsharing_0_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15157_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15157_carsharing_1_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15157_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15157_carsharing_2_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15157_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        },
+        {
+          "src": "/wiki/cars/15157_carsharing_3_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4 · спереду"
+        }
+      ],
       "name": "Toyota Camry V70",
       "year": 2019
     },
@@ -6502,7 +6889,12 @@
     },
     {
       "id": 15163,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15163.png",
+          "variant": null
+        }
+      ],
       "name": "Honda S2000",
       "year": 2004
     },
@@ -6575,13 +6967,63 @@
     },
     {
       "id": 15171,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15171.png",
+          "variant": null
+        },
+        {
+          "src": "/wiki/cars/15171_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15171_carsharing_0_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15171_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15171_carsharing_1_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15171_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15171_carsharing_2_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15171_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        },
+        {
+          "src": "/wiki/cars/15171_carsharing_3_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4 · спереду"
+        }
+      ],
       "name": "Honda Civic Type-R FK8",
       "year": 2007
     },
     {
       "id": 15172,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15172.png",
+          "variant": null
+        }
+      ],
       "name": "Lexus LFA",
       "year": 2012
     },
@@ -6593,7 +7035,12 @@
     },
     {
       "id": 15174,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15174.png",
+          "variant": null
+        }
+      ],
       "name": "Shelby Cobra 427",
       "year": 1965
     },
@@ -6635,7 +7082,12 @@
     },
     {
       "id": 15181,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15181.png",
+          "variant": null
+        }
+      ],
       "name": "BMW M1 E82",
       "year": 2012
     },
@@ -6689,6 +7141,46 @@
         {
           "src": "/wiki/cars/15186_6.png",
           "variant": 6
+        },
+        {
+          "src": "/wiki/cars/15186_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15186_carsharing_0_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15186_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15186_carsharing_1_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15186_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15186_carsharing_2_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15186_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        },
+        {
+          "src": "/wiki/cars/15186_carsharing_3_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4 · спереду"
         }
       ],
       "name": "SKODA Octavia DPS",
@@ -6732,49 +7224,233 @@
     },
     {
       "id": 15195,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15195_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15195_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15195_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15195_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        },
+        {
+          "src": "/wiki/cars/15195.png",
+          "variant": null
+        }
+      ],
       "name": "Toyota Camry V70",
       "year": 2019
     },
     {
       "id": 15196,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15196.png",
+          "variant": null
+        },
+        {
+          "src": "/wiki/cars/15196_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15196_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15196_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15196_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        }
+      ],
       "name": "Ford Focus 3",
       "year": 2014
     },
     {
       "id": 15197,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15197.png",
+          "variant": null
+        },
+        {
+          "src": "/wiki/cars/15197_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15197_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15197_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15197_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        }
+      ],
       "name": "Volkswagen Golf",
       "year": 2000
     },
     {
       "id": 15198,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15198.png",
+          "variant": null
+        },
+        {
+          "src": "/wiki/cars/15198_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15198_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15198_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15198_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        }
+      ],
       "name": "KIA Rio",
       "year": 2000
     },
     {
       "id": 15199,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15199_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15199_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15199_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15199_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        }
+      ],
       "name": "Mazda 3 MPS",
       "year": 2006
     },
     {
       "id": 15200,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15200_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15200_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15200_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15200_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        }
+      ],
       "name": "SKODA Octavia VRS",
       "year": 2017
     },
     {
       "id": 15201,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15201_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15201_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15201_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15201_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        }
+      ],
       "name": "Renalut Logan",
       "year": 2004
     },
     {
       "id": 15202,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15202_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15202_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15202_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15202_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        }
+      ],
       "name": "Volvo XC90",
       "year": 2006
     },
@@ -6882,7 +7558,12 @@
     },
     {
       "id": 15220,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15220.png",
+          "variant": null
+        }
+      ],
       "name": "Infinity Q50",
       "year": 2021
     },
@@ -6972,7 +7653,12 @@
     },
     {
       "id": 15235,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15235.png",
+          "variant": null
+        }
+      ],
       "name": "Noble M600",
       "year": 2010
     },
@@ -7032,7 +7718,12 @@
     },
     {
       "id": 15246,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15246.png",
+          "variant": null
+        }
+      ],
       "name": "Audi RS4 Avant",
       "year": 2022
     },
@@ -7104,7 +7795,12 @@
     },
     {
       "id": 15259,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15259.png",
+          "variant": null
+        }
+      ],
       "name": "Ford GT",
       "year": 2005
     },
@@ -7122,7 +7818,12 @@
     },
     {
       "id": 15262,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15262.png",
+          "variant": null
+        }
+      ],
       "name": "Land Rover Series I",
       "year": 1996
     },
@@ -7170,13 +7871,23 @@
     },
     {
       "id": 15271,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15271.png",
+          "variant": null
+        }
+      ],
       "name": "Nissan 400 Fairlady",
       "year": 2022
     },
     {
       "id": 15272,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15272.png",
+          "variant": null
+        }
+      ],
       "name": "Saab 9-3",
       "year": 2009
     },
@@ -7188,7 +7899,12 @@
     },
     {
       "id": 15274,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15274.png",
+          "variant": null
+        }
+      ],
       "name": "Toyota 4Runner",
       "year": 2019
     },
@@ -7200,7 +7916,48 @@
     },
     {
       "id": 15276,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15276_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15276_carsharing_0_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15276_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15276_carsharing_1_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15276_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15276_carsharing_2_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15276_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        },
+        {
+          "src": "/wiki/cars/15276_carsharing_3_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4 · спереду"
+        }
+      ],
       "name": "Volkswagen Touareg",
       "year": 2014
     },
@@ -7302,7 +8059,12 @@
     },
     {
       "id": 15294,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15294.png",
+          "variant": null
+        }
+      ],
       "name": "Mercedes Br P900 R.HW",
       "year": 2022
     },
@@ -7338,7 +8100,12 @@
     },
     {
       "id": 15600,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15600.png",
+          "variant": null
+        }
+      ],
       "name": "ZAZ Tavria",
       "year": 1998
     },
@@ -7350,7 +8117,12 @@
     },
     {
       "id": 15602,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15602.png",
+          "variant": null
+        }
+      ],
       "name": "Mercedes CLS 53",
       "year": 2019
     },
@@ -7380,6 +8152,10 @@
         {
           "src": "/wiki/cars/15603_6.png",
           "variant": 6
+        },
+        {
+          "src": "/wiki/cars/15603.png",
+          "variant": null
         }
       ],
       "name": "LADA Granta",
@@ -7393,7 +8169,12 @@
     },
     {
       "id": 15605,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15605.png",
+          "variant": null
+        }
+      ],
       "name": "Hummer H2",
       "year": 2007
     },
@@ -7501,6 +8282,46 @@
         {
           "src": "/wiki/cars/15619_6.png",
           "variant": 6
+        },
+        {
+          "src": "/wiki/cars/15619_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15619_carsharing_0_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15619_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15619_carsharing_1_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15619_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15619_carsharing_2_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15619_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        },
+        {
+          "src": "/wiki/cars/15619_carsharing_3_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4 · спереду"
         }
       ],
       "name": "KIA K5",
@@ -7514,7 +8335,12 @@
     },
     {
       "id": 15621,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15621.png",
+          "variant": null
+        }
+      ],
       "name": "GAZ 2401",
       "year": 1987
     },
@@ -7682,7 +8508,48 @@
     },
     {
       "id": 15651,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15651_carsharing_0.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1"
+        },
+        {
+          "src": "/wiki/cars/15651_carsharing_0_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 1 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15651_carsharing_1.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2"
+        },
+        {
+          "src": "/wiki/cars/15651_carsharing_1_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 2 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15651_carsharing_2.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3"
+        },
+        {
+          "src": "/wiki/cars/15651_carsharing_2_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 3 · спереду"
+        },
+        {
+          "src": "/wiki/cars/15651_carsharing_3.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4"
+        },
+        {
+          "src": "/wiki/cars/15651_carsharing_3_front.png",
+          "variant": null,
+          "label": "Каршеринг · колір 4 · спереду"
+        }
+      ],
       "name": "BMW 330D G20",
       "year": 2021
     },
@@ -7699,6 +8566,24 @@
       "year": 2023
     },
     {
+      "id": 15661,
+      "images": [
+        {
+          "src": "/wiki/cars/15661.png",
+          "variant": null
+        }
+      ]
+    },
+    {
+      "id": 15688,
+      "images": [
+        {
+          "src": "/wiki/cars/15688.png",
+          "variant": null
+        }
+      ]
+    },
+    {
       "id": 17404,
       "images": [
         {
@@ -7712,6 +8597,15 @@
       "images": [
         {
           "src": "/wiki/cars/17405.png",
+          "variant": null
+        }
+      ]
+    },
+    {
+      "id": 17426,
+      "images": [
+        {
+          "src": "/wiki/cars/17426.png",
           "variant": null
         }
       ]
@@ -7757,6 +8651,33 @@
       "images": [
         {
           "src": "/wiki/cars/17445.png",
+          "variant": null
+        }
+      ]
+    },
+    {
+      "id": 17454,
+      "images": [
+        {
+          "src": "/wiki/cars/17454.png",
+          "variant": null
+        }
+      ]
+    },
+    {
+      "id": 17456,
+      "images": [
+        {
+          "src": "/wiki/cars/17456.png",
+          "variant": null
+        }
+      ]
+    },
+    {
+      "id": 17460,
+      "images": [
+        {
+          "src": "/wiki/cars/17460.png",
           "variant": null
         }
       ]
