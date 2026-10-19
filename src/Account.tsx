@@ -4,7 +4,7 @@ import {Header,Footer,discord} from '../components/site-shell';
 import {accountApi,ApiError,type Dashboard,type Player,type Property,type Vehicle} from './account/types';
 import type {Catalog} from './wiki/catalog';
 import './account/account.css';
-import ControlPanel from './admin/ControlPanel';
+import ControlPanel from './admin/AdminHub';
 
 const number=(value:number|string)=>new Intl.NumberFormat('uk-UA',{maximumFractionDigits:1}).format(typeof value==='string'&&/^-?\d+$/.test(value)?BigInt(value):Number(value));
 const currency=(value:number|string)=>`${number(value)} ₴`;

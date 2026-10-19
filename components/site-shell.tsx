@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Menu, X, ArrowUpRight, ArrowUp, UserRound, MessageCircle } from 'lucide-react';
+import {useSite} from '../src/site/content';
 export const discord = 'https://discord.gg/GyJnWJXdJ';
 export function Brand() {
   return <a href="/" className="brand" aria-label="United Ukraine — головна"><img src="/assets/logo.png" alt="" width="44" height="54" /><span>UNITED<span>UKRAINE</span><small>ROLEPLAY</small></span></a>;
@@ -31,5 +32,6 @@ export function Header() {
   </div></header></>;
 }
 export function Footer() {
-  return <footer className="footer page-width"><div className="footer-top"><Brand /><p>Твоя країна. Твої правила гри.<br />Твоя нова історія.</p><a href={discord} target="_blank" rel="noreferrer" className="discord-small"><MessageCircle size={18} /> Зустрінемось у Discord <ArrowUpRight size={17} /></a><a className="back-to-top icon-btn" href="#main-content" aria-label="На початок сторінки"><ArrowUp size={19} /></a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} United Ukraine Roleplay</span><div><a href="/contacts">Контакти</a><a href="/terms">Умови користування</a><a href="/privacy">Конфіденційність</a></div><span className="made"><span className="flag" /> З любов’ю до України</span></div></footer>;
+  const {data}=useSite();
+  return <footer className="footer page-width"><div className="footer-top"><Brand /><p>Твоя країна. Твої правила гри.<br />Твоя нова історія.</p>{data.home.discordUrl&&<a href={data.home.discordUrl} target="_blank" rel="noreferrer" className="discord-small"><MessageCircle size={18} /> Зустрінемось у Discord <ArrowUpRight size={17} /></a>}<a className="back-to-top icon-btn" href="#main-content" aria-label="На початок сторінки"><ArrowUp size={19} /></a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} United Ukraine Roleplay</span><div>{data.pages.map(page=><a key={page.id} href={page.url}>{page.title}</a>)}</div><span className="made"><span className="flag" /> З любов’ю до України</span></div></footer>;
 }

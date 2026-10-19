@@ -36,7 +36,7 @@ function loadComponent(relativePath) {
     return loadComponent(existsSync(`${target}.tsx`) ? `${target}.tsx` : `${target}.ts`);
   };
   const execute = vm.runInNewContext(`(function(require, module, exports) {${outputText}\n})`, {
-    window: { location: { pathname: '/', search: '' } }, URLSearchParams,
+    window: { location: { pathname: '/', search: '' } }, URLSearchParams,URL,
   }, { filename });
   execute(localRequire, module, module.exports);
   return module.exports;
@@ -47,6 +47,9 @@ const Section = loadComponent('src/Section.tsx').default;
 const Wiki = loadComponent('src/Wiki.tsx').default;
 const {ForbesBoard} = loadComponent('src/Forbes.tsx');
 const ControlPanel=loadComponent('src/admin/ControlPanel.tsx').default;
+const AdminHub=loadComponent('src/admin/AdminHub.tsx').default;
+const {SettingsForm,DocumentEditor}=loadComponent('src/admin/ContentAdmin.tsx');
+const {default:NewsIntegration,newsIntegration}=loadComponent('src/admin/NewsIntegration.tsx');
 const {DifferenceView,ChangeEditor,ChangeJournal}=loadComponent('src/admin/ChangeTools.tsx');
 const home = renderToStaticMarkup(createElement(Home));
 
@@ -78,12 +81,40 @@ test('initial server state does not invent live player data', () => {
   assert.match(home, /51\.75\.44\.14:2219/);
 });
 
-test('home exposes accessible controls and all initial article cards', () => {
+test('home exposes accessible controls without inventing database news', () => {
   assert.match(home, /aria-controls="primary-navigation" aria-expanded="false"/);
-  assert.equal((home.match(/class="news-card"/g) ?? []).length, 3);
+  assert.equal((home.match(/class="news-card"/g) ?? []).length, 0);
+  assert.match(home,/Завантажуємо новини/);
+  assert.match(home,/Посилання ще не задане/);
   assert.equal((home.match(/class="gallery-card /g) ?? []).length, 3);
   assert.match(home, /aria-label="Оновити статус сервера"/);
   assert.match(home, /role="status"/);
+});
+
+test('administration has four modules and the reserved fourth module is disabled',()=>{
+ const markup=renderToStaticMarkup(createElement(AdminHub,{catalog:null,csrf:'test'}));
+ for(const label of ['Управління сервером','SEO та статичні сторінки','API та новини','Вільний блок'])assert.ok(markup.includes(label));
+ assert.equal((markup.match(/aria-pressed="false"/g)||[]).length,4);
+ assert.match(markup,/<button disabled="" aria-pressed="false"/);
+});
+
+test('CMS forms expose independent launcher flags and complete page/news editors',()=>{
+ const settings={value:{version:'1',downloadUrl:'https://example.test/setup.exe',resourcesEnabled:true,resourcesUrl:'https://example.test/resources.zip',resourcesVersion:'3',resourcesUpdateUrl:'',maintenance:false,maintenanceMessage:''},version:1};
+ const form=renderToStaticMarkup(createElement(SettingsForm,{group:'launcher',title:'Launcher API',setting:settings,csrf:'test',onRefresh:()=>{}}));
+ assert.equal((form.match(/type="checkbox"/g)||[]).length,2);assert.match(form,/resourcesEnabled/);assert.match(form,/Зберегти налаштування/);
+ const editor=renderToStaticMarkup(createElement(DocumentEditor,{initial:null,kind:'news',csrf:'test',onSaved:()=>{},onClose:()=>{}}));
+ for(const label of ['SEO-заголовок','SEO-опис','Категорія','Короткий опис','Опублікувати на сайті','Зберегти чернетку'])assert.ok(editor.includes(label));
+ assert.match(editor,/maxlength="30000"/i);
+});
+
+test('news integration handoff uses the saved domain, actual public DTO and copy controls',()=>{
+ const snippets=newsIntegration('https://united.example.test');assert.equal(snippets.endpoint,'https://united.example.test/api/launcher');
+ for(const field of ['title','excerpt','image','url','publishedAt'])assert.ok(snippets.instruction.includes(field));
+ assert.match(snippets.csharp,/JObject.Parse\(json\)\["news"\]/);assert.match(snippets.csharp,/https:\/\/united.example.test\/api\/launcher/);assert.match(snippets.csharp,/EnsureSuccessStatusCode/);assert.match(snippets.csharp,/TimeSpan.FromSeconds\(10\)/);
+ assert.doesNotMatch(snippets.csharp,/password|csrf|api\/admin/i);assert.equal(newsIntegration(null),null);assert.equal(newsIntegration('javascript:alert(1)'),null);
+ const markup=renderToStaticMarkup(createElement(NewsIntegration,{siteUrl:'https://united.example.test'}));
+ for(const label of ['Підключення новин до лаунчера','Скопіювати посилання','Скопіювати код','C# · .NET Framework 4.8'])assert.ok(markup.includes(label));
+ assert.match(markup,/<textarea[^>]*readOnly=""/);assert.match(markup,/https:\/\/united.example.test\/api\/launcher/);
 });
 
 test('each existing page and 404 render with a valid skip-link destination', () => {

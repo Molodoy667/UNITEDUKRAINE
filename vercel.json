@@ -2,10 +2,19 @@
   "framework": "vite",
   "buildCommand": "npm run deploy:build",
   "outputDirectory": "dist",
+  "functions": {
+    "api/render.js": { "includeFiles": "dist/index.html" }
+  },
   "env": {
     "ADMIN_BRIDGE_ID": "united-main"
   },
   "rewrites": [
+    { "source": "/", "destination": "/api/render?path=/" },
+    { "source": "/contacts", "destination": "/api/render?path=/contacts" },
+    { "source": "/terms", "destination": "/api/render?path=/terms" },
+    { "source": "/privacy", "destination": "/api/render?path=/privacy" },
+    { "source": "/p/:slug", "destination": "/api/render?path=/p/:slug" },
+    { "source": "/news/:slug", "destination": "/api/render?path=/news/:slug" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }

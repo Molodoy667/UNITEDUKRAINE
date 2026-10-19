@@ -24,6 +24,8 @@
     "test:admin": "node tests/admin.test.mjs",
     "test:admin:integration": "node tests/admin.integration.mjs",
     "test:admin:bridge": "node tests/admin-bridge.test.mjs",
+    "test:site": "node tests/site.test.mjs",
+    "test:site:integration": "node tests/site.integration.mjs",
     "test:forum:integration": "node tests/forum.integration.mjs",
     "forum:mail": "node --env-file-if-exists=.env.forum.local scripts/forum-mail.mjs"
   },
