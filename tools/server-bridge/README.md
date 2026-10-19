@@ -1,5 +1,7 @@
 # UNITED UKRAINE — game administration bridge v1
 
+For the actual 2026-10-19 activation evidence, current engine restrictions, backups and unverified scenarios, see [deployment record](../../docs/ADMIN_BRIDGE_DEPLOYMENT.md).
+
 Website deployment alone does not enable game writes. This is a narrow first execution bridge, not full database administration. A successful compile or SQL test does not certify a production rollout; verify the actual server heartbeat and in-game effects separately.
 
 The requested website routing ID `ADMIN_BRIDGE_ID=united-main` is configured in `vercel.json`. It is public configuration, not a secret. Vercel supports this static runtime setting ([configuration reference](https://vercel.com/docs/project-configuration/vercel-json#env)); other database and account secrets remain in project settings. Local development still needs its own environment variable. This does not bypass heartbeat, admin level, password/TOTP, engine or explicit-dispatch checks.
