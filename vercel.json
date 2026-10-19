@@ -9,6 +9,7 @@
     "ADMIN_BRIDGE_ID": "united-main"
   },
   "rewrites": [
+    { "source": "/projects/crmp/v2/info.xml", "destination": "/api/server?format=discord" },
     { "source": "/", "destination": "/api/render?path=/" },
     { "source": "/contacts", "destination": "/api/render?path=/contacts" },
     { "source": "/terms", "destination": "/api/render?path=/terms" },
