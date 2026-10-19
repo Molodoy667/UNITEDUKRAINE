@@ -20,7 +20,7 @@ export async function adminRead<T>(action:string,params:Record<string,string|num
   if(!response.ok||!data)throw new AdminError(response.status,data?.message||'Не вдалося отримати дані панелі.');
   return data as T;
 }
-export type AdminWriteAction='preview'|'confirm'|'cancel'|'dispatch'|'site-settings-save'|'site-document-save'|'site-document-delete'|'site-document-restore';
+export type AdminWriteAction='preview'|'confirm'|'cancel'|'dispatch'|'site-settings-save'|'site-document-save'|'site-document-delete'|'site-document-restore'|'site-image-upload';
 export async function adminWrite<T>(action:AdminWriteAction,body:Record<string,unknown>,csrf:string):Promise<T>{
   const response=await fetch(`/api/admin?action=${action}`,{method:'POST',credentials:'same-origin',cache:'no-store',signal:AbortSignal.timeout(15000),headers:{'Content-Type':'application/json','X-Account-Csrf':csrf},body:JSON.stringify(body)}),data=await response.json().catch(()=>null);
   if(!response.ok||!data)throw new AdminError(response.status,data?.message||'Не вдалося завершити запит. Перевірте журнал або повторіть підтвердження.');

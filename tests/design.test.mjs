@@ -98,22 +98,30 @@ test('administration has four modules and the reserved fourth module is disabled
  assert.match(markup,/<button disabled="" aria-pressed="false"/);
 });
 
-test('CMS forms expose independent launcher flags and complete page/news editors',()=>{
- const settings={value:{version:'1',downloadUrl:'https://example.test/setup.exe',resourcesEnabled:true,resourcesUrl:'https://example.test/resources.zip',resourcesVersion:'3',resourcesUpdateUrl:'',maintenance:false,maintenanceMessage:''},version:1};
- const form=renderToStaticMarkup(createElement(SettingsForm,{group:'launcher',title:'Launcher API',setting:settings,csrf:'test',onRefresh:()=>{}}));
- assert.equal((form.match(/type="checkbox"/g)||[]).length,2);assert.match(form,/resourcesEnabled/);assert.match(form,/Зберегти налаштування/);
+test('CMS retains SEO and news/photo editors without launcher settings controls',()=>{
+ const settings={value:{siteName:'United',title:'United',description:'Description',keywords:'RP',siteUrl:'https://example.test',image:''},version:1};
+ const form=renderToStaticMarkup(createElement(SettingsForm,{group:'seo',title:'SEO',setting:settings,csrf:'test',onRefresh:()=>{}}));
+ assert.match(form,/SEO-заголовок головної/);assert.match(form,/Зберегти налаштування/);
+ const source=readFileSync(path.join(root,'src/admin/ContentAdmin.tsx'),'utf8');
+ assert.doesNotMatch(source,/sa-launcher-settings|group="launcher"|key: 'resourcesEnabled'|Налаштування Launcher API/);
+ const hub=renderToStaticMarkup(createElement(AdminHub,{catalog:null,csrf:'test'}));
+ assert.match(hub,/Новини з фото та API для Electron і Unity/);assert.doesNotMatch(hub,/Налаштування лаунчера/);
  const editor=renderToStaticMarkup(createElement(DocumentEditor,{initial:null,kind:'news',csrf:'test',onSaved:()=>{},onClose:()=>{}}));
  for(const label of ['SEO-заголовок','SEO-опис','Категорія','Короткий опис','Опублікувати на сайті','Зберегти чернетку'])assert.ok(editor.includes(label));
  assert.match(editor,/maxlength="30000"/i);
+ assert.match(editor,/type="file" accept="image\/png,image\/jpeg,image\/webp"/);
+ assert.match(editor,/Завантажити фото з комп’ютера/);
 });
 
 test('news integration handoff uses the saved domain, actual public DTO and copy controls',()=>{
- const snippets=newsIntegration('https://united.example.test');assert.equal(snippets.endpoint,'https://united.example.test/api/launcher');
+ const snippets=newsIntegration('https://united.example.test');assert.equal(snippets.endpoint,'https://united.example.test/api/launcher?action=news');
  for(const field of ['title','excerpt','image','url','publishedAt'])assert.ok(snippets.instruction.includes(field));
- assert.match(snippets.csharp,/JObject.Parse\(json\)\["news"\]/);assert.match(snippets.csharp,/https:\/\/united.example.test\/api\/launcher/);assert.match(snippets.csharp,/EnsureSuccessStatusCode/);assert.match(snippets.csharp,/TimeSpan.FromSeconds\(10\)/);
- assert.doesNotMatch(snippets.csharp,/password|csrf|api\/admin/i);assert.equal(newsIntegration(null),null);assert.equal(newsIntegration('javascript:alert(1)'),null);
+ assert.match(snippets.unity,/JsonUtility.FromJson<SiteNewsResponse>/);assert.match(snippets.unity,/UnityWebRequest.Get/);assert.match(snippets.unity,/request.timeout = 10/);assert.match(snippets.unity,/WaitForSecondsRealtime\(60f\)/);
+ assert.match(snippets.electron,/net.fetch/);assert.match(snippets.electron,/contextBridge.exposeInMainWorld/);assert.match(snippets.electron,/AbortSignal.timeout\(10000\)/);assert.doesNotMatch(snippets.electron,/innerHTML\s*=/);
+ new vm.Script(snippets.electron); // Syntax only; no Electron runtime is invoked.
+ assert.equal(newsIntegration(null),null);assert.equal(newsIntegration('javascript:alert(1)'),null);
  const markup=renderToStaticMarkup(createElement(NewsIntegration,{siteUrl:'https://united.example.test'}));
- for(const label of ['Підключення новин до лаунчера','Скопіювати посилання','Скопіювати код','C# · .NET Framework 4.8'])assert.ok(markup.includes(label));
+ for(const label of ['Підключення новин до лаунчера','Скопіювати посилання','Скопіювати код','Electron · JavaScript','Unity · C# / UnityWebRequest'])assert.ok(markup.includes(label));
  assert.match(markup,/<textarea[^>]*readOnly=""/);assert.match(markup,/https:\/\/united.example.test\/api\/launcher/);
 });
 

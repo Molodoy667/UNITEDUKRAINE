@@ -20,8 +20,8 @@ test('CMS persists through real MySQL, auth/CSRF, publication, recovery, conflic
   await pool.execute('UPDATE accounts_1101 SET admin=12 WHERE id=73');
   const login=async email=>{const response=await call(account,'/api/account?action=login',{}, {email,password:'Synthetic-Game-Password'});assert.equal(response.code,200);return {cookie:response.headers['Set-Cookie'].split(';')[0],csrf:response.body.csrf};};
   actor=await login('player@example.test');ordinary=await login('other@example.test');
-  await t.test('migration seeds only existing static documents/settings and preserves game records',async()=>{
-   assert.deepEqual(fixture.before,fixture.after);const data=(await call(site,'/api/site')).body;assert.equal(data.news.length,0);assert.equal(data.pages.length,3);assert.match(data.home.description,/\n/);assert.equal(data.launcher.resourcesEnabled,false);
+  await t.test('migrations preserve game records and seed the explicitly requested test news once',async()=>{
+   assert.deepEqual(fixture.before,fixture.after);const data=(await call(site,'/api/site')).body;assert.equal(data.news.length,1);assert.equal(data.news[0].slug,'test-launcher-news');assert.equal(data.news[0].category,'Тестова');assert.equal(data.pages.length,3);assert.match(data.home.description,/\n/);assert.equal(data.launcher.resourcesEnabled,false);
    await migrateForum();assert.equal((await call(site,'/api/site')).body.pages.length,3);
   });
   await t.test('ordinary and unauthenticated users cannot read or write CMS; CSRF/Origin enforced',async()=>{
@@ -48,8 +48,9 @@ test('CMS persists through real MySQL, auth/CSRF, publication, recovery, conflic
    const current=(await read('site-settings')).body.settings.launcher;
    const config={...current.value,version:'2.0',downloadUrl:'https://example.test/setup.exe',resourcesEnabled:true,resourcesUrl:'https://example.test/resources.zip',resourcesVersion:'3',resourcesUpdateUrl:'https://example.test/update.zip',maintenance:false};
    assert.equal((await write('site-settings-save',{group:'launcher',version:current.version,value:config})).code,200);
-   const response=await call(launcher,'/api/launcher');assert.equal(response.code,200);assert.deepEqual(response.body.launcher,config);assert.equal(response.body.news.length,1);assert.equal(response.body.news[0].url,'https://united-rp.com.ua/news/synthetic-news');assert.equal(response.body.server.port,2219);
-   assert.equal((await call(createSiteHandler({pool:()=>pool}),'/api/site')).body.news.length,1);
+   const response=await call(launcher,'/api/launcher');assert.equal(response.code,200);assert.deepEqual(response.body.launcher,config);assert.equal(response.body.news.length,2);assert.equal(response.body.news[0].url,'https://united-rp.com.ua/news/synthetic-news');assert.equal(response.body.server.port,2219);
+   assert.equal((await call(createSiteHandler({pool:()=>pool}),'/api/site')).body.news.length,2);
+   const news=await call(launcher,'/api/launcher?action=news');assert.equal(news.body.schemaVersion,1);assert.deepEqual(news.body.news,response.body.news);assert.equal(news.body.launcher,undefined);assert.equal(news.headers['Access-Control-Allow-Origin'],'*');
   });
   await t.test('delete hides content and returns 404; restore preserves body but remains draft',async()=>{
    assert.equal((await write('site-document-delete',{id:itemId,version})).code,200);version++;

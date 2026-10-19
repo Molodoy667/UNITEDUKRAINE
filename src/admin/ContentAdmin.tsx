@@ -1,49 +1,147 @@
-import {useEffect,useRef,useState} from 'react';
-import {ArrowLeft,ArrowRight,Check,ExternalLink,FilePlus2,LoaderCircle,Pencil,RefreshCw,Save,Trash2,Undo2,X} from 'lucide-react';
-import {adminRead,adminWrite,AdminError,type AdminWriteAction} from './client';
-import type {SiteDocument} from '../site/content';
+import { useEffect, useRef, useState } from 'react';
+import { ArrowLeft, ArrowRight, Check, ExternalLink, FilePlus2, LoaderCircle, Pencil, RefreshCw, Save, Trash2, Undo2, X } from 'lucide-react';
+import { adminRead, adminWrite, AdminError, type AdminWriteAction } from './client';
+import type { SiteDocument } from '../site/content';
 import NewsIntegration from './NewsIntegration';
-type Setting={value:Record<string,string|boolean>;version:number;updatedAt:string};
-type Settings=Record<string,Setting>;
-type DocumentRow=SiteDocument&{published:boolean;deleted_at:string|null;version:number};
-type Documents={items:DocumentRow[];total:number;page:number;pages:number};
-type DocumentValue=Pick<DocumentRow,'kind'|'slug'|'title'|'excerpt'|'body'|'image'|'category'|'seo_title'|'seo_description'|'published'>;
-type SaveResult={saved:boolean;id?:number;version:number;replayed:boolean;url?:string};
-const errorText=(error:unknown)=>error instanceof AdminError?error.message:'З’єднання перервано. Повторіть той самий запит, не закриваючи форму.';
-const fields:Record<string,{key:string;label:string;max?:number;type?:'textarea'|'checkbox'|'url'}[]>={
- seo:[{key:'siteName',label:'Назва сайту',max:120},{key:'title',label:'SEO-заголовок головної',max:180},{key:'description',label:'SEO-опис',max:400,type:'textarea'},{key:'keywords',label:'Ключові слова',max:500},{key:'siteUrl',label:'Основний домен (https://…)',type:'url'},{key:'image',label:'Зображення для поширення (HTTPS або /assets/…)'}],
- home:[{key:'headline',label:'Заголовок головної',max:100},{key:'highlight',label:'Виділений рядок заголовка',max:100},{key:'description',label:'Текст під заголовком',max:600,type:'textarea'},{key:'aboutTitle',label:'Заголовок «Про проєкт»',max:180},{key:'aboutText',label:'Текст «Про проєкт»',max:1200,type:'textarea'},{key:'discordUrl',label:'Офіційний Discord',type:'url'},{key:'trailerUrl',label:'Посилання на трейлер',type:'url'}],
- launcher:[{key:'version',label:'Версія лаунчера',max:80},{key:'downloadUrl',label:'Завантаження лаунчера (HTTPS)',type:'url'},{key:'resourcesEnabled',label:'Увімкнути оновлення ресурсів',type:'checkbox'},{key:'resourcesUrl',label:'Архів ресурсів (HTTPS)',type:'url'},{key:'resourcesVersion',label:'Версія ресурсів',max:80},{key:'resourcesUpdateUrl',label:'Додаткове посилання оновлення ресурсів',type:'url'},{key:'maintenance',label:'Технічне обслуговування в лаунчері',type:'checkbox'},{key:'maintenanceMessage',label:'Повідомлення про обслуговування',max:600,type:'textarea'}],
+import ImageUpload from './ImageUpload';
+type Setting = {
+    value: Record<string, string | boolean>;
+    version: number;
+    updatedAt: string;
 };
-function useWrite(csrf:string){
- const pending=useRef<{signature:string;id:string}|null>(null);
- return async(action:AdminWriteAction,body:Record<string,unknown>)=>{const signature=JSON.stringify({action,...body});if(pending.current?.signature!==signature)pending.current={signature,id:crypto.randomUUID()};return await adminWrite<SaveResult>(action,{...body,requestId:pending.current.id},csrf);};
+type Settings = Record<string, Setting>;
+type DocumentRow = SiteDocument & {
+    published: boolean;
+    deleted_at: string | null;
+    version: number;
+};
+type Documents = {
+    items: DocumentRow[];
+    total: number;
+    page: number;
+    pages: number;
+};
+type DocumentValue = Pick<DocumentRow, 'kind' | 'slug' | 'title' | 'excerpt' | 'body' | 'image' | 'category' | 'seo_title' | 'seo_description' | 'published'>;
+type SaveResult = {
+    saved: boolean;
+    id?: number;
+    version: number;
+    replayed: boolean;
+    url?: string;
+};
+const errorText = (error: unknown) => error instanceof AdminError ? error.message : 'З’єднання перервано. Повторіть той самий запит, не закриваючи форму.';
+const fields: Record<string, {
+    key: string;
+    label: string;
+    max?: number;
+    type?: 'textarea' | 'checkbox' | 'url';
+}[]> = {
+    seo: [{ key: 'siteName', label: 'Назва сайту', max: 120 }, { key: 'title', label: 'SEO-заголовок головної', max: 180 }, { key: 'description', label: 'SEO-опис', max: 400, type: 'textarea' }, { key: 'keywords', label: 'Ключові слова', max: 500 }, { key: 'siteUrl', label: 'Основний домен (https://…)', type: 'url' }, { key: 'image', label: 'Зображення для поширення (HTTPS або /assets/…)' }],
+    home: [{ key: 'headline', label: 'Заголовок головної', max: 100 }, { key: 'highlight', label: 'Виділений рядок заголовка', max: 100 }, { key: 'description', label: 'Текст під заголовком', max: 600, type: 'textarea' }, { key: 'aboutTitle', label: 'Заголовок «Про проєкт»', max: 180 }, { key: 'aboutText', label: 'Текст «Про проєкт»', max: 1200, type: 'textarea' }, { key: 'discordUrl', label: 'Офіційний Discord', type: 'url' }, { key: 'trailerUrl', label: 'Посилання на трейлер', type: 'url' }],
+};
+function useWrite(csrf: string) {
+    const pending = useRef<{
+        signature: string;
+        id: string;
+    } | null>(null);
+    return async (action: AdminWriteAction, body: Record<string, unknown>) => { const signature = JSON.stringify({ action, ...body }); if (pending.current?.signature !== signature)
+        pending.current = { signature, id: crypto.randomUUID() }; return await adminWrite<SaveResult>(action, { ...body, requestId: pending.current.id }, csrf); };
 }
-export function SettingsForm({group,title,setting,csrf,onRefresh}:{group:string;title:string;setting:Setting;csrf:string;onRefresh:()=>void}){
- const [value,setValue]=useState(setting.value),[busy,setBusy]=useState(false),[message,setMessage]=useState(''),[error,setError]=useState('');
- const write=useWrite(csrf);
- async function save(){if(busy)return;setBusy(true);setError('');setMessage('');try{await write('site-settings-save',{group,value,version:setting.version});setMessage('Збережено в базі. Публічна сторінка отримає ці дані при наступному відкритті.');onRefresh();}catch(error){setError(errorText(error));}finally{setBusy(false);}}
- return <form className="sa-form" onSubmit={event=>{event.preventDefault();void save();}}><div className="sa-title"><h3>{title}</h3><small>Версія {setting.version}</small></div><div className="sa-fields">{fields[group].map(field=><label key={field.key} className={field.type==='checkbox'?'sa-checkbox':''}>{field.type==='checkbox'?<><input type="checkbox" checked={Boolean(value[field.key])} disabled={busy} onChange={event=>setValue({...value,[field.key]:event.target.checked})}/>{field.label}</>:<>{field.label}{field.type==='textarea'?<textarea rows={3} maxLength={field.max} value={String(value[field.key])} disabled={busy} onChange={event=>setValue({...value,[field.key]:event.target.value})}/>:<input type={field.type==='url'?'url':'text'} maxLength={field.max||2048} value={String(value[field.key])} disabled={busy} onChange={event=>setValue({...value,[field.key]:event.target.value})}/>}</>}</label>)}</div>{group==='launcher'&&<p className="sa-note">resourcesEnabled — окремий перемикач, не maintenance. Для ввімкнення ресурсів обов’язкові URL та версія. Порожні посилання не замінюються демонстраційними.</p>}{error&&<p className="cp-error" role="alert">{error}</p>}{message&&<p className="sa-success" role="status"><Check size={16}/>{message}</p>}<button className="cp-primary" disabled={busy} type="submit">{busy?<LoaderCircle size={16} className="cp-spin"/>:<Save size={16}/>}Зберегти налаштування</button></form>;
+export function SettingsForm({ group, title, setting, csrf, onRefresh }: {
+    group: string;
+    title: string;
+    setting: Setting;
+    csrf: string;
+    onRefresh: () => void;
+}) {
+    const [value, setValue] = useState(setting.value), [busy, setBusy] = useState(false), [message, setMessage] = useState(''), [error, setError] = useState('');
+    const write = useWrite(csrf);
+    async function save() { if (busy)
+        return; setBusy(true); setError(''); setMessage(''); try {
+        await write('site-settings-save', { group, value, version: setting.version });
+        setMessage('Збережено в базі. Публічна сторінка отримає ці дані при наступному відкритті.');
+        onRefresh();
+    }
+    catch (error) {
+        setError(errorText(error));
+    }
+    finally {
+        setBusy(false);
+    } }
+    return <form className="sa-form" onSubmit={event => { event.preventDefault(); void save(); }}><div className="sa-title"><h3>{title}</h3><small>Версія {setting.version}</small></div><div className="sa-fields">{fields[group].map(field => <label key={field.key} className={field.type === 'checkbox' ? 'sa-checkbox' : ''}>{field.type === 'checkbox' ? <><input type="checkbox" checked={Boolean(value[field.key])} disabled={busy} onChange={event => setValue({ ...value, [field.key]: event.target.checked })}/>{field.label}</> : <>{field.label}{field.type === 'textarea' ? <textarea rows={3} maxLength={field.max} value={String(value[field.key])} disabled={busy} onChange={event => setValue({ ...value, [field.key]: event.target.value })}/> : <input type={field.type === 'url' ? 'url' : 'text'} maxLength={field.max || 2048} value={String(value[field.key])} disabled={busy} onChange={event => setValue({ ...value, [field.key]: event.target.value })}/>}</>}</label>)}</div>{error && <p className="cp-error" role="alert">{error}</p>}{message && <p className="sa-success" role="status"><Check size={16}/>{message}</p>}<button className="cp-primary" disabled={busy} type="submit">{busy ? <LoaderCircle size={16} className="cp-spin"/> : <Save size={16}/>}Зберегти налаштування</button></form>;
 }
-const newDocument=(kind:'page'|'news'):DocumentValue=>({kind,slug:'',title:'',excerpt:'',body:'',image:'',category:'',seo_title:'',seo_description:'',published:false});
-export function DocumentEditor({initial,kind,csrf,onSaved,onClose}:{initial:DocumentRow|null;kind:'page'|'news';csrf:string;onSaved:()=>void;onClose:()=>void}){
- const [value,setValue]=useState<DocumentValue>(initial?{kind:initial.kind,slug:initial.slug,title:initial.title,excerpt:initial.excerpt,body:initial.body,image:initial.image,category:initial.category,seo_title:initial.seo_title,seo_description:initial.seo_description,published:initial.published}:newDocument(kind));
- const [busy,setBusy]=useState(false),[error,setError]=useState('');const write=useWrite(csrf);
- const update=(key:keyof DocumentValue,value:string|boolean)=>setValue(previous=>({...previous,[key]:value}));
- async function save(){if(busy)return;setBusy(true);setError('');try{await write('site-document-save',{id:initial?.id??null,version:initial?.version??0,document:value});onSaved();}catch(error){setError(errorText(error));}finally{setBusy(false);}}
- return <form className="sa-form sa-document-editor" onSubmit={event=>{event.preventDefault();void save();}}><div className="sa-title"><h3>{initial?'Редагувати':'Додати'} {kind==='news'?'новину':'сторінку'}</h3><button type="button" onClick={onClose} disabled={busy} aria-label="Закрити редактор"><X size={18}/></button></div><div className="sa-fields"><label>Заголовок<input required maxLength={180} value={value.title} onChange={event=>update('title',event.target.value)} disabled={busy}/></label><label>Адреса (slug)<input required pattern="[a-z0-9]+(-[a-z0-9]+)*" maxLength={100} value={value.slug} onChange={event=>update('slug',event.target.value)} disabled={busy}/><small>{kind==='news'?'/news/':'/p/'}{value.slug||'nazva-storinky'} · contacts, terms, privacy також мають короткі адреси</small></label><label>Категорія<input maxLength={60} value={value.category} onChange={event=>update('category',event.target.value)} disabled={busy}/></label><label>Зображення (HTTPS або /assets/…)<input maxLength={2048} value={value.image} onChange={event=>update('image',event.target.value)} disabled={busy}/></label><label className="sa-wide">Короткий опис<textarea rows={2} maxLength={600} value={value.excerpt} onChange={event=>update('excerpt',event.target.value)} disabled={busy}/></label><label className="sa-wide">Текст<textarea required rows={12} maxLength={30000} value={value.body} onChange={event=>update('body',event.target.value)} disabled={busy}/><small>Звичайний текст. Порожній рядок починає новий абзац; HTML та скрипти не виконуються.</small></label><label>SEO-заголовок<input maxLength={180} value={value.seo_title} onChange={event=>update('seo_title',event.target.value)} disabled={busy}/></label><label>SEO-опис<textarea rows={2} maxLength={400} value={value.seo_description} onChange={event=>update('seo_description',event.target.value)} disabled={busy}/></label><label className="sa-checkbox"><input type="checkbox" checked={value.published} onChange={event=>update('published',event.target.checked)} disabled={busy}/>Опублікувати на сайті{kind==='news'?' та в launcher API':''}</label></div>{error&&<p role="alert" className="cp-error">{error}</p>}<button className="cp-primary" type="submit" disabled={busy}>{busy?<LoaderCircle className="cp-spin" size={16}/>:<Save size={16}/>}Зберегти {value.published?'й опублікувати':'чернетку'}</button></form>;
+const newDocument = (kind: 'page' | 'news'): DocumentValue => ({ kind, slug: '', title: '', excerpt: '', body: '', image: '', category: '', seo_title: '', seo_description: '', published: false });
+export function DocumentEditor({ initial, kind, csrf, onSaved, onClose }: {
+    initial: DocumentRow | null;
+    kind: 'page' | 'news';
+    csrf: string;
+    onSaved: () => void;
+    onClose: () => void;
+}) {
+    const [value, setValue] = useState<DocumentValue>(initial ? { kind: initial.kind, slug: initial.slug, title: initial.title, excerpt: initial.excerpt, body: initial.body, image: initial.image, category: initial.category, seo_title: initial.seo_title, seo_description: initial.seo_description, published: initial.published } : newDocument(kind));
+    const [busy, setBusy] = useState(false), [uploading, setUploading] = useState(false), [error, setError] = useState('');
+    const write = useWrite(csrf);
+    const update = (key: keyof DocumentValue, value: string | boolean) => setValue(previous => ({ ...previous, [key]: value }));
+    async function save() { if (busy || uploading)
+        return; setBusy(true); setError(''); try {
+        await write('site-document-save', { id: initial?.id ?? null, version: initial?.version ?? 0, document: value });
+        onSaved();
+    }
+    catch (error) {
+        setError(errorText(error));
+    }
+    finally {
+        setBusy(false);
+    } }
+    return <form className="sa-form sa-document-editor" onSubmit={event => { event.preventDefault(); void save(); }}><div className="sa-title"><h3>{initial ? 'Редагувати' : 'Додати'} {kind === 'news' ? 'новину' : 'сторінку'}</h3><button type="button" onClick={onClose} disabled={busy || uploading} aria-label="Закрити редактор"><X size={18}/></button></div><div className="sa-fields"><label>Заголовок<input required maxLength={180} value={value.title} onChange={event => update('title', event.target.value)} disabled={busy || uploading}/></label><label>Адреса (slug)<input required pattern="[a-z0-9]+(-[a-z0-9]+)*" maxLength={100} value={value.slug} onChange={event => update('slug', event.target.value)} disabled={busy || uploading}/><small>{kind === 'news' ? '/news/' : '/p/'}{value.slug || 'nazva-storinky'} · contacts, terms, privacy також мають короткі адреси</small></label><label>Категорія<input maxLength={60} value={value.category} onChange={event => update('category', event.target.value)} disabled={busy || uploading}/></label><ImageUpload value={value.image} csrf={csrf} disabled={busy} onChange={url=>update('image',url)} onBusyChange={setUploading}/><label className="sa-wide">Короткий опис<textarea rows={2} maxLength={600} value={value.excerpt} onChange={event => update('excerpt', event.target.value)} disabled={busy || uploading}/></label><label className="sa-wide">Текст<textarea required rows={12} maxLength={30000} value={value.body} onChange={event => update('body', event.target.value)} disabled={busy || uploading}/><small>Звичайний текст. Порожній рядок починає новий абзац; HTML та скрипти не виконуються.</small></label><label>SEO-заголовок<input maxLength={180} value={value.seo_title} onChange={event => update('seo_title', event.target.value)} disabled={busy || uploading}/></label><label>SEO-опис<textarea rows={2} maxLength={400} value={value.seo_description} onChange={event => update('seo_description', event.target.value)} disabled={busy || uploading}/></label><label className="sa-checkbox"><input type="checkbox" checked={value.published} onChange={event => update('published', event.target.checked)} disabled={busy || uploading}/>Опублікувати на сайті{kind === 'news' ? ' та в launcher API' : ''}</label></div>{error && <p role="alert" className="cp-error">{error}</p>}<button className="cp-primary" type="submit" disabled={busy || uploading}>{busy ? <LoaderCircle className="cp-spin" size={16}/> : <Save size={16}/>}Зберегти {value.published ? 'й опублікувати' : 'чернетку'}</button></form>;
 }
-function ContentManager({mode,csrf,onSiteUrl}:{mode:'seo'|'api';csrf:string;onSiteUrl:(url:string|null)=>void}){
- const kind=mode==='seo'?'page':'news';
- const [settings,setSettings]=useState<Settings|null>(null),[data,setData]=useState<Documents|null>(null),[revision,setRevision]=useState(0),[page,setPage]=useState(1),[state,setState]=useState('active'),[busy,setBusy]=useState(false),[error,setError]=useState(''),[saved,setSaved]=useState('');
- const [editor,setEditor]=useState<{item:DocumentRow|null}|null>(null),[deleting,setDeleting]=useState<DocumentRow|null>(null),[confirmed,setConfirmed]=useState(false),[writing,setWriting]=useState(false);
- const write=useWrite(csrf);
- useEffect(()=>{const controller=new AbortController();setBusy(true);setError('');Promise.all([adminRead<{settings:Settings}>('site-settings',{},controller.signal),adminRead<Documents>('site-documents',{kind,page,state},controller.signal)]).then(([next,list])=>{if(!controller.signal.aborted){setSettings(next.settings);setData(list);onSiteUrl(String(next.settings.seo.value.siteUrl));}}).catch(error=>{if(!controller.signal.aborted){setError(errorText(error));if(error instanceof AdminError&&[401,403].includes(error.status)){setSettings(null);setData(null);setEditor(null);onSiteUrl(null);}}}).finally(()=>{if(!controller.signal.aborted)setBusy(false);});return()=>controller.abort();},[mode,kind,page,state,revision,onSiteUrl]);
- async function remove(item:DocumentRow,restore=false){if(writing||(!restore&&!confirmed))return;setWriting(true);setError('');try{await write(restore?'site-document-restore':'site-document-delete',{id:item.id,version:item.version});setSaved(restore?'Відновлено як чернетку. Опублікуйте через редактор.':'Переміщено до кошика. З публічного сайту прибрано.');setDeleting(null);setRevision(v=>v+1);}catch(error){setError(errorText(error));}finally{setWriting(false);}}
- return <div className="sa-content"><div className="sa-title"><h2>{mode==='seo'?'SEO та статичні сторінки':'API та новини'}</h2><button onClick={()=>{setRevision(v=>v+1);setSaved('');}} disabled={busy||writing}><RefreshCw size={15}/>Оновити</button></div><p className="sa-note">Дані зберігаються на сервері. Доступ — тільки адміністратору рівня 12; зміни записуються до журналу. При конфлікті версій форма не перезапише чужі зміни.</p>{error&&<p className="cp-error" role="alert">{error}</p>}{saved&&<p className="sa-success" role="status">{saved}</p>}{busy&&!settings?<p role="status"><LoaderCircle size={20} className="cp-spin"/>Читаємо налаштування…</p>:settings&&<>{(mode==='seo'?['seo','home']:['launcher']).map(group=><SettingsForm key={`${group}:${settings[group].version}`} group={group} title={{seo:'Пошукова оптимізація',home:'Контент головної',launcher:'Launcher API'}[group]!} setting={settings[group]} csrf={csrf} onRefresh={()=>setRevision(v=>v+1)}/>)}{mode==='api'&&<div className="sa-endpoints"><strong>Публічні endpoint</strong><a href="/api/launcher" target="_blank" rel="noreferrer">/api/launcher<ExternalLink size={14}/></a><a href="/api/site" target="_blank" rel="noreferrer">/api/site<ExternalLink size={14}/></a><a href="/api/server" target="_blank" rel="noreferrer">/api/server<ExternalLink size={14}/></a><small>Налаштування launcher.*, опубліковані новини та підтверджений онлайн.</small></div>}<div className="sa-title"><h3>{kind==='news'?'Новини':'Статичні сторінки'}</h3><button className="cp-primary" onClick={()=>{setEditor({item:null});setSaved('');}}><FilePlus2 size={16}/>Додати</button></div><div className="sa-toolbar"><label>Показати<select value={state} onChange={event=>{setState(event.target.value);setPage(1);setEditor(null);setDeleting(null);}}><option value="active">Активні та чернетки</option><option value="trash">Кошик</option></select></label><small>Видалення — відновлюване. Відновлений запис спочатку буде чернеткою.</small></div>{editor&&<DocumentEditor key={`${editor.item?.id||'new'}:${kind}`} initial={editor.item} kind={kind} csrf={csrf} onClose={()=>setEditor(null)} onSaved={()=>{setEditor(null);setSaved('Матеріал збережено в базі.');setRevision(v=>v+1);}}/>}{data&&<><div className="sa-document-list">{data.items.length?data.items.map(item=><article key={item.id}><div><strong>{item.title}</strong><small>{item.url} · {item.deleted_at?'У кошику':item.published?'Опубліковано':'Чернетка'} · v{item.version}</small></div><div className="sa-item-actions">{!item.deleted_at&&<><button onClick={()=>{setEditor({item});setSaved('');}}><Pencil size={14}/>Редагувати</button>{item.published&&<a href={item.url} target="_blank" rel="noreferrer" aria-label={`Відкрити ${item.title}`}><ExternalLink size={15}/></a>}<button disabled={writing} onClick={()=>{setDeleting(item);setConfirmed(false);}}><Trash2 size={14}/>Видалити</button></>}{item.deleted_at&&<button disabled={writing} onClick={()=>void remove(item,true)}><Undo2 size={15}/>Відновити</button>}</div>{deleting?.id===item.id&&<form className="sa-delete" onSubmit={event=>{event.preventDefault();void remove(item);}}><p>Прибрати «{item.title}» з сайту та перемістити до кошика?</p><label className="sa-checkbox"><input type="checkbox" checked={confirmed} onChange={event=>setConfirmed(event.target.checked)} disabled={writing}/>Підтверджую видалення</label><button disabled={writing||!confirmed} type="submit">Так, до кошика</button><button disabled={writing} type="button" onClick={()=>setDeleting(null)}>Скасувати</button></form>}</article>):<p className="sa-note">Записів немає. Додайте перший матеріал.</p>}</div><nav className="cp-pagination" aria-label="Сторінки контенту"><span>Усього: {data.total}</span><div><button disabled={data.page<=1||busy} onClick={()=>setPage(data.page-1)} aria-label="Попередня сторінка"><ArrowLeft size={15}/></button><span>{data.page} / {data.pages}</span><button disabled={data.page>=data.pages||busy} onClick={()=>setPage(data.page+1)} aria-label="Наступна сторінка"><ArrowRight size={15}/></button></div></nav></>}</>}</div>;
+function ContentManager({ mode, csrf, onSiteUrl }: {
+    mode: 'seo' | 'api';
+    csrf: string;
+    onSiteUrl: (url: string | null) => void;
+}) {
+    const kind = mode === 'seo' ? 'page' : 'news';
+    const [settings, setSettings] = useState<Settings | null>(null), [data, setData] = useState<Documents | null>(null), [revision, setRevision] = useState(0), [page, setPage] = useState(1), [state, setState] = useState('active'), [busy, setBusy] = useState(false), [error, setError] = useState(''), [saved, setSaved] = useState('');
+    const [editor, setEditor] = useState<{
+        item: DocumentRow | null;
+    } | null>(null), [deleting, setDeleting] = useState<DocumentRow | null>(null), [confirmed, setConfirmed] = useState(false), [writing, setWriting] = useState(false);
+    const write = useWrite(csrf);
+    useEffect(() => { const controller = new AbortController(); setBusy(true); setError(''); Promise.all([adminRead<{
+            settings: Settings;
+        }>('site-settings', {}, controller.signal), adminRead<Documents>('site-documents', { kind, page, state }, controller.signal)]).then(([next, list]) => { if (!controller.signal.aborted) {
+        setSettings(next.settings);
+        setData(list);
+        onSiteUrl(String(next.settings.seo.value.siteUrl));
+    } }).catch(error => { if (!controller.signal.aborted) {
+        setError(errorText(error));
+        if (error instanceof AdminError && [401, 403].includes(error.status)) {
+            setSettings(null);
+            setData(null);
+            setEditor(null);
+            onSiteUrl(null);
+        }
+    } }).finally(() => { if (!controller.signal.aborted)
+        setBusy(false); }); return () => controller.abort(); }, [mode, kind, page, state, revision, onSiteUrl]);
+    async function remove(item: DocumentRow, restore = false) { if (writing || (!restore && !confirmed))
+        return; setWriting(true); setError(''); try {
+        await write(restore ? 'site-document-restore' : 'site-document-delete', { id: item.id, version: item.version });
+        setSaved(restore ? 'Відновлено як чернетку. Опублікуйте через редактор.' : 'Переміщено до кошика. З публічного сайту прибрано.');
+        setDeleting(null);
+        setRevision(v => v + 1);
+    }
+    catch (error) {
+        setError(errorText(error));
+    }
+    finally {
+        setWriting(false);
+    } }
+    return <div className="sa-content"><div className="sa-title"><h2>{mode === 'seo' ? 'SEO та статичні сторінки' : 'API та новини'}</h2><button onClick={() => { setRevision(v => v + 1); setSaved(''); }} disabled={busy || writing}><RefreshCw size={15}/>Оновити</button></div><p className="sa-note">Дані зберігаються на сервері. Доступ — тільки адміністратору рівня 12; зміни записуються до журналу. При конфлікті версій форма не перезапише чужі зміни.</p>{error && <p className="cp-error" role="alert">{error}</p>}{saved && <p className="sa-success" role="status">{saved}</p>}{busy && !settings ? <p role="status"><LoaderCircle size={20} className="cp-spin"/>Читаємо налаштування…</p> : settings && <>{mode === 'seo' && ['seo','home'].map(group=><SettingsForm key={`${group}:${settings[group].version}`} group={group} title={group==='seo'?'Пошукова оптимізація':'Контент головної'} setting={settings[group]} csrf={csrf} onRefresh={()=>setRevision(v=>v+1)}/>)}<div className="sa-title"><h3>{kind === 'news' ? 'Управління новинами' : 'Статичні сторінки'}</h3><button className="cp-primary" onClick={() => { setEditor({ item: null }); setSaved(''); }}><FilePlus2 size={16}/>{kind==='news'?'Додати новину з фото':'Додати сторінку'}</button></div><div className="sa-toolbar"><label>Показати<select value={state} onChange={event => { setState(event.target.value); setPage(1); setEditor(null); setDeleting(null); }}><option value="active">Активні та чернетки</option><option value="trash">Кошик</option></select></label><small>Видалення — відновлюване. Відновлений запис спочатку буде чернеткою.</small></div>{editor && <DocumentEditor key={`${editor.item?.id || 'new'}:${kind}`} initial={editor.item} kind={kind} csrf={csrf} onClose={() => setEditor(null)} onSaved={() => { setEditor(null); setSaved('Матеріал збережено в базі.'); setRevision(v => v + 1); }}/>}{data && <><div className="sa-document-list">{data.items.length ? data.items.map(item => <article key={item.id}><div className="sa-news-row">{item.image&&<img src={item.image} alt="" loading="lazy" referrerPolicy="no-referrer"/>}<div><strong>{item.title}</strong><small>{item.url} · {item.deleted_at ? 'У кошику' : item.published ? 'Опубліковано' : 'Чернетка'} · v{item.version}</small></div></div><div className="sa-item-actions">{!item.deleted_at && <><button onClick={() => { setEditor({ item }); setSaved(''); }}><Pencil size={14}/>Редагувати</button>{item.published && <a href={item.url} target="_blank" rel="noreferrer" aria-label={`Відкрити ${item.title}`}><ExternalLink size={15}/></a>}<button disabled={writing} onClick={() => { setDeleting(item); setConfirmed(false); }}><Trash2 size={14}/>Видалити</button></>}{item.deleted_at && <button disabled={writing} onClick={() => void remove(item, true)}><Undo2 size={15}/>Відновити</button>}</div>{deleting?.id === item.id && <form className="sa-delete" onSubmit={event => { event.preventDefault(); void remove(item); }}><p>Прибрати «{item.title}» з сайту та перемістити до кошика?</p><label className="sa-checkbox"><input type="checkbox" checked={confirmed} onChange={event => setConfirmed(event.target.checked)} disabled={writing}/>Підтверджую видалення</label><button disabled={writing || !confirmed} type="submit">Так, до кошика</button><button disabled={writing} type="button" onClick={() => setDeleting(null)}>Скасувати</button></form>}</article>) : <p className="sa-note">Записів немає. Додайте перший матеріал.</p>}</div><nav className="cp-pagination" aria-label="Сторінки контенту"><span>Усього: {data.total}</span><div><button disabled={data.page <= 1 || busy} onClick={() => setPage(data.page - 1)} aria-label="Попередня сторінка"><ArrowLeft size={15}/></button><span>{data.page} / {data.pages}</span><button disabled={data.page >= data.pages || busy} onClick={() => setPage(data.page + 1)} aria-label="Наступна сторінка"><ArrowRight size={15}/></button></div></nav></>}
+</>}</div>;
 }
-
-export default function ContentAdmin({mode,csrf}:{mode:'seo'|'api';csrf:string}){
- const [siteUrl,setSiteUrl]=useState<string|null>(null);
- return <><ContentManager mode={mode} csrf={csrf} onSiteUrl={setSiteUrl}/>{mode==='api'&&<NewsIntegration siteUrl={siteUrl}/>}</>;
+export default function ContentAdmin({ mode, csrf }: {
+    mode: 'seo' | 'api';
+    csrf: string;
+}) {
+    const [siteUrl, setSiteUrl] = useState<string | null>(null);
+    return <><ContentManager mode={mode} csrf={csrf} onSiteUrl={setSiteUrl}/>{mode === 'api' && <NewsIntegration siteUrl={siteUrl}/>}</>;
 }
