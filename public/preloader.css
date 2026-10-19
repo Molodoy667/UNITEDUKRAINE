@@ -1,0 +1,10 @@
+.site-preloader{box-sizing:border-box;min-height:65svh;width:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:24px;text-align:center;padding:24px;font-family:Manrope,Arial,sans-serif;color:#a2adbc}
+.site-preloader .site-preloader-mark{position:relative;width:95px;height:95px;flex-shrink:0;display:grid;place-items:center}
+.site-preloader .site-preloader-mark>img{display:block;width:36px;height:45px;object-fit:contain}
+.site-preloader .site-preloader-mark>span{position:absolute;inset:0;border:1px solid #f0cc7620;border-top-color:#f0cc76aa;border-radius:50%;animation:site-preloader-rotate 2s linear infinite}
+.site-preloader[role=status]>p{margin:0;font-size:12px;font-weight:400;line-height:1.7;color:#a2adbc}
+.site-preloader-screen{position:fixed;inset:0;z-index:10000;min-height:100svh;height:100%;background:#0b0f12;overflow:auto}
+.site-preloader-help{position:absolute;bottom:24px;left:24px;right:24px;font-size:11px;color:#a2adbc}
+.site-preloader-help a{color:#d6ba7c;text-decoration:underline;text-underline-offset:3px}
+@keyframes site-preloader-rotate{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.site-preloader .site-preloader-mark>span{animation:none}}

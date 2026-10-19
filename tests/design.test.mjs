@@ -51,6 +51,7 @@ const AdminHub=loadComponent('src/admin/AdminHub.tsx').default;
 const {SettingsForm,DocumentEditor}=loadComponent('src/admin/ContentAdmin.tsx');
 const {default:NewsIntegration,newsIntegration}=loadComponent('src/admin/NewsIntegration.tsx');
 const {DifferenceView,ChangeEditor,ChangeJournal}=loadComponent('src/admin/ChangeTools.tsx');
+const {default:PagePreloader,BootPreloaderReady}=loadComponent('src/ui/PagePreloader.tsx');
 const home = renderToStaticMarkup(createElement(Home));
 
 test('home keeps the existing identity and original hero asset', () => {
@@ -141,7 +142,23 @@ test('wiki renders three accessible category links, size choices and a loading s
   for(const tab of ['skins','cars','accessories'])assert.ok(markup.includes(`/wiki?tab=${tab}&amp;size=10&amp;page=1`));
   for(const size of [10,50,100])assert.match(markup,new RegExp(`<option value="${size}"`));
   assert.match(markup,/Пошук за ID або назвою/);
-  assert.match(markup,/Завантаження каталогу…/);
+  assert.match(markup,/Завантажуємо твій світ…/);
+});
+
+test('shared preloader preserves the account logo/orbit, status and reduced-motion support',()=>{
+ const inline=renderToStaticMarkup(createElement(PagePreloader)),screen=renderToStaticMarkup(createElement(PagePreloader,{fullscreen:true}));
+ assert.match(inline,/class="site-preloader" role="status" aria-live="polite" aria-atomic="true"/);
+ assert.match(inline,/src="\/assets\/logo.png" alt="" width="36" height="45"/);assert.match(inline,/Завантажуємо твій світ…/);
+ assert.match(screen,/site-preloader-screen/);assert.equal(renderToStaticMarkup(createElement(BootPreloaderReady)),'');
+ const css=readFileSync(path.join(root,'public/preloader.css'),'utf8');assert.match(css,/width:95px;height:95px/);assert.match(css,/2s linear infinite/);assert.match(css,/@media\(prefers-reduced-motion:reduce\)/);
+});
+
+test('all pages share boot/lazy/data preloaders without introducing artificial delays or removing SSR content',()=>{
+ const html=readFileSync(path.join(root,'index.html'),'utf8'),entry=readFileSync(path.join(root,'src/main.tsx'),'utf8');
+ assert.match(html,/href="\/preloader.css"/);assert.match(html,/id="site-boot-preloader"/);assert.match(html,/<div id="root"><\/div>/);assert.match(html,/<noscript><style>#site-boot-preloader\{display:none\}/);
+ assert.match(entry,/<BootPreloaderReady\/>/);assert.match(entry,/<Suspense fallback=\{<PagePreloader fullscreen\/>\}>/);assert.doesNotMatch(entry,/fallback=\{<p/);
+ for(const page of ['src/Account.tsx','src/Roulette.tsx','src/Wiki.tsx','src/Forbes.tsx','src/Home.tsx','src/site/ContentPage.tsx','src/forum/ui.tsx'])assert.match(readFileSync(path.join(root,page),'utf8'),/<PagePreloader(?: fullscreen)?\/>/,page);
+ const component=readFileSync(path.join(root,'src/ui/PagePreloader.tsx'),'utf8');assert.doesNotMatch(component,/setTimeout|setInterval/);assert.match(component,/getElementById\('site-boot-preloader'\)\?\.remove\(\)/);
 });
 
 test('Forbes navigation, real podium markup and ten table positions have accessible semantics',()=>{

@@ -2,6 +2,7 @@ import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react'
 import { ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronLeft, ChevronRight, Copy, Download, Expand, Gamepad2, Globe2, MapPin, MessageCircle, Monitor, RefreshCw, Route, Sparkles, Users, X } from 'lucide-react';
 import { Header, Footer } from '@/components/site-shell';
 import {useSite,SiteMetadata} from './site/content';
+import PagePreloader from './ui/PagePreloader';
 import { Tilt, usePageMotion } from './motion';
 
 type Status = { status: 'online' | 'unavailable'; players?: number; maxPlayers?: number; updatedAt: string; source?: string };
@@ -93,6 +94,7 @@ export default function Home() {
   }
 
   return <>
+    {contentLoading&&<PagePreloader fullscreen/>}
     <SiteMetadata/><Header />
     <main id="main-content">
       <section className="hero" aria-labelledby="hero-title">

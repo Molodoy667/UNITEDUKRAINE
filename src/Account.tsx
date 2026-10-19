@@ -5,6 +5,7 @@ import {accountApi,ApiError,type Dashboard,type Player,type Property,type Vehicl
 import type {Catalog} from './wiki/catalog';
 import './account/account.css';
 import ControlPanel from './admin/AdminHub';
+import PagePreloader from './ui/PagePreloader';
 
 const number=(value:number|string)=>new Intl.NumberFormat('uk-UA',{maximumFractionDigits:1}).format(typeof value==='string'&&/^-?\d+$/.test(value)?BigInt(value):Number(value));
 const currency=(value:number|string)=>`${number(value)} ₴`;
@@ -79,5 +80,5 @@ export default function Account(){
   useEffect(()=>{const controller=new AbortController();fetch('/wiki/catalog.json',{signal:controller.signal}).then(response=>response.ok?response.json():null).then(result=>{if(result&&Array.isArray(result.skins)&&Array.isArray(result.cars))setCatalog(result);}).catch(()=>{});return()=>controller.abort();},[]);
   async function login(email:string,password:string,code:string){const result=await accountApi<{csrf:string}>('login',{email,password,code},csrf.current);csrf.current=result.csrf;setPhase('loading');await load();}
   async function logout(){if(loggingOut)return;setLoggingOut(true);try{await accountApi('logout',{},csrf.current);++requestId.current;csrf.current='';setData(null);setMessage('');setPhase('guest');}catch(error){setMessage(error instanceof Error?error.message:'Не вдалося завершити сеанс.');}finally{setLoggingOut(false);}}
-  return <><Header/><main id="main-content" className="uc-page">{phase==='loading'?<div className="uc-loading" role="status"><div className="uc-loading-mark"><img src="/assets/logo.png" alt=""/><span/></div><p>Завантажуємо твій світ…</p></div>:phase==='error'?<section className="uc-unavailable"><Shield size={40}/><h1>Твій світ зачекає.</h1><p role="alert">{message}</p><button className="uc-button uc-button-gold" onClick={()=>void load()} disabled={refreshing}><RefreshCw size={17}/> Повторити спробу</button></section>:phase==='guest'?<Login onLogin={login}/>:data&&<AccountDashboard data={data} catalog={catalog} onLogout={()=>void logout()} onRefresh={()=>void load()} refreshing={refreshing} loggingOut={loggingOut} message={message}/>}</main><Footer/></>;
+  return <><Header/><main id="main-content" className="uc-page">{phase==='loading'?<PagePreloader/>:phase==='error'?<section className="uc-unavailable"><Shield size={40}/><h1>Твій світ зачекає.</h1><p role="alert">{message}</p><button className="uc-button uc-button-gold" onClick={()=>void load()} disabled={refreshing}><RefreshCw size={17}/> Повторити спробу</button></section>:phase==='guest'?<Login onLogin={login}/>:data&&<AccountDashboard data={data} catalog={catalog} onLogout={()=>void logout()} onRefresh={()=>void load()} refreshing={refreshing} loggingOut={loggingOut} message={message}/>}</main><Footer/></>;
 }

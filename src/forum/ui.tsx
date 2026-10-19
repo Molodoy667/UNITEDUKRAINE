@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { ArrowLeft, ArrowRight, Bold, Code, Eye, ImagePlus, Italic, Link2, List, MessageSquareQuote, Paperclip, Save, Send, X } from 'lucide-react';
 import { api, date, href, read, type RecordData } from './client';
 import { useForum } from './context';
+import PagePreloader from '../ui/PagePreloader';
 
 export function useData(action: string, params: Record<string, string | number> = {}, revision = 0, enabled = true) {
   const key = JSON.stringify(params), [state, setState] = useState<{ data: RecordData | null; error: string; loading: boolean }>({ data: null, error: '', loading: true });
@@ -15,7 +16,7 @@ export function useData(action: string, params: Record<string, string | number> 
 }
 export function Panel({ children, className = '' }: { children: ReactNode; className?: string }) { return <div className={`forum-panel ${className}`}>{children}</div>; }
 export function ErrorNotice({ children }: { children: ReactNode }) { return <p className="forum-error" role="alert">{children}</p>; }
-export function Loading() { return <div className="forum-loading" role="status"><span />Завантаження форуму…</div>; }
+export function Loading() { return <PagePreloader/>; }
 export function Empty({ children = 'Поки що тут немає публікацій.' }: { children?: ReactNode }) { return <div className="forum-empty"><MessageSquareQuote size={34} /><p>{children}</p></div>; }
 export function Badge({ children, color }: { children: ReactNode; color?: string }) { return <span className="forum-badge" style={color && /^#[\da-f]{6}$/i.test(color) ? { color, borderColor: `${color}55`, background: `${color}12` } : undefined}>{children}</span>; }
 export function Avatar({ user, size = '' }: { user: RecordData; size?: string }) {

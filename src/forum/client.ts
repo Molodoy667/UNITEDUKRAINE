@@ -14,7 +14,8 @@ export async function api(action: string, body?: unknown, signal?: AbortSignal):
 }
 export async function read(action: string, params: Record<string, string | number> = {}, signal?: AbortSignal): Promise<RecordData> {
   const query = new URLSearchParams({ action, ...Object.fromEntries(Object.entries(params).map(([key, value]) => [key, String(value)])) });
-  const response = await fetch(`/api/forum?${query}`, { credentials: 'same-origin', signal });
+  const timeout=AbortSignal.timeout(12000);
+  const response = await fetch(`/api/forum?${query}`, { credentials: 'same-origin', signal:signal?AbortSignal.any([signal,timeout]):timeout });
   let data: RecordData;
   try { data = await response.json(); } catch { throw new Error('Не вдалося прочитати відповідь форуму'); }
   if (!response.ok) throw Object.assign(new Error(data.message || 'Форум недоступний'), { status: response.status, code: data.error });
