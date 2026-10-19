@@ -17,6 +17,7 @@
     "forum:owner": "node --env-file-if-exists=.env.forum.local scripts/forum-manage.mjs owner",
     "forum:cleanup": "node --env-file-if-exists=.env.forum.local scripts/forum-manage.mjs cleanup",
     "test:forum": "node tests/forum.test.mjs",
+    "test:account": "node tests/account.test.mjs",
     "test:forum:integration": "node tests/forum.integration.mjs",
     "forum:mail": "node --env-file-if-exists=.env.forum.local scripts/forum-mail.mjs"
   },

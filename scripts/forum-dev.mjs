@@ -3,6 +3,7 @@ import forum from '../api/forum.js';
 import server from '../api/server.js';
 import health from '../api/db-health.js';
 import mail from '../api/forum-mail.js';
+import account from '../api/account.js';
 
 const port = Number(process.env.FORUM_DEV_PORT || 4174);
 createServer(async (request, response) => {
@@ -17,6 +18,7 @@ createServer(async (request, response) => {
     if (route === '/api/server') return await server(request,response);
     if (route === '/api/db-health') return await health(request,response);
     if (route === '/api/forum-mail') return await mail(request,response);
+    if (route === '/api/account') return await account(request,response);
     response.status(404).json({ message:'Not found' });
   } catch { response.status(500).json({ message:'Local API error' }); }
 }).listen(port,'127.0.0.1', () => console.log(`Local forum API: http://127.0.0.1:${port}`));
