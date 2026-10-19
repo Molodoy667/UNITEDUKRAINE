@@ -37,15 +37,15 @@ export default async function handler(request, response) {
       const config = await settings(), boards = await boardsFor(ctx.user), filter = topicFilter(ctx.user, boards);
       result = { user: ctx.user ? publicUser(ctx.user, true) : null, csrf: ctx.session?.csrf || null, boards, settings: config,
         capabilities: { email: mailConfigured(), attachments: storageConfigured(), gameLink: false },
-        stats: { users: (await one('SELECT COUNT(*) total FROM forum_users WHERE email_verified=1')).total, topics: (await one(`SELECT COUNT(*) total FROM forum_topics t WHERE ${filter.sql}`, filter.values)).total } };
+        stats: { users: (await one('SELECT COUNT(*) total FROM forum_users')).total, topics: (await one(`SELECT COUNT(*) total FROM forum_topics t WHERE ${filter.sql}`, filter.values)).total } };
     } else if (action === 'boards') result = { boards: await boardsFor(ctx.user) };
     else if (action === 'topics') result = await listTopics(ctx, query);
     else if (action === 'posts') result = await listPosts(ctx, query);
     else if (action === 'topic') result = await topicDetail(ctx, query);
     else if (action === 'members') {
       const paging = page(query), search = `%${text(query.get('q') || '', 'Пошук', 0, 32).replace(/[!%_\\]/g, char => `!${char}`)}%`;
-      const members = await rows(`SELECT u.id,u.username,u.avatar_id,u.created_at,r.name role_name,r.color role_color,IF(JSON_EXTRACT(u.preferences,'$.hideOnline')=TRUE,NULL,u.last_seen_at) last_seen_at FROM forum_users u JOIN forum_roles r ON r.id=u.role_id WHERE u.email_verified=1 AND u.username LIKE ? ESCAPE '!' ORDER BY u.id DESC LIMIT ${paging.size} OFFSET ${paging.offset}`, [search]);
-      result = { members, total: (await one("SELECT COUNT(*) total FROM forum_users WHERE email_verified=1 AND username LIKE ? ESCAPE '!'", [search])).total, ...paging };
+      const members = await rows(`SELECT u.id,u.username,u.avatar_id,u.created_at,r.name role_name,r.color role_color,IF(JSON_EXTRACT(u.preferences,'$.hideOnline')=TRUE,NULL,u.last_seen_at) last_seen_at FROM forum_users u JOIN forum_roles r ON r.id=u.role_id WHERE u.username LIKE ? ESCAPE '!' ORDER BY u.id DESC LIMIT ${paging.size} OFFSET ${paging.offset}`, [search]);
+      result = { members, total: (await one("SELECT COUNT(*) total FROM forum_users WHERE username LIKE ? ESCAPE '!'", [search])).total, ...paging };
     } else if (action === 'attachment') result = await attachmentRead(ctx, query);
     else if (action.startsWith('admin') || ['moderation','revisions'].includes(action)) result = await adminRead(ctx, action, query);
     else result = await socialRead(ctx, action, query);

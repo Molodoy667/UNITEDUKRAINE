@@ -8,7 +8,7 @@ Use `config/forum.env.example` as a list of required configuration. `.env.forum.
 
 1. Configure existing MySQL variables and `FORUM_ORIGIN` with the actual HTTPS origin.
 2. Generate independent 32-byte random hexadecimal values for `FORUM_IP_SECRET`, `FORUM_ENCRYPTION_KEY` and `FORUM_CRON_SECRET`. Preserve the encryption key in operator backups: changing it without recovery makes existing TOTP secrets unreadable.
-3. Configure a verified Resend sender (`RESEND_API_KEY`, `FORUM_MAIL_FROM`). Registration remains unavailable until mail is configured; login and existing verified accounts remain usable.
+3. Email confirmation is not required for registration or forum publishing. Configure a verified Resend sender (`RESEND_API_KEY`, `FORUM_MAIL_FROM`) only if password recovery, email changes or email notifications are needed.
 4. Configure a separate private R2 bucket and server-only credentials. Public access and custom public domains must be disabled for this bucket. Launcher-download buckets are public and unsuitable for forum evidence.
 5. Vercel runs `npm run deploy:build`, which applies `npm run forum:migrate` before the production build. The existing server-only MySQL variables must be available to the build. A migration error stops the deployment. An operator can also run the migration command manually. The runner holds an advisory lock, records checksums, applies ordered idempotent SQL and refuses modified applied migrations. Add new migration files for subsequent schema changes. MySQL DDL commits implicitly: back up first and rerun after a partially failed migration.
 6. Set `FORUM_OWNER_USERNAME`, `FORUM_OWNER_EMAIL` and a unique `FORUM_OWNER_PASSWORD` locally. Run `npm run forum:owner`, then remove the bootstrap variables. There is no public owner-setup endpoint. A second bootstrap is rejected once an owner exists.
@@ -33,7 +33,7 @@ Reference: [Cloudflare R2 presigned URLs](https://developers.cloudflare.com/r2/a
 
 ## Mail and scheduled maintenance
 
-Verification and password recovery send one-use, expiring tokens. Tokens are stored as hashes. Authenticated writes require the exact configured origin, JSON and a per-session CSRF token. Password changes/recovery invalidate other sessions.
+Registration creates an active account without sending an email-confirmation message. Password recovery and email changes still use one-use, expiring email tokens when mail is configured. Tokens are stored as hashes. Authenticated writes require the exact configured origin, JSON and a per-session CSRF token. Password changes/recovery invalidate other sessions.
 
 Changing a password also invalidates pending email-change and verification links. Confirming a new email address revokes all sessions and pending links, including recovery links delivered to the old address. Enabling TOTP revokes other sessions and pending account-security links. The active setup session remains available so the owner can finish configuring administration.
 

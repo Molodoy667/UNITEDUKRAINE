@@ -60,7 +60,7 @@ function cli(command,env={}){
   assert.equal(result.status,0,`${command}: ${result.stdout} ${result.stderr}`);return result.stdout;
 }
 function confirmation(mail){const match=mail.text.match(/http:\/\/[^\s]+/);assert.ok(match);const url=new URL(match[0]);return{token:url.searchParams.get('token'),purpose:url.searchParams.get('purpose')};}
-async function register(username){const actor=client();await call(actor,'auth.register',{username,email:`${username}@example.test`,password:'Local-Test-Password-123'});await call(actor,'auth.confirm',confirmation(mails.at(-1)));await call(actor,'bootstrap');return actor;}
+async function register(username){const actor=client();await call(actor,'auth.register',{username,email:`${username}@example.test`,password:'Local-Test-Password-123'});await db.execute('UPDATE forum_users SET email_verified=1 WHERE id=?',[actor.user.id]);await call(actor,'bootstrap');return actor;}
 const guest=client(),owner=client();let alice,bob,moderator,ownerTotpSecret;
 try{
   await test('forum persists and enforces permissions against a real local MariaDB',async t=>{
@@ -78,13 +78,14 @@ try{
       assert.equal((await call(previousSession,'bootstrap')).user,null);
       await call(owner,'admin');assert.equal((await call(owner,'bootstrap')).user.twoFactor,true);
     });
-    await t.test('registration, email confirmation and authentication reject unverified writes and CSRF',async()=>{
+    await t.test('registration works without email confirmation while CSRF and origin checks remain enforced',async()=>{
+      const previousMailCount=mails.length;
       alice=client();await call(alice,'auth.register',{username:'Alice_Player',email:'alice@example.test',password:'Local-Test-Password-123'});
-      await call(alice,'topic.create',{boardId:5,title:'Unverified topic',body:'Must not publish'},403);
-      const link=confirmation(mails.at(-1));await call(alice,'auth.confirm',link);await call(alice,'auth.confirm',link,400);
+      assert.equal(mails.length,previousMailCount,'registration must not send a verification email');
+      await call(alice,'bootstrap');assert.equal(alice.user.verified,false);
+      await call(alice,'topic.create',{boardId:5,title:'No email confirmation needed',body:'Registration grants normal forum access'});
       await call(alice,'topic.create',{boardId:5,title:'Invalid CSRF topic',body:'No write'},403,{headers:{'X-Forum-Csrf':'wrong'}});
       await call(alice,'topic.create',{boardId:5,title:'Invalid origin topic',body:'No write'},403,{headers:{Origin:'https://attacker.test'}});
-      await call(alice,'bootstrap');assert.equal(alice.user.verified,true);
       bob=await register('Bob_Player');moderator=await register('Section_Mod');
       await call(guest,'auth.login',{login:'Alice_Player',password:'wrong'},401);
     });
