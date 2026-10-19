@@ -1,0 +1,4 @@
+# Copy to scriptfiles/united_web_bridge.cfg only during an approved rollout.
+# This example intentionally leaves the bridge disabled.
+enabled=0
+bridge_id=united-main

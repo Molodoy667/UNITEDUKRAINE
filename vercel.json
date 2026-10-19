@@ -2,6 +2,9 @@
   "framework": "vite",
   "buildCommand": "npm run deploy:build",
   "outputDirectory": "dist",
+  "env": {
+    "ADMIN_BRIDGE_ID": "united-main"
+  },
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]

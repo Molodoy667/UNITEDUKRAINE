@@ -19,6 +19,11 @@
     "test:forum": "node tests/forum.test.mjs",
     "test:account": "node tests/account.test.mjs",
     "test:roulette": "node tests/roulette.integration.mjs",
+    "test:forbes": "node tests/forbes.test.mjs",
+    "test:forbes:integration": "node tests/forbes.integration.mjs",
+    "test:admin": "node tests/admin.test.mjs",
+    "test:admin:integration": "node tests/admin.integration.mjs",
+    "test:admin:bridge": "node tests/admin-bridge.test.mjs",
     "test:forum:integration": "node tests/forum.integration.mjs",
     "forum:mail": "node --env-file-if-exists=.env.forum.local scripts/forum-mail.mjs"
   },

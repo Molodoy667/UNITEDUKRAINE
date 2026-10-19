@@ -45,6 +45,9 @@ function loadComponent(relativePath) {
 const Home = loadComponent('src/Home.tsx').default;
 const Section = loadComponent('src/Section.tsx').default;
 const Wiki = loadComponent('src/Wiki.tsx').default;
+const {ForbesBoard} = loadComponent('src/Forbes.tsx');
+const ControlPanel=loadComponent('src/admin/ControlPanel.tsx').default;
+const {DifferenceView,ChangeEditor,ChangeJournal}=loadComponent('src/admin/ChangeTools.tsx');
 const home = renderToStaticMarkup(createElement(Home));
 
 test('home keeps the existing identity and original hero asset', () => {
@@ -100,4 +103,34 @@ test('wiki renders three accessible category links, size choices and a loading s
   for(const size of [10,50,100])assert.match(markup,new RegExp(`<option value="${size}"`));
   assert.match(markup,/Пошук за ID або назвою/);
   assert.match(markup,/Завантаження каталогу…/);
+});
+
+test('Forbes navigation, real podium markup and ten table positions have accessible semantics',()=>{
+  assert.match(home,/href="\/forbes"/);
+  const players=Array.from({length:13},(_,i)=>({id:i+1,rank:i+1,nickname:`Test_Player_${i+1}`,skinId:223,wealth:String(6280000000-i*1000000)}));
+  const markup=renderToStaticMarkup(createElement(ForbesBoard,{data:{basis:'cash_plus_bank',limit:13,updatedAt:new Date(0).toISOString(),players},skins:new Map([[223,'/wiki/skins/223.png']])}));
+  for(const label of ['Перше місце — Test_Player_1','Друге місце — Test_Player_2','Третє місце — Test_Player_3'])assert.ok(markup.includes(label));
+  assert.equal((markup.match(/class="fb-player-skin"/g)||[]).length,3);assert.equal((markup.match(/<tr>/g)||[]).length,11);assert.match(markup,/<table class="fb-ranking-table"/);assert.match(markup,/Test_Player_13/);assert.match(markup,/6[^\d]*280[^\d]*000[^\d]*000/);
+  const css=readFileSync(path.join(root,'src/forbes/forbes.css'),'utf8');assert.match(css,/\.fb-place-1\{grid-column:2/);assert.match(css,/\.fb-place-2\{grid-column:1/);assert.match(css,/\.fb-place-3\{grid-column:3/);
+});
+test('Forbes empty and incomplete rankings do not invent users or skin previews',()=>{
+  const render=players=>renderToStaticMarkup(createElement(ForbesBoard,{data:{basis:'cash_plus_bank',limit:13,updatedAt:new Date(0).toISOString(),players},skins:new Map()}));
+  const empty=render([]);assert.match(empty,/Перша історія ще попереду/);assert.doesNotMatch(empty,/<tbody>|fb-player-skin/);
+  const single=render([{id:1,rank:1,nickname:'Only_Player',skinId:99999,wealth:'1000'}]);assert.equal((single.match(/fb-vacant/g)||[]).length,2);assert.match(single,/СКІН #99999/);assert.doesNotMatch(single,/<img/);
+});
+
+test('game control panel exposes six real-data sections, request journal and honest execution/AI labels',()=>{
+  const markup=renderToStaticMarkup(createElement(ControlPanel,{catalog:null}));
+  assert.match(markup,/Панель керування/);assert.equal((markup.match(/class="cp-module"/g)||[]).length,6);
+  for(const label of ['Гравці','Гравці онлайн','Будинки','Бізнеси','Автомобілі','Квартири','Найбагатші гравці','Вільні будинки','AI-помічник'])assert.ok(markup.includes(label));
+  assert.match(markup,/ЕТАП 3 · СИНХРОНІЗАЦІЯ/);assert.match(markup,/ЗАПЛАНОВАНО/);assert.match(markup,/Прямий SQL-доступ закритий/);
+  assert.doesNotMatch(markup,/Private-Test-Password|players_password|Видалити гравця/);
+});
+
+test('change editor and journal distinguish stored requests from game execution; diff escapes injected names',()=>{
+  const editor=renderToStaticMarkup(createElement(ChangeEditor,{detail:{entity:'houses',item:{id:1,name:'House'},version:'test',editable:false,proposalFields:{name:{label:'Назва',kind:'text',maxLength:20}}},csrf:'test-csrf',onSaved:()=>{},onAuthError:()=>{}}));
+  assert.match(editor,/Підготувати зміни/);assert.match(editor,/без прямого запису в гру/);assert.doesNotMatch(editor,/test-csrf|Зміни застосовано/);
+  const diff=renderToStaticMarkup(createElement(DifferenceView,{changes:{name:{before:'<script>alert(1)</script>',after:'New House'}}}));
+  assert.match(diff,/Було/);assert.match(diff,/Стане після застосування/);assert.match(diff,/&lt;script&gt;/);assert.doesNotMatch(diff,/<script>/);
+  const journal=renderToStaticMarkup(createElement(ChangeJournal,{csrf:'test',revision:0,onAuthError:()=>{}}));assert.match(journal,/aria-expanded="false"/);assert.match(journal,/Заявки та журнал дій/);
 });
