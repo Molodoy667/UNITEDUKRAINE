@@ -30,6 +30,8 @@
     "test:site:media:integration": "node tests/site-media.integration.mjs",
     "test:discord": "node tests/discord-presence.test.mjs",
     "test:online": "node tests/online.test.mjs",
+    "test:resource-release": "node tests/resource-release.test.mjs",
+    "test:resource-release:integration": "node tests/resource-release.integration.mjs",
     "test:knowledge": "node tests/knowledge.test.mjs",
     "test:knowledge:integration": "node tests/knowledge.integration.mjs",
     "knowledge:validate": "node scripts/knowledge-validate.mjs",

@@ -9,6 +9,12 @@
     "ADMIN_BRIDGE_ID": "united-main"
   },
   "rewrites": [
+    { "source": "/Project/info.json", "destination": "/api/launcher?resourceAction=config" },
+    { "source": "/api/android-resources/state", "destination": "/api/launcher?resourceAction=state" },
+    { "source": "/api/android-resources/activate", "destination": "/api/launcher?resourceAction=activate" },
+    { "source": "/api/android-resources/publications/:publicationId", "destination": "/api/launcher?resourceAction=publications/:publicationId" },
+    { "source": "/api/android-resources", "destination": "/api/launcher?resourceAction=not-found" },
+    { "source": "/api/android-resources/:path*", "destination": "/api/launcher?resourceAction=not-found" },
     { "source": "/online.json", "destination": "/api/server?format=online" },
     { "source": "/api/knowledge-base", "destination": "/api/site?kbRoute=not-found" },
     { "source": "/api/knowledge-base/categories", "destination": "/api/site?kbRoute=categories" },

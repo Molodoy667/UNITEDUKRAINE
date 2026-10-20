@@ -14,7 +14,7 @@ async function call(handler,{method='GET',url=ONLINE_PATH}={}){
 test('Android mapping uses crmp_new/server 1 with integer counts from the verified snapshot',()=>{
  assert.deepEqual(clientOnlineJson(snapshot()),{crmp_new:{'1':{players:7,maxPlayers:500}}});
  assert.deepEqual(clientOnlineJson(snapshot({players:0})),{crmp_new:{'1':{players:0,maxPlayers:500}}});
- const config=JSON.parse(readFileSync(new URL('../public/Project/info.json',import.meta.url),'utf8'));
+ const config=JSON.parse(readFileSync(new URL('../data/launcher/project-info.seed.json',import.meta.url),'utf8'));
  for(const release of Object.values(config)){
   const server=release.servers[String(GAME_SERVER.id)];assert.equal(server.ip,GAME_SERVER.ip);assert.equal(server.port,GAME_SERVER.port);
  }

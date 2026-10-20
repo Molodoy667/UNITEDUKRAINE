@@ -11,7 +11,7 @@ async function call(handler,method='GET'){
  await handler({method,url:DISCORD_INFO_PATH,headers:{}},res);return res;
 }
 test('game server mapping agrees with every published Project/info.json server entry',()=>{
- const config=JSON.parse(readFileSync(new URL('../public/Project/info.json',import.meta.url),'utf8'));
+ const config=JSON.parse(readFileSync(new URL('../data/launcher/project-info.seed.json',import.meta.url),'utf8'));
  for(const release of Object.values(config)){
   const server=release.servers[String(GAME_SERVER.id)];assert.equal(server.ip,GAME_SERVER.ip);assert.equal(server.port,GAME_SERVER.port);assert.equal(server.name,GAME_SERVER.name);
  }

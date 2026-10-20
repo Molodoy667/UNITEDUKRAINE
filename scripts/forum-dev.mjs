@@ -36,6 +36,7 @@ createServer(async (request, response) => {
     if (route === '/api/site') return await site(request,response);
     if (route==='/api/knowledge-base'||route.startsWith('/api/knowledge-base/')) return await site(request,response);
     if (route === '/api/launcher') return await launcher(request,response);
+    if (route === '/Project/info.json'||route==='/api/android-resources'||route.startsWith('/api/android-resources/')) return await launcher(request,response);
     if (route === '/api/render') return await render(request,response);
     if (route === '/api/media') return await media(request,response);
     response.status(404).json({ message:'Not found' });
