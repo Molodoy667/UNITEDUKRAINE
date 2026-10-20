@@ -25,6 +25,7 @@ createServer(async (request, response) => {
     const route = new URL(request.url, 'http://localhost').pathname;
     if (route === '/api/forum') return await forum(request,response);
     if (route === '/api/server') return await server(request,response);
+    if (route === '/online.json') return await server(request,response);
     if (route === '/projects/crmp/v2/info.xml') return await server(request,response);
     if (route === '/api/db-health') return await health(request,response);
     if (route === '/api/forum-mail') return await mail(request,response);

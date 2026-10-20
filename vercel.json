@@ -9,6 +9,7 @@
     "ADMIN_BRIDGE_ID": "united-main"
   },
   "rewrites": [
+    { "source": "/online.json", "destination": "/api/server?format=online" },
     { "source": "/api/knowledge-base", "destination": "/api/site?kbRoute=not-found" },
     { "source": "/api/knowledge-base/categories", "destination": "/api/site?kbRoute=categories" },
     { "source": "/api/knowledge-base/posts/:categoryId", "destination": "/api/site?kbRoute=posts/:categoryId" },
