@@ -1,0 +1,49 @@
+CREATE TABLE IF NOT EXISTS site_knowledge_lock (
+ id TINYINT NOT NULL PRIMARY KEY
+) ENGINE=InnoDB;
+INSERT IGNORE INTO site_knowledge_lock(id) VALUES(1);
+
+CREATE TABLE IF NOT EXISTS site_kb_categories (
+ id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ parent INT NOT NULL DEFAULT 0,
+ title VARCHAR(180) NOT NULL,
+ position INT NOT NULL DEFAULT 0,
+ published TINYINT NOT NULL DEFAULT 0,
+ deleted_at DATETIME DEFAULT NULL,
+ version INT NOT NULL DEFAULT 1,
+ source_id INT DEFAULT NULL UNIQUE,
+ source_hash CHAR(64) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
+ created_by INT DEFAULT NULL,
+ updated_by INT DEFAULT NULL,
+ created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ INDEX kb_category_parent(parent,deleted_at,published,position)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS site_kb_posts (
+ id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ category_id INT NOT NULL,
+ client VARCHAR(16) NOT NULL DEFAULT 'all',
+ title VARCHAR(240) NOT NULL,
+ content MEDIUMTEXT NOT NULL,
+ position INT NOT NULL DEFAULT 0,
+ published TINYINT NOT NULL DEFAULT 0,
+ deleted_at DATETIME DEFAULT NULL,
+ version INT NOT NULL DEFAULT 1,
+ source_id INT DEFAULT NULL UNIQUE,
+ source_hash CHAR(64) CHARACTER SET ascii COLLATE ascii_bin DEFAULT NULL,
+ created_by INT DEFAULT NULL,
+ updated_by INT DEFAULT NULL,
+ created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+ INDEX kb_posts_category(category_id,deleted_at,published,position),
+ CONSTRAINT kb_posts_category FOREIGN KEY(category_id) REFERENCES site_kb_categories(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS site_kb_imports (
+ seed_key VARCHAR(100) CHARACTER SET ascii COLLATE ascii_bin NOT NULL PRIMARY KEY,
+ checksum CHAR(64) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+ categories INT NOT NULL,
+ posts INT NOT NULL,
+ imported_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

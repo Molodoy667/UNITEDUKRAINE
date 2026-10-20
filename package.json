@@ -29,6 +29,9 @@
     "test:site:media": "node tests/site-media.test.mjs",
     "test:site:media:integration": "node tests/site-media.integration.mjs",
     "test:discord": "node tests/discord-presence.test.mjs",
+    "test:knowledge": "node tests/knowledge.test.mjs",
+    "test:knowledge:integration": "node tests/knowledge.integration.mjs",
+    "knowledge:validate": "node scripts/knowledge-validate.mjs",
     "discord:http": "node scripts/discord-presence-http.mjs",
     "test:forum:integration": "node tests/forum.integration.mjs",
     "forum:mail": "node --env-file-if-exists=.env.forum.local scripts/forum-mail.mjs"

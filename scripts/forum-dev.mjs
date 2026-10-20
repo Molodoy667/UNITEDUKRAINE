@@ -33,6 +33,7 @@ createServer(async (request, response) => {
     if (route === '/api/forbes') return await forbes(request,response);
     if (route === '/api/admin') return await admin(request,response);
     if (route === '/api/site') return await site(request,response);
+    if (route==='/api/knowledge-base'||route.startsWith('/api/knowledge-base/')) return await site(request,response);
     if (route === '/api/launcher') return await launcher(request,response);
     if (route === '/api/render') return await render(request,response);
     if (route === '/api/media') return await media(request,response);

@@ -92,11 +92,11 @@ test('home exposes accessible controls without inventing database news', () => {
   assert.match(home, /role="status"/);
 });
 
-test('administration has four modules and the reserved fourth module is disabled',()=>{
+test('administration has four functional modules including knowledge base',()=>{
  const markup=renderToStaticMarkup(createElement(AdminHub,{catalog:null,csrf:'test'}));
- for(const label of ['Управління сервером','SEO та статичні сторінки','API та новини','Вільний блок'])assert.ok(markup.includes(label));
+ for(const label of ['Управління сервером','SEO та статичні сторінки','API та новини','База знань'])assert.ok(markup.includes(label));
  assert.equal((markup.match(/aria-pressed="false"/g)||[]).length,4);
- assert.match(markup,/<button disabled="" aria-pressed="false"/);
+ assert.doesNotMatch(markup,/<button disabled="" aria-pressed="false"/);
 });
 
 test('CMS retains SEO and news/photo editors without launcher settings controls',()=>{
@@ -189,4 +189,12 @@ test('change editor and journal distinguish stored requests from game execution;
   const diff=renderToStaticMarkup(createElement(DifferenceView,{changes:{name:{before:'<script>alert(1)</script>',after:'New House'}}}));
   assert.match(diff,/Було/);assert.match(diff,/Стане після застосування/);assert.match(diff,/&lt;script&gt;/);assert.doesNotMatch(diff,/<script>/);
   const journal=renderToStaticMarkup(createElement(ChangeJournal,{csrf:'test',revision:0,onAuthError:()=>{}}));assert.match(journal,/aria-expanded="false"/);assert.match(journal,/Заявки та журнал дій/);
+});
+
+test('knowledge post editor previews escaped plain text and exposes category/order/client/publication controls',()=>{
+ const {KnowledgePostEditor}=loadComponent('src/admin/KnowledgeAdmin.tsx');
+ const markup=renderToStaticMarkup(createElement(KnowledgePostEditor,{item:{id:261,category_id:1,client:'pc',title:'<img src=x>',content:'Рядок 1\r\n<script>alert(1)</script>',position:7,published:false,version:1,deleted_at:null},categories:[{id:1,parent:0,title:'Основи гри',published:true}],csrf:'never-render-this-secret',onClose(){},onSaved(){},onWorking(){}}));
+ for(const label of ['Попередній перегляд','Категорія','Порядок','Клієнт','Опублікувати статтю','Зберегти чернетку'])assert.ok(markup.includes(label),label);
+ assert.match(markup,/&lt;script&gt;alert\(1\)&lt;\/script&gt;/);assert.doesNotMatch(markup,/<script>|<img src=x>|never-render-this-secret/);
+ assert.match(markup,/Рядок 1\r\n/);assert.match(readFileSync(path.join(root,'src/admin/knowledge-admin.css'),'utf8'),/white-space:pre-wrap/);
 });

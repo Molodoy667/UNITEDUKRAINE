@@ -9,6 +9,11 @@
     "ADMIN_BRIDGE_ID": "united-main"
   },
   "rewrites": [
+    { "source": "/api/knowledge-base", "destination": "/api/site?kbRoute=not-found" },
+    { "source": "/api/knowledge-base/categories", "destination": "/api/site?kbRoute=categories" },
+    { "source": "/api/knowledge-base/posts/:categoryId", "destination": "/api/site?kbRoute=posts/:categoryId" },
+    { "source": "/api/knowledge-base/search", "destination": "/api/site?kbRoute=search" },
+    { "source": "/api/knowledge-base/:path*", "destination": "/api/site?kbRoute=not-found" },
     { "source": "/projects/crmp/v2/info.xml", "destination": "/api/server?format=discord" },
     { "source": "/", "destination": "/api/render?path=/" },
     { "source": "/contacts", "destination": "/api/render?path=/contacts" },
