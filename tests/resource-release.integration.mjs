@@ -34,6 +34,24 @@ test('persistent Android activation CAS, replay/recovery and public config on is
    assert.equal((await activate(payload(288,{filesSha256:BASELINE.filesSha256,archivesSha256:BASELINE.archivesSha256}))).body.error,'no_resource_changes');
    assert.equal((await state()).resourcesVersion,288);assert.equal(verified,0);
   });
+  await t.test('server address migration updates a previously deployed config without resetting resource versions',async()=>{
+   const initial=(await call(handler,'/Project/info.json')).body;
+   const [original]=await pool.query('SELECT revision FROM site_launcher_config WHERE id=1');
+   const persisted=structuredClone(initial);
+   for(const branch of BRANCHES){persisted[branch].Android.resourcesVersion=301;Object.assign(persisted[branch].servers['1'],{ip:'51.75.44.14',port:2219});}
+   persisted['1.7.6'].servers['2']={name:'Other',ip:'192.0.2.2',port:9000};
+   persisted.unrelated={servers:{'1':{ip:'51.75.44.14',port:2219}}};
+   const sql=readFileSync(new URL('../migrations/014_launcher_server_address.sql',import.meta.url),'utf8');
+   try{
+    await pool.execute('UPDATE site_launcher_config SET config_json=?,revision=9 WHERE id=1',[JSON.stringify(persisted)]);
+    const [changed]=await pool.query(sql);assert.equal(changed.affectedRows,1);
+    const [again]=await pool.query(sql);assert.equal(again.affectedRows,0);
+    const expected=structuredClone(persisted);
+    for(const branch of BRANCHES)Object.assign(expected[branch].servers['1'],{ip:'94.23.168.153',port:2610});
+    assert.deepEqual((await call(handler,'/Project/info.json')).body,expected);
+    const active=await state();assert.equal(active.resourcesVersion,301);assert.equal(active.configRevision,10);assert.equal(active.manifests.filesSha256,BASELINE.filesSha256);
+   }finally{await pool.execute('UPDATE site_launcher_config SET config_json=?,revision=? WHERE id=1',[JSON.stringify(initial),original[0].revision]);}
+  });
   await t.test('CDN mismatch rolls back config and leaves publicationId uncommitted',async()=>{
    const body=payload(288,{filesSha256:'f'.repeat(64)}),res=await activate(body);assert.equal(res.code,409);assert.equal(res.body.error,'manifest_hash_mismatch');
    assert.equal((await state()).resourcesVersion,288);assert.equal((await call(handler,`/api/android-resources/publications/${body.publicationId}`)).code,404);

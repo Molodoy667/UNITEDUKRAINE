@@ -48,7 +48,7 @@ test('CMS persists through real MySQL, auth/CSRF, publication, recovery, conflic
    const current=(await read('site-settings')).body.settings.launcher;
    const config={...current.value,version:'2.0',downloadUrl:'https://example.test/setup.exe',resourcesEnabled:true,resourcesUrl:'https://example.test/resources.zip',resourcesVersion:'3',resourcesUpdateUrl:'https://example.test/update.zip',maintenance:false};
    assert.equal((await write('site-settings-save',{group:'launcher',version:current.version,value:config})).code,200);
-   const response=await call(launcher,'/api/launcher');assert.equal(response.code,200);assert.deepEqual(response.body.launcher,config);assert.equal(response.body.news.length,1);assert.equal(response.body.server.port,2219);
+   const response=await call(launcher,'/api/launcher');assert.equal(response.code,200);assert.deepEqual(response.body.launcher,config);assert.equal(response.body.news.length,1);assert.deepEqual(response.body.server,{address:'94.23.168.153',port:2610});
    assert.equal((await call(createSiteHandler({pool:()=>pool}),'/api/site')).body.news.length,2);
    const news=await call(launcher,'/api/launcher?action=news');assert.equal(news.body.schemaVersion,1);assert.deepEqual(news.body.news,response.body.news);assert.equal(news.body.launcher,undefined);assert.equal(news.headers['Access-Control-Allow-Origin'],'*');
    const scoped=await call(launcher,'/api/launcher?action=news&audience=launcher');assert.equal(scoped.body.news.length,2);assert.equal(scoped.body.news[0].url,'https://united-rp.com.ua/news/synthetic-news');assert.equal(scoped.body.news[0].hasPage,false);

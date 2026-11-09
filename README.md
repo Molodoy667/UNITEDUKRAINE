@@ -31,6 +31,6 @@ Vercel runs `npm run deploy:build` to apply forum migrations and then build the 
 - Launcher download URL was not provided. Replace the launcher notification with the actual HTTPS download link when available.
 
 ## Server monitoring
-`/api/server` polls the public open.mp index for exactly `51.75.44.14:2219`. The server was absent from that index during implementation. Missing responses are shown as unavailable, never fabricated as online or offline. The UI refreshes every 60 seconds.
+`/api/server` queries `94.23.168.153:2610` via SA-MP UDP first. It falls back to a configured monitor or the public open.mp index, accepting data only for that same address. The homepage, `/online.json`, and Discord XML use this monitor. Missing responses are shown as unavailable; the UI refreshes every 60 seconds.
 
 For direct UDP polling, a standalone zero-dependency monitor is included in `server-monitor/index.mjs`. Run it on a VPS with UDP access, reverse-proxy `127.0.0.1:3081/status` over HTTPS, and set the Vercel environment variable `MONITOR_API_URL` to that HTTPS endpoint. The monitor only queries the fixed server, validates replies and caches for 30 seconds. The VPS component is not deployed by this repository's Vercel build.

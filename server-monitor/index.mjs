@@ -2,7 +2,7 @@
 // Reverse-proxy localhost:3081 over HTTPS and set MONITOR_API_URL on the Site.
 import dgram from 'node:dgram';
 import http from 'node:http';
-const host='51.75.44.14',port=2219;
+const host='94.23.168.153',port=2610;
 function query(){return new Promise(resolve=>{
  const socket=dgram.createSocket('udp4');let done=false;
  const finish=value=>{if(done)return;done=true;clearTimeout(timeout);socket.close();resolve({...value,address:`${host}:${port}`,updatedAt:new Date().toISOString(),source:'direct-query'})};

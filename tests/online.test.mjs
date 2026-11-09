@@ -18,7 +18,7 @@ test('Android mapping uses crmp_new/server 1 with integer counts from the verifi
  for(const release of Object.values(config)){
   const server=release.servers[String(GAME_SERVER.id)];assert.equal(server.ip,GAME_SERVER.ip);assert.equal(server.port,GAME_SERVER.port);
  }
- assert.equal(ONLINE_PATH,'/online.json');assert.equal(ADDRESS,'51.75.44.14:2219');
+ assert.equal(ONLINE_PATH,'/online.json');assert.equal(ADDRESS,'94.23.168.153:2610');
 });
 
 test('unknown/mismatched/untrusted counts omit the server instead of inventing zero/1000 or returning null',()=>{

@@ -79,7 +79,7 @@ test('all referenced local image assets exist', () => {
 test('initial server state does not invent live player data', () => {
   assert.match(home, /Оновлення…/);
   assert.doesNotMatch(home, /Сервер онлайн/);
-  assert.match(home, /51\.75\.44\.14:2219/);
+  assert.match(home, /94\.23\.168\.153:2610/);
 });
 
 test('home exposes accessible controls without inventing database news', () => {

@@ -6,7 +6,7 @@ import PagePreloader from './ui/PagePreloader';
 import { Tilt, usePageMotion } from './motion';
 
 type Status = { status: 'online' | 'unavailable'; players?: number; maxPlayers?: number; updatedAt: string; source?: string };
-const address = '51.75.44.14:2219';
+const address = '94.23.168.153:2610';
 export function HomeFeedCard({item}:{item:SiteDocument}){
  return <article className="news-card">
   <div className="news-image">{item.video

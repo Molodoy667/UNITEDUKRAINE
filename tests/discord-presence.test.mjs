@@ -12,14 +12,15 @@ async function call(handler,method='GET'){
 }
 test('game server mapping agrees with every published Project/info.json server entry',()=>{
  const config=JSON.parse(readFileSync(new URL('../data/launcher/project-info.seed.json',import.meta.url),'utf8'));
+ assert.deepEqual(JSON.parse(readFileSync(new URL('../Project/info.json',import.meta.url),'utf8')),config);
  for(const release of Object.values(config)){
   const server=release.servers[String(GAME_SERVER.id)];assert.equal(server.ip,GAME_SERVER.ip);assert.equal(server.port,GAME_SERVER.port);assert.equal(server.name,GAME_SERVER.name);
  }
- assert.equal(ADDRESS,'51.75.44.14:2219');
+ assert.equal(ADDRESS,'94.23.168.153:2610');
 });
 test('XML is UTF-8 with servers at the root and separate IP and port; only verified counts appear',()=>{
  const xml=discordInfoXml(snapshot());assert.match(xml,/^<\?xml version="1.0" encoding="UTF-8"\?>\n<servers>/);
- assert.match(xml,/<server id="1">/);assert.match(xml,/<name>United Ukraine \| Онлайн: 7<\/name>/);assert.match(xml,/<ip>51\.75\.44\.14<\/ip>/);assert.match(xml,/<port>2219<\/port>/);assert.match(xml,/<\/servers>\n$/);assert.doesNotMatch(xml,/Untrusted monitor|<root>|<html|ip>[^<]*:/);
+ assert.match(xml,/<server id="1">/);assert.match(xml,/<name>United Ukraine \| Онлайн: 7<\/name>/);assert.match(xml,/<ip>94\.23\.168\.153<\/ip>/);assert.match(xml,/<port>2610<\/port>/);assert.match(xml,/<\/servers>\n$/);assert.doesNotMatch(xml,/Untrusted monitor|<root>|<html|ip>[^<]*:/);
  assert.match(discordInfoXml(snapshot({players:0})),/Онлайн: 0/);
  for(const status of [null,{},snapshot({status:'unavailable'}),snapshot({players:-1}),snapshot({players:'7'}),snapshot({players:501}),snapshot({address:'other:7777'}),snapshot({maxPlayers:0}),snapshot({source:'unknown'})]){
   const value=discordInfoXml(status);assert.match(value,/<name>United Ukraine<\/name>/);assert.doesNotMatch(value,/Онлайн|<online>/);
