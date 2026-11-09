@@ -31,6 +31,7 @@ try {
     await rows('DELETE FROM forum_sessions WHERE expires_at<UTC_TIMESTAMP()');
     await rows('DELETE FROM site_account_sessions WHERE expires_at<UTC_TIMESTAMP()');
     await rows('DELETE FROM site_account_limits WHERE reset_at<UTC_TIMESTAMP()');
+    await rows('DELETE FROM site_news_videos WHERE ready=0 AND created_at<DATE_SUB(UTC_TIMESTAMP(), INTERVAL 1 DAY)');
     console.log('Expired rate-limit, token and session records removed.');
   } else if (command === 'reset-2fa') {
     const userId = id(process.env.FORUM_RECOVERY_USER_ID);

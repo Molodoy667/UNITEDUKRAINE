@@ -108,10 +108,16 @@ test('CMS retains SEO and news/photo editors without launcher settings controls'
  const hub=renderToStaticMarkup(createElement(AdminHub,{catalog:null,csrf:'test'}));
  assert.match(hub,/Новини з фото та API для Electron і Unity/);assert.doesNotMatch(hub,/Налаштування лаунчера/);
  const editor=renderToStaticMarkup(createElement(DocumentEditor,{initial:null,kind:'news',csrf:'test',onSaved:()=>{},onClose:()=>{}}));
- for(const label of ['SEO-заголовок','SEO-опис','Категорія','Короткий опис','Опублікувати на сайті','Зберегти чернетку'])assert.ok(editor.includes(label));
+ for(const label of ['SEO-заголовок','SEO-опис','Категорія','Короткий опис','Опублікувати в обраних місцях','Показувати в лаунчері','Показувати в стрічці на головній','Зберегти чернетку'])assert.ok(editor.includes(label),label);
  assert.match(editor,/maxlength="30000"/i);
  assert.match(editor,/type="file" accept="image\/png,image\/jpeg,image\/webp"/);
  assert.match(editor,/Завантажити фото з комп’ютера/);
+});
+
+test('home feed-only media renders inline playable video without a news-page link',()=>{
+ const {HomeFeedCard}=loadComponent('src/Home.tsx');
+ const markup=renderToStaticMarkup(createElement(HomeFeedCard,{item:{title:'Відео',excerpt:'Огляд',category:'',image:'',video:'/media/news/test.mp4',url:'/news/test',placement:2}}));
+ assert.match(markup,/<video[^>]*controls/);assert.match(markup,/src="\/media\/news\/test\.mp4"/);assert.doesNotMatch(markup,/<a\b|\/news\/test"/);
 });
 
 test('news integration handoff uses the saved domain, actual public DTO and copy controls',()=>{

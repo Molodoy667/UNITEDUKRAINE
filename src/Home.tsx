@@ -1,12 +1,20 @@
 import { useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 import { ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronLeft, ChevronRight, Copy, Download, Expand, Gamepad2, Globe2, MapPin, MessageCircle, Monitor, RefreshCw, Route, Sparkles, Users, X } from 'lucide-react';
 import { Header, Footer } from '@/components/site-shell';
-import {useSite,SiteMetadata} from './site/content';
+import {useSite,SiteMetadata,type SiteDocument} from './site/content';
 import PagePreloader from './ui/PagePreloader';
 import { Tilt, usePageMotion } from './motion';
 
 type Status = { status: 'online' | 'unavailable'; players?: number; maxPlayers?: number; updatedAt: string; source?: string };
 const address = '51.75.44.14:2219';
+export function HomeFeedCard({item}:{item:SiteDocument}){
+ return <article className="news-card">
+  <div className="news-image">{item.video
+   ?<video aria-label={item.title} controls playsInline preload="metadata" src={item.video} style={{width:'100%',height:'100%',objectFit:'contain',background:'#080d14'}}/>
+   :<img src={item.image||'/assets/world.jpg'} alt="" loading="lazy"/>}</div>
+  <div className="news-body"><span className="micro-label">{item.category||'UNITED JOURNAL'}</span><h3>{item.title}</h3><p style={{whiteSpace:'pre-wrap'}}>{item.excerpt||item.body}</p></div>
+ </article>;
+}
 const scenes = [
   { title: 'Місто, яке надихає', subtitle: 'Київ · атмосфера проєкту', position: '15% 25%', label: 'МІСТО' },
   { title: 'Твій власний маршрут', subtitle: 'Дороги · атмосфера проєкту', position: '15% 85%', label: 'СВОБОДА' },
@@ -135,7 +143,7 @@ export default function Home() {
       <section className="news section page-width" id="news" data-reveal><SectionLabel number="02">НА ЗВ’ЯЗКУ З ПРОЄКТОМ</SectionLabel>
         <div className="section-title"><h2>У ЦЕНТРІ <span className="gold">ПОДІЙ.</span></h2><div className="filters" aria-label="Фільтр матеріалів">{filters.map(item => <button key={item} className={filter === item ? 'active' : ''} aria-pressed={filter === item} onClick={() => setFilter(item)}>{item}</button>)}</div></div>
         <p className="editorial-note" role="status">{contentError|| (contentLoading?'Завантажуємо новини…':articles.length?'Опубліковано адміністрацією проєкту':'Опублікованих новин поки немає.')}</p>
-        <div className="news-grid">{articles.map((item, index) => (filter===filters[0]||filter===(item.category||'Новини'))&&<Tilt className="news-tilt" key={item.id} intensity={3}><a className="news-card" href={item.url} aria-label={`Читати: ${item.title}`}><div className="news-image"><img src={item.image||'/assets/world.jpg'} alt="" loading="lazy" /><span className="article-tag">{item.category||'Новини'}</span><span className="round-arrow"><ArrowUpRight size={21} /></span></div><div className="news-body"><span className="micro-label">UNITED JOURNAL <span>/ {index + 1}</span></span><h3>{item.title}</h3><p>{item.excerpt}</p><span className="read-more">Читати новину <ArrowRight size={17} /></span></div></a></Tilt>)}</div>
+        <div className="news-grid">{articles.map((item, index) => (filter===filters[0]||filter===(item.category||'Новини'))&&<Tilt className="news-tilt" key={item.id} intensity={3}>{item.placement!=null?<HomeFeedCard item={item}/>:<a className="news-card" href={item.url} aria-label={`Читати: ${item.title}`}><div className="news-image"><img src={item.image||'/assets/world.jpg'} alt="" loading="lazy" /><span className="article-tag">{item.category||'Новини'}</span><span className="round-arrow"><ArrowUpRight size={21} /></span></div><div className="news-body"><span className="micro-label">UNITED JOURNAL <span>/ {index + 1}</span></span><h3>{item.title}</h3><p>{item.excerpt}</p><span className="read-more">Читати новину <ArrowRight size={17} /></span></div></a>}</Tilt>)}</div>
       </section>
 
       <section className="start-section" id="start"><div className="start section page-width" data-reveal><SectionLabel number="03">НОВА ІСТОРІЯ ЗА ТРИ КРОКИ</SectionLabel>

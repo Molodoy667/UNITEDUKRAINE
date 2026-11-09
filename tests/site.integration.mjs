@@ -44,13 +44,14 @@ test('CMS persists through real MySQL, auth/CSRF, publication, recovery, conflic
    assert.equal((await write('site-document-save',{id:itemId,version:1,document:value('page',true)})).body.error,'stale_content');
   });
   await t.test('published news and launcher settings are synchronized across fresh public handlers',async()=>{
-   const doc=value('news',true);assert.equal((await write('site-document-save',{id:null,version:0,document:doc})).code,200);
+   const doc={...value('news',true),showInLauncher:true,showInFeed:true};assert.equal((await write('site-document-save',{id:null,version:0,document:doc})).code,200);
    const current=(await read('site-settings')).body.settings.launcher;
    const config={...current.value,version:'2.0',downloadUrl:'https://example.test/setup.exe',resourcesEnabled:true,resourcesUrl:'https://example.test/resources.zip',resourcesVersion:'3',resourcesUpdateUrl:'https://example.test/update.zip',maintenance:false};
    assert.equal((await write('site-settings-save',{group:'launcher',version:current.version,value:config})).code,200);
-   const response=await call(launcher,'/api/launcher');assert.equal(response.code,200);assert.deepEqual(response.body.launcher,config);assert.equal(response.body.news.length,2);assert.equal(response.body.news[0].url,'https://united-rp.com.ua/news/synthetic-news');assert.equal(response.body.server.port,2219);
+   const response=await call(launcher,'/api/launcher');assert.equal(response.code,200);assert.deepEqual(response.body.launcher,config);assert.equal(response.body.news.length,1);assert.equal(response.body.server.port,2219);
    assert.equal((await call(createSiteHandler({pool:()=>pool}),'/api/site')).body.news.length,2);
    const news=await call(launcher,'/api/launcher?action=news');assert.equal(news.body.schemaVersion,1);assert.deepEqual(news.body.news,response.body.news);assert.equal(news.body.launcher,undefined);assert.equal(news.headers['Access-Control-Allow-Origin'],'*');
+   const scoped=await call(launcher,'/api/launcher?action=news&audience=launcher');assert.equal(scoped.body.news.length,2);assert.equal(scoped.body.news[0].url,'https://united-rp.com.ua/news/synthetic-news');assert.equal(scoped.body.news[0].hasPage,false);
   });
   await t.test('delete hides content and returns 404; restore preserves body but remains draft',async()=>{
    assert.equal((await write('site-document-delete',{id:itemId,version})).code,200);version++;

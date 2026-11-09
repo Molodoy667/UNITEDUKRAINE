@@ -18,7 +18,7 @@ test('news photo upload persists real bytes, authorizes drafts, publishes via AP
  const png=await readFile(new URL('../public/assets/logo.png',import.meta.url)),jpeg=await readFile(new URL('../public/assets/world.jpg',import.meta.url));
  let actor,ordinary,photo,article;
  const write=(action,body,identity=actor)=>call(admin,`/api/admin?action=${action}`,identity,{requestId:randomUUID(),...body});
- const doc={kind:'news',slug:'uploaded-photo-news',title:'Synthetic upload test',excerpt:'Synthetic excerpt',body:'Synthetic body',image:'',category:'Test',seo_title:'',seo_description:'',published:false};
+ const doc={kind:'news',slug:'uploaded-photo-news',title:'Synthetic upload test',excerpt:'Synthetic excerpt',body:'Synthetic body',image:'',category:'Test',seo_title:'',seo_description:'',published:false,showInLauncher:true,showInFeed:false};
  const count=async table=>Number((await pool.query(`SELECT COUNT(*) AS n FROM ${table}`))[0][0].n);
  try{
   await pool.execute('UPDATE accounts_1101 SET admin=12 WHERE id=73');
@@ -52,7 +52,7 @@ test('news photo upload persists real bytes, authorizes drafts, publishes via AP
    const res=await write('site-document-save',{id:article.id,version:article.version,document:{...doc,published:true}});assert.equal(res.code,200);article=res.body;
    const image=await call(media,photo.url);assert.equal(image.code,200);assert.deepEqual(image.bytes,png);assert.equal(image.headers['Content-Type'],'image/png');assert.equal(image.headers['Access-Control-Allow-Origin'],'*');assert.equal(image.headers['X-Content-Type-Options'],'nosniff');
    const head=await call(media,photo.url,{},undefined,'HEAD');assert.equal(head.code,200);assert.equal(head.bytes,undefined);
-   const result=await call(news,'/api/launcher?action=news');assert.equal(result.body.schemaVersion,1);const item=result.body.news.find(n=>n.id===article.id);assert.equal(item.image,`https://united-rp.com.ua${photo.url}`);assert.equal(item.title,doc.title);assert.ok(item.publishedAt);
+   const result=await call(news,'/api/launcher?action=news&audience=launcher');assert.equal(result.body.schemaVersion,1);const item=result.body.news.find(n=>n.id===article.id);assert.equal(item.image,`https://united-rp.com.ua${photo.url}`);assert.equal(item.title,doc.title);assert.ok(item.publishedAt);
   });
   await t.test('delete hides public photo; restore as draft does not republish it',async()=>{
    let res=await write('site-document-delete',{id:article.id,version:article.version});assert.equal(res.code,200);article=res.body;assert.equal((await call(media,photo.url)).code,404);
