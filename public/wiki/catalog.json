@@ -6095,25 +6095,45 @@
     },
     {
       "id": 517,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/517.webp",
+          "variant": null
+        }
+      ],
       "name": "РАФ Латвия",
       "year": 2000
     },
     {
       "id": 518,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/518.webp",
+          "variant": null
+        }
+      ],
       "name": "ERAZ",
       "year": 1966
     },
     {
       "id": 519,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/519.webp",
+          "variant": null
+        }
+      ],
       "name": "Shamal",
       "year": 2000
     },
     {
       "id": 520,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/520.webp",
+          "variant": null
+        }
+      ],
       "name": "Винищувач",
       "year": 2000
     },
@@ -6125,37 +6145,67 @@
     },
     {
       "id": 522,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/522.webp",
+          "variant": null
+        }
+      ],
       "name": "Ducati Desmosed. RR",
       "year": 2008
     },
     {
       "id": 523,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/523.webp",
+          "variant": null
+        }
+      ],
       "name": "Поліцейський мотоцикл",
       "year": 2000
     },
     {
       "id": 524,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/524.webp",
+          "variant": null
+        }
+      ],
       "name": "Цементовоз",
       "year": 2000
     },
     {
       "id": 525,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/525.webp",
+          "variant": null
+        }
+      ],
       "name": "Евакуатор",
       "year": 2000
     },
     {
       "id": 526,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/526.webp",
+          "variant": null
+        }
+      ],
       "name": "Ford Start Sierra",
       "year": 1994
     },
     {
       "id": 527,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/527.webp",
+          "variant": null
+        }
+      ],
       "name": "Volkswagen Golf 2",
       "year": 1992
     },
