@@ -6337,43 +6337,77 @@
     },
     {
       "id": 540,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/540.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes E55",
       "year": 2003
     },
     {
       "id": 541,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/541.webp",
+          "variant": null
+        }
+      ],
       "name": "Ferrari Portofino",
       "year": 2013
     },
     {
       "id": 542,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/542.webp",
+          "variant": null
+        }
+      ],
       "name": "LUAZ 969",
       "year": 1996
     },
     {
       "id": 543,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/543.webp",
+          "variant": null
+        }
+      ],
       "name": "Tesla Model S",
       "year": 2009
     },
     {
       "id": 544,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/544.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes Unimog МЧС",
       "year": 2022
     },
     {
       "id": 545,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/545.webp",
+          "variant": null
+        }
+      ],
       "name": "Moskvich АЗЛК-400",
       "year": 1946
     },
     {
       "id": 546,
       "images": [
+        {
+          "src": "/wiki/cars/546.webp",
+          "variant": null
+        },
         {
           "src": "/wiki/cars/546.png",
           "variant": null
@@ -6384,7 +6418,12 @@
     },
     {
       "id": 547,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/547.webp",
+          "variant": null
+        }
+      ],
       "name": "Audi 80 Avant",
       "year": 1996
     },
@@ -6396,13 +6435,23 @@
     },
     {
       "id": 549,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/549.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA ОКА",
       "year": 1990
     },
     {
       "id": 550,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/550.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA 2170",
       "year": 1996
     },
