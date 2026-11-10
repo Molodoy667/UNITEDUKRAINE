@@ -6567,61 +6567,111 @@
     },
     {
       "id": 561,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/561.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA 2115",
       "year": 2000
     },
     {
       "id": 562,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/562.webp",
+          "variant": null
+        }
+      ],
       "name": "Nissan Skyline",
       "year": 2001
     },
     {
       "id": 563,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/563.webp",
+          "variant": null
+        }
+      ],
       "name": "Спас верт",
       "year": 2000
     },
     {
       "id": 564,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/564.webp",
+          "variant": null
+        }
+      ],
       "name": "RCtank",
       "year": 2000
     },
     {
       "id": 565,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/565.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA 2108",
       "year": 1991
     },
     {
       "id": 566,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/566.webp",
+          "variant": null
+        }
+      ],
       "name": "Daewoo Lanos",
       "year": 2008
     },
     {
       "id": 567,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/567.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA 2106",
       "year": 2006
     },
     {
       "id": 568,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/568.webp",
+          "variant": null
+        }
+      ],
       "name": "Bandito",
       "year": 2000
     },
     {
       "id": 569,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/569.webp",
+          "variant": null
+        }
+      ],
       "name": "Вагон",
       "year": 2000
     },
     {
       "id": 570,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/570.webp",
+          "variant": null
+        }
+      ],
       "name": "Вагон",
       "year": 2000
     },
