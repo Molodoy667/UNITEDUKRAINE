@@ -5768,19 +5768,33 @@
     },
     {
       "id": 489,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/489.webp",
+          "variant": null
+        }
+      ],
       "name": "Toyota TLC 200",
       "year": 2007
     },
     {
       "id": 490,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/490.webp",
+          "variant": null
+        }
+      ],
       "name": "Land Rover Vogue",
       "year": 2019
     },
     {
       "id": 491,
       "images": [
+        {
+          "src": "/wiki/cars/491.webp",
+          "variant": null
+        },
         {
           "src": "/wiki/cars/491.png",
           "variant": null
@@ -5791,7 +5805,12 @@
     },
     {
       "id": 492,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/492.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA 2109",
       "year": 1987
     },
@@ -5808,7 +5827,12 @@
     },
     {
       "id": 494,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/494.webp",
+          "variant": null
+        }
+      ],
       "name": "Dodge Challanger",
       "year": 2010
     },
@@ -5820,7 +5844,12 @@
     },
     {
       "id": 496,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/496.webp",
+          "variant": null
+        }
+      ],
       "name": "Opel Ascona",
       "year": 1970
     },
@@ -5848,13 +5877,23 @@
     },
     {
       "id": 499,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/499.webp",
+          "variant": null
+        }
+      ],
       "name": "GAZ NEXT",
       "year": 1989
     },
     {
       "id": 500,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/500.webp",
+          "variant": null
+        }
+      ],
       "name": "UAZ Hunter",
       "year": 2003
     },
@@ -5866,13 +5905,23 @@
     },
     {
       "id": 502,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/502.webp",
+          "variant": null
+        }
+      ],
       "name": "RollsRoyce Wraith",
       "year": 2013
     },
     {
       "id": 503,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/503.webp",
+          "variant": null
+        }
+      ],
       "name": "Nissan GT-R",
       "year": 2022
     },
