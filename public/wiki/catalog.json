@@ -6457,25 +6457,45 @@
     },
     {
       "id": 551,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/551.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW E39",
       "year": 2001
     },
     {
       "id": 552,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/552.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes Unimog Рем.дорог",
       "year": 2022
     },
     {
       "id": 553,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/553.webp",
+          "variant": null
+        }
+      ],
       "name": "Кукурузник",
       "year": 2000
     },
     {
       "id": 554,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/554.webp",
+          "variant": null
+        }
+      ],
       "name": "UAZ Patriot",
       "year": 2005
     },
@@ -6483,7 +6503,7 @@
       "id": 555,
       "images": [
         {
-          "src": "/wiki/cars/555.png",
+          "src": "/wiki/cars/555.webp",
           "variant": null
         }
       ],
@@ -6492,25 +6512,45 @@
     },
     {
       "id": 556,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/556.webp",
+          "variant": null
+        }
+      ],
       "name": "Монстр",
       "year": 2000
     },
     {
       "id": 557,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/557.webp",
+          "variant": null
+        }
+      ],
       "name": "Монстр",
       "year": 2000
     },
     {
       "id": 558,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/558.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M4",
       "year": 2013
     },
     {
       "id": 559,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/559.webp",
+          "variant": null
+        }
+      ],
       "name": "Toyota Supra",
       "year": 1986
     },
@@ -6518,7 +6558,7 @@
       "id": 560,
       "images": [
         {
-          "src": "/wiki/cars/560.png",
+          "src": "/wiki/cars/560.webp",
           "variant": null
         }
       ],
