@@ -6615,7 +6615,12 @@
     },
     {
       "id": 15094,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/bmw-x6m-f16.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW X6M F16",
       "year": 2008
     },
@@ -8140,7 +8145,12 @@
     },
     {
       "id": 15275,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/toyota-tundra.webp",
+          "variant": null
+        }
+      ],
       "name": "Toyota Tundra",
       "year": 2021
     },
