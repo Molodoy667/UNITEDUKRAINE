@@ -4654,7 +4654,12 @@
     },
     {
       "id": 403,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/403.webp",
+          "variant": null
+        }
+      ],
       "name": "ZIL Сідельний тягач",
       "year": 1992
     },
@@ -4682,19 +4687,34 @@
     },
     {
       "id": 406,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/406.webp",
+          "variant": null
+        }
+      ],
       "name": "ZIL 130",
       "year": 1963
     },
     {
       "id": 407,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/407.webp",
+          "variant": null
+        }
+      ],
       "name": "KAMAZ Пожежна машина",
       "year": 2022
     },
     {
       "id": 408,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/408.webp",
+          "variant": null
+        }
+      ],
       "name": "Сміттєвоз",
       "year": 2000
     },
@@ -4744,13 +4764,23 @@
     },
     {
       "id": 413,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/413.webp",
+          "variant": null
+        }
+      ],
       "name": "PAZ 672",
       "year": 1970
     },
     {
       "id": 414,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/414.webp",
+          "variant": null
+        }
+      ],
       "name": "LIAZ 5256",
       "year": 1988
     },
@@ -4767,7 +4797,12 @@
     },
     {
       "id": 416,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/416.webp",
+          "variant": null
+        }
+      ],
       "name": "Швидка допомога",
       "year": 2000
     },
@@ -4779,7 +4814,12 @@
     },
     {
       "id": 418,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/418.webp",
+          "variant": null
+        }
+      ],
       "name": "Moonbeam",
       "year": 2000
     },
@@ -4797,7 +4837,12 @@
     },
     {
       "id": 420,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/420.webp",
+          "variant": null
+        }
+      ],
       "name": "Таксі",
       "year": 2000
     },
@@ -4825,7 +4870,12 @@
     },
     {
       "id": 423,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/423.webp",
+          "variant": null
+        }
+      ],
       "name": "MrWhoop",
       "year": 2000
     },
