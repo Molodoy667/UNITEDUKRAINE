@@ -6211,37 +6211,66 @@
     },
     {
       "id": 528,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/528.webp",
+          "variant": null
+        }
+      ],
       "name": "Катафалк",
       "year": 2000
     },
     {
       "id": 529,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/529.webp",
+          "variant": null
+        }
+      ],
       "name": "W126",
       "year": 2000
     },
     {
       "id": 530,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/530.webp",
+          "variant": null
+        }
+      ],
       "name": "Навантажувач",
       "year": 2000
     },
     {
       "id": 531,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/531.webp",
+          "variant": null
+        }
+      ],
       "name": "Трактор",
       "year": 2000
     },
     {
       "id": 532,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/532.webp",
+          "variant": null
+        }
+      ],
       "name": "Комбайн",
       "year": 2000
     },
     {
       "id": 533,
       "images": [
+        {
+          "src": "/wiki/cars/533.webp",
+          "variant": null
+        },
         {
           "src": "/wiki/cars/533.png",
           "variant": null
@@ -6252,25 +6281,45 @@
     },
     {
       "id": 534,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/534.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW E30",
       "year": 1994
     },
     {
       "id": 535,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/535.webp",
+          "variant": null
+        }
+      ],
       "name": "Impreza WRX",
       "year": 2000
     },
     {
       "id": 536,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/536.webp",
+          "variant": null
+        }
+      ],
       "name": "Volvo 240",
       "year": 1993
     },
     {
       "id": 537,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/537.webp",
+          "variant": null
+        }
+      ],
       "name": "Blade",
       "year": 2000
     },
