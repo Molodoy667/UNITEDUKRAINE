@@ -5325,13 +5325,23 @@
     },
     {
       "id": 458,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/458.webp",
+          "variant": null
+        }
+      ],
       "name": "Audi A4",
       "year": 2001
     },
     {
       "id": 459,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/459.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes Vito",
       "year": 2003
     },
@@ -5542,6 +5552,10 @@
       "id": 474,
       "images": [
         {
+          "src": "/wiki/cars/474.webp",
+          "variant": null
+        },
+        {
           "src": "/wiki/cars/474.png",
           "variant": null
         },
@@ -5591,7 +5605,12 @@
     },
     {
       "id": 475,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/475.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW X5",
       "year": 1999
     },
@@ -5603,7 +5622,12 @@
     },
     {
       "id": 477,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/477.webp",
+          "variant": null
+        }
+      ],
       "name": "Mazda RX-7",
       "year": 1992
     },
@@ -5616,6 +5640,10 @@
     {
       "id": 479,
       "images": [
+        {
+          "src": "/wiki/cars/479.webp",
+          "variant": null
+        },
         {
           "src": "/wiki/cars/479.png",
           "variant": null
@@ -5637,7 +5665,12 @@
     },
     {
       "id": 481,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/481.webp",
+          "variant": null
+        }
+      ],
       "name": "BMX",
       "year": 1995
     },
@@ -5649,13 +5682,23 @@
     },
     {
       "id": 483,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/483.webp",
+          "variant": null
+        }
+      ],
       "name": "PAZ 3205",
       "year": 2000
     },
     {
       "id": 484,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/484.webp",
+          "variant": null
+        }
+      ],
       "name": "Теплохід",
       "year": 2000
     },
@@ -5667,7 +5710,12 @@
     },
     {
       "id": 486,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/486.webp",
+          "variant": null
+        }
+      ],
       "name": "Бульдозер",
       "year": 2000
     },
