@@ -4626,7 +4626,12 @@
   "cars": [
     {
       "id": 400,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/400.webp",
+          "variant": null
+        }
+      ],
       "name": "Porshe Cayenne",
       "year": 2023
     },
@@ -4638,7 +4643,12 @@
     },
     {
       "id": 402,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/402.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes E63 AMG",
       "year": 2013
     },
@@ -4690,7 +4700,12 @@
     },
     {
       "id": 409,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/409.webp",
+          "variant": null
+        }
+      ],
       "name": "RollsRoyce",
       "year": 2003
     },
@@ -4741,7 +4756,12 @@
     },
     {
       "id": 415,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/415.webp",
+          "variant": null
+        }
+      ],
       "name": "Lamborghini Aventador",
       "year": 2011
     },
@@ -5068,7 +5088,12 @@
     },
     {
       "id": 451,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/451.webp",
+          "variant": null
+        }
+      ],
       "name": "Ferrari 488 GTB",
       "year": 2012
     },
@@ -5357,7 +5382,12 @@
     },
     {
       "id": 480,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/480.webp",
+          "variant": null
+        }
+      ],
       "name": "Audi R8",
       "year": 2006
     },
@@ -5981,7 +6011,12 @@
     },
     {
       "id": 579,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/579.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes G65",
       "year": 2015
     },
@@ -6520,7 +6555,12 @@
     },
     {
       "id": 15085,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15085.webp",
+          "variant": null
+        }
+      ],
       "name": "Bugatti Chiron",
       "year": 2016
     },
@@ -6617,7 +6657,7 @@
       "id": 15094,
       "images": [
         {
-          "src": "/wiki/cars/15094.png",
+          "src": "/wiki/cars/15094.webp",
           "variant": null
         }
       ],
@@ -8024,7 +8064,12 @@
     },
     {
       "id": 15258,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15258.webp",
+          "variant": null
+        }
+      ],
       "name": "Toyota Supra F1",
       "year": 2001
     },
@@ -8147,7 +8192,7 @@
       "id": 15275,
       "images": [
         {
-          "src": "/wiki/cars/15275.png",
+          "src": "/wiki/cars/15275.webp",
           "variant": null
         }
       ],
