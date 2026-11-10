@@ -4650,13 +4650,23 @@
     },
     {
       "id": 404,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/car-concepts/volvo-940.webp",
+          "variant": null
+        }
+      ],
       "name": "Volvo 940",
       "year": 1990
     },
     {
       "id": 405,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/car-concepts/audi-rs6-avant.webp",
+          "variant": null
+        }
+      ],
       "name": "Audi RS-6 Avant",
       "year": 2002
     },
@@ -4686,19 +4696,34 @@
     },
     {
       "id": 410,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/car-concepts/mercedes-c63s.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes C63S",
       "year": 2019
     },
     {
       "id": 411,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/car-concepts/mitsubishi-evo.webp",
+          "variant": null
+        }
+      ],
       "name": "Mitsubishi EVO",
       "year": 2016
     },
     {
       "id": 412,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/car-concepts/mercedes-w123.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes W123",
       "year": 1975
     },
@@ -4758,13 +4783,23 @@
     },
     {
       "id": 421,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/car-concepts/peugeot-406.webp",
+          "variant": null
+        }
+      ],
       "name": "Peugeot Peugeot 406",
       "year": 2005
     },
     {
       "id": 422,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/car-concepts/jeep-gc.webp",
+          "variant": null
+        }
+      ],
       "name": "Jeep GC",
       "year": 2002
     },
@@ -4788,7 +4823,12 @@
     },
     {
       "id": 426,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/car-concepts/daewoo-matiz-l.webp",
+          "variant": null
+        }
+      ],
       "name": "Daewoo Matiz L",
       "year": 2022
     },
@@ -4941,7 +4981,12 @@
     },
     {
       "id": 439,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/car-concepts/lada-2101.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA 2101",
       "year": 1970
     },
@@ -4959,7 +5004,12 @@
     },
     {
       "id": 442,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/car-concepts/gaz-m20.webp",
+          "variant": null
+        }
+      ],
       "name": "GAZ М20",
       "year": 2000
     },
