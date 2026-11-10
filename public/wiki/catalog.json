@@ -6677,13 +6677,23 @@
     },
     {
       "id": 571,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/571.webp",
+          "variant": null
+        }
+      ],
       "name": "Карт",
       "year": 2000
     },
     {
       "id": 572,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/572.webp",
+          "variant": null
+        }
+      ],
       "name": "онокосилка",
       "year": 2000
     },
@@ -6691,7 +6701,7 @@
       "id": 573,
       "images": [
         {
-          "src": "/wiki/cars/573.png",
+          "src": "/wiki/cars/573.webp",
           "variant": null
         }
       ],
@@ -6700,31 +6710,56 @@
     },
     {
       "id": 574,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/574.webp",
+          "variant": null
+        }
+      ],
       "name": "Sweeper",
       "year": 2000
     },
     {
       "id": 575,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/575.webp",
+          "variant": null
+        }
+      ],
       "name": "Уборш улиц",
       "year": 2000
     },
     {
       "id": 576,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/576.webp",
+          "variant": null
+        }
+      ],
       "name": "Moskvich АЗЛК-408",
       "year": 1964
     },
     {
       "id": 577,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/577.webp",
+          "variant": null
+        }
+      ],
       "name": "AT 400",
       "year": 2000
     },
     {
       "id": 578,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/578.webp",
+          "variant": null
+        }
+      ],
       "name": "Борт",
       "year": 2000
     },
@@ -6741,13 +6776,23 @@
     },
     {
       "id": 580,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/580.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes ZЗ-13 \"Чайка\"",
       "year": 2000
     },
     {
       "id": 581,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/581.webp",
+          "variant": null
+        }
+      ],
       "name": "Suzuki Hayabusa",
       "year": 2000
     },
