@@ -5208,7 +5208,12 @@
     },
     {
       "id": 446,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/446.webp",
+          "variant": null
+        }
+      ],
       "name": "Scania Squalo",
       "year": 2014
     },
@@ -5269,7 +5274,12 @@
     },
     {
       "id": 452,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/452.webp",
+          "variant": null
+        }
+      ],
       "name": "Scania Speeder",
       "year": 2000
     },
@@ -5286,7 +5296,12 @@
     },
     {
       "id": 454,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/454.webp",
+          "variant": null
+        }
+      ],
       "name": "Scania Tropic",
       "year": 2000
     },
@@ -5538,13 +5553,23 @@
     },
     {
       "id": 472,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/472.webp",
+          "variant": null
+        }
+      ],
       "name": "Coastg",
       "year": 2000
     },
     {
       "id": 473,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/473.webp",
+          "variant": null
+        }
+      ],
       "name": "Scania Dinghy",
       "year": 2000
     },
@@ -5721,13 +5746,23 @@
     },
     {
       "id": 487,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/487.webp",
+          "variant": null
+        }
+      ],
       "name": "Robinson R44",
       "year": 1992
     },
     {
       "id": 488,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/488.webp",
+          "variant": null
+        }
+      ],
       "name": "News Верт",
       "year": 2000
     },
@@ -5762,7 +5797,12 @@
     },
     {
       "id": 493,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/493.webp",
+          "variant": null
+        }
+      ],
       "name": "Jaguar Jetmax",
       "year": 2010
     },
@@ -5786,13 +5826,23 @@
     },
     {
       "id": 497,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/497.webp",
+          "variant": null
+        }
+      ],
       "name": "Polmav",
       "year": 2000
     },
     {
       "id": 498,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/498.webp",
+          "variant": null
+        }
+      ],
       "name": "Поліцейський гелікоптер",
       "year": 2000
     },
