@@ -1,5 +1,9 @@
 # Wiki catalog
 
+## Concept car previews
+
+The first page of the Cars tab includes ten visual concepts in `public/wiki/car-concepts/`. They are separate from the ID-based game catalog because their exact resource IDs are not confirmed. The source PNGs were resized to 1400 × 788 WebP at quality 86; the ten files together are about 95% smaller than the originals. A matching car search shows its concept preview when available.
+
 `/wiki` is a React view with skins, cars and accessories, ID/name search, 10/50/100 items per page and URL-backed pagination (`tab`, `size`, `page`, `q`). Browser Back/Forward restores selection. Previews are local static files; no game database or third-party CDN is required.
 
 Imported from the operator-provided `uiresources` folder: 740 skin previews (including four variants), 693 accessory previews and 64 car preview files representing 19 model IDs. Additional static resolution found 178 car mappings: 38 prize images, 128 carsharing colors/views and 12 visually reviewed Battle Pass/main-menu reward images. The catalog now has 519 IDs (513 from the vehicle reference plus six additional image-only IDs), with previews for 75 models and 242 PNG files including variants. The remaining 444 catalog IDs have no confirmed preview in the reviewed image mappings. `public/wiki/car-sources.json` records the additional ID-to-resource-path mappings. Models without supplied previews are explicitly labelled; no unrelated image is substituted. The source `-1.png` accessory placeholder is not treated as an actual item.
