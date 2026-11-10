@@ -5878,7 +5878,12 @@
     },
     {
       "id": 495,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/495.webp",
+          "variant": null
+        }
+      ],
       "name": "Ford Start Raptor",
       "year": 2014
     },
@@ -5973,25 +5978,45 @@
     },
     {
       "id": 505,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/505.webp",
+          "variant": null
+        }
+      ],
       "name": "Bentley Bentyaga",
       "year": 2015
     },
     {
       "id": 506,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/506.webp",
+          "variant": null
+        }
+      ],
       "name": "Porshe 911",
       "year": 2011
     },
     {
       "id": 507,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/507.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW E34",
       "year": 1988
     },
     {
       "id": 508,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/508.webp",
+          "variant": null
+        }
+      ],
       "name": "Ford Start Raptor",
       "year": 2008
     },
@@ -6015,31 +6040,56 @@
     },
     {
       "id": 512,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/512.webp",
+          "variant": null
+        }
+      ],
       "name": "Cropdast",
       "year": 2000
     },
     {
       "id": 513,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/513.webp",
+          "variant": null
+        }
+      ],
       "name": "Stunt",
       "year": 2000
     },
     {
       "id": 514,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/514.webp",
+          "variant": null
+        }
+      ],
       "name": "GAZ 5410",
       "year": 1980
     },
     {
       "id": 515,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/515.webp",
+          "variant": null
+        }
+      ],
       "name": "Volvo FH",
       "year": 2013
     },
     {
       "id": 516,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/516.webp",
+          "variant": null
+        }
+      ],
       "name": "Ford Start Focus 3",
       "year": 2014
     },
