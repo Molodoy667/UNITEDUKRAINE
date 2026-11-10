@@ -4808,7 +4808,12 @@
     },
     {
       "id": 417,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/417.webp",
+          "variant": null
+        }
+      ],
       "name": "Leviathn",
       "year": 2000
     },
@@ -4826,6 +4831,10 @@
     {
       "id": 419,
       "images": [
+        {
+          "src": "/wiki/cars/419.webp",
+          "variant": null
+        },
         {
           "src": "/wiki/cars/419.png",
           "variant": null
@@ -4892,7 +4901,12 @@
     },
     {
       "id": 425,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/425.webp",
+          "variant": null
+        }
+      ],
       "name": "Hunter",
       "year": 2000
     },
@@ -4966,7 +4980,12 @@
     },
     {
       "id": 430,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/430.webp",
+          "variant": null
+        }
+      ],
       "name": "Predator",
       "year": 2000
     },
@@ -4983,7 +5002,12 @@
     },
     {
       "id": 432,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/432.webp",
+          "variant": null
+        }
+      ],
       "name": "Танк",
       "year": 2000
     },
@@ -5011,7 +5035,12 @@
     },
     {
       "id": 435,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/435.webp",
+          "variant": null
+        }
+      ],
       "name": "Прицеп",
       "year": 2000
     },
@@ -5185,7 +5214,12 @@
     },
     {
       "id": 447,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/447.webp",
+          "variant": null
+        }
+      ],
       "name": "Водний гелікоптер",
       "year": 2000
     },
@@ -5213,7 +5247,12 @@
     },
     {
       "id": 450,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/450.webp",
+          "variant": null
+        }
+      ],
       "name": "Прицеп",
       "year": 2000
     },
@@ -5236,7 +5275,12 @@
     },
     {
       "id": 453,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/453.webp",
+          "variant": null
+        }
+      ],
       "name": "Reefer",
       "year": 2000
     },
@@ -5293,7 +5337,12 @@
     },
     {
       "id": 460,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/460.webp",
+          "variant": null
+        }
+      ],
       "name": "Гідролітак",
       "year": 2000
     },
