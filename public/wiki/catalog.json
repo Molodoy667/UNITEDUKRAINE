@@ -7980,25 +7980,45 @@
     },
     {
       "id": 15117,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15117.webp",
+          "variant": null
+        }
+      ],
       "name": "UAZ Инкассация",
       "year": 2008
     },
     {
       "id": 15118,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15118.webp",
+          "variant": null
+        }
+      ],
       "name": "Toyota Prado 2016",
       "year": 2016
     },
     {
       "id": 15119,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15119.webp",
+          "variant": null
+        }
+      ],
       "name": "UAZ Хантер",
       "year": 2003
     },
     {
       "id": 15120,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15120.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes E63",
       "year": 2013
     },
@@ -8006,68 +8026,8 @@
       "id": 15121,
       "images": [
         {
-          "src": "/wiki/cars/15121_1.png",
-          "variant": 1
-        },
-        {
-          "src": "/wiki/cars/15121_2.png",
-          "variant": 2
-        },
-        {
-          "src": "/wiki/cars/15121_3.png",
-          "variant": 3
-        },
-        {
-          "src": "/wiki/cars/15121_4.png",
-          "variant": 4
-        },
-        {
-          "src": "/wiki/cars/15121_5.png",
-          "variant": 5
-        },
-        {
-          "src": "/wiki/cars/15121_6.png",
-          "variant": 6
-        },
-        {
-          "src": "/wiki/cars/15121_carsharing_0.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1"
-        },
-        {
-          "src": "/wiki/cars/15121_carsharing_0_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15121_carsharing_1.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2"
-        },
-        {
-          "src": "/wiki/cars/15121_carsharing_1_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15121_carsharing_2.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3"
-        },
-        {
-          "src": "/wiki/cars/15121_carsharing_2_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15121_carsharing_3.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4"
-        },
-        {
-          "src": "/wiki/cars/15121_carsharing_3_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4 · спереду"
+          "src": "/wiki/cars/15121.webp",
+          "variant": null
         }
       ],
       "name": "LADA Vesta",
@@ -8075,13 +8035,23 @@
     },
     {
       "id": 15124,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15124.webp",
+          "variant": null
+        }
+      ],
       "name": "GAZ 3102",
       "year": 1982
     },
     {
       "id": 15125,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15125.webp",
+          "variant": null
+        }
+      ],
       "name": "Mitsubishi Lancer X",
       "year": 2018
     },
@@ -8089,7 +8059,7 @@
       "id": 15126,
       "images": [
         {
-          "src": "/wiki/cars/15126.png",
+          "src": "/wiki/cars/15126.webp",
           "variant": null
         }
       ],
@@ -8098,13 +8068,23 @@
     },
     {
       "id": 15127,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15127.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW 1000R",
       "year": 2020
     },
     {
       "id": 15128,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15128.webp",
+          "variant": null
+        }
+      ],
       "name": "Toyota Camry 40",
       "year": 2006
     },
