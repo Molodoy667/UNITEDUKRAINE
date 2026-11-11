@@ -9410,19 +9410,34 @@
     },
     {
       "id": 15255,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15255.webp",
+          "variant": null
+        }
+      ],
       "name": "Mazda RX-7 F3",
       "year": 2002
     },
     {
       "id": 15256,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15256.webp",
+          "variant": null
+        }
+      ],
       "name": "Mitsubishi Lancer Evo F3",
       "year": 2006
     },
     {
       "id": 15257,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15257.webp",
+          "variant": null
+        }
+      ],
       "name": "Nissan Skyline GTR F2",
       "year": 2002
     },
@@ -9441,7 +9456,7 @@
       "id": 15259,
       "images": [
         {
-          "src": "/wiki/cars/15259.png",
+          "src": "/wiki/cars/15259.webp",
           "variant": null
         }
       ],
@@ -9450,13 +9465,23 @@
     },
     {
       "id": 15260,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15260.webp",
+          "variant": null
+        }
+      ],
       "name": "Ford Transit TK",
       "year": 2010
     },
     {
       "id": 15261,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15261.webp",
+          "variant": null
+        }
+      ],
       "name": "Lamborghini Centenario",
       "year": 2018
     },
@@ -9464,7 +9489,7 @@
       "id": 15262,
       "images": [
         {
-          "src": "/wiki/cars/15262.png",
+          "src": "/wiki/cars/15262.webp",
           "variant": null
         }
       ],
@@ -9473,19 +9498,34 @@
     },
     {
       "id": 15263,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15263.webp",
+          "variant": null
+        }
+      ],
       "name": "McLaren 765LT",
       "year": 2022
     },
     {
       "id": 15264,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15264.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes C63 Coupe BE",
       "year": 2013
     },
     {
       "id": 15265,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15265.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes GL63 X166",
       "year": 2016
     },
