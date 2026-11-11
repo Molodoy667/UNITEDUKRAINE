@@ -8750,13 +8750,23 @@
     },
     {
       "id": 15191,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15191.webp",
+          "variant": null
+        }
+      ],
       "name": "Nissan 370Z",
       "year": 2017
     },
     {
       "id": 15192,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15192.webp",
+          "variant": null
+        }
+      ],
       "name": "Porshe Taycan Turbo S",
       "year": 2021
     },
@@ -8764,27 +8774,7 @@
       "id": 15195,
       "images": [
         {
-          "src": "/wiki/cars/15195_carsharing_0.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1"
-        },
-        {
-          "src": "/wiki/cars/15195_carsharing_1.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2"
-        },
-        {
-          "src": "/wiki/cars/15195_carsharing_2.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3"
-        },
-        {
-          "src": "/wiki/cars/15195_carsharing_3.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4"
-        },
-        {
-          "src": "/wiki/cars/15195.png",
+          "src": "/wiki/cars/15195.webp",
           "variant": null
         }
       ],
@@ -8795,28 +8785,8 @@
       "id": 15196,
       "images": [
         {
-          "src": "/wiki/cars/15196.png",
+          "src": "/wiki/cars/15196.webp",
           "variant": null
-        },
-        {
-          "src": "/wiki/cars/15196_carsharing_0.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1"
-        },
-        {
-          "src": "/wiki/cars/15196_carsharing_1.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2"
-        },
-        {
-          "src": "/wiki/cars/15196_carsharing_2.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3"
-        },
-        {
-          "src": "/wiki/cars/15196_carsharing_3.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4"
         }
       ],
       "name": "Ford Focus 3",
@@ -8826,28 +8796,8 @@
       "id": 15197,
       "images": [
         {
-          "src": "/wiki/cars/15197.png",
+          "src": "/wiki/cars/15197.webp",
           "variant": null
-        },
-        {
-          "src": "/wiki/cars/15197_carsharing_0.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1"
-        },
-        {
-          "src": "/wiki/cars/15197_carsharing_1.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2"
-        },
-        {
-          "src": "/wiki/cars/15197_carsharing_2.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3"
-        },
-        {
-          "src": "/wiki/cars/15197_carsharing_3.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4"
         }
       ],
       "name": "Volkswagen Golf",
@@ -8857,28 +8807,8 @@
       "id": 15198,
       "images": [
         {
-          "src": "/wiki/cars/15198.png",
+          "src": "/wiki/cars/15198.webp",
           "variant": null
-        },
-        {
-          "src": "/wiki/cars/15198_carsharing_0.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1"
-        },
-        {
-          "src": "/wiki/cars/15198_carsharing_1.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2"
-        },
-        {
-          "src": "/wiki/cars/15198_carsharing_2.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3"
-        },
-        {
-          "src": "/wiki/cars/15198_carsharing_3.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4"
         }
       ],
       "name": "KIA Rio",
@@ -8888,24 +8818,8 @@
       "id": 15199,
       "images": [
         {
-          "src": "/wiki/cars/15199_carsharing_0.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1"
-        },
-        {
-          "src": "/wiki/cars/15199_carsharing_1.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2"
-        },
-        {
-          "src": "/wiki/cars/15199_carsharing_2.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3"
-        },
-        {
-          "src": "/wiki/cars/15199_carsharing_3.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4"
+          "src": "/wiki/cars/15199.webp",
+          "variant": null
         }
       ],
       "name": "Mazda 3 MPS",
@@ -8915,24 +8829,8 @@
       "id": 15200,
       "images": [
         {
-          "src": "/wiki/cars/15200_carsharing_0.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1"
-        },
-        {
-          "src": "/wiki/cars/15200_carsharing_1.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2"
-        },
-        {
-          "src": "/wiki/cars/15200_carsharing_2.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3"
-        },
-        {
-          "src": "/wiki/cars/15200_carsharing_3.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4"
+          "src": "/wiki/cars/15200.webp",
+          "variant": null
         }
       ],
       "name": "SKODA Octavia VRS",
@@ -8942,24 +8840,8 @@
       "id": 15201,
       "images": [
         {
-          "src": "/wiki/cars/15201_carsharing_0.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1"
-        },
-        {
-          "src": "/wiki/cars/15201_carsharing_1.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2"
-        },
-        {
-          "src": "/wiki/cars/15201_carsharing_2.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3"
-        },
-        {
-          "src": "/wiki/cars/15201_carsharing_3.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4"
+          "src": "/wiki/cars/15201.webp",
+          "variant": null
         }
       ],
       "name": "Renalut Logan",
@@ -8969,24 +8851,8 @@
       "id": 15202,
       "images": [
         {
-          "src": "/wiki/cars/15202_carsharing_0.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1"
-        },
-        {
-          "src": "/wiki/cars/15202_carsharing_1.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2"
-        },
-        {
-          "src": "/wiki/cars/15202_carsharing_2.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3"
-        },
-        {
-          "src": "/wiki/cars/15202_carsharing_3.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4"
+          "src": "/wiki/cars/15202.webp",
+          "variant": null
         }
       ],
       "name": "Volvo XC90",
