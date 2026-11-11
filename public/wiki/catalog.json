@@ -7298,31 +7298,56 @@
     },
     {
       "id": 794,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/794.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M2",
       "year": 2015
     },
     {
       "id": 795,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/795.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes 4x4*2",
       "year": 2023
     },
     {
       "id": 796,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/796.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes G-Clas",
       "year": 2016
     },
     {
       "id": 797,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/797.webp",
+          "variant": null
+        }
+      ],
       "name": "Ford Mustang GT 5.0",
       "year": 2015
     },
     {
       "id": 798,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/798.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes W221 S",
       "year": 2005
     },
@@ -7330,7 +7355,7 @@
       "id": 799,
       "images": [
         {
-          "src": "/wiki/cars/799.png",
+          "src": "/wiki/cars/799.webp",
           "variant": null
         }
       ],
@@ -7339,25 +7364,45 @@
     },
     {
       "id": 907,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/907.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW X5 F15",
       "year": 2013
     },
     {
       "id": 908,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/908.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW X5M E70",
       "year": 2014
     },
     {
       "id": 909,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/909.webp",
+          "variant": null
+        }
+      ],
       "name": "Hyundai Santa Fe",
       "year": 2010
     },
     {
       "id": 965,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/965.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes Pul",
       "year": 2016
     },
