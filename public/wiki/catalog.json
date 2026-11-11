@@ -7628,7 +7628,12 @@
     },
     {
       "id": 15083,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15083.webp",
+          "variant": null
+        }
+      ],
       "name": "GAZ 66 \"ШИШИГА\"",
       "year": 1965
     },
@@ -7636,7 +7641,7 @@
       "id": 15084,
       "images": [
         {
-          "src": "/wiki/cars/15084.png",
+          "src": "/wiki/cars/15084.webp",
           "variant": null
         }
       ],
@@ -7656,37 +7661,67 @@
     },
     {
       "id": 15086,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15086.webp",
+          "variant": null
+        }
+      ],
       "name": "Lexus IS F",
       "year": 2014
     },
     {
       "id": 15087,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15087.webp",
+          "variant": null
+        }
+      ],
       "name": "Mazda 3 MPS",
       "year": 2006
     },
     {
       "id": 15088,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15088.webp",
+          "variant": null
+        }
+      ],
       "name": "Mazda MX-5",
       "year": 1998
     },
     {
       "id": 15089,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15089.webp",
+          "variant": null
+        }
+      ],
       "name": "Audi RS7",
       "year": 2013
     },
     {
       "id": 15090,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15090.webp",
+          "variant": null
+        }
+      ],
       "name": "Nissan Silvia S15",
       "year": 2001
     },
     {
       "id": 15091,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15091.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes 300SL",
       "year": 1954
     },
@@ -7694,44 +7729,8 @@
       "id": 15092,
       "images": [
         {
-          "src": "/wiki/cars/15092_carsharing_0.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1"
-        },
-        {
-          "src": "/wiki/cars/15092_carsharing_0_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15092_carsharing_1.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2"
-        },
-        {
-          "src": "/wiki/cars/15092_carsharing_1_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15092_carsharing_2.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3"
-        },
-        {
-          "src": "/wiki/cars/15092_carsharing_2_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15092_carsharing_3.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4"
-        },
-        {
-          "src": "/wiki/cars/15092_carsharing_3_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4 · спереду"
+          "src": "/wiki/cars/15092.webp",
+          "variant": null
         }
       ],
       "name": "Volvo XC90",
@@ -7739,7 +7738,12 @@
     },
     {
       "id": 15093,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15093.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes W124 E",
       "year": 1996
     },
