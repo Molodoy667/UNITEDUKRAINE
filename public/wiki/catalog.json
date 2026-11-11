@@ -8970,43 +8970,78 @@
     },
     {
       "id": 15213,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15213.webp",
+          "variant": null
+        }
+      ],
       "name": "Chevrolet Camaro",
       "year": 2017
     },
     {
       "id": 15214,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15214.webp",
+          "variant": null
+        }
+      ],
       "name": "Chevrolet Suburban",
       "year": 2003
     },
     {
       "id": 15215,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15215.webp",
+          "variant": null
+        }
+      ],
       "name": "Citroen DS 23",
       "year": 1976
     },
     {
       "id": 15216,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15216.webp",
+          "variant": null
+        }
+      ],
       "name": "DMC",
       "year": 1982
     },
     {
       "id": 15217,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15217.webp",
+          "variant": null
+        }
+      ],
       "name": "Dodge Charger SRT HellCat",
       "year": 2017
     },
     {
       "id": 15218,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15218.webp",
+          "variant": null
+        }
+      ],
       "name": "Ford VelociRaptor 6x6",
       "year": 2018
     },
     {
       "id": 15219,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15219.webp",
+          "variant": null
+        }
+      ],
       "name": "Ford Mustang Shelby",
       "year": 2013
     },
@@ -9014,7 +9049,7 @@
       "id": 15220,
       "images": [
         {
-          "src": "/wiki/cars/15220.png",
+          "src": "/wiki/cars/15220.webp",
           "variant": null
         }
       ],
@@ -9023,13 +9058,23 @@
     },
     {
       "id": 15221,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15221.webp",
+          "variant": null
+        }
+      ],
       "name": "Jeep Rubicon",
       "year": 2019
     },
     {
       "id": 15222,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15222.webp",
+          "variant": null
+        }
+      ],
       "name": "Koenigsegg Jesko",
       "year": 2020
     },
