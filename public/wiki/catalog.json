@@ -8860,61 +8860,111 @@
     },
     {
       "id": 15203,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15203.webp",
+          "variant": null
+        }
+      ],
       "name": "Alfa Romeo Gulia",
       "year": 2015
     },
     {
       "id": 15204,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15204.webp",
+          "variant": null
+        }
+      ],
       "name": "Audi RS7 C8",
       "year": 2020
     },
     {
       "id": 15205,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15205.webp",
+          "variant": null
+        }
+      ],
       "name": "Austin Seven 24",
       "year": 1924
     },
     {
       "id": 15206,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15206.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M635CSI E24 1986",
       "year": 1986
     },
     {
       "id": 15207,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15207.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M5 E28",
       "year": 1986
     },
     {
       "id": 15208,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15208.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA Инвалидка 2.0",
       "year": 1970
     },
     {
       "id": 15209,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15209.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M3 E92",
       "year": 2010
     },
     {
       "id": 15210,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15210.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M5 F10",
       "year": 2013
     },
     {
       "id": 15211,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15211.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M6",
       "year": 2013
     },
     {
       "id": 15212,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15212.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW Z8 E52",
       "year": 2002
     },
