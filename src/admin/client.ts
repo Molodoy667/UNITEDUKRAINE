@@ -3,7 +3,7 @@ export type Section=Entity|'online';
 export type Row=Record<string,string|number|null>;
 export type Overview={operator:{id:number;nickname:string};stats:Record<Entity,{available:boolean;total:number|null;free?:number|null;admins?:number}>;online:{available:boolean;count:number|null;checkedAt:string};updatedAt:string;capabilities:{read:boolean;edit:boolean;propose:boolean;ai:boolean};source:string};
 export type Listing={entity:Section;items:Row[];total:number;page?:number;size?:number;pages?:number;onlineCount?:number;unmatched?:string[];updatedAt:string};
-export type FieldRule={label:string;kind:'text'|'integer';min?:number;max?:number;maxLength?:number};
+export type FieldRule={label:string;kind:'text'|'integer'|'digits';min?:number;max?:number;maxLength?:number;maxDigits?:number};
 export type Detail={entity:Entity;item:Row;version:string;proposalFields:Record<string,FieldRule>;updatedAt:string;editable:boolean};
 export type Difference=Record<string,{before:string|number|null;after:string|number}>;
 export type ChangePreview={entity:Entity;id:number;changes:Difference;reason:string;expiresAt:string;token:string;applied:false};
@@ -11,7 +11,7 @@ export type ChangeStatus='awaiting_bridge'|'queued'|'applied'|'rejected'|'cancel
 export type ChangeResult={id:string;status:ChangeStatus;applied:boolean;replayed:boolean};
 export type ChangeRecord={id:string;actor_id:number;actor_name:string|null;entity:Entity;record_id:number;changes:Difference;reason:string;status:ChangeStatus;result_code:string|null;created_at:string;events:{id:string;actor_id:number;actor_name:string|null;event:string;reason:string;created_at:string}[]};
 export type ChangeHistory={items:ChangeRecord[];total:number;page:number;pages:number};
-export type BridgeState={configured:boolean;available:boolean;reason:string;bridgeId?:string;checkedAt?:string;capabilities:Partial<Record<Entity,number|boolean>>};
+export type BridgeState={configured:boolean;available:boolean;reason:string;bridgeId?:string;checkedAt?:string;capabilities:Partial<Record<Entity,number|boolean>>&{players_money?:number|boolean}};
 export class AdminError extends Error{constructor(public status:number,message:string){super(message);}}
 export async function adminRead<T>(action:string,params:Record<string,string|number>={},signal?:AbortSignal):Promise<T>{
   const query=new URLSearchParams({action,...Object.fromEntries(Object.entries(params).map(([k,v])=>[k,String(v)]))});

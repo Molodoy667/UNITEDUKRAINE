@@ -27,6 +27,12 @@ Operator explicitly requested activation and separately approved restarting with
 
 The database engine guards were retained. Further engine conversions require separate backup/maintenance approval. Money, roles, ownership, deletion and arbitrary SQL remain unsupported.
 
+## Local admin-panel extension (not deployed)
+
+The current repository source now includes exact decimal-string proposals for player `money` and `bank`, plus an updated Pawn consumer that accepts them only for disconnected accounts. The updated bridge advertises this separately as `players_money`; the website refuses to dispatch these proposals when that feature flag is absent. The bridge recorded as active in the 2026-10-19 evidence above does not advertise the new flag, so these edits remain unavailable until the matching server source is compiled, reviewed and deployed. This repository change does not alter the live server or database.
+
+Vehicle ownership/creation and house/business value edits are still unsupported. Their deployed tables are MyISAM, and the game bridge rejects them. Do not enable these writes by changing the capability flag or bypassing the engine guard; they need a reviewed game-side operation and a separately approved storage/maintenance plan.
+
 ## Recovery and unverified scenarios
 
 - Local previous AMX/source/dependency backups: `work/bridge-review-20261019-092052/` (ignored by Git; contains private configuration and must not be published).

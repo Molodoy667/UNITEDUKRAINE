@@ -124,23 +124,26 @@ stock UUW_Tick()
     new engines[5],caps[150];
     for(new k;k<5;k++) engines[k]=UUW_Engine(UUW_Tables[k]);
     if(UUW_Paused) return 0;
-    format(caps,sizeof caps,"{\"players\":%d,\"houses\":%d,\"businesses\":%d,\"vehicles\":%d,\"apartments\":%d}",engines[0],engines[1],engines[2],engines[3],engines[4]);
+    format(caps,sizeof caps,"{\"players\":%d,\"players_money\":%d,\"houses\":%d,\"businesses\":%d,\"vehicles\":%d,\"apartments\":%d}",engines[0],engines[0],engines[1],engines[2],engines[3],engines[4]);
     mysql_format(UUW_DB,UUW_SQL,sizeof UUW_SQL,"INSERT INTO site_admin_bridge(bridge_id,instance_id,protocol,enabled,capabilities,heartbeat_at,detail_code) VALUES('%e','%e',1,1,'%e',UTC_TIMESTAMP(),'ready') ON DUPLICATE KEY UPDATE instance_id=VALUES(instance_id),protocol=1,enabled=1,capabilities=VALUES(capabilities),heartbeat_at=UTC_TIMESTAMP(),detail_code='ready'",UUW_Id,UUW_Instance,caps);
     if(!UUW_Exec(UUW_SQL)||!UUW_Exec("START TRANSACTION")) return 0;
-    mysql_format(UUW_DB,UUW_SQL,sizeof UUW_SQL,"SELECT c.id,c.entity,c.record_id,d.dispatched_by,IFNULL(a.admin,0) actor_admin,d.expires_at<=UTC_TIMESTAMP() expired,JSON_LENGTH(c.changes) n,JSON_UNQUOTE(JSON_EXTRACT(c.changes,'$.name.after')) new_name,JSON_EXTRACT(c.changes,'$.skin.after') skin,JSON_EXTRACT(c.changes,'$.color_1.after') c1,JSON_EXTRACT(c.changes,'$.color_2.after') c2,JSON_EXTRACT(c.changes,'$.locked.after') locked,JSON_CONTAINS_PATH(c.changes,'one','$.color_1') has_c1,JSON_CONTAINS_PATH(c.changes,'one','$.color_2') has_c2 FROM site_admin_changes c JOIN site_admin_dispatch d ON d.change_id=c.id LEFT JOIN accounts_1101 a ON a.id=d.dispatched_by WHERE c.status='queued' AND d.bridge_id='%e' ORDER BY d.created_at,c.id LIMIT 1 FOR UPDATE",UUW_Id);
+    mysql_format(UUW_DB,UUW_SQL,sizeof UUW_SQL,"SELECT c.id,c.entity,c.record_id,d.dispatched_by,IFNULL(a.admin,0) actor_admin,d.expires_at<=UTC_TIMESTAMP() expired,JSON_LENGTH(c.changes) n,JSON_UNQUOTE(JSON_EXTRACT(c.changes,'$.name.after')) new_name,JSON_EXTRACT(c.changes,'$.skin.after') skin,JSON_UNQUOTE(JSON_EXTRACT(c.changes,'$.money.after')) new_money,JSON_UNQUOTE(JSON_EXTRACT(c.changes,'$.bank.after')) new_bank,JSON_EXTRACT(c.changes,'$.color_1.after') c1,JSON_EXTRACT(c.changes,'$.color_2.after') c2,JSON_EXTRACT(c.changes,'$.locked.after') locked,JSON_CONTAINS_PATH(c.changes,'one','$.skin') has_skin,JSON_CONTAINS_PATH(c.changes,'one','$.money') has_money,JSON_CONTAINS_PATH(c.changes,'one','$.bank') has_bank,JSON_CONTAINS_PATH(c.changes,'one','$.color_1') has_c1,JSON_CONTAINS_PATH(c.changes,'one','$.color_2') has_c2 FROM site_admin_changes c JOIN site_admin_dispatch d ON d.change_id=c.id LEFT JOIN accounts_1101 a ON a.id=d.dispatched_by WHERE c.status='queued' AND d.bridge_id='%e' ORDER BY d.created_at,c.id LIMIT 1 FOR UPDATE",UUW_Id);
     new Cache:result=mysql_query(UUW_DB,UUW_SQL,true);
     if(mysql_errno(UUW_DB)) return UUW_Stop();
     if(!cache_get_row_count(UUW_DB)) { cache_delete(result,UUW_DB);return UUW_Exec("COMMIT"); }
-    new id[37],entity[24],after[64],actor,recordid,kind=-1,code[40]="applied",count,skin,c1,c2,locked,has1,has2;
+    new id[37],entity[24],after[64],money[24],bank[24],actor,recordid,kind=-1,code[40]="applied",count,skin,c1,c2,locked,has_skin,has_money,has_bank,has1,has2;
     cache_get_field_content(0,"id",id,UUW_DB,sizeof id);
     cache_get_field_content(0,"entity",entity,UUW_DB,sizeof entity);
     cache_get_field_content(0,"new_name",after,UUW_DB,sizeof after);
+    cache_get_field_content(0,"new_money",money,UUW_DB,sizeof money);
+    cache_get_field_content(0,"new_bank",bank,UUW_DB,sizeof bank);
     actor=cache_get_field_content_int(0,"dispatched_by",UUW_DB);
     recordid=cache_get_field_content_int(0,"record_id",UUW_DB);
     count=cache_get_field_content_int(0,"n",UUW_DB);
     skin=cache_get_field_content_int(0,"skin",UUW_DB);
     c1=cache_get_field_content_int(0,"c1",UUW_DB); c2=cache_get_field_content_int(0,"c2",UUW_DB);
     locked=cache_get_field_content_int(0,"locked",UUW_DB);
+    has_skin=cache_get_field_content_int(0,"has_skin",UUW_DB);has_money=cache_get_field_content_int(0,"has_money",UUW_DB);has_bank=cache_get_field_content_int(0,"has_bank",UUW_DB);
     has1=cache_get_field_content_int(0,"has_c1",UUW_DB);has2=cache_get_field_content_int(0,"has_c2",UUW_DB);
     if(cache_get_field_content_int(0,"actor_admin",UUW_DB)!=12) code="actor_revoked";
     if(cache_get_field_content_int(0,"expired",UUW_DB)) code="expired";
@@ -154,7 +157,7 @@ stock UUW_Tick()
     if(!UUW_Exec(UUW_SQL)) return 0;
     switch(kind)
     {
-        case 0:format(UUW_SQL,sizeof UUW_SQL,"SELECT JSON_LENGTH(@uu_changes)=1 AND JSON_TYPE(JSON_EXTRACT(@uu_changes,'$.skin.after'))='INTEGER' ok");
+        case 0:format(UUW_SQL,sizeof UUW_SQL,"SELECT JSON_LENGTH(@uu_changes)=JSON_CONTAINS_PATH(@uu_changes,'one','$.skin')+JSON_CONTAINS_PATH(@uu_changes,'one','$.money')+JSON_CONTAINS_PATH(@uu_changes,'one','$.bank') AND JSON_LENGTH(@uu_changes)>0 AND (NOT JSON_CONTAINS_PATH(@uu_changes,'one','$.skin') OR JSON_TYPE(JSON_EXTRACT(@uu_changes,'$.skin.after'))='INTEGER') AND (NOT JSON_CONTAINS_PATH(@uu_changes,'one','$.money') OR (JSON_TYPE(JSON_EXTRACT(@uu_changes,'$.money.after'))='STRING' AND JSON_UNQUOTE(JSON_EXTRACT(@uu_changes,'$.money.after')) REGEXP '^[0-9]{1,19}$')) AND (NOT JSON_CONTAINS_PATH(@uu_changes,'one','$.bank') OR (JSON_TYPE(JSON_EXTRACT(@uu_changes,'$.bank.after'))='STRING' AND JSON_UNQUOTE(JSON_EXTRACT(@uu_changes,'$.bank.after')) REGEXP '^[0-9]{1,19}$')) ok");
         case 1,2:format(UUW_SQL,sizeof UUW_SQL,"SELECT JSON_LENGTH(@uu_changes)=1 AND JSON_TYPE(JSON_EXTRACT(@uu_changes,'$.name.after'))='STRING' ok");
         case 3:format(UUW_SQL,sizeof UUW_SQL,"SELECT JSON_LENGTH(@uu_changes)=JSON_CONTAINS_PATH(@uu_changes,'one','$.color_1')+JSON_CONTAINS_PATH(@uu_changes,'one','$.color_2') AND (NOT JSON_CONTAINS_PATH(@uu_changes,'one','$.color_1') OR JSON_TYPE(JSON_EXTRACT(@uu_changes,'$.color_1.after'))='INTEGER') AND (NOT JSON_CONTAINS_PATH(@uu_changes,'one','$.color_2') OR JSON_TYPE(JSON_EXTRACT(@uu_changes,'$.color_2.after'))='INTEGER') ok");
         case 4:format(UUW_SQL,sizeof UUW_SQL,"SELECT JSON_LENGTH(@uu_changes)=1 AND JSON_TYPE(JSON_EXTRACT(@uu_changes,'$.locked.after'))='INTEGER' ok");
@@ -178,7 +181,7 @@ stock UUW_Tick()
             // Includes connecting/unauthorized players, not only logged-in IDs.
             new nickname[MAX_PLAYER_NAME];
             for(new p;p<MAX_PLAYERS;p++) if(IsPlayerConnected(p)) {GetPlayerName(p,nickname,sizeof nickname);if(!strcmp(nickname,before,true)||GetPlayerAccountID(p)==recordid) code="player_online";}
-            if(count!=1||!IsValidSkin(skin)) code="invalid_skin";
+            if(count!=has_skin+has_money+has_bank||count<1||(has_skin&&!IsValidSkin(skin))||(has_money&&strlen(money)<1)||(has_bank&&strlen(bank)<1)) code="invalid_player_values";
         }
         case 1:
         {
@@ -225,7 +228,7 @@ stock UUW_Tick()
     }
     switch(kind)
     {
-        case 0:mysql_format(UUW_DB,UUW_SQL,sizeof UUW_SQL,"UPDATE accounts_1101 SET skin=%d WHERE id=%d",skin,recordid);
+        case 0:mysql_format(UUW_DB,UUW_SQL,sizeof UUW_SQL,"UPDATE accounts_1101 SET skin=IF(%d, %d, skin),money=IF(%d, '%e', money),bank=IF(%d, '%e', bank) WHERE id=%d",has_skin,skin,has_money,money,has_bank,bank,recordid);
         case 1,2:mysql_format(UUW_DB,UUW_SQL,sizeof UUW_SQL,"UPDATE `%s` SET name='%e' WHERE id=%d",UUW_Tables[kind],after,recordid);
         case 3:mysql_format(UUW_DB,UUW_SQL,sizeof UUW_SQL,"UPDATE ownable_cars SET color_1=%d,color_2=%d WHERE id=%d AND famcar=0",c1,c2,recordid);
         case 4:mysql_format(UUW_DB,UUW_SQL,sizeof UUW_SQL,"UPDATE appartaments_ap SET locked=%d WHERE id=%d",locked,recordid);

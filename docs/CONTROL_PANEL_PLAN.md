@@ -39,13 +39,13 @@ The initial proposal field allowlist is deliberately narrow:
 
 | Entity | Proposal fields | Input constraints |
 | --- | --- | --- |
-| `players` | `skin` | integer 0–30000 |
+| `players` | `skin` | integer 0–30000; `money` and `bank` are decimal strings, 1–19 digits |
 | `houses` | `name` | nonempty, up to 19 characters (Pawn buffer 20 with NUL) |
 | `businesses` | `name` | nonempty, up to 29 characters (Pawn buffer 30 with NUL) |
 | `vehicles` | `color_1`, `color_2` | integer 0–255 |
 | `apartments` | `locked` | 0 or 1 |
 
-These constraints validate a **proposal**, not that a skin/model exists or that a change is safe to execute in a particular game state. The future bridge must validate actual loaded game IDs, permissions, dependencies and current state again. Names reject controls, Pawn colour braces and supplementary Unicode characters. No money/admin/ownership/credentials/coordinates/deletion/mass-operation editor exists. The supplied dump's field widths are respected; actual deployed schema and engines still require pre-execution inspection.
+These constraints validate a **proposal**, not that a skin/model exists or that a change is safe to execute in a particular game state. The bridge revalidates the skin against the live game and rejects online accounts; money and bank edits are exact nonnegative decimal strings and also require the account to be offline. Names reject controls, Pawn colour braces and supplementary Unicode characters. Admin roles, ownership, credentials, coordinates, deletion and mass operations remain unsupported. Business, house and vehicle writes remain blocked by the deployed MyISAM engines; no engine conversion is included.
 
 ### Storage / endpoints
 

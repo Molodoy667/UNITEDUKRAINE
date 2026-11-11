@@ -4,6 +4,8 @@ For the actual 2026-10-19 activation evidence, current engine restrictions, back
 
 Website deployment alone does not enable game writes. This is a narrow first execution bridge, not full database administration. A successful compile or SQL test does not certify a production rollout; verify the actual server heartbeat and in-game effects separately.
 
+The working tree also contains an un-deployed `players_money` feature: it allows exact decimal-string edits to offline player cash/bank fields and advertises a separate capability bit. The website will not dispatch balance proposals through the deployed bridge until that updated consumer is compiled and reports `players_money` in its heartbeat. Vehicle grants and house/business value writes remain unsupported; see the deployment record before changing the database engine or server operation model.
+
 The requested website routing ID `ADMIN_BRIDGE_ID=united-main` is configured in `vercel.json`. It is public configuration, not a secret. Vercel supports this static runtime setting ([configuration reference](https://vercel.com/docs/project-configuration/vercel-json#env)); other database and account secrets remain in project settings. Local development still needs its own environment variable. This does not bypass heartbeat, admin level, password/TOTP, engine or explicit-dispatch checks.
 
 ## Files and activation boundary
