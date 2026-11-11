@@ -6959,61 +6959,111 @@
     },
     {
       "id": 593,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/593.webp",
+          "variant": null
+        }
+      ],
       "name": "Dodo",
       "year": 2000
     },
     {
       "id": 594,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/594.webp",
+          "variant": null
+        }
+      ],
       "name": "RCcam",
       "year": 2000
     },
     {
       "id": 595,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/595.webp",
+          "variant": null
+        }
+      ],
       "name": "LIAZ Launch",
       "year": 2000
     },
     {
       "id": 596,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/596.webp",
+          "variant": null
+        }
+      ],
       "name": "GAZ Мил",
       "year": 2000
     },
     {
       "id": 597,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/597.webp",
+          "variant": null
+        }
+      ],
       "name": "Toyota Camry",
       "year": 1998
     },
     {
       "id": 598,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/598.webp",
+          "variant": null
+        }
+      ],
       "name": "UAZ мил",
       "year": 2000
     },
     {
       "id": 599,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/599.webp",
+          "variant": null
+        }
+      ],
       "name": "UAZ ТАЗ мил",
       "year": 2000
     },
     {
       "id": 600,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/600.webp",
+          "variant": null
+        }
+      ],
       "name": "IG 2717",
       "year": 1997
     },
     {
       "id": 601,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/601.webp",
+          "variant": null
+        }
+      ],
       "name": "Bucephalus",
       "year": 2022
     },
     {
       "id": 602,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/602.webp",
+          "variant": null
+        }
+      ],
       "name": "Lexus RC-F",
       "year": 2019
     },
