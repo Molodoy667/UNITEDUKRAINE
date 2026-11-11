@@ -8,7 +8,7 @@ import PagePreloader from './ui/PagePreloader';
 function Preview({item,tab}:{item:Entry;tab:Category}) {
   const images=item.images|| (item.image?[{src:item.image,variant:item.variant||null}]:[]);
   const [failed,setFailed]=useState(false);
-  return <div className="wiki-preview">{images.length&&!failed?<img className={item.imageFlipX?'wiki-flipped':''} src={images[0].src} alt={`${item.name||singular[tab]} · ID ${item.id}`} loading="lazy" decoding="async" onError={()=>setFailed(true)}/>:<div className="wiki-missing"><ImageOff size={32}/><span>Прев’ю відсутнє</span></div>}<span className="wiki-id">ID {item.id}</span></div>;
+  return <div className={`wiki-preview wiki-preview--${tab}`}>{images.length&&!failed?<img className={`${item.imageFlipX?'wiki-flipped':''}${tab!=='cars'?' wiki-object':''}`} src={images[0].src} alt={`${item.name||singular[tab]} · ID ${item.id}`} loading="lazy" decoding="async" onError={()=>setFailed(true)}/>:<div className="wiki-missing"><ImageOff size={32}/><span>Прев’ю відсутнє</span></div>}<span className="wiki-id">ID {item.id}</span></div>;
 }
 export default function Wiki() {
   const [query,setQuery]=useState(()=>selection(window.location.search));
