@@ -10396,61 +10396,111 @@
     },
     {
       "id": 15640,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15640.webp",
+          "variant": null
+        }
+      ],
       "name": "Bentley Flyinq Spur",
       "year": 2023
     },
     {
       "id": 15641,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15641.webp",
+          "variant": null
+        }
+      ],
       "name": "PAZ Ami",
       "year": 2023
     },
     {
       "id": 15642,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15642.webp",
+          "variant": null
+        }
+      ],
       "name": "Lamborghini Urus",
       "year": 2023
     },
     {
       "id": 15643,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15643.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes AMG Project One",
       "year": 2023
     },
     {
       "id": 15645,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15645.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes CLS 63 AMG",
       "year": 2010
     },
     {
       "id": 15646,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15646.webp",
+          "variant": null
+        }
+      ],
       "name": "Lamborghini Tecnomar",
       "year": 2023
     },
     {
       "id": 15647,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15647.webp",
+          "variant": null
+        }
+      ],
       "name": "GMC Hummer EV",
       "year": 2023
     },
     {
       "id": 15648,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15648.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA 2103",
       "year": 1985
     },
     {
       "id": 15649,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15649.webp",
+          "variant": null
+        }
+      ],
       "name": "Chevrolet Camper",
       "year": 1985
     },
     {
       "id": 15650,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15650.webp",
+          "variant": null
+        }
+      ],
       "name": "Lamborghini Diablo",
       "year": 2001
     },
