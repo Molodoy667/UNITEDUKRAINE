@@ -10006,61 +10006,111 @@
     },
     {
       "id": 15609,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15609.webp",
+          "variant": null
+        }
+      ],
       "name": "Porshe 911 992",
       "year": 2018
     },
     {
       "id": 15610,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15610.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW 1000R",
       "year": 2020
     },
     {
       "id": 15611,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15611.webp",
+          "variant": null
+        }
+      ],
       "name": "Bugatti Veyron",
       "year": 2015
     },
     {
       "id": 15612,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15612.webp",
+          "variant": null
+        }
+      ],
       "name": "GAZ 52",
       "year": 2022
     },
     {
       "id": 15613,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15613.webp",
+          "variant": null
+        }
+      ],
       "name": "Koenigsegg Gemera",
       "year": 2022
     },
     {
       "id": 15614,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15614.webp",
+          "variant": null
+        }
+      ],
       "name": "Lamborghini Countach",
       "year": 2022
     },
     {
       "id": 15615,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15615.webp",
+          "variant": null
+        }
+      ],
       "name": "Snow Snow",
       "year": 2022
     },
     {
       "id": 15616,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15616.webp",
+          "variant": null
+        }
+      ],
       "name": "Bentley UltraTank",
       "year": 2022
     },
     {
       "id": 15617,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15617.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA 2101 Pickup",
       "year": 2022
     },
     {
       "id": 15618,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15618.webp",
+          "variant": null
+        }
+      ],
       "name": "International ProStar LT",
       "year": 2019
     },
