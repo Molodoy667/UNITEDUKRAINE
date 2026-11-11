@@ -2,6 +2,7 @@ import { readdir, readFile, mkdir, copyFile, writeFile, access } from 'node:fs/p
 import path from 'node:path';
 import ts from 'typescript';
 import {carAssets} from './wiki-car-assets.mjs';
+import {classifyVehicle,imageNameHints,flippedVehicleIds} from './wiki-vehicle-type.mjs';
 
 // Explicit local import; never run against an unreviewed download or execute game JS.
 const source = process.argv[2];
@@ -53,10 +54,16 @@ for (const model of models) {
   const brand = brands[model.brand]?.[0];
   entry.name = [brand && brand!=='None'?brand:'', String(model.name||'')].filter(Boolean).join(' ') || null;
   entry.year = model.year_issue || null;
+  entry.vehicleType = classifyVehicle(model.modelid,model.class_type,model.name);
   // Visual audit: resource cars/419.png is Ford-branded, not the Opel in this reference.
   // Preserve the resource ID, but do not publish the contradictory label as fact.
   if(model.modelid===419){entry.name=null;entry.year=null;entry.nameNote='Назва у довіднику не відповідає прев’ю';}
 }
+for(const [id,hint] of Object.entries(imageNameHints)){
+  const entry=manifest.cars.find(item=>item.id===Number(id));
+  if(entry){entry.name=hint.name;entry.nameNote=hint.nameNote;entry.year=null;entry.vehicleType=classifyVehicle(entry.id,null,hint.name);}
+}
+for(const id of flippedVehicleIds){const entry=manifest.cars.find(item=>item.id===id);if(entry)entry.imageFlipX=true;}
 for (const kind of ['skins','cars','accessories']) manifest[kind].sort((a,b)=>a.id-b.id);
 await writeFile(new URL('catalog.json',output), JSON.stringify(manifest,null,2)+'\n');
 console.log(JSON.stringify(Object.fromEntries(['skins','cars','accessories'].map(k=>[k,{count:manifest[k].length,withPreview:manifest[k].filter(x=>x.image||x.images?.length).length}]))));

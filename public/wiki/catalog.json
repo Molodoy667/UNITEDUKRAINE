@@ -4633,7 +4633,8 @@
         }
       ],
       "name": "Porshe Cayenne",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 401,
@@ -4644,7 +4645,8 @@
         }
       ],
       "name": "IG 2712",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 402,
@@ -4655,7 +4657,8 @@
         }
       ],
       "name": "Mercedes E63 AMG",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 403,
@@ -4666,7 +4669,8 @@
         }
       ],
       "name": "ZIL Сідельний тягач",
-      "year": 1992
+      "year": 1992,
+      "vehicleType": "truck"
     },
     {
       "id": 404,
@@ -4681,7 +4685,8 @@
         }
       ],
       "name": "Volvo 940",
-      "year": 1990
+      "year": 1990,
+      "vehicleType": "car"
     },
     {
       "id": 405,
@@ -4696,7 +4701,8 @@
         }
       ],
       "name": "Audi RS-6 Avant",
-      "year": 2002
+      "year": 2002,
+      "vehicleType": "car"
     },
     {
       "id": 406,
@@ -4707,7 +4713,8 @@
         }
       ],
       "name": "ZIL 130",
-      "year": 1963
+      "year": 1963,
+      "vehicleType": "truck"
     },
     {
       "id": 407,
@@ -4718,7 +4725,8 @@
         }
       ],
       "name": "KAMAZ Пожежна машина",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "special"
     },
     {
       "id": 408,
@@ -4729,7 +4737,8 @@
         }
       ],
       "name": "Сміттєвоз",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 409,
@@ -4740,7 +4749,8 @@
         }
       ],
       "name": "RollsRoyce",
-      "year": 2003
+      "year": 2003,
+      "vehicleType": "car"
     },
     {
       "id": 410,
@@ -4755,7 +4765,8 @@
         }
       ],
       "name": "Mercedes C63S",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "car"
     },
     {
       "id": 411,
@@ -4770,7 +4781,8 @@
         }
       ],
       "name": "Mitsubishi EVO",
-      "year": 2016
+      "year": 2016,
+      "vehicleType": "car"
     },
     {
       "id": 412,
@@ -4785,7 +4797,8 @@
         }
       ],
       "name": "Mercedes W123",
-      "year": 1975
+      "year": 1975,
+      "vehicleType": "car"
     },
     {
       "id": 413,
@@ -4796,7 +4809,8 @@
         }
       ],
       "name": "PAZ 672",
-      "year": 1970
+      "year": 1970,
+      "vehicleType": "bus"
     },
     {
       "id": 414,
@@ -4807,7 +4821,8 @@
         }
       ],
       "name": "LIAZ 5256",
-      "year": 1988
+      "year": 1988,
+      "vehicleType": "bus"
     },
     {
       "id": 415,
@@ -4818,7 +4833,8 @@
         }
       ],
       "name": "Lamborghini Aventador",
-      "year": 2011
+      "year": 2011,
+      "vehicleType": "car"
     },
     {
       "id": 416,
@@ -4829,7 +4845,8 @@
         }
       ],
       "name": "Швидка допомога",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 417,
@@ -4840,7 +4857,8 @@
         }
       ],
       "name": "Leviathn",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "helicopter"
     },
     {
       "id": 418,
@@ -4851,7 +4869,8 @@
         }
       ],
       "name": "Moonbeam",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 419,
@@ -4865,9 +4884,10 @@
           "variant": null
         }
       ],
-      "name": null,
+      "name": "Ford-хетчбек (модель не підтверджена)",
       "year": null,
-      "nameNote": "Назва у довіднику не відповідає прев’ю"
+      "nameNote": "Прев’ю показує Ford, але назва Opel Astra GTC у довіднику суперечить зображенню.",
+      "vehicleType": "car"
     },
     {
       "id": 420,
@@ -4878,7 +4898,8 @@
         }
       ],
       "name": "Таксі",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 421,
@@ -4893,7 +4914,8 @@
         }
       ],
       "name": "Peugeot Peugeot 406",
-      "year": 2005
+      "year": 2005,
+      "vehicleType": "car"
     },
     {
       "id": 422,
@@ -4908,7 +4930,8 @@
         }
       ],
       "name": "Jeep GC",
-      "year": 2002
+      "year": 2002,
+      "vehicleType": "car"
     },
     {
       "id": 423,
@@ -4919,7 +4942,8 @@
         }
       ],
       "name": "MrWhoop",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 424,
@@ -4930,7 +4954,8 @@
         }
       ],
       "name": "YAMAHA Wolverine",
-      "year": 2015
+      "year": 2015,
+      "vehicleType": "atv"
     },
     {
       "id": 425,
@@ -4941,7 +4966,8 @@
         }
       ],
       "name": "Hunter",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "helicopter"
     },
     {
       "id": 426,
@@ -4956,7 +4982,8 @@
         }
       ],
       "name": "Daewoo Matiz L",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 427,
@@ -4967,7 +4994,8 @@
         }
       ],
       "name": "Enforcer",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 428,
@@ -4978,7 +5006,8 @@
         }
       ],
       "name": "Ford Інкасаторський автомобіль",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "special"
     },
     {
       "id": 429,
@@ -5013,7 +5042,8 @@
         }
       ],
       "name": "Maybach X222",
-      "year": 2015
+      "year": 2015,
+      "vehicleType": "car"
     },
     {
       "id": 430,
@@ -5024,7 +5054,8 @@
         }
       ],
       "name": "Predator",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "boat"
     },
     {
       "id": 431,
@@ -5035,7 +5066,8 @@
         }
       ],
       "name": "LIAZ 677",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "bus"
     },
     {
       "id": 432,
@@ -5046,7 +5078,8 @@
         }
       ],
       "name": "Танк",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 433,
@@ -5057,7 +5090,8 @@
         }
       ],
       "name": "KRAZ Військовий транспорт",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "special"
     },
     {
       "id": 434,
@@ -5068,7 +5102,8 @@
         }
       ],
       "name": "Hot Rod",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 435,
@@ -5079,7 +5114,8 @@
         }
       ],
       "name": "Прицеп",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "trailer"
     },
     {
       "id": 436,
@@ -5134,7 +5170,8 @@
         }
       ],
       "name": "KIA Rio",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 437,
@@ -5145,7 +5182,8 @@
         }
       ],
       "name": "Икарус",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "bus"
     },
     {
       "id": 438,
@@ -5160,7 +5198,8 @@
         }
       ],
       "name": "Таксі",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 439,
@@ -5175,7 +5214,8 @@
         }
       ],
       "name": "LADA 2101",
-      "year": 1970
+      "year": 1970,
+      "vehicleType": "car"
     },
     {
       "id": 440,
@@ -5186,7 +5226,8 @@
         }
       ],
       "name": "Rumpo",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 441,
@@ -5197,7 +5238,8 @@
         }
       ],
       "name": "RCcar",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 442,
@@ -5212,7 +5254,8 @@
         }
       ],
       "name": "GAZ М20",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 443,
@@ -5223,7 +5266,8 @@
         }
       ],
       "name": "Автовоз",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "truck"
     },
     {
       "id": 444,
@@ -5234,7 +5278,8 @@
         }
       ],
       "name": "БРДМ",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "special"
     },
     {
       "id": 445,
@@ -5249,7 +5294,8 @@
         }
       ],
       "name": "SKODA Octavia RS",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 446,
@@ -5260,7 +5306,8 @@
         }
       ],
       "name": "Scania Squalo",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "boat"
     },
     {
       "id": 447,
@@ -5271,7 +5318,8 @@
         }
       ],
       "name": "Водний гелікоптер",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "helicopter"
     },
     {
       "id": 448,
@@ -5282,7 +5330,8 @@
         }
       ],
       "name": "Pizzaboy",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "moped"
     },
     {
       "id": 449,
@@ -5293,7 +5342,8 @@
         }
       ],
       "name": "Цистерна",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "truck"
     },
     {
       "id": 450,
@@ -5304,7 +5354,8 @@
         }
       ],
       "name": "Прицеп",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "trailer"
     },
     {
       "id": 451,
@@ -5315,7 +5366,8 @@
         }
       ],
       "name": "Ferrari 488 GTB",
-      "year": 2012
+      "year": 2012,
+      "vehicleType": "car"
     },
     {
       "id": 452,
@@ -5326,7 +5378,8 @@
         }
       ],
       "name": "Scania Speeder",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "boat"
     },
     {
       "id": 453,
@@ -5337,7 +5390,8 @@
         }
       ],
       "name": "Reefer",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "boat"
     },
     {
       "id": 454,
@@ -5348,7 +5402,8 @@
         }
       ],
       "name": "Scania Tropic",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "boat"
     },
     {
       "id": 455,
@@ -5359,7 +5414,8 @@
         }
       ],
       "name": "Грейдер",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "construction"
     },
     {
       "id": 456,
@@ -5370,7 +5426,8 @@
         }
       ],
       "name": "GAZ NEXT",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "truck"
     },
     {
       "id": 457,
@@ -5381,7 +5438,8 @@
         }
       ],
       "name": "Гольфкар",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 458,
@@ -5392,7 +5450,8 @@
         }
       ],
       "name": "Audi A4",
-      "year": 2001
+      "year": 2001,
+      "vehicleType": "car"
     },
     {
       "id": 459,
@@ -5403,7 +5462,8 @@
         }
       ],
       "name": "Mercedes Vito",
-      "year": 2003
+      "year": 2003,
+      "vehicleType": "truck"
     },
     {
       "id": 460,
@@ -5414,7 +5474,8 @@
         }
       ],
       "name": "Гідролітак",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "airplane"
     },
     {
       "id": 461,
@@ -5425,7 +5486,8 @@
         }
       ],
       "name": "Honda CB 750",
-      "year": 1992
+      "year": 1992,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 462,
@@ -5436,7 +5498,8 @@
         }
       ],
       "name": "BIKE Scooter",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "moped"
     },
     {
       "id": 463,
@@ -5447,7 +5510,8 @@
         }
       ],
       "name": "Harley Company Chopper",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 464,
@@ -5458,7 +5522,8 @@
         }
       ],
       "name": "RCplane",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "airplane"
     },
     {
       "id": 465,
@@ -5469,7 +5534,8 @@
         }
       ],
       "name": "RCheli",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "helicopter"
     },
     {
       "id": 466,
@@ -5544,7 +5610,8 @@
         }
       ],
       "name": "BMW G30",
-      "year": 2017
+      "year": 2017,
+      "vehicleType": "car"
     },
     {
       "id": 467,
@@ -5555,7 +5622,8 @@
         }
       ],
       "name": "LADA 2107",
-      "year": 1982
+      "year": 1982,
+      "vehicleType": "car"
     },
     {
       "id": 468,
@@ -5566,7 +5634,8 @@
         }
       ],
       "name": "Motocross",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 469,
@@ -5577,7 +5646,8 @@
         }
       ],
       "name": "Robinson R22",
-      "year": 2003
+      "year": 2003,
+      "vehicleType": "helicopter"
     },
     {
       "id": 470,
@@ -5587,8 +5657,10 @@
           "variant": null
         }
       ],
-      "name": null,
-      "year": 2000
+      "name": "Військовий позашляховик",
+      "year": null,
+      "vehicleType": "special",
+      "nameNote": "Опис за зображенням; точну модель неможливо підтвердити за довідником."
     },
     {
       "id": 471,
@@ -5599,7 +5671,8 @@
         }
       ],
       "name": "Motocross MOBILE",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 472,
@@ -5610,7 +5683,8 @@
         }
       ],
       "name": "Coastg",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "boat"
     },
     {
       "id": 473,
@@ -5621,7 +5695,8 @@
         }
       ],
       "name": "Scania Dinghy",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "boat"
     },
     {
       "id": 474,
@@ -5676,7 +5751,8 @@
         }
       ],
       "name": "Volkswagen",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 475,
@@ -5687,7 +5763,8 @@
         }
       ],
       "name": "BMW X5",
-      "year": 1999
+      "year": 1999,
+      "vehicleType": "car"
     },
     {
       "id": 476,
@@ -5698,7 +5775,8 @@
         }
       ],
       "name": "Винищувач",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "airplane"
     },
     {
       "id": 477,
@@ -5709,7 +5787,8 @@
         }
       ],
       "name": "Mazda RX-7",
-      "year": 1992
+      "year": 1992,
+      "vehicleType": "car"
     },
     {
       "id": 478,
@@ -5720,7 +5799,8 @@
         }
       ],
       "name": "IG 27151",
-      "year": 1972
+      "year": 1972,
+      "vehicleType": "car"
     },
     {
       "id": 479,
@@ -5735,7 +5815,8 @@
         }
       ],
       "name": "Renalut Logan",
-      "year": 2016
+      "year": 2016,
+      "vehicleType": "car"
     },
     {
       "id": 480,
@@ -5746,7 +5827,8 @@
         }
       ],
       "name": "Audi R8",
-      "year": 2006
+      "year": 2006,
+      "vehicleType": "car"
     },
     {
       "id": 481,
@@ -5757,7 +5839,8 @@
         }
       ],
       "name": "BMX",
-      "year": 1995
+      "year": 1995,
+      "vehicleType": "bicycle"
     },
     {
       "id": 482,
@@ -5768,7 +5851,8 @@
         }
       ],
       "name": "GAZ",
-      "year": 2003
+      "year": 2003,
+      "vehicleType": "truck"
     },
     {
       "id": 483,
@@ -5779,7 +5863,8 @@
         }
       ],
       "name": "PAZ 3205",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "bus"
     },
     {
       "id": 484,
@@ -5790,7 +5875,8 @@
         }
       ],
       "name": "Теплохід",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "boat"
     },
     {
       "id": 485,
@@ -5801,7 +5887,8 @@
         }
       ],
       "name": "Аеродинамічний транспорт",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 486,
@@ -5812,7 +5899,8 @@
         }
       ],
       "name": "Бульдозер",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "construction"
     },
     {
       "id": 487,
@@ -5823,7 +5911,8 @@
         }
       ],
       "name": "Robinson R44",
-      "year": 1992
+      "year": 1992,
+      "vehicleType": "helicopter"
     },
     {
       "id": 488,
@@ -5834,7 +5923,8 @@
         }
       ],
       "name": "News Верт",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "helicopter"
     },
     {
       "id": 489,
@@ -5845,7 +5935,8 @@
         }
       ],
       "name": "Toyota TLC 200",
-      "year": 2007
+      "year": 2007,
+      "vehicleType": "car"
     },
     {
       "id": 490,
@@ -5856,7 +5947,8 @@
         }
       ],
       "name": "Land Rover Vogue",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "car"
     },
     {
       "id": 491,
@@ -5871,7 +5963,8 @@
         }
       ],
       "name": "Honda Civic Si",
-      "year": 2001
+      "year": 2001,
+      "vehicleType": "car"
     },
     {
       "id": 492,
@@ -5882,7 +5975,8 @@
         }
       ],
       "name": "LADA 2109",
-      "year": 1987
+      "year": 1987,
+      "vehicleType": "car"
     },
     {
       "id": 493,
@@ -5893,7 +5987,8 @@
         }
       ],
       "name": "Jaguar Jetmax",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "boat"
     },
     {
       "id": 494,
@@ -5904,7 +5999,8 @@
         }
       ],
       "name": "Dodge Challanger",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "car"
     },
     {
       "id": 495,
@@ -5915,7 +6011,8 @@
         }
       ],
       "name": "Ford Start Raptor",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "car"
     },
     {
       "id": 496,
@@ -5926,7 +6023,8 @@
         }
       ],
       "name": "Opel Ascona",
-      "year": 1970
+      "year": 1970,
+      "vehicleType": "car"
     },
     {
       "id": 497,
@@ -5937,7 +6035,8 @@
         }
       ],
       "name": "Polmav",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "helicopter"
     },
     {
       "id": 498,
@@ -5948,7 +6047,8 @@
         }
       ],
       "name": "Поліцейський гелікоптер",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "helicopter"
     },
     {
       "id": 499,
@@ -5959,7 +6059,8 @@
         }
       ],
       "name": "GAZ NEXT",
-      "year": 1989
+      "year": 1989,
+      "vehicleType": "truck"
     },
     {
       "id": 500,
@@ -5970,7 +6071,8 @@
         }
       ],
       "name": "UAZ Hunter",
-      "year": 2003
+      "year": 2003,
+      "vehicleType": "car"
     },
     {
       "id": 501,
@@ -5981,7 +6083,8 @@
         }
       ],
       "name": "RCgobl",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "helicopter"
     },
     {
       "id": 502,
@@ -5992,7 +6095,8 @@
         }
       ],
       "name": "RollsRoyce Wraith",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 503,
@@ -6003,7 +6107,8 @@
         }
       ],
       "name": "Nissan GT-R",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 504,
@@ -6014,7 +6119,8 @@
         }
       ],
       "name": "Bloodra",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 505,
@@ -6025,7 +6131,8 @@
         }
       ],
       "name": "Bentley Bentyaga",
-      "year": 2015
+      "year": 2015,
+      "vehicleType": "car"
     },
     {
       "id": 506,
@@ -6036,7 +6143,8 @@
         }
       ],
       "name": "Porshe 911",
-      "year": 2011
+      "year": 2011,
+      "vehicleType": "car"
     },
     {
       "id": 507,
@@ -6047,7 +6155,8 @@
         }
       ],
       "name": "BMW E34",
-      "year": 1988
+      "year": 1988,
+      "vehicleType": "car"
     },
     {
       "id": 508,
@@ -6058,7 +6167,8 @@
         }
       ],
       "name": "Ford Start Raptor",
-      "year": 2008
+      "year": 2008,
+      "vehicleType": "car"
     },
     {
       "id": 509,
@@ -6069,7 +6179,8 @@
         }
       ],
       "name": "BIKE Bike",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "bicycle"
     },
     {
       "id": 510,
@@ -6080,7 +6191,8 @@
         }
       ],
       "name": "BIKE Bike",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "bicycle"
     },
     {
       "id": 511,
@@ -6091,7 +6203,8 @@
         }
       ],
       "name": "Be",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "airplane"
     },
     {
       "id": 512,
@@ -6102,7 +6215,8 @@
         }
       ],
       "name": "Cropdast",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "airplane"
     },
     {
       "id": 513,
@@ -6113,7 +6227,8 @@
         }
       ],
       "name": "Stunt",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "airplane"
     },
     {
       "id": 514,
@@ -6124,7 +6239,8 @@
         }
       ],
       "name": "GAZ 5410",
-      "year": 1980
+      "year": 1980,
+      "vehicleType": "truck"
     },
     {
       "id": 515,
@@ -6135,7 +6251,8 @@
         }
       ],
       "name": "Volvo FH",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "truck"
     },
     {
       "id": 516,
@@ -6146,7 +6263,8 @@
         }
       ],
       "name": "Ford Start Focus 3",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "car"
     },
     {
       "id": 517,
@@ -6157,7 +6275,8 @@
         }
       ],
       "name": "РАФ Латвия",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "truck"
     },
     {
       "id": 518,
@@ -6168,7 +6287,8 @@
         }
       ],
       "name": "ERAZ",
-      "year": 1966
+      "year": 1966,
+      "vehicleType": "truck"
     },
     {
       "id": 519,
@@ -6179,7 +6299,8 @@
         }
       ],
       "name": "Shamal",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "airplane"
     },
     {
       "id": 520,
@@ -6190,7 +6311,8 @@
         }
       ],
       "name": "Винищувач",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "airplane"
     },
     {
       "id": 521,
@@ -6201,7 +6323,8 @@
         }
       ],
       "name": "IG",
-      "year": 1972
+      "year": 1972,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 522,
@@ -6212,7 +6335,8 @@
         }
       ],
       "name": "Ducati Desmosed. RR",
-      "year": 2008
+      "year": 2008,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 523,
@@ -6223,7 +6347,8 @@
         }
       ],
       "name": "Поліцейський мотоцикл",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 524,
@@ -6234,7 +6359,8 @@
         }
       ],
       "name": "Цементовоз",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "truck"
     },
     {
       "id": 525,
@@ -6245,7 +6371,8 @@
         }
       ],
       "name": "Евакуатор",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "truck"
     },
     {
       "id": 526,
@@ -6256,7 +6383,8 @@
         }
       ],
       "name": "Ford Start Sierra",
-      "year": 1994
+      "year": 1994,
+      "vehicleType": "car"
     },
     {
       "id": 527,
@@ -6267,7 +6395,8 @@
         }
       ],
       "name": "Volkswagen Golf 2",
-      "year": 1992
+      "year": 1992,
+      "vehicleType": "car"
     },
     {
       "id": 528,
@@ -6278,7 +6407,8 @@
         }
       ],
       "name": "Катафалк",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 529,
@@ -6289,7 +6419,8 @@
         }
       ],
       "name": "W126",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 530,
@@ -6300,7 +6431,8 @@
         }
       ],
       "name": "Навантажувач",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "construction"
     },
     {
       "id": 531,
@@ -6311,7 +6443,8 @@
         }
       ],
       "name": "Трактор",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "construction"
     },
     {
       "id": 532,
@@ -6322,7 +6455,8 @@
         }
       ],
       "name": "Комбайн",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "construction"
     },
     {
       "id": 533,
@@ -6337,7 +6471,8 @@
         }
       ],
       "name": "Audi TTRS",
-      "year": 2018
+      "year": 2018,
+      "vehicleType": "car"
     },
     {
       "id": 534,
@@ -6348,7 +6483,8 @@
         }
       ],
       "name": "BMW E30",
-      "year": 1994
+      "year": 1994,
+      "vehicleType": "car"
     },
     {
       "id": 535,
@@ -6359,7 +6495,8 @@
         }
       ],
       "name": "Impreza WRX",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 536,
@@ -6370,7 +6507,8 @@
         }
       ],
       "name": "Volvo 240",
-      "year": 1993
+      "year": 1993,
+      "vehicleType": "car"
     },
     {
       "id": 537,
@@ -6381,7 +6519,8 @@
         }
       ],
       "name": "Blade",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 538,
@@ -6392,7 +6531,8 @@
         }
       ],
       "name": "Потяг",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 539,
@@ -6403,7 +6543,8 @@
         }
       ],
       "name": "Судно на повітряній подушці",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "boat"
     },
     {
       "id": 540,
@@ -6414,7 +6555,8 @@
         }
       ],
       "name": "Mercedes E55",
-      "year": 2003
+      "year": 2003,
+      "vehicleType": "car"
     },
     {
       "id": 541,
@@ -6425,7 +6567,8 @@
         }
       ],
       "name": "Ferrari Portofino",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 542,
@@ -6436,7 +6579,8 @@
         }
       ],
       "name": "LUAZ 969",
-      "year": 1996
+      "year": 1996,
+      "vehicleType": "car"
     },
     {
       "id": 543,
@@ -6447,7 +6591,8 @@
         }
       ],
       "name": "Tesla Model S",
-      "year": 2009
+      "year": 2009,
+      "vehicleType": "car"
     },
     {
       "id": 544,
@@ -6458,7 +6603,8 @@
         }
       ],
       "name": "Mercedes Unimog МЧС",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 545,
@@ -6469,7 +6615,8 @@
         }
       ],
       "name": "Moskvich АЗЛК-400",
-      "year": 1946
+      "year": 1946,
+      "vehicleType": "car"
     },
     {
       "id": 546,
@@ -6484,7 +6631,8 @@
         }
       ],
       "name": "IG ИЖ Комби",
-      "year": 1973
+      "year": 1973,
+      "vehicleType": "car"
     },
     {
       "id": 547,
@@ -6495,7 +6643,8 @@
         }
       ],
       "name": "Audi 80 Avant",
-      "year": 1996
+      "year": 1996,
+      "vehicleType": "car"
     },
     {
       "id": 548,
@@ -6506,7 +6655,8 @@
         }
       ],
       "name": "Воен Верт",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "helicopter"
     },
     {
       "id": 549,
@@ -6517,7 +6667,8 @@
         }
       ],
       "name": "LADA ОКА",
-      "year": 1990
+      "year": 1990,
+      "vehicleType": "car"
     },
     {
       "id": 550,
@@ -6528,7 +6679,8 @@
         }
       ],
       "name": "LADA 2170",
-      "year": 1996
+      "year": 1996,
+      "vehicleType": "car"
     },
     {
       "id": 551,
@@ -6539,7 +6691,8 @@
         }
       ],
       "name": "BMW E39",
-      "year": 2001
+      "year": 2001,
+      "vehicleType": "car"
     },
     {
       "id": 552,
@@ -6550,7 +6703,8 @@
         }
       ],
       "name": "Mercedes Unimog Рем.дорог",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "special"
     },
     {
       "id": 553,
@@ -6561,7 +6715,8 @@
         }
       ],
       "name": "Кукурузник",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "airplane"
     },
     {
       "id": 554,
@@ -6572,7 +6727,8 @@
         }
       ],
       "name": "UAZ Patriot",
-      "year": 2005
+      "year": 2005,
+      "vehicleType": "car"
     },
     {
       "id": 555,
@@ -6583,7 +6739,8 @@
         }
       ],
       "name": "ZAZ 968М",
-      "year": 1973
+      "year": 1973,
+      "vehicleType": "car"
     },
     {
       "id": 556,
@@ -6594,7 +6751,8 @@
         }
       ],
       "name": "Монстр",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "truck"
     },
     {
       "id": 557,
@@ -6605,7 +6763,8 @@
         }
       ],
       "name": "Монстр",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "truck"
     },
     {
       "id": 558,
@@ -6616,7 +6775,8 @@
         }
       ],
       "name": "BMW M4",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 559,
@@ -6627,7 +6787,8 @@
         }
       ],
       "name": "Toyota Supra",
-      "year": 1986
+      "year": 1986,
+      "vehicleType": "car"
     },
     {
       "id": 560,
@@ -6638,7 +6799,8 @@
         }
       ],
       "name": "Subaru WRX Sti",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "car"
     },
     {
       "id": 561,
@@ -6649,7 +6811,8 @@
         }
       ],
       "name": "LADA 2115",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 562,
@@ -6660,7 +6823,8 @@
         }
       ],
       "name": "Nissan Skyline",
-      "year": 2001
+      "year": 2001,
+      "vehicleType": "car"
     },
     {
       "id": 563,
@@ -6671,7 +6835,8 @@
         }
       ],
       "name": "Спас верт",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "helicopter"
     },
     {
       "id": 564,
@@ -6682,7 +6847,8 @@
         }
       ],
       "name": "RCtank",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 565,
@@ -6693,7 +6859,8 @@
         }
       ],
       "name": "LADA 2108",
-      "year": 1991
+      "year": 1991,
+      "vehicleType": "car"
     },
     {
       "id": 566,
@@ -6704,7 +6871,8 @@
         }
       ],
       "name": "Daewoo Lanos",
-      "year": 2008
+      "year": 2008,
+      "vehicleType": "car"
     },
     {
       "id": 567,
@@ -6715,7 +6883,8 @@
         }
       ],
       "name": "LADA 2106",
-      "year": 2006
+      "year": 2006,
+      "vehicleType": "car"
     },
     {
       "id": 568,
@@ -6726,7 +6895,8 @@
         }
       ],
       "name": "Bandito",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 569,
@@ -6737,7 +6907,8 @@
         }
       ],
       "name": "Вагон",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 570,
@@ -6748,7 +6919,8 @@
         }
       ],
       "name": "Вагон",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 571,
@@ -6759,7 +6931,8 @@
         }
       ],
       "name": "Карт",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 572,
@@ -6770,7 +6943,8 @@
         }
       ],
       "name": "онокосилка",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "construction"
     },
     {
       "id": 573,
@@ -6781,7 +6955,8 @@
         }
       ],
       "name": "Mercedes G65 6x6",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 574,
@@ -6792,7 +6967,8 @@
         }
       ],
       "name": "Sweeper",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 575,
@@ -6803,7 +6979,8 @@
         }
       ],
       "name": "Уборш улиц",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 576,
@@ -6814,7 +6991,8 @@
         }
       ],
       "name": "Moskvich АЗЛК-408",
-      "year": 1964
+      "year": 1964,
+      "vehicleType": "car"
     },
     {
       "id": 577,
@@ -6825,7 +7003,8 @@
         }
       ],
       "name": "AT 400",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "airplane"
     },
     {
       "id": 578,
@@ -6836,7 +7015,8 @@
         }
       ],
       "name": "Борт",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "truck"
     },
     {
       "id": 579,
@@ -6847,7 +7027,8 @@
         }
       ],
       "name": "Mercedes G65",
-      "year": 2015
+      "year": 2015,
+      "vehicleType": "car"
     },
     {
       "id": 580,
@@ -6858,7 +7039,8 @@
         }
       ],
       "name": "Mercedes ZЗ-13 \"Чайка\"",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 581,
@@ -6869,7 +7051,8 @@
         }
       ],
       "name": "Suzuki Hayabusa",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 582,
@@ -6880,7 +7063,8 @@
         }
       ],
       "name": "BMW R71",
-      "year": 1941
+      "year": 1941,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 583,
@@ -6891,7 +7075,8 @@
         }
       ],
       "name": "Tug",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "boat"
     },
     {
       "id": 584,
@@ -6902,7 +7087,8 @@
         }
       ],
       "name": "Цистерна",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "truck"
     },
     {
       "id": 585,
@@ -6913,7 +7099,8 @@
         }
       ],
       "name": "Mercedes W140",
-      "year": 1964
+      "year": 1964,
+      "vehicleType": "car"
     },
     {
       "id": 586,
@@ -6924,7 +7111,8 @@
         }
       ],
       "name": "Harley Company Fat Boy",
-      "year": 1990
+      "year": 1990,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 587,
@@ -6935,7 +7123,8 @@
         }
       ],
       "name": "Audi Quattro",
-      "year": 1991
+      "year": 1991,
+      "vehicleType": "car"
     },
     {
       "id": 588,
@@ -6946,7 +7135,8 @@
         }
       ],
       "name": "Кафе",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 589,
@@ -6997,7 +7187,8 @@
         }
       ],
       "name": "Volkswagen VW Golf GTI 7",
-      "year": 2021
+      "year": 2021,
+      "vehicleType": "car"
     },
     {
       "id": 590,
@@ -7008,7 +7199,8 @@
         }
       ],
       "name": "Вагон",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 591,
@@ -7019,7 +7211,8 @@
         }
       ],
       "name": "Прицеп",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "trailer"
     },
     {
       "id": 592,
@@ -7030,7 +7223,8 @@
         }
       ],
       "name": "Androm",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "airplane"
     },
     {
       "id": 593,
@@ -7041,7 +7235,8 @@
         }
       ],
       "name": "Dodo",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "airplane"
     },
     {
       "id": 594,
@@ -7052,7 +7247,8 @@
         }
       ],
       "name": "RCcam",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 595,
@@ -7063,7 +7259,8 @@
         }
       ],
       "name": "LIAZ Launch",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "bus"
     },
     {
       "id": 596,
@@ -7074,7 +7271,8 @@
         }
       ],
       "name": "GAZ Мил",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 597,
@@ -7085,7 +7283,8 @@
         }
       ],
       "name": "Toyota Camry",
-      "year": 1998
+      "year": 1998,
+      "vehicleType": "car"
     },
     {
       "id": 598,
@@ -7096,7 +7295,8 @@
         }
       ],
       "name": "UAZ мил",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 599,
@@ -7107,7 +7307,8 @@
         }
       ],
       "name": "UAZ ТАЗ мил",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 600,
@@ -7118,7 +7319,8 @@
         }
       ],
       "name": "IG 2717",
-      "year": 1997
+      "year": 1997,
+      "vehicleType": "car"
     },
     {
       "id": 601,
@@ -7129,7 +7331,8 @@
         }
       ],
       "name": "Bucephalus",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "special"
     },
     {
       "id": 602,
@@ -7140,7 +7343,8 @@
         }
       ],
       "name": "Lexus RC-F",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "car"
     },
     {
       "id": 603,
@@ -7151,7 +7355,8 @@
         }
       ],
       "name": "Dodge Charger",
-      "year": 2006
+      "year": 2006,
+      "vehicleType": "car"
     },
     {
       "id": 604,
@@ -7162,7 +7367,8 @@
         }
       ],
       "name": "Porshe Panamera T.",
-      "year": 2009
+      "year": 2009,
+      "vehicleType": "car"
     },
     {
       "id": 605,
@@ -7173,7 +7379,8 @@
         }
       ],
       "name": "Lamborghini Huracan",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "car"
     },
     {
       "id": 606,
@@ -7184,7 +7391,8 @@
         }
       ],
       "name": "Прицеп",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "trailer"
     },
     {
       "id": 607,
@@ -7195,7 +7403,8 @@
         }
       ],
       "name": "Прицеп",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "trailer"
     },
     {
       "id": 608,
@@ -7206,7 +7415,8 @@
         }
       ],
       "name": "Лестница",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 609,
@@ -7217,7 +7427,8 @@
         }
       ],
       "name": "Авиа",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "airplane"
     },
     {
       "id": 610,
@@ -7228,7 +7439,8 @@
         }
       ],
       "name": "Плуг",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "construction"
     },
     {
       "id": 611,
@@ -7239,7 +7451,8 @@
         }
       ],
       "name": "Прицеп уборщ",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "special"
     },
     {
       "id": 612,
@@ -7250,7 +7463,8 @@
         }
       ],
       "name": "BMW M5 E60",
-      "year": 2003
+      "year": 2003,
+      "vehicleType": "car"
     },
     {
       "id": 613,
@@ -7261,7 +7475,8 @@
         }
       ],
       "name": "LADA Urban",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "car"
     },
     {
       "id": 614,
@@ -7272,7 +7487,8 @@
         }
       ],
       "name": "BMW X6M E71",
-      "year": 2008
+      "year": 2008,
+      "vehicleType": "car"
     },
     {
       "id": 699,
@@ -7283,7 +7499,8 @@
         }
       ],
       "name": "MINI WMini JCW GP",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 793,
@@ -7294,7 +7511,8 @@
         }
       ],
       "name": "Audi Q7",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "car"
     },
     {
       "id": 794,
@@ -7305,7 +7523,8 @@
         }
       ],
       "name": "BMW M2",
-      "year": 2015
+      "year": 2015,
+      "vehicleType": "car"
     },
     {
       "id": 795,
@@ -7316,7 +7535,8 @@
         }
       ],
       "name": "Mercedes 4x4*2",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 796,
@@ -7327,7 +7547,8 @@
         }
       ],
       "name": "Mercedes G-Clas",
-      "year": 2016
+      "year": 2016,
+      "vehicleType": "car"
     },
     {
       "id": 797,
@@ -7338,7 +7559,8 @@
         }
       ],
       "name": "Ford Mustang GT 5.0",
-      "year": 2015
+      "year": 2015,
+      "vehicleType": "car"
     },
     {
       "id": 798,
@@ -7349,7 +7571,8 @@
         }
       ],
       "name": "Mercedes W221 S",
-      "year": 2005
+      "year": 2005,
+      "vehicleType": "car"
     },
     {
       "id": 799,
@@ -7360,7 +7583,8 @@
         }
       ],
       "name": "GAZ 31105 \"Волга\"",
-      "year": 2004
+      "year": 2004,
+      "vehicleType": "car"
     },
     {
       "id": 907,
@@ -7371,7 +7595,8 @@
         }
       ],
       "name": "BMW X5 F15",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 908,
@@ -7382,7 +7607,8 @@
         }
       ],
       "name": "BMW X5M E70",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "car"
     },
     {
       "id": 909,
@@ -7393,7 +7619,8 @@
         }
       ],
       "name": "Hyundai Santa Fe",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "car"
     },
     {
       "id": 965,
@@ -7404,7 +7631,8 @@
         }
       ],
       "name": "Mercedes Pul",
-      "year": 2016
+      "year": 2016,
+      "vehicleType": "car"
     },
     {
       "id": 999,
@@ -7415,7 +7643,8 @@
         }
       ],
       "name": "Lamborghini Urus",
-      "year": 2017
+      "year": 2017,
+      "vehicleType": "car"
     },
     {
       "id": 1326,
@@ -7426,7 +7655,8 @@
         }
       ],
       "name": "Mercedes ML63 AMG W164",
-      "year": 2011
+      "year": 2011,
+      "vehicleType": "car"
     },
     {
       "id": 15065,
@@ -7437,7 +7667,8 @@
         }
       ],
       "name": "Toyota Chaser",
-      "year": 2001
+      "year": 2001,
+      "vehicleType": "car"
     },
     {
       "id": 15066,
@@ -7448,7 +7679,8 @@
         }
       ],
       "name": "Volkswagen Touareg",
-      "year": 2002
+      "year": 2002,
+      "vehicleType": "car"
     },
     {
       "id": 15067,
@@ -7459,7 +7691,8 @@
         }
       ],
       "name": "BMW E38 740",
-      "year": 1994
+      "year": 1994,
+      "vehicleType": "car"
     },
     {
       "id": 15068,
@@ -7470,7 +7703,8 @@
         }
       ],
       "name": "Toyota Mark II 90",
-      "year": 1990
+      "year": 1990,
+      "vehicleType": "car"
     },
     {
       "id": 15069,
@@ -7481,7 +7715,8 @@
         }
       ],
       "name": "Toyota Camry V50",
-      "year": 2011
+      "year": 2011,
+      "vehicleType": "car"
     },
     {
       "id": 15070,
@@ -7492,7 +7727,8 @@
         }
       ],
       "name": "UAZ Буханка",
-      "year": 1958
+      "year": 1958,
+      "vehicleType": "car"
     },
     {
       "id": 15071,
@@ -7503,7 +7739,8 @@
         }
       ],
       "name": "Lexus LX570",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "car"
     },
     {
       "id": 15072,
@@ -7514,7 +7751,8 @@
         }
       ],
       "name": "Lexus IS200",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 15073,
@@ -7525,7 +7763,8 @@
         }
       ],
       "name": "BMW 740 F02",
-      "year": 2008
+      "year": 2008,
+      "vehicleType": "car"
     },
     {
       "id": 15074,
@@ -7536,7 +7775,8 @@
         }
       ],
       "name": "LADA 2114",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 15075,
@@ -7547,7 +7787,8 @@
         }
       ],
       "name": "Jeep Grand Cherokee",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15076,
@@ -7558,7 +7799,8 @@
         }
       ],
       "name": "Cadilac Escalade",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "car"
     },
     {
       "id": 15077,
@@ -7569,7 +7811,8 @@
         }
       ],
       "name": "Honda Accord",
-      "year": 2002
+      "year": 2002,
+      "vehicleType": "car"
     },
     {
       "id": 15078,
@@ -7580,7 +7823,8 @@
         }
       ],
       "name": "LADA 2110",
-      "year": 2002
+      "year": 2002,
+      "vehicleType": "car"
     },
     {
       "id": 15079,
@@ -7591,7 +7835,8 @@
         }
       ],
       "name": "LADA 2104",
-      "year": 1984
+      "year": 1984,
+      "vehicleType": "car"
     },
     {
       "id": 15080,
@@ -7602,7 +7847,8 @@
         }
       ],
       "name": "LADA 2105",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 15081,
@@ -7613,7 +7859,8 @@
         }
       ],
       "name": "Volkswagen Scirocco",
-      "year": 2002
+      "year": 2002,
+      "vehicleType": "car"
     },
     {
       "id": 15082,
@@ -7624,7 +7871,8 @@
         }
       ],
       "name": "Mercedes 560 SE",
-      "year": 1991
+      "year": 1991,
+      "vehicleType": "car"
     },
     {
       "id": 15083,
@@ -7635,7 +7883,8 @@
         }
       ],
       "name": "GAZ 66 \"ШИШИГА\"",
-      "year": 1965
+      "year": 1965,
+      "vehicleType": "truck"
     },
     {
       "id": 15084,
@@ -7646,7 +7895,8 @@
         }
       ],
       "name": "Alfa Romeo 155",
-      "year": 1998
+      "year": 1998,
+      "vehicleType": "car"
     },
     {
       "id": 15085,
@@ -7657,7 +7907,8 @@
         }
       ],
       "name": "Bugatti Chiron",
-      "year": 2016
+      "year": 2016,
+      "vehicleType": "car"
     },
     {
       "id": 15086,
@@ -7668,7 +7919,8 @@
         }
       ],
       "name": "Lexus IS F",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "car"
     },
     {
       "id": 15087,
@@ -7679,7 +7931,8 @@
         }
       ],
       "name": "Mazda 3 MPS",
-      "year": 2006
+      "year": 2006,
+      "vehicleType": "car"
     },
     {
       "id": 15088,
@@ -7690,7 +7943,8 @@
         }
       ],
       "name": "Mazda MX-5",
-      "year": 1998
+      "year": 1998,
+      "vehicleType": "car"
     },
     {
       "id": 15089,
@@ -7701,7 +7955,8 @@
         }
       ],
       "name": "Audi RS7",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 15090,
@@ -7712,7 +7967,8 @@
         }
       ],
       "name": "Nissan Silvia S15",
-      "year": 2001
+      "year": 2001,
+      "vehicleType": "car"
     },
     {
       "id": 15091,
@@ -7723,7 +7979,8 @@
         }
       ],
       "name": "Mercedes 300SL",
-      "year": 1954
+      "year": 1954,
+      "vehicleType": "car"
     },
     {
       "id": 15092,
@@ -7734,7 +7991,8 @@
         }
       ],
       "name": "Volvo XC90",
-      "year": 2006
+      "year": 2006,
+      "vehicleType": "car"
     },
     {
       "id": 15093,
@@ -7745,7 +8003,8 @@
         }
       ],
       "name": "Mercedes W124 E",
-      "year": 1996
+      "year": 1996,
+      "vehicleType": "car"
     },
     {
       "id": 15094,
@@ -7756,7 +8015,8 @@
         }
       ],
       "name": "BMW X6M F16",
-      "year": 2008
+      "year": 2008,
+      "vehicleType": "car"
     },
     {
       "id": 15095,
@@ -7767,7 +8027,8 @@
         }
       ],
       "name": "Mercedes Actros",
-      "year": 2003
+      "year": 2003,
+      "vehicleType": "truck"
     },
     {
       "id": 15096,
@@ -7778,7 +8039,8 @@
         }
       ],
       "name": "Volvo FM12",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "truck"
     },
     {
       "id": 15097,
@@ -7789,7 +8051,8 @@
         }
       ],
       "name": "Daf XF 105",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "truck"
     },
     {
       "id": 15098,
@@ -7800,7 +8063,8 @@
         }
       ],
       "name": "KAMAZ 54115",
-      "year": 1996
+      "year": 1996,
+      "vehicleType": "truck"
     },
     {
       "id": 15099,
@@ -7811,7 +8075,8 @@
         }
       ],
       "name": "Maz",
-      "year": 1989
+      "year": 1989,
+      "vehicleType": "truck"
     },
     {
       "id": 15100,
@@ -7822,7 +8087,8 @@
         }
       ],
       "name": "Scania R700",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "truck"
     },
     {
       "id": 15101,
@@ -7833,7 +8099,8 @@
         }
       ],
       "name": "ZIL 130",
-      "year": 1966
+      "year": 1966,
+      "vehicleType": "truck"
     },
     {
       "id": 15102,
@@ -7844,7 +8111,8 @@
         }
       ],
       "name": "Man TGS",
-      "year": 2007
+      "year": 2007,
+      "vehicleType": "truck"
     },
     {
       "id": 15103,
@@ -7855,7 +8123,8 @@
         }
       ],
       "name": "ZIL 131",
-      "year": 1966
+      "year": 1966,
+      "vehicleType": "truck"
     },
     {
       "id": 15104,
@@ -7866,7 +8135,8 @@
         }
       ],
       "name": "Tesla CyberTrack",
-      "year": 2021
+      "year": 2021,
+      "vehicleType": "car"
     },
     {
       "id": 15105,
@@ -7877,7 +8147,8 @@
         }
       ],
       "name": "BMW M1",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "car"
     },
     {
       "id": 15106,
@@ -7888,7 +8159,8 @@
         }
       ],
       "name": "BMW Z4 M40 2019",
-      "year": 2018
+      "year": 2018,
+      "vehicleType": "car"
     },
     {
       "id": 15107,
@@ -7899,7 +8171,8 @@
         }
       ],
       "name": "BMW M5 F90",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "car"
     },
     {
       "id": 15108,
@@ -7910,7 +8183,8 @@
         }
       ],
       "name": "Maserati Levante 201",
-      "year": 2011
+      "year": 2011,
+      "vehicleType": "car"
     },
     {
       "id": 15109,
@@ -7921,7 +8195,8 @@
         }
       ],
       "name": "BMW I8 Roadster",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 15110,
@@ -7932,7 +8207,8 @@
         }
       ],
       "name": "Tesla CyberTrack Coca cola",
-      "year": 2021
+      "year": 2021,
+      "vehicleType": "car"
     },
     {
       "id": 15113,
@@ -7943,7 +8219,8 @@
         }
       ],
       "name": "Chevrolet Corvette Z",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "car"
     },
     {
       "id": 15114,
@@ -7954,7 +8231,8 @@
         }
       ],
       "name": "Mercedes GT63S",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "car"
     },
     {
       "id": 15115,
@@ -7965,7 +8243,8 @@
         }
       ],
       "name": "Jeep Grand Cherokee",
-      "year": 2017
+      "year": 2017,
+      "vehicleType": "car"
     },
     {
       "id": 15116,
@@ -7976,7 +8255,8 @@
         }
       ],
       "name": "McLaren P1",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 15117,
@@ -7987,7 +8267,8 @@
         }
       ],
       "name": "UAZ Инкассация",
-      "year": 2008
+      "year": 2008,
+      "vehicleType": "special"
     },
     {
       "id": 15118,
@@ -7998,7 +8279,8 @@
         }
       ],
       "name": "Toyota Prado 2016",
-      "year": 2016
+      "year": 2016,
+      "vehicleType": "car"
     },
     {
       "id": 15119,
@@ -8009,7 +8291,8 @@
         }
       ],
       "name": "UAZ Хантер",
-      "year": 2003
+      "year": 2003,
+      "vehicleType": "car"
     },
     {
       "id": 15120,
@@ -8020,7 +8303,8 @@
         }
       ],
       "name": "Mercedes E63",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 15121,
@@ -8031,7 +8315,8 @@
         }
       ],
       "name": "LADA Vesta",
-      "year": 2015
+      "year": 2015,
+      "vehicleType": "car"
     },
     {
       "id": 15124,
@@ -8042,7 +8327,8 @@
         }
       ],
       "name": "GAZ 3102",
-      "year": 1982
+      "year": 1982,
+      "vehicleType": "car"
     },
     {
       "id": 15125,
@@ -8053,7 +8339,8 @@
         }
       ],
       "name": "Mitsubishi Lancer X",
-      "year": 2018
+      "year": 2018,
+      "vehicleType": "car"
     },
     {
       "id": 15126,
@@ -8064,7 +8351,8 @@
         }
       ],
       "name": "Tesla X",
-      "year": 2015
+      "year": 2015,
+      "vehicleType": "car"
     },
     {
       "id": 15127,
@@ -8075,7 +8363,8 @@
         }
       ],
       "name": "BMW 1000R",
-      "year": 2020
+      "year": 2020,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 15128,
@@ -8086,7 +8375,8 @@
         }
       ],
       "name": "Toyota Camry 40",
-      "year": 2006
+      "year": 2006,
+      "vehicleType": "car"
     },
     {
       "id": 15129,
@@ -8097,7 +8387,8 @@
         }
       ],
       "name": "KTM",
-      "year": 2020
+      "year": 2020,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 15130,
@@ -8108,7 +8399,8 @@
         }
       ],
       "name": "Motocross CrossTBI",
-      "year": 2017
+      "year": 2017,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 15131,
@@ -8119,7 +8411,8 @@
         }
       ],
       "name": "Subaru Impreza WRX",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 15132,
@@ -8130,7 +8423,8 @@
         }
       ],
       "name": "Ducati Diavel",
-      "year": 2011
+      "year": 2011,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 15133,
@@ -8141,7 +8435,8 @@
         }
       ],
       "name": "IG 5",
-      "year": 2007
+      "year": 2007,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 15134,
@@ -8152,7 +8447,8 @@
         }
       ],
       "name": "Kawasaki Ninja H2R",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 15135,
@@ -8163,7 +8459,8 @@
         }
       ],
       "name": "Motocross",
-      "year": 2009
+      "year": 2009,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 15136,
@@ -8174,7 +8471,8 @@
         }
       ],
       "name": "Suzuki Hayabusa",
-      "year": 2008
+      "year": 2008,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 15137,
@@ -8185,7 +8483,8 @@
         }
       ],
       "name": "W Company Fenyr SuperSport",
-      "year": 2015
+      "year": 2015,
+      "vehicleType": "car"
     },
     {
       "id": 15139,
@@ -8196,7 +8495,8 @@
         }
       ],
       "name": "Harley Company RSR",
-      "year": 2015
+      "year": 2015,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 15140,
@@ -8207,7 +8507,8 @@
         }
       ],
       "name": "Mercedes C63 W204 FL",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 15141,
@@ -8218,7 +8519,8 @@
         }
       ],
       "name": "Mercedes CLS63",
-      "year": 2018
+      "year": 2018,
+      "vehicleType": "car"
     },
     {
       "id": 15142,
@@ -8229,7 +8531,8 @@
         }
       ],
       "name": "Mercedes E63 20",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 15143,
@@ -8240,7 +8543,8 @@
         }
       ],
       "name": "Mercedes E63 DPS",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "special"
     },
     {
       "id": 15144,
@@ -8251,7 +8555,8 @@
         }
       ],
       "name": "Audi S3",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 15145,
@@ -8262,7 +8567,8 @@
         }
       ],
       "name": "LADA 21099",
-      "year": 2001
+      "year": 2001,
+      "vehicleType": "car"
     },
     {
       "id": 15146,
@@ -8273,7 +8579,8 @@
         }
       ],
       "name": "RollsRoyce CULLINAN",
-      "year": 2018
+      "year": 2018,
+      "vehicleType": "car"
     },
     {
       "id": 15147,
@@ -8284,7 +8591,8 @@
         }
       ],
       "name": "Mercedes X-Class",
-      "year": 2017
+      "year": 2017,
+      "vehicleType": "truck"
     },
     {
       "id": 15148,
@@ -8295,7 +8603,8 @@
         }
       ],
       "name": "Land Rover Range Rover Velar",
-      "year": 2017
+      "year": 2017,
+      "vehicleType": "car"
     },
     {
       "id": 15149,
@@ -8306,7 +8615,8 @@
         }
       ],
       "name": "Audi RS6 C5",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "car"
     },
     {
       "id": 15150,
@@ -8317,7 +8627,8 @@
         }
       ],
       "name": "LADA 2112 купе",
-      "year": 2002
+      "year": 2002,
+      "vehicleType": "car"
     },
     {
       "id": 15151,
@@ -8328,7 +8639,8 @@
         }
       ],
       "name": "LADA 2112",
-      "year": 2002
+      "year": 2002,
+      "vehicleType": "car"
     },
     {
       "id": 15152,
@@ -8339,7 +8651,8 @@
         }
       ],
       "name": "Volvo v40",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "car"
     },
     {
       "id": 15153,
@@ -8350,7 +8663,8 @@
         }
       ],
       "name": "BMW X7",
-      "year": 2018
+      "year": 2018,
+      "vehicleType": "car"
     },
     {
       "id": 15155,
@@ -8361,7 +8675,8 @@
         }
       ],
       "name": "Mercedes W124 Coupe AMG",
-      "year": 1995
+      "year": 1995,
+      "vehicleType": "car"
     },
     {
       "id": 15156,
@@ -8372,7 +8687,8 @@
         }
       ],
       "name": "Bentley Turbo R",
-      "year": 1998
+      "year": 1998,
+      "vehicleType": "car"
     },
     {
       "id": 15157,
@@ -8383,7 +8699,8 @@
         }
       ],
       "name": "Toyota Camry V70",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "car"
     },
     {
       "id": 15158,
@@ -8394,7 +8711,8 @@
         }
       ],
       "name": "BMW M5 F90 LCI",
-      "year": 2021
+      "year": 2021,
+      "vehicleType": "car"
     },
     {
       "id": 15159,
@@ -8405,7 +8723,8 @@
         }
       ],
       "name": "Acura NSX",
-      "year": 2016
+      "year": 2016,
+      "vehicleType": "car"
     },
     {
       "id": 15160,
@@ -8416,7 +8735,8 @@
         }
       ],
       "name": "Mercedes SLR MacFarlaneMcLare",
-      "year": 2003
+      "year": 2003,
+      "vehicleType": "car"
     },
     {
       "id": 15161,
@@ -8427,7 +8747,8 @@
         }
       ],
       "name": "BMW 850CSI",
-      "year": 1996
+      "year": 1996,
+      "vehicleType": "car"
     },
     {
       "id": 15162,
@@ -8438,7 +8759,8 @@
         }
       ],
       "name": "Toyota Mark II 100",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 15163,
@@ -8449,7 +8771,8 @@
         }
       ],
       "name": "Honda S2000",
-      "year": 2004
+      "year": 2004,
+      "vehicleType": "car"
     },
     {
       "id": 15164,
@@ -8460,7 +8783,8 @@
         }
       ],
       "name": "BMW M8 F92",
-      "year": 2021
+      "year": 2021,
+      "vehicleType": "car"
     },
     {
       "id": 15165,
@@ -8471,7 +8795,8 @@
         }
       ],
       "name": "BMW M4 G82",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15166,
@@ -8482,7 +8807,8 @@
         }
       ],
       "name": "Mercedes S63 AMG",
-      "year": 2018
+      "year": 2018,
+      "vehicleType": "car"
     },
     {
       "id": 15167,
@@ -8493,7 +8819,8 @@
         }
       ],
       "name": "Mercedes S500",
-      "year": 2018
+      "year": 2018,
+      "vehicleType": "car"
     },
     {
       "id": 15168,
@@ -8504,7 +8831,8 @@
         }
       ],
       "name": "BMW 325i E36",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 15169,
@@ -8515,7 +8843,8 @@
         }
       ],
       "name": "Chevrolet Corvette C8",
-      "year": 2020
+      "year": 2020,
+      "vehicleType": "car"
     },
     {
       "id": 15170,
@@ -8526,7 +8855,8 @@
         }
       ],
       "name": "Ferrari F40",
-      "year": 1990
+      "year": 1990,
+      "vehicleType": "car"
     },
     {
       "id": 15171,
@@ -8537,7 +8867,8 @@
         }
       ],
       "name": "Honda Civic Type-R FK8",
-      "year": 2007
+      "year": 2007,
+      "vehicleType": "car"
     },
     {
       "id": 15172,
@@ -8548,7 +8879,8 @@
         }
       ],
       "name": "Lexus LFA",
-      "year": 2012
+      "year": 2012,
+      "vehicleType": "car"
     },
     {
       "id": 15173,
@@ -8559,7 +8891,8 @@
         }
       ],
       "name": "Porshe 911 992",
-      "year": 2018
+      "year": 2018,
+      "vehicleType": "car"
     },
     {
       "id": 15174,
@@ -8570,7 +8903,8 @@
         }
       ],
       "name": "Shelby Cobra 427",
-      "year": 1965
+      "year": 1965,
+      "vehicleType": "car"
     },
     {
       "id": 15175,
@@ -8581,7 +8915,8 @@
         }
       ],
       "name": "BMW M5 F90 CS",
-      "year": 2021
+      "year": 2021,
+      "vehicleType": "car"
     },
     {
       "id": 15176,
@@ -8592,7 +8927,8 @@
         }
       ],
       "name": "Mercedes SLS AMG",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "car"
     },
     {
       "id": 15177,
@@ -8603,7 +8939,8 @@
         }
       ],
       "name": "Hummer H1",
-      "year": 1995
+      "year": 1995,
+      "vehicleType": "car"
     },
     {
       "id": 15178,
@@ -8614,7 +8951,8 @@
         }
       ],
       "name": "Mercedes SL65 AMG",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "car"
     },
     {
       "id": 15179,
@@ -8625,7 +8963,8 @@
         }
       ],
       "name": "Bentley 8-Liter",
-      "year": 1931
+      "year": 1931,
+      "vehicleType": "car"
     },
     {
       "id": 15180,
@@ -8636,7 +8975,8 @@
         }
       ],
       "name": "BMW M3 E46",
-      "year": 2006
+      "year": 2006,
+      "vehicleType": "car"
     },
     {
       "id": 15181,
@@ -8647,7 +8987,8 @@
         }
       ],
       "name": "BMW M1 E82",
-      "year": 2012
+      "year": 2012,
+      "vehicleType": "car"
     },
     {
       "id": 15182,
@@ -8658,7 +8999,8 @@
         }
       ],
       "name": "Ferrari LaPotenza",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 15183,
@@ -8669,7 +9011,8 @@
         }
       ],
       "name": "Volkswagen Golf 5 GTI",
-      "year": 2004
+      "year": 2004,
+      "vehicleType": "car"
     },
     {
       "id": 15184,
@@ -8680,7 +9023,8 @@
         }
       ],
       "name": "Toyota Hachiroku AE86",
-      "year": 1983
+      "year": 1983,
+      "vehicleType": "car"
     },
     {
       "id": 15185,
@@ -8691,7 +9035,8 @@
         }
       ],
       "name": "SKODA Octavia VRS",
-      "year": 2017
+      "year": 2017,
+      "vehicleType": "car"
     },
     {
       "id": 15186,
@@ -8702,7 +9047,8 @@
         }
       ],
       "name": "SKODA Octavia DPS",
-      "year": 2017
+      "year": 2017,
+      "vehicleType": "special"
     },
     {
       "id": 15187,
@@ -8713,7 +9059,8 @@
         }
       ],
       "name": "Ferrari 599XX",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "car"
     },
     {
       "id": 15188,
@@ -8724,7 +9071,8 @@
         }
       ],
       "name": "BMW X6M F96",
-      "year": 2021
+      "year": 2021,
+      "vehicleType": "car"
     },
     {
       "id": 15189,
@@ -8735,7 +9083,8 @@
         }
       ],
       "name": "Dodge Ram SRT Viper",
-      "year": 2006
+      "year": 2006,
+      "vehicleType": "car"
     },
     {
       "id": 15190,
@@ -8746,7 +9095,8 @@
         }
       ],
       "name": "Mercedes 280SL",
-      "year": 1969
+      "year": 1969,
+      "vehicleType": "car"
     },
     {
       "id": 15191,
@@ -8757,7 +9107,8 @@
         }
       ],
       "name": "Nissan 370Z",
-      "year": 2017
+      "year": 2017,
+      "vehicleType": "car"
     },
     {
       "id": 15192,
@@ -8768,7 +9119,8 @@
         }
       ],
       "name": "Porshe Taycan Turbo S",
-      "year": 2021
+      "year": 2021,
+      "vehicleType": "car"
     },
     {
       "id": 15195,
@@ -8779,7 +9131,8 @@
         }
       ],
       "name": "Toyota Camry V70",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "car"
     },
     {
       "id": 15196,
@@ -8790,7 +9143,8 @@
         }
       ],
       "name": "Ford Focus 3",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "car"
     },
     {
       "id": 15197,
@@ -8801,7 +9155,8 @@
         }
       ],
       "name": "Volkswagen Golf",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 15198,
@@ -8812,7 +9167,8 @@
         }
       ],
       "name": "KIA Rio",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 15199,
@@ -8823,7 +9179,8 @@
         }
       ],
       "name": "Mazda 3 MPS",
-      "year": 2006
+      "year": 2006,
+      "vehicleType": "car"
     },
     {
       "id": 15200,
@@ -8834,7 +9191,8 @@
         }
       ],
       "name": "SKODA Octavia VRS",
-      "year": 2017
+      "year": 2017,
+      "vehicleType": "car"
     },
     {
       "id": 15201,
@@ -8845,7 +9203,8 @@
         }
       ],
       "name": "Renalut Logan",
-      "year": 2004
+      "year": 2004,
+      "vehicleType": "car"
     },
     {
       "id": 15202,
@@ -8856,7 +9215,8 @@
         }
       ],
       "name": "Volvo XC90",
-      "year": 2006
+      "year": 2006,
+      "vehicleType": "car"
     },
     {
       "id": 15203,
@@ -8867,7 +9227,8 @@
         }
       ],
       "name": "Alfa Romeo Gulia",
-      "year": 2015
+      "year": 2015,
+      "vehicleType": "car"
     },
     {
       "id": 15204,
@@ -8878,7 +9239,8 @@
         }
       ],
       "name": "Audi RS7 C8",
-      "year": 2020
+      "year": 2020,
+      "vehicleType": "car"
     },
     {
       "id": 15205,
@@ -8889,7 +9251,8 @@
         }
       ],
       "name": "Austin Seven 24",
-      "year": 1924
+      "year": 1924,
+      "vehicleType": "car"
     },
     {
       "id": 15206,
@@ -8900,7 +9263,8 @@
         }
       ],
       "name": "BMW M635CSI E24 1986",
-      "year": 1986
+      "year": 1986,
+      "vehicleType": "car"
     },
     {
       "id": 15207,
@@ -8911,7 +9275,8 @@
         }
       ],
       "name": "BMW M5 E28",
-      "year": 1986
+      "year": 1986,
+      "vehicleType": "car"
     },
     {
       "id": 15208,
@@ -8922,7 +9287,8 @@
         }
       ],
       "name": "LADA Инвалидка 2.0",
-      "year": 1970
+      "year": 1970,
+      "vehicleType": "car"
     },
     {
       "id": 15209,
@@ -8933,7 +9299,8 @@
         }
       ],
       "name": "BMW M3 E92",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "car"
     },
     {
       "id": 15210,
@@ -8944,7 +9311,8 @@
         }
       ],
       "name": "BMW M5 F10",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 15211,
@@ -8955,7 +9323,8 @@
         }
       ],
       "name": "BMW M6",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 15212,
@@ -8966,7 +9335,8 @@
         }
       ],
       "name": "BMW Z8 E52",
-      "year": 2002
+      "year": 2002,
+      "vehicleType": "car"
     },
     {
       "id": 15213,
@@ -8977,7 +9347,8 @@
         }
       ],
       "name": "Chevrolet Camaro",
-      "year": 2017
+      "year": 2017,
+      "vehicleType": "car"
     },
     {
       "id": 15214,
@@ -8988,7 +9359,8 @@
         }
       ],
       "name": "Chevrolet Suburban",
-      "year": 2003
+      "year": 2003,
+      "vehicleType": "car"
     },
     {
       "id": 15215,
@@ -8999,7 +9371,8 @@
         }
       ],
       "name": "Citroen DS 23",
-      "year": 1976
+      "year": 1976,
+      "vehicleType": "car"
     },
     {
       "id": 15216,
@@ -9010,7 +9383,8 @@
         }
       ],
       "name": "DMC",
-      "year": 1982
+      "year": 1982,
+      "vehicleType": "car"
     },
     {
       "id": 15217,
@@ -9021,7 +9395,8 @@
         }
       ],
       "name": "Dodge Charger SRT HellCat",
-      "year": 2017
+      "year": 2017,
+      "vehicleType": "car"
     },
     {
       "id": 15218,
@@ -9032,7 +9407,8 @@
         }
       ],
       "name": "Ford VelociRaptor 6x6",
-      "year": 2018
+      "year": 2018,
+      "vehicleType": "truck"
     },
     {
       "id": 15219,
@@ -9043,7 +9419,8 @@
         }
       ],
       "name": "Ford Mustang Shelby",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 15220,
@@ -9054,7 +9431,8 @@
         }
       ],
       "name": "Infinity Q50",
-      "year": 2021
+      "year": 2021,
+      "vehicleType": "car"
     },
     {
       "id": 15221,
@@ -9065,7 +9443,8 @@
         }
       ],
       "name": "Jeep Rubicon",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "car"
     },
     {
       "id": 15222,
@@ -9076,7 +9455,8 @@
         }
       ],
       "name": "Koenigsegg Jesko",
-      "year": 2020
+      "year": 2020,
+      "vehicleType": "car"
     },
     {
       "id": 15223,
@@ -9087,7 +9467,8 @@
         }
       ],
       "name": "Lamborghini Aventador J",
-      "year": 2016
+      "year": 2016,
+      "vehicleType": "car"
     },
     {
       "id": 15224,
@@ -9098,7 +9479,8 @@
         }
       ],
       "name": "Lamborghini Aventador SVJ",
-      "year": 2016
+      "year": 2016,
+      "vehicleType": "car"
     },
     {
       "id": 15225,
@@ -9109,7 +9491,8 @@
         }
       ],
       "name": "Lamborghini Countach",
-      "year": 1991
+      "year": 1991,
+      "vehicleType": "car"
     },
     {
       "id": 15226,
@@ -9120,7 +9503,8 @@
         }
       ],
       "name": "Land Rover Defender",
-      "year": 2020
+      "year": 2020,
+      "vehicleType": "car"
     },
     {
       "id": 15227,
@@ -9131,7 +9515,8 @@
         }
       ],
       "name": "McLaren Senna",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "car"
     },
     {
       "id": 15228,
@@ -9142,7 +9527,8 @@
         }
       ],
       "name": "Mercedes AMG GTR",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15229,
@@ -9153,7 +9539,8 @@
         }
       ],
       "name": "Mercedes CLK-GTR",
-      "year": 1999
+      "year": 1999,
+      "vehicleType": "car"
     },
     {
       "id": 15230,
@@ -9164,7 +9551,8 @@
         }
       ],
       "name": "Porshe 918 Spyder",
-      "year": 2015
+      "year": 2015,
+      "vehicleType": "car"
     },
     {
       "id": 15231,
@@ -9175,7 +9563,8 @@
         }
       ],
       "name": "Mercedes W221 S320d",
-      "year": 2005
+      "year": 2005,
+      "vehicleType": "car"
     },
     {
       "id": 15232,
@@ -9186,7 +9575,8 @@
         }
       ],
       "name": "Mercedes Unimog U502",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "truck"
     },
     {
       "id": 15233,
@@ -9197,7 +9587,8 @@
         }
       ],
       "name": "Napier Railton",
-      "year": 1933
+      "year": 1933,
+      "vehicleType": "car"
     },
     {
       "id": 15234,
@@ -9208,7 +9599,8 @@
         }
       ],
       "name": "Subaru Impreza WRX P",
-      "year": 2005
+      "year": 2005,
+      "vehicleType": "car"
     },
     {
       "id": 15235,
@@ -9219,7 +9611,8 @@
         }
       ],
       "name": "Noble M600",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "car"
     },
     {
       "id": 15236,
@@ -9230,7 +9623,8 @@
         }
       ],
       "name": "Pagani Huayra",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 15237,
@@ -9241,7 +9635,8 @@
         }
       ],
       "name": "Porshe 911 Turbo 1975",
-      "year": 1975
+      "year": 1975,
+      "vehicleType": "car"
     },
     {
       "id": 15238,
@@ -9252,7 +9647,8 @@
         }
       ],
       "name": "Quadra V-Tech",
-      "year": 2008
+      "year": 2008,
+      "vehicleType": "car"
     },
     {
       "id": 15239,
@@ -9263,7 +9659,8 @@
         }
       ],
       "name": "Sherp",
-      "year": 2012
+      "year": 2012,
+      "vehicleType": "special"
     },
     {
       "id": 15240,
@@ -9274,7 +9671,8 @@
         }
       ],
       "name": "Toyota LC 100",
-      "year": 2007
+      "year": 2007,
+      "vehicleType": "car"
     },
     {
       "id": 15242,
@@ -9285,7 +9683,8 @@
         }
       ],
       "name": "ZIL мойщик улиц",
-      "year": 1962
+      "year": 1962,
+      "vehicleType": "special"
     },
     {
       "id": 15243,
@@ -9296,7 +9695,8 @@
         }
       ],
       "name": "Lagoon",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "yacht"
     },
     {
       "id": 15244,
@@ -9307,7 +9707,8 @@
         }
       ],
       "name": "Marina",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "yacht"
     },
     {
       "id": 15245,
@@ -9318,7 +9719,8 @@
         }
       ],
       "name": "Мотоблок",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "construction"
     },
     {
       "id": 15246,
@@ -9329,7 +9731,8 @@
         }
       ],
       "name": "Audi RS4 Avant",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15247,
@@ -9340,7 +9743,8 @@
         }
       ],
       "name": "Audi RS5 2018",
-      "year": 2018
+      "year": 2018,
+      "vehicleType": "car"
     },
     {
       "id": 15248,
@@ -9351,7 +9755,8 @@
         }
       ],
       "name": "Audi Q8",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15249,
@@ -9362,7 +9767,8 @@
         }
       ],
       "name": "BMW X7 Facelift",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15250,
@@ -9373,7 +9779,8 @@
         }
       ],
       "name": "Bugatti Divo",
-      "year": 2020
+      "year": 2020,
+      "vehicleType": "car"
     },
     {
       "id": 15252,
@@ -9384,7 +9791,8 @@
         }
       ],
       "name": "Ferrari SF90",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15253,
@@ -9395,7 +9803,8 @@
         }
       ],
       "name": "Dodge Charger F7",
-      "year": 1969
+      "year": 1969,
+      "vehicleType": "car"
     },
     {
       "id": 15254,
@@ -9406,7 +9815,8 @@
         }
       ],
       "name": "Mazda Mazda RX-7 F1",
-      "year": 2002
+      "year": 2002,
+      "vehicleType": "car"
     },
     {
       "id": 15255,
@@ -9417,7 +9827,8 @@
         }
       ],
       "name": "Mazda RX-7 F3",
-      "year": 2002
+      "year": 2002,
+      "vehicleType": "car"
     },
     {
       "id": 15256,
@@ -9428,7 +9839,8 @@
         }
       ],
       "name": "Mitsubishi Lancer Evo F3",
-      "year": 2006
+      "year": 2006,
+      "vehicleType": "car"
     },
     {
       "id": 15257,
@@ -9439,7 +9851,8 @@
         }
       ],
       "name": "Nissan Skyline GTR F2",
-      "year": 2002
+      "year": 2002,
+      "vehicleType": "car"
     },
     {
       "id": 15258,
@@ -9450,7 +9863,8 @@
         }
       ],
       "name": "Toyota Supra F1",
-      "year": 2001
+      "year": 2001,
+      "vehicleType": "car"
     },
     {
       "id": 15259,
@@ -9461,7 +9875,8 @@
         }
       ],
       "name": "Ford GT",
-      "year": 2005
+      "year": 2005,
+      "vehicleType": "car"
     },
     {
       "id": 15260,
@@ -9472,7 +9887,8 @@
         }
       ],
       "name": "Ford Transit TK",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "truck"
     },
     {
       "id": 15261,
@@ -9483,7 +9899,8 @@
         }
       ],
       "name": "Lamborghini Centenario",
-      "year": 2018
+      "year": 2018,
+      "vehicleType": "car"
     },
     {
       "id": 15262,
@@ -9494,7 +9911,8 @@
         }
       ],
       "name": "Land Rover Series I",
-      "year": 1996
+      "year": 1996,
+      "vehicleType": "car"
     },
     {
       "id": 15263,
@@ -9505,7 +9923,8 @@
         }
       ],
       "name": "McLaren 765LT",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15264,
@@ -9516,7 +9935,8 @@
         }
       ],
       "name": "Mercedes C63 Coupe BE",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "car"
     },
     {
       "id": 15265,
@@ -9527,7 +9947,8 @@
         }
       ],
       "name": "Mercedes GL63 X166",
-      "year": 2016
+      "year": 2016,
+      "vehicleType": "car"
     },
     {
       "id": 15266,
@@ -9538,7 +9959,8 @@
         }
       ],
       "name": "Mercedes Maybach G650 La",
-      "year": 2018
+      "year": 2018,
+      "vehicleType": "car"
     },
     {
       "id": 15268,
@@ -9549,7 +9971,8 @@
         }
       ],
       "name": "Mercedes Sprinter TK",
-      "year": 2013
+      "year": 2013,
+      "vehicleType": "truck"
     },
     {
       "id": 15269,
@@ -9560,7 +9983,8 @@
         }
       ],
       "name": "Mercedes S63 AMG W223",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15270,
@@ -9571,7 +9995,8 @@
         }
       ],
       "name": "Mercedes S500 W223",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15271,
@@ -9582,7 +10007,8 @@
         }
       ],
       "name": "Nissan 400 Fairlady",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15272,
@@ -9593,7 +10019,8 @@
         }
       ],
       "name": "Saab 9-3",
-      "year": 2009
+      "year": 2009,
+      "vehicleType": "car"
     },
     {
       "id": 15273,
@@ -9604,7 +10031,8 @@
         }
       ],
       "name": "Subaru Impreza WRX",
-      "year": 2005
+      "year": 2005,
+      "vehicleType": "car"
     },
     {
       "id": 15274,
@@ -9615,7 +10043,8 @@
         }
       ],
       "name": "Toyota 4Runner",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "car"
     },
     {
       "id": 15275,
@@ -9626,7 +10055,8 @@
         }
       ],
       "name": "Toyota Tundra",
-      "year": 2021
+      "year": 2021,
+      "vehicleType": "truck"
     },
     {
       "id": 15276,
@@ -9637,7 +10067,8 @@
         }
       ],
       "name": "Volkswagen Touareg",
-      "year": 2014
+      "year": 2014,
+      "vehicleType": "car"
     },
     {
       "id": 15277,
@@ -9648,7 +10079,8 @@
         }
       ],
       "name": "KAMAZ 5350",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "truck"
     },
     {
       "id": 15278,
@@ -9659,7 +10091,8 @@
         }
       ],
       "name": "Mercedes Sprinter",
-      "year": 2012
+      "year": 2012,
+      "vehicleType": "truck"
     },
     {
       "id": 15279,
@@ -9670,7 +10103,8 @@
         }
       ],
       "name": "Toyota Tundra Camper",
-      "year": 2021
+      "year": 2021,
+      "vehicleType": "camper"
     },
     {
       "id": 15281,
@@ -9681,7 +10115,8 @@
         }
       ],
       "name": "LADA Инвалидка",
-      "year": 1997
+      "year": 1997,
+      "vehicleType": "car"
     },
     {
       "id": 15282,
@@ -9692,7 +10127,8 @@
         }
       ],
       "name": "RollsRoyce Cullinan B",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15283,
@@ -9703,7 +10139,8 @@
         }
       ],
       "name": "RollsRoyce Phantom B",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15284,
@@ -9714,7 +10151,8 @@
         }
       ],
       "name": "Dodge RAM TRX",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "truck"
     },
     {
       "id": 15285,
@@ -9725,7 +10163,8 @@
         }
       ],
       "name": "Robinson Helicopter",
-      "year": 2020
+      "year": 2020,
+      "vehicleType": "helicopter"
     },
     {
       "id": 15286,
@@ -9736,7 +10175,8 @@
         }
       ],
       "name": "Mercedes GLS 63 AMG",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15287,
@@ -9747,7 +10187,8 @@
         }
       ],
       "name": "RollsRoyce Phantom",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15288,
@@ -9758,7 +10199,8 @@
         }
       ],
       "name": "Audi Etron GT",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15289,
@@ -9769,7 +10211,8 @@
         }
       ],
       "name": "BMW X5M",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15290,
@@ -9780,7 +10223,8 @@
         }
       ],
       "name": "Toyota LC 300",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15291,
@@ -9791,7 +10235,8 @@
         }
       ],
       "name": "Robinson Helicopter",
-      "year": 2020
+      "year": 2020,
+      "vehicleType": "helicopter"
     },
     {
       "id": 15292,
@@ -9802,7 +10247,8 @@
         }
       ],
       "name": "Regina",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15293,
@@ -9813,7 +10259,8 @@
         }
       ],
       "name": "Ford Mustang",
-      "year": 1967
+      "year": 1967,
+      "vehicleType": "car"
     },
     {
       "id": 15294,
@@ -9824,7 +10271,8 @@
         }
       ],
       "name": "Mercedes Br P900 R.HW",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15295,
@@ -9835,7 +10283,8 @@
         }
       ],
       "name": "Ford HotRod",
-      "year": 1969
+      "year": 1969,
+      "vehicleType": "car"
     },
     {
       "id": 15296,
@@ -9846,7 +10295,8 @@
         }
       ],
       "name": "Daewoo Matiz",
-      "year": 2000
+      "year": 2000,
+      "vehicleType": "car"
     },
     {
       "id": 15297,
@@ -9857,7 +10307,8 @@
         }
       ],
       "name": "Mercedes Br P900 R",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15298,
@@ -9868,7 +10319,8 @@
         }
       ],
       "name": "Porshe 959",
-      "year": 1991
+      "year": 1991,
+      "vehicleType": "car"
     },
     {
       "id": 15299,
@@ -9879,7 +10331,8 @@
         }
       ],
       "name": "Ferrari Monza",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15600,
@@ -9890,7 +10343,8 @@
         }
       ],
       "name": "ZAZ Tavria",
-      "year": 1998
+      "year": 1998,
+      "vehicleType": "car"
     },
     {
       "id": 15601,
@@ -9901,7 +10355,8 @@
         }
       ],
       "name": "Ferrari 512 TR",
-      "year": 1994
+      "year": 1994,
+      "vehicleType": "car"
     },
     {
       "id": 15602,
@@ -9912,7 +10367,8 @@
         }
       ],
       "name": "Mercedes CLS 53",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "car"
     },
     {
       "id": 15603,
@@ -9947,7 +10403,8 @@
         }
       ],
       "name": "LADA Granta",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15604,
@@ -9958,7 +10415,8 @@
         }
       ],
       "name": "GAZ Волга КГБ",
-      "year": 1968
+      "year": 1968,
+      "vehicleType": "special"
     },
     {
       "id": 15605,
@@ -9969,7 +10427,8 @@
         }
       ],
       "name": "Hummer H2",
-      "year": 2007
+      "year": 2007,
+      "vehicleType": "car"
     },
     {
       "id": 15606,
@@ -9980,7 +10439,8 @@
         }
       ],
       "name": "Mercedes GLS 63 AMG",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15607,
@@ -9991,7 +10451,8 @@
         }
       ],
       "name": "LADA Granta",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15608,
@@ -10002,7 +10463,8 @@
         }
       ],
       "name": "BMW X5M",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15609,
@@ -10013,7 +10475,8 @@
         }
       ],
       "name": "Porshe 911 992",
-      "year": 2018
+      "year": 2018,
+      "vehicleType": "car"
     },
     {
       "id": 15610,
@@ -10024,7 +10487,8 @@
         }
       ],
       "name": "BMW 1000R",
-      "year": 2020
+      "year": 2020,
+      "vehicleType": "motorcycle"
     },
     {
       "id": 15611,
@@ -10035,7 +10499,8 @@
         }
       ],
       "name": "Bugatti Veyron",
-      "year": 2015
+      "year": 2015,
+      "vehicleType": "car"
     },
     {
       "id": 15612,
@@ -10046,7 +10511,8 @@
         }
       ],
       "name": "GAZ 52",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "truck"
     },
     {
       "id": 15613,
@@ -10057,7 +10523,8 @@
         }
       ],
       "name": "Koenigsegg Gemera",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15614,
@@ -10068,7 +10535,8 @@
         }
       ],
       "name": "Lamborghini Countach",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15615,
@@ -10079,7 +10547,8 @@
         }
       ],
       "name": "Snow Snow",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "special"
     },
     {
       "id": 15616,
@@ -10090,7 +10559,8 @@
         }
       ],
       "name": "Bentley UltraTank",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "special"
     },
     {
       "id": 15617,
@@ -10101,7 +10571,8 @@
         }
       ],
       "name": "LADA 2101 Pickup",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "truck"
     },
     {
       "id": 15618,
@@ -10112,7 +10583,8 @@
         }
       ],
       "name": "International ProStar LT",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "truck"
     },
     {
       "id": 15619,
@@ -10183,7 +10655,8 @@
         }
       ],
       "name": "KIA K5",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15620,
@@ -10194,7 +10667,8 @@
         }
       ],
       "name": "KIA K5 Police",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "special"
     },
     {
       "id": 15621,
@@ -10205,7 +10679,8 @@
         }
       ],
       "name": "GAZ 2401",
-      "year": 1987
+      "year": 1987,
+      "vehicleType": "car"
     },
     {
       "id": 15622,
@@ -10216,7 +10691,8 @@
         }
       ],
       "name": "BMW M3 F80 CS",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15623,
@@ -10227,7 +10703,8 @@
         }
       ],
       "name": "Bentley Continental",
-      "year": 2017
+      "year": 2017,
+      "vehicleType": "car"
     },
     {
       "id": 15624,
@@ -10238,7 +10715,8 @@
         }
       ],
       "name": "Ferrari Enzo",
-      "year": 2004
+      "year": 2004,
+      "vehicleType": "car"
     },
     {
       "id": 15626,
@@ -10249,7 +10727,8 @@
         }
       ],
       "name": "Lamborghini Sian",
-      "year": 2019
+      "year": 2019,
+      "vehicleType": "car"
     },
     {
       "id": 15627,
@@ -10260,7 +10739,8 @@
         }
       ],
       "name": "Mercedes EQG",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15628,
@@ -10271,7 +10751,8 @@
         }
       ],
       "name": "Porshe Cayenne Turbo GT",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15629,
@@ -10282,7 +10763,8 @@
         }
       ],
       "name": "UAZ Пикап",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "truck"
     },
     {
       "id": 15630,
@@ -10293,7 +10775,8 @@
         }
       ],
       "name": "Mercedes V Class",
-      "year": 2022
+      "year": 2022,
+      "vehicleType": "car"
     },
     {
       "id": 15631,
@@ -10304,7 +10787,8 @@
         }
       ],
       "name": "UAZ 452 Koncept",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15632,
@@ -10315,7 +10799,8 @@
         }
       ],
       "name": "Toyota LC300 Safari",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15633,
@@ -10326,7 +10811,8 @@
         }
       ],
       "name": "BMW M4 CSL",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15634,
@@ -10337,7 +10823,8 @@
         }
       ],
       "name": "Mercedes PUCH",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15635,
@@ -10348,7 +10835,8 @@
         }
       ],
       "name": "UAZ 452 Пикап Концепт",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "truck"
     },
     {
       "id": 15636,
@@ -10359,7 +10847,8 @@
         }
       ],
       "name": "BMW M3 G80 CS",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15637,
@@ -10370,7 +10859,8 @@
         }
       ],
       "name": "Audi RS6 C8 Avant",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15638,
@@ -10381,7 +10871,8 @@
         }
       ],
       "name": "ZAZ Project 965",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15639,
@@ -10392,7 +10883,8 @@
         }
       ],
       "name": "ZAZ E-Zaz",
-      "year": 2077
+      "year": 2077,
+      "vehicleType": "car"
     },
     {
       "id": 15640,
@@ -10403,7 +10895,8 @@
         }
       ],
       "name": "Bentley Flyinq Spur",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15641,
@@ -10414,7 +10907,8 @@
         }
       ],
       "name": "PAZ Ami",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "bus"
     },
     {
       "id": 15642,
@@ -10425,7 +10919,8 @@
         }
       ],
       "name": "Lamborghini Urus",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15643,
@@ -10436,7 +10931,8 @@
         }
       ],
       "name": "Mercedes AMG Project One",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15645,
@@ -10447,7 +10943,8 @@
         }
       ],
       "name": "Mercedes CLS 63 AMG",
-      "year": 2010
+      "year": 2010,
+      "vehicleType": "car"
     },
     {
       "id": 15646,
@@ -10458,7 +10955,8 @@
         }
       ],
       "name": "Lamborghini Tecnomar",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "yacht"
     },
     {
       "id": 15647,
@@ -10469,7 +10967,8 @@
         }
       ],
       "name": "GMC Hummer EV",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "truck"
     },
     {
       "id": 15648,
@@ -10480,7 +10979,8 @@
         }
       ],
       "name": "LADA 2103",
-      "year": 1985
+      "year": 1985,
+      "vehicleType": "car"
     },
     {
       "id": 15649,
@@ -10491,7 +10991,8 @@
         }
       ],
       "name": "Chevrolet Camper",
-      "year": 1985
+      "year": 1985,
+      "vehicleType": "camper"
     },
     {
       "id": 15650,
@@ -10502,7 +11003,8 @@
         }
       ],
       "name": "Lamborghini Diablo",
-      "year": 2001
+      "year": 2001,
+      "vehicleType": "car"
     },
     {
       "id": 15651,
@@ -10554,7 +11056,8 @@
         }
       ],
       "name": "BMW 330D G20",
-      "year": 2021
+      "year": 2021,
+      "vehicleType": "car"
     },
     {
       "id": 15652,
@@ -10565,7 +11068,8 @@
         }
       ],
       "name": "BMW 760i G70",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15653,
@@ -10576,7 +11080,8 @@
         }
       ],
       "name": "BMW M3 G81",
-      "year": 2023
+      "year": 2023,
+      "vehicleType": "car"
     },
     {
       "id": 15661,
@@ -10585,7 +11090,12 @@
           "src": "/wiki/cars/15661.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "car",
+      "name": "Спортивне купе Bugatti",
+      "nameNote": "Марку визначено візуально; точну модель довідник не підтверджує.",
+      "year": null,
+      "imageFlipX": true
     },
     {
       "id": 15688,
@@ -10594,7 +11104,12 @@
           "src": "/wiki/cars/15688.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "car",
+      "name": "Гоночний Porsche 911",
+      "nameNote": "Опис за зображенням; точну модифікацію довідник не підтверджує.",
+      "year": null,
+      "imageFlipX": true
     },
     {
       "id": 17404,
@@ -10603,7 +11118,12 @@
           "src": "/wiki/cars/17404.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "car",
+      "name": "Спортивне купе Audi",
+      "nameNote": "Марку визначено візуально; точну модель довідник не підтверджує.",
+      "year": null,
+      "imageFlipX": true
     },
     {
       "id": 17405,
@@ -10612,7 +11132,12 @@
           "src": "/wiki/cars/17405.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "car",
+      "name": "Позашляховик Mercedes-Benz G-Class",
+      "nameNote": "Модель визначено візуально; довідник ресурсу її не підтверджує.",
+      "year": null,
+      "imageFlipX": true
     },
     {
       "id": 17426,
@@ -10621,7 +11146,12 @@
           "src": "/wiki/cars/17426.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "car",
+      "name": "Porsche 911 GT3",
+      "nameNote": "Модель визначено за зображенням; довідник ресурсу її не підтверджує.",
+      "year": null,
+      "imageFlipX": true
     },
     {
       "id": 17433,
@@ -10630,7 +11160,12 @@
           "src": "/wiki/cars/17433.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "car",
+      "name": "BMW M4 GT3",
+      "nameNote": "Модель визначено за зображенням; довідник ресурсу її не підтверджує.",
+      "year": null,
+      "imageFlipX": true
     },
     {
       "id": 17437,
@@ -10639,7 +11174,12 @@
           "src": "/wiki/cars/17437.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "car",
+      "name": "Dodge Viper",
+      "nameNote": "Модель визначено за зображенням; довідник ресурсу її не підтверджує.",
+      "year": null,
+      "imageFlipX": true
     },
     {
       "id": 17438,
@@ -10648,7 +11188,12 @@
           "src": "/wiki/cars/17438.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "car",
+      "name": "Chevrolet Impala",
+      "nameNote": "Назва прочитана на зображенні; довідник ресурсу її не підтверджує.",
+      "year": null,
+      "imageFlipX": true
     },
     {
       "id": 17444,
@@ -10657,7 +11202,12 @@
           "src": "/wiki/cars/17444.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "car",
+      "name": "Спортивний автомобіль Ford GT",
+      "nameNote": "Марку й тип визначено візуально; точну модель довідник не підтверджує.",
+      "year": null,
+      "imageFlipX": true
     },
     {
       "id": 17445,
@@ -10666,7 +11216,12 @@
           "src": "/wiki/cars/17445.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "car",
+      "name": "Позашляховик Mercedes-Benz G-Class",
+      "nameNote": "Модель визначено візуально; довідник ресурсу її не підтверджує.",
+      "year": null,
+      "imageFlipX": true
     },
     {
       "id": 17454,
@@ -10675,7 +11230,12 @@
           "src": "/wiki/cars/17454.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "car",
+      "name": "Toyota GR Yaris",
+      "nameNote": "Модель визначено за зображенням; довідник ресурсу її не підтверджує.",
+      "year": null,
+      "imageFlipX": true
     },
     {
       "id": 17456,
@@ -10684,7 +11244,11 @@
           "src": "/wiki/cars/17456.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "car",
+      "name": "Електричний седан Xiaomi SU7",
+      "nameNote": "Модель визначено візуально; емблему та назву довідник ресурсу не підтверджує.",
+      "year": null
     },
     {
       "id": 17460,
@@ -10693,7 +11257,12 @@
           "src": "/wiki/cars/17460.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "car",
+      "name": "Audi RS6 Avant",
+      "nameNote": "Модель визначено за зображенням; довідник ресурсу її не підтверджує.",
+      "year": null,
+      "imageFlipX": true
     },
     {
       "id": 17462,
@@ -10702,7 +11271,12 @@
           "src": "/wiki/cars/17462.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "car",
+      "name": "LADA 2109",
+      "nameNote": "Назву прочитано на зображенні; довідник ресурсу її не підтверджує.",
+      "year": null,
+      "imageFlipX": true
     },
     {
       "id": 17463,
@@ -10711,7 +11285,12 @@
           "src": "/wiki/cars/17463.webp",
           "variant": null
         }
-      ]
+      ],
+      "vehicleType": "truck",
+      "name": "Пікап BMW",
+      "nameNote": "Марку й тип визначено візуально; точну модель довідник не підтверджує.",
+      "year": null,
+      "imageFlipX": true
     }
   ],
   "accessories": [
