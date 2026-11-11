@@ -6084,7 +6084,12 @@
     },
     {
       "id": 511,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/511.webp",
+          "variant": null
+        }
+      ],
       "name": "Be",
       "year": 2000
     },
@@ -6189,7 +6194,12 @@
     },
     {
       "id": 521,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/521.webp",
+          "variant": null
+        }
+      ],
       "name": "IG",
       "year": 1972
     },
@@ -6375,13 +6385,23 @@
     },
     {
       "id": 538,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/538.webp",
+          "variant": null
+        }
+      ],
       "name": "Потяг",
       "year": 2000
     },
     {
       "id": 539,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/539.webp",
+          "variant": null
+        }
+      ],
       "name": "Судно на повітряній подушці",
       "year": 2000
     },
@@ -6479,7 +6499,12 @@
     },
     {
       "id": 548,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/548.webp",
+          "variant": null
+        }
+      ],
       "name": "Воен Верт",
       "year": 2000
     },
@@ -6927,7 +6952,7 @@
       "id": 589,
       "images": [
         {
-          "src": "/wiki/cars/589.png",
+          "src": "/wiki/cars/589.webp",
           "variant": null
         },
         {
@@ -7229,13 +7254,23 @@
     },
     {
       "id": 613,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/613.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA Urban",
       "year": 2014
     },
     {
       "id": 614,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/614.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW X6M E71",
       "year": 2008
     },
@@ -7243,7 +7278,7 @@
       "id": 699,
       "images": [
         {
-          "src": "/wiki/cars/699.png",
+          "src": "/wiki/cars/699.webp",
           "variant": null
         }
       ],
@@ -7252,7 +7287,12 @@
     },
     {
       "id": 793,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/793.webp",
+          "variant": null
+        }
+      ],
       "name": "Audi Q7",
       "year": 2010
     },
