@@ -4637,7 +4637,12 @@
     },
     {
       "id": 401,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/401.webp",
+          "variant": null
+        }
+      ],
       "name": "IG 2712",
       "year": 2000
     },
@@ -5576,7 +5581,12 @@
     },
     {
       "id": 470,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/470.webp",
+          "variant": null
+        }
+      ],
       "name": null,
       "year": 2000
     },
@@ -5681,7 +5691,12 @@
     },
     {
       "id": 476,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/476.webp",
+          "variant": null
+        }
+      ],
       "name": "Винищувач",
       "year": 2000
     },
@@ -5698,7 +5713,12 @@
     },
     {
       "id": 478,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/478.webp",
+          "variant": null
+        }
+      ],
       "name": "IG 27151",
       "year": 1972
     },
@@ -5741,7 +5761,12 @@
     },
     {
       "id": 482,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/482.webp",
+          "variant": null
+        }
+      ],
       "name": "GAZ",
       "year": 2003
     },
@@ -5769,7 +5794,12 @@
     },
     {
       "id": 485,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/485.webp",
+          "variant": null
+        }
+      ],
       "name": "Аеродинамічний транспорт",
       "year": 2000
     },
@@ -5944,7 +5974,12 @@
     },
     {
       "id": 501,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/501.webp",
+          "variant": null
+        }
+      ],
       "name": "RCgobl",
       "year": 2000
     },
@@ -5972,7 +6007,12 @@
     },
     {
       "id": 504,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/504.webp",
+          "variant": null
+        }
+      ],
       "name": "Bloodra",
       "year": 2000
     },
@@ -6022,13 +6062,23 @@
     },
     {
       "id": 509,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/509.webp",
+          "variant": null
+        }
+      ],
       "name": "BIKE Bike",
       "year": 2000
     },
     {
       "id": 510,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/510.webp",
+          "variant": null
+        }
+      ],
       "name": "BIKE Bike",
       "year": 2000
     },
