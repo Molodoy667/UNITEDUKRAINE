@@ -10286,61 +10286,111 @@
     },
     {
       "id": 15630,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15630.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes V Class",
       "year": 2022
     },
     {
       "id": 15631,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15631.webp",
+          "variant": null
+        }
+      ],
       "name": "UAZ 452 Koncept",
       "year": 2023
     },
     {
       "id": 15632,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15632.webp",
+          "variant": null
+        }
+      ],
       "name": "Toyota LC300 Safari",
       "year": 2023
     },
     {
       "id": 15633,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15633.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M4 CSL",
       "year": 2023
     },
     {
       "id": 15634,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15634.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes PUCH",
       "year": 2023
     },
     {
       "id": 15635,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15635.webp",
+          "variant": null
+        }
+      ],
       "name": "UAZ 452 Пикап Концепт",
       "year": 2023
     },
     {
       "id": 15636,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15636.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M3 G80 CS",
       "year": 2023
     },
     {
       "id": 15637,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15637.webp",
+          "variant": null
+        }
+      ],
       "name": "Audi RS6 C8 Avant",
       "year": 2023
     },
     {
       "id": 15638,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15638.webp",
+          "variant": null
+        }
+      ],
       "name": "ZAZ Project 965",
       "year": 2023
     },
     {
       "id": 15639,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15639.webp",
+          "variant": null
+        }
+      ],
       "name": "ZAZ E-Zaz",
       "year": 2077
     },
