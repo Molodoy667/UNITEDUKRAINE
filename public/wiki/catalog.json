@@ -7760,61 +7760,111 @@
     },
     {
       "id": 15095,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15095.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes Actros",
       "year": 2003
     },
     {
       "id": 15096,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15096.webp",
+          "variant": null
+        }
+      ],
       "name": "Volvo FM12",
       "year": 2000
     },
     {
       "id": 15097,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15097.webp",
+          "variant": null
+        }
+      ],
       "name": "Daf XF 105",
       "year": 2010
     },
     {
       "id": 15098,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15098.webp",
+          "variant": null
+        }
+      ],
       "name": "KAMAZ 54115",
       "year": 1996
     },
     {
       "id": 15099,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15099.webp",
+          "variant": null
+        }
+      ],
       "name": "Maz",
       "year": 1989
     },
     {
       "id": 15100,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15100.webp",
+          "variant": null
+        }
+      ],
       "name": "Scania R700",
       "year": 2000
     },
     {
       "id": 15101,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15101.webp",
+          "variant": null
+        }
+      ],
       "name": "ZIL 130",
       "year": 1966
     },
     {
       "id": 15102,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15102.webp",
+          "variant": null
+        }
+      ],
       "name": "Man TGS",
       "year": 2007
     },
     {
       "id": 15103,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15103.webp",
+          "variant": null
+        }
+      ],
       "name": "ZIL 131",
       "year": 1966
     },
     {
       "id": 15104,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15104.webp",
+          "variant": null
+        }
+      ],
       "name": "Tesla CyberTrack",
       "year": 2021
     },
