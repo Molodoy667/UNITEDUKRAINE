@@ -7,8 +7,8 @@ import PagePreloader from './ui/PagePreloader';
 
 function Preview({item,tab}:{item:Entry;tab:Category}) {
   const images=item.images|| (item.image?[{src:item.image,variant:item.variant||null}]:[]);
-  const [selected,setSelected]=useState(0),[failed,setFailed]=useState(false);
-  return <><div className="wiki-preview">{images.length&&!failed?<img className={item.imageFlipX?'wiki-flipped':''} src={images[selected]?.src||images[0].src} alt={`${item.name||singular[tab]} · ID ${item.id}`} loading="lazy" decoding="async" onError={()=>setFailed(true)}/>:<div className="wiki-missing"><ImageOff size={32}/><span>Прев’ю відсутнє</span></div>}<span className="wiki-id">ID {item.id}</span></div>{images.length>1&&<label className="wiki-variant">Варіант<select aria-label={`Варіант авто ID ${item.id}`} value={selected} onChange={e=>{setSelected(Number(e.target.value));setFailed(false);}}>{images.map((img,index)=><option key={img.src} value={index}>{'label' in img&&img.label?img.label:img.variant||index+1}</option>)}</select></label>}</>;
+  const [failed,setFailed]=useState(false);
+  return <div className="wiki-preview">{images.length&&!failed?<img className={item.imageFlipX?'wiki-flipped':''} src={images[0].src} alt={`${item.name||singular[tab]} · ID ${item.id}`} loading="lazy" decoding="async" onError={()=>setFailed(true)}/>:<div className="wiki-missing"><ImageOff size={32}/><span>Прев’ю відсутнє</span></div>}<span className="wiki-id">ID {item.id}</span></div>;
 }
 export default function Wiki() {
   const [query,setQuery]=useState(()=>selection(window.location.search));
