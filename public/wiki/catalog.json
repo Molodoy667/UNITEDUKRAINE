@@ -9531,25 +9531,45 @@
     },
     {
       "id": 15266,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15266.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes Maybach G650 La",
       "year": 2018
     },
     {
       "id": 15268,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15268.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes Sprinter TK",
       "year": 2013
     },
     {
       "id": 15269,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15269.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes S63 AMG W223",
       "year": 2022
     },
     {
       "id": 15270,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15270.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes S500 W223",
       "year": 2022
     },
@@ -9557,7 +9577,7 @@
       "id": 15271,
       "images": [
         {
-          "src": "/wiki/cars/15271.png",
+          "src": "/wiki/cars/15271.webp",
           "variant": null
         }
       ],
@@ -9568,7 +9588,7 @@
       "id": 15272,
       "images": [
         {
-          "src": "/wiki/cars/15272.png",
+          "src": "/wiki/cars/15272.webp",
           "variant": null
         }
       ],
@@ -9577,7 +9597,12 @@
     },
     {
       "id": 15273,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15273.webp",
+          "variant": null
+        }
+      ],
       "name": "Subaru Impreza WRX",
       "year": 2005
     },
@@ -9585,7 +9610,7 @@
       "id": 15274,
       "images": [
         {
-          "src": "/wiki/cars/15274.png",
+          "src": "/wiki/cars/15274.webp",
           "variant": null
         }
       ],
@@ -9607,44 +9632,8 @@
       "id": 15276,
       "images": [
         {
-          "src": "/wiki/cars/15276_carsharing_0.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1"
-        },
-        {
-          "src": "/wiki/cars/15276_carsharing_0_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15276_carsharing_1.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2"
-        },
-        {
-          "src": "/wiki/cars/15276_carsharing_1_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15276_carsharing_2.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3"
-        },
-        {
-          "src": "/wiki/cars/15276_carsharing_2_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15276_carsharing_3.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4"
-        },
-        {
-          "src": "/wiki/cars/15276_carsharing_3_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4 · спереду"
+          "src": "/wiki/cars/15276.webp",
+          "variant": null
         }
       ],
       "name": "Volkswagen Touareg",
@@ -9652,7 +9641,12 @@
     },
     {
       "id": 15277,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15277.webp",
+          "variant": null
+        }
+      ],
       "name": "KAMAZ 5350",
       "year": 2022
     },
