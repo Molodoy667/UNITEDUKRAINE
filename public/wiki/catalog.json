@@ -9300,13 +9300,23 @@
     },
     {
       "id": 15244,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15244.webp",
+          "variant": null
+        }
+      ],
       "name": "Marina",
       "year": 2022
     },
     {
       "id": 15245,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15245.webp",
+          "variant": null
+        }
+      ],
       "name": "Мотоблок",
       "year": 2022
     },
@@ -9314,7 +9324,7 @@
       "id": 15246,
       "images": [
         {
-          "src": "/wiki/cars/15246.png",
+          "src": "/wiki/cars/15246.webp",
           "variant": null
         }
       ],
@@ -9323,43 +9333,78 @@
     },
     {
       "id": 15247,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15247.webp",
+          "variant": null
+        }
+      ],
       "name": "Audi RS5 2018",
       "year": 2018
     },
     {
       "id": 15248,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15248.webp",
+          "variant": null
+        }
+      ],
       "name": "Audi Q8",
       "year": 2022
     },
     {
       "id": 15249,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15249.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW X7 Facelift",
       "year": 2022
     },
     {
       "id": 15250,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15250.webp",
+          "variant": null
+        }
+      ],
       "name": "Bugatti Divo",
       "year": 2020
     },
     {
       "id": 15252,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15252.webp",
+          "variant": null
+        }
+      ],
       "name": "Ferrari SF90",
       "year": 2022
     },
     {
       "id": 15253,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15253.webp",
+          "variant": null
+        }
+      ],
       "name": "Dodge Charger F7",
       "year": 1969
     },
     {
       "id": 15254,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15254.webp",
+          "variant": null
+        }
+      ],
       "name": "Mazda Mazda RX-7 F1",
       "year": 2002
     },
