@@ -10118,66 +10118,66 @@
       "id": 15619,
       "images": [
         {
-          "src": "/wiki/cars/15619_1.png",
+          "src": "/wiki/cars/15619.webp",
           "variant": 1
         },
         {
-          "src": "/wiki/cars/15619_2.png",
+          "src": "/wiki/cars/15619_2.webp",
           "variant": 2
         },
         {
-          "src": "/wiki/cars/15619_3.png",
+          "src": "/wiki/cars/15619_3.webp",
           "variant": 3
         },
         {
-          "src": "/wiki/cars/15619_4.png",
+          "src": "/wiki/cars/15619_4.webp",
           "variant": 4
         },
         {
-          "src": "/wiki/cars/15619_5.png",
+          "src": "/wiki/cars/15619_5.webp",
           "variant": 5
         },
         {
-          "src": "/wiki/cars/15619_6.png",
+          "src": "/wiki/cars/15619_6.webp",
           "variant": 6
         },
         {
-          "src": "/wiki/cars/15619_carsharing_0.png",
+          "src": "/wiki/cars/15619_carsharing_0.webp",
           "variant": null,
           "label": "Каршеринг · колір 1"
         },
         {
-          "src": "/wiki/cars/15619_carsharing_0_front.png",
+          "src": "/wiki/cars/15619_carsharing_0_front.webp",
           "variant": null,
           "label": "Каршеринг · колір 1 · спереду"
         },
         {
-          "src": "/wiki/cars/15619_carsharing_1.png",
+          "src": "/wiki/cars/15619_carsharing_1.webp",
           "variant": null,
           "label": "Каршеринг · колір 2"
         },
         {
-          "src": "/wiki/cars/15619_carsharing_1_front.png",
+          "src": "/wiki/cars/15619_carsharing_1_front.webp",
           "variant": null,
           "label": "Каршеринг · колір 2 · спереду"
         },
         {
-          "src": "/wiki/cars/15619_carsharing_2.png",
+          "src": "/wiki/cars/15619_carsharing_2.webp",
           "variant": null,
           "label": "Каршеринг · колір 3"
         },
         {
-          "src": "/wiki/cars/15619_carsharing_2_front.png",
+          "src": "/wiki/cars/15619_carsharing_2_front.webp",
           "variant": null,
           "label": "Каршеринг · колір 3 · спереду"
         },
         {
-          "src": "/wiki/cars/15619_carsharing_3.png",
+          "src": "/wiki/cars/15619_carsharing_3.webp",
           "variant": null,
           "label": "Каршеринг · колір 4"
         },
         {
-          "src": "/wiki/cars/15619_carsharing_3_front.png",
+          "src": "/wiki/cars/15619_carsharing_3_front.webp",
           "variant": null,
           "label": "Каршеринг · колір 4 · спереду"
         }
@@ -10187,7 +10187,12 @@
     },
     {
       "id": 15620,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15620.webp",
+          "variant": null
+        }
+      ],
       "name": "KIA K5 Police",
       "year": 2022
     },
@@ -10195,7 +10200,7 @@
       "id": 15621,
       "images": [
         {
-          "src": "/wiki/cars/15621.png",
+          "src": "/wiki/cars/15621.webp",
           "variant": null
         }
       ],
@@ -10204,43 +10209,78 @@
     },
     {
       "id": 15622,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15622.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M3 F80 CS",
       "year": 2022
     },
     {
       "id": 15623,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15623.webp",
+          "variant": null
+        }
+      ],
       "name": "Bentley Continental",
       "year": 2017
     },
     {
       "id": 15624,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15624.webp",
+          "variant": null
+        }
+      ],
       "name": "Ferrari Enzo",
       "year": 2004
     },
     {
       "id": 15626,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15626.webp",
+          "variant": null
+        }
+      ],
       "name": "Lamborghini Sian",
       "year": 2019
     },
     {
       "id": 15627,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15627.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes EQG",
       "year": 2022
     },
     {
       "id": 15628,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15628.webp",
+          "variant": null
+        }
+      ],
       "name": "Porshe Cayenne Turbo GT",
       "year": 2023
     },
     {
       "id": 15629,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15629.webp",
+          "variant": null
+        }
+      ],
       "name": "UAZ Пикап",
       "year": 2023
     },
