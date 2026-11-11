@@ -9652,61 +9652,111 @@
     },
     {
       "id": 15278,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15278.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes Sprinter",
       "year": 2012
     },
     {
       "id": 15279,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15279.webp",
+          "variant": null
+        }
+      ],
       "name": "Toyota Tundra Camper",
       "year": 2021
     },
     {
       "id": 15281,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15281.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA Инвалидка",
       "year": 1997
     },
     {
       "id": 15282,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15282.webp",
+          "variant": null
+        }
+      ],
       "name": "RollsRoyce Cullinan B",
       "year": 2022
     },
     {
       "id": 15283,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15283.webp",
+          "variant": null
+        }
+      ],
       "name": "RollsRoyce Phantom B",
       "year": 2022
     },
     {
       "id": 15284,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15284.webp",
+          "variant": null
+        }
+      ],
       "name": "Dodge RAM TRX",
       "year": 2022
     },
     {
       "id": 15285,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15285.webp",
+          "variant": null
+        }
+      ],
       "name": "Robinson Helicopter",
       "year": 2020
     },
     {
       "id": 15286,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15286.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes GLS 63 AMG",
       "year": 2022
     },
     {
       "id": 15287,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15287.webp",
+          "variant": null
+        }
+      ],
       "name": "RollsRoyce Phantom",
       "year": 2022
     },
     {
       "id": 15288,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15288.webp",
+          "variant": null
+        }
+      ],
       "name": "Audi Etron GT",
       "year": 2022
     },
