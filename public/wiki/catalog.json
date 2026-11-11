@@ -7518,25 +7518,45 @@
     },
     {
       "id": 15073,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15073.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW 740 F02",
       "year": 2008
     },
     {
       "id": 15074,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15074.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA 2114",
       "year": 2013
     },
     {
       "id": 15075,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15075.webp",
+          "variant": null
+        }
+      ],
       "name": "Jeep Grand Cherokee",
       "year": 2023
     },
     {
       "id": 15076,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15076.webp",
+          "variant": null
+        }
+      ],
       "name": "Cadilac Escalade",
       "year": 2014
     },
@@ -7544,31 +7564,7 @@
       "id": 15077,
       "images": [
         {
-          "src": "/wiki/cars/15077_1.png",
-          "variant": 1
-        },
-        {
-          "src": "/wiki/cars/15077_2.png",
-          "variant": 2
-        },
-        {
-          "src": "/wiki/cars/15077_3.png",
-          "variant": 3
-        },
-        {
-          "src": "/wiki/cars/15077_4.png",
-          "variant": 4
-        },
-        {
-          "src": "/wiki/cars/15077_5.png",
-          "variant": 5
-        },
-        {
-          "src": "/wiki/cars/15077_6.png",
-          "variant": 6
-        },
-        {
-          "src": "/wiki/cars/15077.png",
+          "src": "/wiki/cars/15077.webp",
           "variant": null
         }
       ],
@@ -7577,19 +7573,34 @@
     },
     {
       "id": 15078,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15078.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA 2110",
       "year": 2002
     },
     {
       "id": 15079,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15079.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA 2104",
       "year": 1984
     },
     {
       "id": 15080,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15080.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA 2105",
       "year": 2000
     },
@@ -7597,7 +7608,7 @@
       "id": 15081,
       "images": [
         {
-          "src": "/wiki/cars/15081.png",
+          "src": "/wiki/cars/15081.webp",
           "variant": null
         }
       ],
@@ -7606,7 +7617,12 @@
     },
     {
       "id": 15082,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15082.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes 560 SE",
       "year": 1991
     },
