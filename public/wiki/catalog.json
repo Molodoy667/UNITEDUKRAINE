@@ -7408,37 +7408,67 @@
     },
     {
       "id": 999,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/999.webp",
+          "variant": null
+        }
+      ],
       "name": "Lamborghini Urus",
       "year": 2017
     },
     {
       "id": 1326,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/1326.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes ML63 AMG W164",
       "year": 2011
     },
     {
       "id": 15065,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15065.webp",
+          "variant": null
+        }
+      ],
       "name": "Toyota Chaser",
       "year": 2001
     },
     {
       "id": 15066,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15066.webp",
+          "variant": null
+        }
+      ],
       "name": "Volkswagen Touareg",
       "year": 2002
     },
     {
       "id": 15067,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15067.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW E38 740",
       "year": 1994
     },
     {
       "id": 15068,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15068.webp",
+          "variant": null
+        }
+      ],
       "name": "Toyota Mark II 90",
       "year": 1990
     },
@@ -7446,28 +7476,8 @@
       "id": 15069,
       "images": [
         {
-          "src": "/wiki/cars/15069_1.png",
-          "variant": 1
-        },
-        {
-          "src": "/wiki/cars/15069_2.png",
-          "variant": 2
-        },
-        {
-          "src": "/wiki/cars/15069_3.png",
-          "variant": 3
-        },
-        {
-          "src": "/wiki/cars/15069_4.png",
-          "variant": 4
-        },
-        {
-          "src": "/wiki/cars/15069_5.png",
-          "variant": 5
-        },
-        {
-          "src": "/wiki/cars/15069_6.png",
-          "variant": 6
+          "src": "/wiki/cars/15069.webp",
+          "variant": null
         }
       ],
       "name": "Toyota Camry V50",
@@ -7475,19 +7485,34 @@
     },
     {
       "id": 15070,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15070.webp",
+          "variant": null
+        }
+      ],
       "name": "UAZ Буханка",
       "year": 1958
     },
     {
       "id": 15071,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15071.webp",
+          "variant": null
+        }
+      ],
       "name": "Lexus LX570",
       "year": 2010
     },
     {
       "id": 15072,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15072.webp",
+          "variant": null
+        }
+      ],
       "name": "Lexus IS200",
       "year": 2000
     },
