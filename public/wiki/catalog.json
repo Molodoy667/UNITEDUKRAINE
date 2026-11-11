@@ -10508,42 +10508,47 @@
       "id": 15651,
       "images": [
         {
-          "src": "/wiki/cars/15651_carsharing_0.png",
+          "src": "/wiki/cars/15651.webp",
+          "variant": null,
+          "label": "Прев’ю в шоурумі"
+        },
+        {
+          "src": "/wiki/cars/15651_carsharing_0.webp",
           "variant": null,
           "label": "Каршеринг · колір 1"
         },
         {
-          "src": "/wiki/cars/15651_carsharing_0_front.png",
+          "src": "/wiki/cars/15651_carsharing_0_front.webp",
           "variant": null,
           "label": "Каршеринг · колір 1 · спереду"
         },
         {
-          "src": "/wiki/cars/15651_carsharing_1.png",
+          "src": "/wiki/cars/15651_carsharing_1.webp",
           "variant": null,
           "label": "Каршеринг · колір 2"
         },
         {
-          "src": "/wiki/cars/15651_carsharing_1_front.png",
+          "src": "/wiki/cars/15651_carsharing_1_front.webp",
           "variant": null,
           "label": "Каршеринг · колір 2 · спереду"
         },
         {
-          "src": "/wiki/cars/15651_carsharing_2.png",
+          "src": "/wiki/cars/15651_carsharing_2.webp",
           "variant": null,
           "label": "Каршеринг · колір 3"
         },
         {
-          "src": "/wiki/cars/15651_carsharing_2_front.png",
+          "src": "/wiki/cars/15651_carsharing_2_front.webp",
           "variant": null,
           "label": "Каршеринг · колір 3 · спереду"
         },
         {
-          "src": "/wiki/cars/15651_carsharing_3.png",
+          "src": "/wiki/cars/15651_carsharing_3.webp",
           "variant": null,
           "label": "Каршеринг · колір 4"
         },
         {
-          "src": "/wiki/cars/15651_carsharing_3_front.png",
+          "src": "/wiki/cars/15651_carsharing_3_front.webp",
           "variant": null,
           "label": "Каршеринг · колір 4 · спереду"
         }
@@ -10553,13 +10558,23 @@
     },
     {
       "id": 15652,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15652.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW 760i G70",
       "year": 2023
     },
     {
       "id": 15653,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15653.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M3 G81",
       "year": 2023
     },
@@ -10567,7 +10582,7 @@
       "id": 15661,
       "images": [
         {
-          "src": "/wiki/cars/15661.png",
+          "src": "/wiki/cars/15661.webp",
           "variant": null
         }
       ]
@@ -10576,7 +10591,7 @@
       "id": 15688,
       "images": [
         {
-          "src": "/wiki/cars/15688.png",
+          "src": "/wiki/cars/15688.webp",
           "variant": null
         }
       ]
@@ -10585,7 +10600,7 @@
       "id": 17404,
       "images": [
         {
-          "src": "/wiki/cars/17404.png",
+          "src": "/wiki/cars/17404.webp",
           "variant": null
         }
       ]
@@ -10594,7 +10609,7 @@
       "id": 17405,
       "images": [
         {
-          "src": "/wiki/cars/17405.png",
+          "src": "/wiki/cars/17405.webp",
           "variant": null
         }
       ]
@@ -10603,7 +10618,7 @@
       "id": 17426,
       "images": [
         {
-          "src": "/wiki/cars/17426.png",
+          "src": "/wiki/cars/17426.webp",
           "variant": null
         }
       ]
@@ -10612,7 +10627,7 @@
       "id": 17433,
       "images": [
         {
-          "src": "/wiki/cars/17433.png",
+          "src": "/wiki/cars/17433.webp",
           "variant": null
         }
       ]
@@ -10621,7 +10636,7 @@
       "id": 17437,
       "images": [
         {
-          "src": "/wiki/cars/17437.png",
+          "src": "/wiki/cars/17437.webp",
           "variant": null
         }
       ]
