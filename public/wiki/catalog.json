@@ -8310,13 +8310,23 @@
     },
     {
       "id": 15150,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15150.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA 2112 купе",
       "year": 2002
     },
     {
       "id": 15151,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15151.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA 2112",
       "year": 2002
     },
@@ -8324,7 +8334,7 @@
       "id": 15152,
       "images": [
         {
-          "src": "/wiki/cars/15152.png",
+          "src": "/wiki/cars/15152.webp",
           "variant": null
         }
       ],
@@ -8333,19 +8343,34 @@
     },
     {
       "id": 15153,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15153.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW X7",
       "year": 2018
     },
     {
       "id": 15155,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15155.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes W124 Coupe AMG",
       "year": 1995
     },
     {
       "id": 15156,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15156.webp",
+          "variant": null
+        }
+      ],
       "name": "Bentley Turbo R",
       "year": 1998
     },
@@ -8353,44 +8378,8 @@
       "id": 15157,
       "images": [
         {
-          "src": "/wiki/cars/15157_carsharing_0.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1"
-        },
-        {
-          "src": "/wiki/cars/15157_carsharing_0_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15157_carsharing_1.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2"
-        },
-        {
-          "src": "/wiki/cars/15157_carsharing_1_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15157_carsharing_2.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3"
-        },
-        {
-          "src": "/wiki/cars/15157_carsharing_2_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15157_carsharing_3.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4"
-        },
-        {
-          "src": "/wiki/cars/15157_carsharing_3_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4 · спереду"
+          "src": "/wiki/cars/15157.webp",
+          "variant": null
         }
       ],
       "name": "Toyota Camry V70",
@@ -8398,19 +8387,34 @@
     },
     {
       "id": 15158,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15158.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M5 F90 LCI",
       "year": 2021
     },
     {
       "id": 15159,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15159.webp",
+          "variant": null
+        }
+      ],
       "name": "Acura NSX",
       "year": 2016
     },
     {
       "id": 15160,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15160.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes SLR MacFarlaneMcLare",
       "year": 2003
     },
