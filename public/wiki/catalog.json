@@ -9872,7 +9872,12 @@
     },
     {
       "id": 15299,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15299.webp",
+          "variant": null
+        }
+      ],
       "name": "Ferrari Monza",
       "year": 2022
     },
@@ -9880,7 +9885,7 @@
       "id": 15600,
       "images": [
         {
-          "src": "/wiki/cars/15600.png",
+          "src": "/wiki/cars/15600.webp",
           "variant": null
         }
       ],
@@ -9889,7 +9894,12 @@
     },
     {
       "id": 15601,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15601.webp",
+          "variant": null
+        }
+      ],
       "name": "Ferrari 512 TR",
       "year": 1994
     },
@@ -9897,7 +9907,7 @@
       "id": 15602,
       "images": [
         {
-          "src": "/wiki/cars/15602.png",
+          "src": "/wiki/cars/15602.webp",
           "variant": null
         }
       ],
@@ -9908,31 +9918,31 @@
       "id": 15603,
       "images": [
         {
-          "src": "/wiki/cars/15603_1.png",
+          "src": "/wiki/cars/15603.webp",
           "variant": 1
         },
         {
-          "src": "/wiki/cars/15603_2.png",
+          "src": "/wiki/cars/15603_2.webp",
           "variant": 2
         },
         {
-          "src": "/wiki/cars/15603_3.png",
+          "src": "/wiki/cars/15603_3.webp",
           "variant": 3
         },
         {
-          "src": "/wiki/cars/15603_4.png",
+          "src": "/wiki/cars/15603_4.webp",
           "variant": 4
         },
         {
-          "src": "/wiki/cars/15603_5.png",
+          "src": "/wiki/cars/15603_5.webp",
           "variant": 5
         },
         {
-          "src": "/wiki/cars/15603_6.png",
+          "src": "/wiki/cars/15603_6.webp",
           "variant": 6
         },
         {
-          "src": "/wiki/cars/15603.png",
+          "src": "/wiki/cars/15603_default.webp",
           "variant": null
         }
       ],
@@ -9941,7 +9951,12 @@
     },
     {
       "id": 15604,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15604.webp",
+          "variant": null
+        }
+      ],
       "name": "GAZ Волга КГБ",
       "year": 1968
     },
@@ -9949,7 +9964,7 @@
       "id": 15605,
       "images": [
         {
-          "src": "/wiki/cars/15605.png",
+          "src": "/wiki/cars/15605.webp",
           "variant": null
         }
       ],
@@ -9958,19 +9973,34 @@
     },
     {
       "id": 15606,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15606.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes GLS 63 AMG",
       "year": 2022
     },
     {
       "id": 15607,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15607.webp",
+          "variant": null
+        }
+      ],
       "name": "LADA Granta",
       "year": 2022
     },
     {
       "id": 15608,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15608.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW X5M",
       "year": 2022
     },
