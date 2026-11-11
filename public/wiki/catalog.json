@@ -8420,13 +8420,23 @@
     },
     {
       "id": 15161,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15161.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW 850CSI",
       "year": 1996
     },
     {
       "id": 15162,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15162.webp",
+          "variant": null
+        }
+      ],
       "name": "Toyota Mark II 100",
       "year": 2000
     },
@@ -8434,7 +8444,7 @@
       "id": 15163,
       "images": [
         {
-          "src": "/wiki/cars/15163.png",
+          "src": "/wiki/cars/15163.webp",
           "variant": null
         }
       ],
@@ -8443,19 +8453,34 @@
     },
     {
       "id": 15164,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15164.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M8 F92",
       "year": 2021
     },
     {
       "id": 15165,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15165.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M4 G82",
       "year": 2023
     },
     {
       "id": 15166,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15166.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes S63 AMG",
       "year": 2018
     },
@@ -8463,28 +8488,8 @@
       "id": 15167,
       "images": [
         {
-          "src": "/wiki/cars/15167_1.png",
-          "variant": 1
-        },
-        {
-          "src": "/wiki/cars/15167_2.png",
-          "variant": 2
-        },
-        {
-          "src": "/wiki/cars/15167_3.png",
-          "variant": 3
-        },
-        {
-          "src": "/wiki/cars/15167_4.png",
-          "variant": 4
-        },
-        {
-          "src": "/wiki/cars/15167_5.png",
-          "variant": 5
-        },
-        {
-          "src": "/wiki/cars/15167_6.png",
-          "variant": 6
+          "src": "/wiki/cars/15167.webp",
+          "variant": null
         }
       ],
       "name": "Mercedes S500",
@@ -8492,19 +8497,34 @@
     },
     {
       "id": 15168,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15168.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW 325i E36",
       "year": 2000
     },
     {
       "id": 15169,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15169.webp",
+          "variant": null
+        }
+      ],
       "name": "Chevrolet Corvette C8",
       "year": 2020
     },
     {
       "id": 15170,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15170.webp",
+          "variant": null
+        }
+      ],
       "name": "Ferrari F40",
       "year": 1990
     },
