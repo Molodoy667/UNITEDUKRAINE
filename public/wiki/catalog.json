@@ -8532,48 +8532,8 @@
       "id": 15171,
       "images": [
         {
-          "src": "/wiki/cars/15171.png",
+          "src": "/wiki/cars/15171.webp",
           "variant": null
-        },
-        {
-          "src": "/wiki/cars/15171_carsharing_0.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1"
-        },
-        {
-          "src": "/wiki/cars/15171_carsharing_0_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15171_carsharing_1.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2"
-        },
-        {
-          "src": "/wiki/cars/15171_carsharing_1_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15171_carsharing_2.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3"
-        },
-        {
-          "src": "/wiki/cars/15171_carsharing_2_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15171_carsharing_3.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4"
-        },
-        {
-          "src": "/wiki/cars/15171_carsharing_3_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4 · спереду"
         }
       ],
       "name": "Honda Civic Type-R FK8",
@@ -8583,7 +8543,7 @@
       "id": 15172,
       "images": [
         {
-          "src": "/wiki/cars/15172.png",
+          "src": "/wiki/cars/15172.webp",
           "variant": null
         }
       ],
@@ -8592,7 +8552,12 @@
     },
     {
       "id": 15173,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15173.webp",
+          "variant": null
+        }
+      ],
       "name": "Porshe 911 992",
       "year": 2018
     },
@@ -8600,7 +8565,7 @@
       "id": 15174,
       "images": [
         {
-          "src": "/wiki/cars/15174.png",
+          "src": "/wiki/cars/15174.webp",
           "variant": null
         }
       ],
@@ -8609,37 +8574,67 @@
     },
     {
       "id": 15175,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15175.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M5 F90 CS",
       "year": 2021
     },
     {
       "id": 15176,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15176.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes SLS AMG",
       "year": 2014
     },
     {
       "id": 15177,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15177.webp",
+          "variant": null
+        }
+      ],
       "name": "Hummer H1",
       "year": 1995
     },
     {
       "id": 15178,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15178.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes SL65 AMG",
       "year": 2010
     },
     {
       "id": 15179,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15179.webp",
+          "variant": null
+        }
+      ],
       "name": "Bentley 8-Liter",
       "year": 1931
     },
     {
       "id": 15180,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15180.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M3 E46",
       "year": 2006
     },
