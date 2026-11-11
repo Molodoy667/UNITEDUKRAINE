@@ -7069,61 +7069,111 @@
     },
     {
       "id": 603,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/603.webp",
+          "variant": null
+        }
+      ],
       "name": "Dodge Charger",
       "year": 2006
     },
     {
       "id": 604,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/604.webp",
+          "variant": null
+        }
+      ],
       "name": "Porshe Panamera T.",
       "year": 2009
     },
     {
       "id": 605,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/605.webp",
+          "variant": null
+        }
+      ],
       "name": "Lamborghini Huracan",
       "year": 2014
     },
     {
       "id": 606,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/606.webp",
+          "variant": null
+        }
+      ],
       "name": "Прицеп",
       "year": 2000
     },
     {
       "id": 607,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/607.webp",
+          "variant": null
+        }
+      ],
       "name": "Прицеп",
       "year": 2000
     },
     {
       "id": 608,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/608.webp",
+          "variant": null
+        }
+      ],
       "name": "Лестница",
       "year": 2000
     },
     {
       "id": 609,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/609.webp",
+          "variant": null
+        }
+      ],
       "name": "Авиа",
       "year": 2000
     },
     {
       "id": 610,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/610.webp",
+          "variant": null
+        }
+      ],
       "name": "Плуг",
       "year": 2000
     },
     {
       "id": 611,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/611.webp",
+          "variant": null
+        }
+      ],
       "name": "Прицеп уборщ",
       "year": 2000
     },
     {
       "id": 612,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/612.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW M5 E60",
       "year": 2003
     },
