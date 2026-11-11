@@ -6798,43 +6798,78 @@
     },
     {
       "id": 582,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/582.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW R71",
       "year": 1941
     },
     {
       "id": 583,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/583.webp",
+          "variant": null
+        }
+      ],
       "name": "Tug",
       "year": 2000
     },
     {
       "id": 584,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/584.webp",
+          "variant": null
+        }
+      ],
       "name": "Цистерна",
       "year": 2000
     },
     {
       "id": 585,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/585.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes W140",
       "year": 1964
     },
     {
       "id": 586,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/586.webp",
+          "variant": null
+        }
+      ],
       "name": "Harley Company Fat Boy",
       "year": 1990
     },
     {
       "id": 587,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/587.webp",
+          "variant": null
+        }
+      ],
       "name": "Audi Quattro",
       "year": 1991
     },
     {
       "id": 588,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/588.webp",
+          "variant": null
+        }
+      ],
       "name": "Кафе",
       "year": 2000
     },
@@ -6891,19 +6926,34 @@
     },
     {
       "id": 590,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/590.webp",
+          "variant": null
+        }
+      ],
       "name": "Вагон",
       "year": 2000
     },
     {
       "id": 591,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/591.webp",
+          "variant": null
+        }
+      ],
       "name": "Прицеп",
       "year": 2000
     },
     {
       "id": 592,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/592.webp",
+          "variant": null
+        }
+      ],
       "name": "Androm",
       "year": 2000
     },
