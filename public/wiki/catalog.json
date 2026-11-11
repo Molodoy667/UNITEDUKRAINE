@@ -8642,7 +8642,7 @@
       "id": 15181,
       "images": [
         {
-          "src": "/wiki/cars/15181.png",
+          "src": "/wiki/cars/15181.webp",
           "variant": null
         }
       ],
@@ -8651,25 +8651,45 @@
     },
     {
       "id": 15182,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15182.webp",
+          "variant": null
+        }
+      ],
       "name": "Ferrari LaPotenza",
       "year": 2013
     },
     {
       "id": 15183,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15183.webp",
+          "variant": null
+        }
+      ],
       "name": "Volkswagen Golf 5 GTI",
       "year": 2004
     },
     {
       "id": 15184,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15184.webp",
+          "variant": null
+        }
+      ],
       "name": "Toyota Hachiroku AE86",
       "year": 1983
     },
     {
       "id": 15185,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15185.webp",
+          "variant": null
+        }
+      ],
       "name": "SKODA Octavia VRS",
       "year": 2017
     },
@@ -8677,68 +8697,8 @@
       "id": 15186,
       "images": [
         {
-          "src": "/wiki/cars/15186_1.png",
-          "variant": 1
-        },
-        {
-          "src": "/wiki/cars/15186_2.png",
-          "variant": 2
-        },
-        {
-          "src": "/wiki/cars/15186_3.png",
-          "variant": 3
-        },
-        {
-          "src": "/wiki/cars/15186_4.png",
-          "variant": 4
-        },
-        {
-          "src": "/wiki/cars/15186_5.png",
-          "variant": 5
-        },
-        {
-          "src": "/wiki/cars/15186_6.png",
-          "variant": 6
-        },
-        {
-          "src": "/wiki/cars/15186_carsharing_0.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1"
-        },
-        {
-          "src": "/wiki/cars/15186_carsharing_0_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 1 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15186_carsharing_1.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2"
-        },
-        {
-          "src": "/wiki/cars/15186_carsharing_1_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 2 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15186_carsharing_2.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3"
-        },
-        {
-          "src": "/wiki/cars/15186_carsharing_2_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 3 · спереду"
-        },
-        {
-          "src": "/wiki/cars/15186_carsharing_3.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4"
-        },
-        {
-          "src": "/wiki/cars/15186_carsharing_3_front.png",
-          "variant": null,
-          "label": "Каршеринг · колір 4 · спереду"
+          "src": "/wiki/cars/15186.webp",
+          "variant": null
         }
       ],
       "name": "SKODA Octavia DPS",
@@ -8746,25 +8706,45 @@
     },
     {
       "id": 15187,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15187.webp",
+          "variant": null
+        }
+      ],
       "name": "Ferrari 599XX",
       "year": 2010
     },
     {
       "id": 15188,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15188.webp",
+          "variant": null
+        }
+      ],
       "name": "BMW X6M F96",
       "year": 2021
     },
     {
       "id": 15189,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15189.webp",
+          "variant": null
+        }
+      ],
       "name": "Dodge Ram SRT Viper",
       "year": 2006
     },
     {
       "id": 15190,
-      "images": [],
+      "images": [
+        {
+          "src": "/wiki/cars/15190.webp",
+          "variant": null
+        }
+      ],
       "name": "Mercedes 280SL",
       "year": 1969
     },
