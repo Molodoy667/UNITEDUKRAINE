@@ -4,7 +4,7 @@ import {useSite} from '../src/site/content';
 export const discord = 'https://discord.gg/GyJnWJXdJ';
 export function Brand() {
   const {data}=useSite();
-  return <a href="/" className="brand" aria-label="United Ukraine — головна"><img src={data.builder?.logo||'/assets/logo.webp'} alt="" width="44" height="54" /><span>UNITED<span>UKRAINE</span><small>ROLEPLAY</small></span></a>;
+  return <a href="/" className="brand" aria-label="United Ukraine — головна"><img src={data.builder?.logo||'/assets/logo.webp'} alt="" width="44" height="54" /><span>UNITED<span>UKRAINE</span><small>{data.builder.sections.footer.brandCaption}</small></span></a>;
 }
 export function Header() {
   const {data}=useSite();
@@ -35,5 +35,6 @@ export function Header() {
 }
 export function Footer() {
   const {data}=useSite();
-  return <footer className="footer page-width"><div className="footer-top"><Brand /><p>Твоя країна. Твої правила гри.<br />Твоя нова історія.</p>{data.home.discordUrl&&<a href={data.home.discordUrl} target="_blank" rel="noreferrer" className="discord-small"><MessageCircle size={18} /> Зустрінемось у Discord <ArrowUpRight size={17} /></a>}<a className="back-to-top icon-btn" href="#main-content" aria-label="На початок сторінки"><ArrowUp size={19} /></a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} United Ukraine Roleplay</span><div>{data.pages.map(page=><a key={page.id} href={page.url}>{page.title}</a>)}</div><span className="made"><span className="flag" /> З любов’ю до України</span></div></footer>;
+  if(!data.builder.sections.visibility.footer)return null;
+  return <footer className="footer page-width"><div className="footer-top"><Brand /><p>{data.builder.sections.footer.description}<br />{data.builder.sections.footer.descriptionSecond}</p>{data.home.discordUrl&&<a href={data.home.discordUrl} target="_blank" rel="noreferrer" className="discord-small"><MessageCircle size={18} /> Зустрінемось у Discord <ArrowUpRight size={17} /></a>}<a className="back-to-top icon-btn" href="#main-content" aria-label="На початок сторінки"><ArrowUp size={19} /></a></div><div className="footer-bottom"><span>© {new Date().getFullYear()} United Ukraine Roleplay</span><div>{data.pages.map(page=><a key={page.id} href={page.url}>{page.title}</a>)}</div><span className="made"><span className="flag" /> {data.builder.sections.footer.madeBy}</span></div></footer>;
 }

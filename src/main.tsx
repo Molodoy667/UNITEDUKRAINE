@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import Home from "./Home";
 import Section from "./Section";
 import {SiteProvider,SiteMetadata} from './site/content';
+import SiteModeGate from './site/SiteModeGate';
 import ContentPage from './site/ContentPage';
 import PagePreloader,{BootPreloaderReady} from './ui/PagePreloader';
 import "../app/globals.css";
@@ -18,5 +19,5 @@ const Page = section === 'forbes' ? <Forbes/> : section === 'roulette' ? <Roulet
 const parts=window.location.pathname.split('/').filter(Boolean);
 const contentPage=['contacts','terms','privacy'].includes(section)?<ContentPage kind="page" slug={section}/>:['p','news'].includes(section)&&parts.length===2?<ContentPage kind={section==='news'?'news':'page'} slug={parts[1]}/>:null;
 createRoot(document.getElementById("root")!).render(
-  <StrictMode><BootPreloaderReady/><SiteProvider>{!contentPage&&section&&<SiteMetadata/>}<Suspense fallback={<PagePreloader fullscreen/>}>{contentPage||Page}</Suspense></SiteProvider></StrictMode>,
+  <StrictMode><BootPreloaderReady/><SiteProvider><SiteModeGate>{!contentPage&&section&&<SiteMetadata/>}<Suspense fallback={<PagePreloader fullscreen/>}>{contentPage||Page}</Suspense></SiteModeGate></SiteProvider></StrictMode>,
 );

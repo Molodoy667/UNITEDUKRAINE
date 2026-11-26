@@ -4,12 +4,16 @@ Implementation in UNITEDUKRAINE only. The previous game bridge and engine guards
 
 ## Interface
 
-`/account?tab=admin`, requiring the existing game account with **admin exactly 12**, now opens four module cards:
+`/account?tab=admin`, requiring the existing game account with **admin exactly 12**, opens compact modules in separate browser tabs:
 
-1. **Управління сервером** — existing players, online list, property registries, proposal editors and game bridge journal.
-2. **SEO та статичні сторінки** — general SEO title/description/keywords/canonical domain/social preview; home heading/copy/about text/Discord/trailer link; create, edit, publish, unpublish and soft-delete static pages, restore from trash as a draft.
-3. **API та новини** — photo upload/preview, create/edit/publish/unpublish/trash/restore, plus copyable news API examples for Electron and Unity. Launcher configuration controls were removed from this interface at the operator's request. Existing stored configuration and the public `/api/launcher` contract are preserved; no database settings were deleted.
-4. **Вільний блок** — visibly reserved and disabled, not a non-functional link.
+1. **Ігровий сервер** — existing players, online list, property registries, proposal editors and game bridge journal.
+2. **Редагування сайту** — access mode, menu and logo, plus the home page's hero, server card, project description, ticker, news, game steps, gallery, community and footer. Each visible block can be disabled. The access modes are public, account-authenticated, and technical work; only an admin-12 account can bypass technical work.
+3. **SEO та сторінки** — general SEO settings and editable static pages.
+4. **Новини та API** — photo upload/preview, news management and copyable API examples.
+5. **База знань** — existing knowledge-base editor.
+6. **Project / Android** — Project background and Android image endpoints.
+
+Visitors blocked by the account-authenticated mode can use `/account?site-login=1` to sign in. The mode is checked across client-side pages, server-rendered pages and public page-content endpoints. The technical-work screen uses an existing WebP site image with animated CSS decoration.
 
 At the bottom of **API та новини**, **Підключення новин до лаунчера** generates copyable instructions plus **Electron (JavaScript)** and **Unity (C# / UnityWebRequest)** examples from the saved `seo.siteUrl`. Separate buttons copy `/api/launcher?action=news` or the selected code. Electron uses main-process `net.fetch`, a narrow IPC/preload bridge and safe text DOM cards; Unity uses a serializable wrapper with `JsonUtility`, polling and a UI event. Neither requires Newtonsoft.Json. Both explain nullable dates, empty lists/images, 10-second timeout, 60-second refresh and retaining the previous list on errors. Unity card/texture rendering must be wired into the actual launcher UI. Clipboard denial offers manual copy. No admin cookie/password/API key is included. Separate Electron/Unity projects were not edited or compiled.
 
@@ -23,7 +27,9 @@ New migration **`008_site_content.sql`** creates only InnoDB website tables:
 - `site_documents`: `page` or `news`, unique kind/slug, body, excerpt, image/category, per-document SEO, publication and soft-delete flags, versions and timestamps.
 - `site_content_audit`: actor/request UUID, payload hash, event/target, before/after snapshots and persisted result for idempotent retries.
 
-Migration **009_site_media.sql** adds InnoDB `site_media`: UUID, unique SHA-256, MIME, byte size, dimensions, binary bytes, actor and timestamp. Small news photos are stored in MySQL, **not R2**, so no additional storage credentials are needed. Upload limit: 2 MiB, PNG/JPEG/WebP, dimensions up to 4096 × 4096; SVG/GIF and animated WebP are rejected. The server checks canonical base64, MIME against container signatures, container bounds and dimension headers, not full pixel decoding or malware scanning. Private JSON upload is bounded to 3 MiB; ordinary CMS JSON retains its 64 KiB limit. Auth/Origin/CSRF are checked first. Upload, deduplication and metadata-only audit are transactional and reuse the existing 120 operations / 15 minutes limiter; binary/base64 is not copied into audit snapshots.
+Migration **009_site_media.sql** adds InnoDB `site_media`: UUID, unique SHA-256, MIME, byte size, dimensions, binary bytes, actor and timestamp. Uploaded images are stored in MySQL, **not R2**, so no additional storage credentials are needed. The browser accepts PNG/JPEG/WebP files up to 5 MiB and converts normal site images to WebP; stored output is capped at 3 MiB and dimensions at 4096 × 4096. The Project background is the one exception: it is saved as PNG, with JPEG converted to PNG, and served from `/Project/background.png`. SVG/GIF and animated WebP are rejected. The server checks canonical base64, MIME against container signatures, container bounds and dimension headers, not full pixel decoding or malware scanning. Private JSON upload is bounded to 5 MiB; ordinary CMS JSON retains its 64 KiB limit. Auth/Origin/CSRF are checked first. Upload, deduplication and metadata-only audit are transactional and reuse the existing 120 operations / 15 minutes limiter; binary/base64 is not copied into audit snapshots.
+
+`/Project/background.png` and `/Project/android-logo.webp` are stable public routes backed by the saved media row. Vercel serves those bytes through the media API; uploads do not overwrite files inside the deployed source directory.
 
 Images are served by `/api/media?id=<UUID>` with their validated MIME, `nosniff` and no-store. An unlinked/draft image requires an administrator-12 session for preview; anonymous/ordinary access returns 404. An image referenced by any published, non-deleted document or the saved SEO image becomes public with wildcard CORS (no credential permission), including HEAD support. Removing the last public reference makes future anonymous requests private again, but cannot revoke already downloaded copies. Assets shared by other published documents stay public. Soft deletion retains image bytes for restoration; unlinked uploads are not automatically purged. This deliberately bounded DB storage is suitable for small images, not large media archives.
 
@@ -37,9 +43,9 @@ Delete moves a document to the trash, unpublishes it and removes it from public 
 
 | Endpoint | Access / result |
 | --- | --- |
-| `GET /api/site` | Published settings, latest 12 news and up to 100 page navigation links; no admin/audit data |
-| `GET /api/site?action=document&kind=page&slug=...` | One published page, otherwise 404 |
-| `GET /api/site?action=document&kind=news&slug=...` | One published news item, otherwise 404 |
+| `GET /api/site` | Published settings, latest 12 news and up to 100 page navigation links in public mode; restricted modes return only access-screen settings to unauthorized visitors |
+| `GET /api/site?action=document&kind=page&slug=...` | One published page; denied while the site is restricted and the visitor is unauthorized |
+| `GET /api/site?action=document&kind=news&slug=...` | One published news item; denied while the site is restricted and the visitor is unauthorized |
 | `GET /api/launcher` | Explicit launcher configuration, fixed game endpoint and published news with absolute links |
 | `GET /api/launcher?action=news` | `{schemaVersion:1,news:[{id,title,excerpt,image,url,publishedAt}]}`; public, absolute URLs, CORS, last 12 published news |
 | `GET/HEAD /api/media?id=<UUID>` | Image bytes; public only when referenced by published content/SEO; otherwise administrator preview |
