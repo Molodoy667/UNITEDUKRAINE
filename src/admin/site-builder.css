@@ -1,0 +1,23 @@
+.sa-builder-form{padding-bottom:27px}
+.sa-builder-form h4{margin:0;color:#e3eaf2;font-size:16px}
+.sa-builder-brand,.sa-builder-navigation,.sa-builder-media{margin:24px 0}
+.sa-builder-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:14px}
+.sa-builder-heading>div{display:grid;gap:7px}
+.sa-builder-heading small{font-size:11px;line-height:1.6;color:#8498af}
+.sa-builder-heading>button,.sa-builder-link-actions button{display:inline-flex;align-items:center;gap:7px;padding:9px 12px;background:#17212d;color:#cad5e1;border:1px solid #304052;border-radius:8px;font-size:12px}
+.sa-builder-heading>button:disabled,.sa-builder-link-actions button:disabled{opacity:.45;cursor:default}
+.sa-builder-links{display:grid;gap:12px}
+.sa-builder-link{min-width:0;padding:16px;border:1px solid #2b3948;border-radius:10px;background:#0d151f}
+.sa-builder-link legend{padding:0 7px;color:#d6ba7c;font-size:12px}
+.sa-builder-link-fields{display:grid;grid-template-columns:1fr 1.4fr;gap:14px}
+.sa-builder-link-fields label{display:flex;flex-direction:column;gap:7px;color:#a3b2c4;font-size:12px}
+.sa-builder-link-fields input{width:100%;box-sizing:border-box;border:1px solid #304052;border-radius:8px;background:#0c131c;padding:10px 11px;color:#e4eaf2;font:inherit}
+.sa-builder-link-fields input:focus{outline:2px solid #c9aa6699;outline-offset:2px}
+.sa-builder-link-fields small{color:#798da4;font-size:10px;line-height:1.5}
+.sa-builder-link-actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+.sa-builder-link-actions button:disabled{opacity:.45}
+.sa-builder-image-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.sa-builder-image-grid .sa-image-upload{min-width:0}
+.sa-builder-image-grid .sa-image-preview img{width:100%;height:145px}
+.sa-builder-form>button[type=submit]{margin-top:10px}
+@media(max-width:700px){.sa-builder-heading{align-items:flex-start;flex-direction:column}.sa-builder-link-fields,.sa-builder-image-grid{grid-template-columns:1fr}.sa-builder-link{padding:13px}}

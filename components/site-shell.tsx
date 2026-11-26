@@ -3,9 +3,11 @@ import { Menu, X, ArrowUpRight, ArrowUp, UserRound, MessageCircle } from 'lucide
 import {useSite} from '../src/site/content';
 export const discord = 'https://discord.gg/GyJnWJXdJ';
 export function Brand() {
-  return <a href="/" className="brand" aria-label="United Ukraine — головна"><img src="/assets/logo.png" alt="" width="44" height="54" /><span>UNITED<span>UKRAINE</span><small>ROLEPLAY</small></span></a>;
+  const {data}=useSite();
+  return <a href="/" className="brand" aria-label="United Ukraine — головна"><img src={data.builder?.logo||'/assets/logo.png'} alt="" width="44" height="54" /><span>UNITED<span>UKRAINE</span><small>ROLEPLAY</small></span></a>;
 }
 export function Header() {
+  const {data}=useSite();
   const [open, setOpen] = useState(false);
   const header = useRef<HTMLElement>(null);
   const menuButton = useRef<HTMLButtonElement>(null);
@@ -27,7 +29,7 @@ export function Header() {
     return () => { window.removeEventListener('keydown', escape); document.removeEventListener('pointerdown', outside); };
   }, [open]);
   return <><a className="skip-link" href="#main-content">Перейти до вмісту</a><header className="header" ref={header}><div className="header-inner"><Brand />
-    <nav id="primary-navigation" className={open ? 'nav open' : 'nav'} aria-label="Основна навігація" onClick={() => setOpen(false)}>{[{ href: '/', name: 'Головна' }, { href: '/forum', name: 'Форум' }, { href: '/wiki', name: 'Вікі' }, { href: '/roulette', name: 'Рулетка' }, { href: '/forbes', name: 'Forbes' }, { href: '/donate', name: 'Донат' }].map(link => <a href={link.href} key={link.href} aria-current={path === link.href ? 'page' : undefined}>{link.name}{link.href === '/donate' && <span className="nav-plus">+</span>}</a>)}<a className="mobile-account" href="/account">Особистий кабінет <ArrowUpRight size={16} /></a></nav>
+    <nav id="primary-navigation" className={open ? 'nav open' : 'nav'} aria-label="Основна навігація" onClick={() => setOpen(false)}>{(data.builder?.navigation||[]).map(link => <a href={link.href} key={link.id} aria-current={path === link.href ? 'page' : undefined}>{link.label}{link.href === '/donate' && <span className="nav-plus">+</span>}</a>)}<a className="mobile-account" href="/account">Особистий кабінет <ArrowUpRight size={16} /></a></nav>
     <a className="account" href="/account" aria-label="Особистий кабінет"><UserRound size={17} /><span>Особистий кабінет</span><ArrowUpRight size={16} /></a><button className="menu-toggle icon-btn" ref={menuButton} onClick={() => setOpen(value => !value)} aria-label={open ? 'Закрити меню' : 'Відкрити меню'} aria-controls="primary-navigation" aria-expanded={open}>{open ? <X /> : <Menu />}</button>
   </div></header></>;
 }

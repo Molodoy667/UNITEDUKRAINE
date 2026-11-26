@@ -24,6 +24,7 @@ export type AdminWriteAction='preview'|'confirm'|'cancel'|'dispatch'|'site-setti
 export async function adminWrite<T>(action:AdminWriteAction,body:Record<string,unknown>,csrf:string):Promise<T>{
   const response=await fetch(`/api/admin?action=${action}`,{method:'POST',credentials:'same-origin',cache:'no-store',signal:AbortSignal.timeout(15000),headers:{'Content-Type':'application/json','X-Account-Csrf':csrf},body:JSON.stringify(body)}),data=await response.json().catch(()=>null);
   if(!response.ok||!data)throw new AdminError(response.status,data?.message||'Не вдалося завершити запит. Перевірте журнал або повторіть підтвердження.');
+  if(action==='site-settings-save')window.dispatchEvent(new Event('site-content-updated'));
   return data as T;
 }
 export const format=(value:unknown)=>value===null||value===undefined?'—':typeof value==='string'&&/^-?\d+$/.test(value)?new Intl.NumberFormat('uk-UA').format(BigInt(value)):String(value);
