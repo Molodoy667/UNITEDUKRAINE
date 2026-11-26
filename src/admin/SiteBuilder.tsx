@@ -34,7 +34,14 @@ function BuilderEditor({setting,csrf,onSaved}:{setting:Setting<SiteBuilderSettin
  const [value,setValue]=useState(setting.value),[busy,setBusy]=useState(false),[uploading,setUploading]=useState(false),[error,setError]=useState(''),[message,setMessage]=useState('');
  const pending=useRef<{signature:string;id:string}|null>(null),activeUploads=useRef(new Set<string>());
  function updateSection(group:SectionGroup,key:string,next:string){setValue(previous=>({...previous,sections:{...previous.sections,[group]:{...previous.sections[group],[key]:next} as SiteSections[SectionGroup]}}));}
- function updateSectionItem(group:'world'|'gallery'|'start',index:number,key:string,next:string){setValue(previous=>{const current=previous.sections[group],collection=group==='world'?'features':group==='gallery'?'scenes':'steps',items=current[collection] as Array<Record<string,string>>;return {...previous,sections:{...previous.sections,[group]:{...current,[collection]:items.map((item,itemIndex)=>itemIndex===index?{...item,[key]:next}:item)} as SiteSections[typeof group]}};});}
+ function updateSectionItem(group:'world'|'gallery'|'start',index:number,key:string,next:string){
+  const updateItem=<T extends object>(items:T[])=>items.map((item,itemIndex)=>itemIndex===index?({...item,[key]:next} as T):item);
+  setValue(previous=>{
+   if(group==='world')return {...previous,sections:{...previous.sections,world:{...previous.sections.world,features:updateItem(previous.sections.world.features)}}};
+   if(group==='gallery')return {...previous,sections:{...previous.sections,gallery:{...previous.sections.gallery,scenes:updateItem(previous.sections.gallery.scenes)}}};
+   return {...previous,sections:{...previous.sections,start:{...previous.sections.start,steps:updateItem(previous.sections.start.steps)}}};
+  });
+ }
  function updateVisibility(key:keyof SiteSections['visibility'],next:boolean){setValue(previous=>({...previous,sections:{...previous.sections,visibility:{...previous.sections.visibility,[key]:next}}}));}
  function updateImage(key:'logo'|'hero'|'world'|'gallery1'|'gallery2'|'gallery3',url:string){
   if(key==='logo')setValue(previous=>({...previous,logo:url}));
