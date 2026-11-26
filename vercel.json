@@ -10,6 +10,8 @@
   },
   "rewrites": [
     { "source": "/media/news/:id.mp4", "destination": "/api/media?video=:id" },
+    { "source": "/Project/background.png", "destination": "/api/media?asset=project-background" },
+    { "source": "/Project/android-logo.webp", "destination": "/api/media?asset=android-logo" },
     { "source": "/Project/info.json", "destination": "/api/launcher?resourceAction=config" },
     { "source": "/api/android-resources/state", "destination": "/api/launcher?resourceAction=state" },
     { "source": "/api/android-resources/activate", "destination": "/api/launcher?resourceAction=activate" },

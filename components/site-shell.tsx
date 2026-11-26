@@ -4,7 +4,7 @@ import {useSite} from '../src/site/content';
 export const discord = 'https://discord.gg/GyJnWJXdJ';
 export function Brand() {
   const {data}=useSite();
-  return <a href="/" className="brand" aria-label="United Ukraine — головна"><img src={data.builder?.logo||'/assets/logo.png'} alt="" width="44" height="54" /><span>UNITED<span>UKRAINE</span><small>ROLEPLAY</small></span></a>;
+  return <a href="/" className="brand" aria-label="United Ukraine — головна"><img src={data.builder?.logo||'/assets/logo.webp'} alt="" width="44" height="54" /><span>UNITED<span>UKRAINE</span><small>ROLEPLAY</small></span></a>;
 }
 export function Header() {
   const {data}=useSite();

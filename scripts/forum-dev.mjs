@@ -18,7 +18,7 @@ createServer(async (request, response) => {
   response.json = data => { response.setHeader('Content-Type','application/json; charset=utf-8'); response.end(JSON.stringify(data)); };
   try {
     const parsed=new URL(request.url,'http://localhost');
-    const limit=parsed.pathname==='/api/admin'&&['site-image-upload','site-video-part'].includes(parsed.searchParams.get('action'))?3*1024*1024:100000;
+    const limit=parsed.pathname==='/api/admin'&&['site-image-upload','site-video-part'].includes(parsed.searchParams.get('action'))?5*1024*1024:100000;
     let size = 0; const chunks = [];
     for await (const chunk of request) { size += chunk.length; if (size > limit) { response.status(413).json({ message:'Request too large' }); return; } chunks.push(chunk); }
     if (size) request.body = Buffer.concat(chunks).toString('utf8');

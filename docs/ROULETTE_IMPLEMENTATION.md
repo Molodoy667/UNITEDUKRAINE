@@ -53,7 +53,7 @@ UI preview: additionally set `ROULETTE_TEST_PREVIEW=1`, run `node tests/roulette
 
 ## Generated artwork
 
-Method: built-in `image_gen.imagegen`, transparent output. Integrated asset: `public/roulette/aurora-gt.png`. Original output: `C:/Users/Admin/.codex/generated_images/01a0b545-6f6f-7771-884c-4d7f8ceaa4bf/exec-7e75115e-a457-45eb-9b6b-80b78f5dade8.png`.
+Method: built-in `image_gen.imagegen`, transparent output. Integrated asset: `public/roulette/aurora-gt.webp`. Original output: `C:/Users/Admin/.codex/generated_images/01a0b545-6f6f-7771-884c-4d7f8ceaa4bf/exec-7e75115e-a457-45eb-9b6b-80b78f5dade8.png`.
 
 Prompt brief: an original luxury black-and-champagne-gold concept supercar named Aurora GT, front three-quarter view facing left, clean realistic game-prize render, complete car on transparent background, cinematic studio lighting, no text, no watermark and no manufacturer logo. The surrounding triangles, stage, light rays and interface are authored in CSS, not baked into the asset.
 

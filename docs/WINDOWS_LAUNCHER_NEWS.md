@@ -24,7 +24,7 @@
     },
     {
       "id": 41, "title": "Новина з фото", "excerpt": "Опис",
-      "image": "https://united-rp.com.ua/assets/world.jpg",
+      "image": "https://united-rp.com.ua/assets/world.webp",
       "url": "https://united-rp.com.ua/news/update-photo",
       "publishedAt": "2026-11-09T13:00:00.000Z"
     }

@@ -11,7 +11,7 @@ export function HomeFeedCard({item}:{item:SiteDocument}){
  return <article className="news-card">
   <div className="news-image">{item.video
    ?<video aria-label={item.title} controls playsInline preload="metadata" src={item.video} style={{width:'100%',height:'100%',objectFit:'contain',background:'#080d14'}}/>
-   :<img src={item.image||'/assets/world.jpg'} alt="" loading="lazy"/>}</div>
+   :<img src={item.image||'/assets/world.webp'} alt="" loading="lazy"/>}</div>
   <div className="news-body"><span className="micro-label">{item.category||'UNITED JOURNAL'}</span><h3>{item.title}</h3><p style={{whiteSpace:'pre-wrap'}}>{item.excerpt||item.body}</p></div>
  </article>;
 }
@@ -28,7 +28,7 @@ function SectionLabel({ number, children }: { number: string; children: ReactNod
 export default function Home() {
   const {data,loading:contentLoading,error:contentError}=useSite();
   const articles=data.news,discord=data.home.discordUrl;
-  const galleryImages=[data.builder?.images.gallery1||'/assets/world.jpg',data.builder?.images.gallery2||'/assets/world.jpg',data.builder?.images.gallery3||'/assets/world.jpg'];
+  const galleryImages=[data.builder?.images.gallery1||'/assets/world.webp',data.builder?.images.gallery2||'/assets/world.webp',data.builder?.images.gallery3||'/assets/world.webp'];
   const filters=['Усі матеріали',...new Set(articles.map(item=>item.category||'Новини'))];
   const [status, setStatus] = useState<Status | null>(null);
   const [loading, setLoading] = useState(true);
@@ -113,7 +113,7 @@ export default function Home() {
           <div className="hero-copy"><span className="intro-cross" aria-hidden="true">✳</span><p style={{whiteSpace:'pre-line'}}>{data.home.description}</p><div className="hero-actions"><a className="btn primary" href="#start"><Gamepad2 size={19} />Почати гру<ArrowUpRight size={19} /></a>{discord&&<a className="icon-btn discord-link" href={discord} target="_blank" rel="noreferrer" aria-label="Наш Discord"><MessageCircle size={22} /></a>}{data.home.trailerUrl&&<a className="text-link" href={data.home.trailerUrl} target="_blank" rel="noreferrer">Трейлер<ArrowUpRight size={17}/></a>}</div></div>
         </div>
         <div className="hero-visual page-width"><Tilt className="hero-art" intensity={2.4}><div className="hero-art-frame">
-          <img className="hero-image" src={data.builder?.images.hero||'/assets/world-promo.png'} alt="United Ukraine на комп’ютері та телефоні на тлі вечірнього українського міста" fetchPriority="high" width="1850" height="850" />
+          <img className="hero-image" src={data.builder?.images.hero||'/assets/world-promo.webp'} alt="United Ukraine на комп’ютері та телефоні на тлі вечірнього українського міста" fetchPriority="high" width="1850" height="850" />
           <div className="hero-vignette" aria-hidden="true" /><span className="art-corner corner-tl" aria-hidden="true" /><span className="art-corner corner-br" aria-hidden="true" />
           <div className="art-topline"><span><i /> ВІДКРИЙ СВІЙ СВІТ</span><span>UNITED UKRAINE / ROLEPLAY</span></div>
           <div className="art-caption"><span className="art-caption-number">01</span><div><small>ТВОЯ НАСТУПНА ПРИГОДА</small><p>Починається тут.</p></div><a href="#world" className="art-explore" aria-label="Відкрити світ проєкту"><ArrowDown size={22} /></a></div>
@@ -130,7 +130,7 @@ export default function Home() {
 
       <section id="world" className="world section page-width" data-reveal><SectionLabel number="01">БІЛЬШЕ, НІЖ ГРА</SectionLabel>
         <div className="world-heading"><h2>{data.home.aboutTitle}</h2><div><p style={{whiteSpace:'pre-line'}}>{data.home.aboutText}</p><a href="#gallery" className="text-link">Відчути атмосферу <ArrowUpRight size={18} /></a></div></div>
-        <div className="world-layout"><Tilt className="world-image-wrap" intensity={2}><img src={data.builder?.images.world||'/assets/world.jpg'} alt="Концепт-арт українського міста та персонажів United Ukraine" loading="lazy" /><div className="world-image-shade" /><span className="image-location"><MapPin size={14} /> НАТХНЕННО УКРАЇНОЮ</span><div className="world-image-title"><span>ВПІЗНАВАЙ СВОЄ.</span><strong>ВІДКРИВАЙ НОВЕ.</strong></div><span className="image-disclaimer">КОНЦЕПТ-АРТ ПРОЄКТУ</span></Tilt>
+        <div className="world-layout"><Tilt className="world-image-wrap" intensity={2}><img src={data.builder?.images.world||'/assets/world.webp'} alt="Концепт-арт українського міста та персонажів United Ukraine" loading="lazy" /><div className="world-image-shade" /><span className="image-location"><MapPin size={14} /> НАТХНЕННО УКРАЇНОЮ</span><div className="world-image-title"><span>ВПІЗНАВАЙ СВОЄ.</span><strong>ВІДКРИВАЙ НОВЕ.</strong></div><span className="image-disclaimer">КОНЦЕПТ-АРТ ПРОЄКТУ</span></Tilt>
           <div className="world-features">{[
             { icon: MapPin, number: '01', title: 'Своя атмосфера', text: 'Український характер у кожній деталі. Місця, у яких відчуваєш себе вдома.' },
             { icon: Route, number: '02', title: 'Твій власний шлях', text: 'Створи персонажа, знаходь можливості та вирішуй, ким стане твій герой.' },
@@ -144,11 +144,11 @@ export default function Home() {
       <section className="news section page-width" id="news" data-reveal><SectionLabel number="02">НА ЗВ’ЯЗКУ З ПРОЄКТОМ</SectionLabel>
         <div className="section-title"><h2>У ЦЕНТРІ <span className="gold">ПОДІЙ.</span></h2><div className="filters" aria-label="Фільтр матеріалів">{filters.map(item => <button key={item} className={filter === item ? 'active' : ''} aria-pressed={filter === item} onClick={() => setFilter(item)}>{item}</button>)}</div></div>
         <p className="editorial-note" role="status">{contentError|| (contentLoading?'Завантажуємо новини…':articles.length?'Опубліковано адміністрацією проєкту':'Опублікованих новин поки немає.')}</p>
-        <div className="news-grid">{articles.map((item, index) => (filter===filters[0]||filter===(item.category||'Новини'))&&<Tilt className="news-tilt" key={item.id} intensity={3}>{item.placement!=null?<HomeFeedCard item={item}/>:<a className="news-card" href={item.url} aria-label={`Читати: ${item.title}`}><div className="news-image"><img src={item.image||'/assets/world.jpg'} alt="" loading="lazy" /><span className="article-tag">{item.category||'Новини'}</span><span className="round-arrow"><ArrowUpRight size={21} /></span></div><div className="news-body"><span className="micro-label">UNITED JOURNAL <span>/ {index + 1}</span></span><h3>{item.title}</h3><p>{item.excerpt}</p><span className="read-more">Читати новину <ArrowRight size={17} /></span></div></a>}</Tilt>)}</div>
+        <div className="news-grid">{articles.map((item, index) => (filter===filters[0]||filter===(item.category||'Новини'))&&<Tilt className="news-tilt" key={item.id} intensity={3}>{item.placement!=null?<HomeFeedCard item={item}/>:<a className="news-card" href={item.url} aria-label={`Читати: ${item.title}`}><div className="news-image"><img src={item.image||'/assets/world.webp'} alt="" loading="lazy" /><span className="article-tag">{item.category||'Новини'}</span><span className="round-arrow"><ArrowUpRight size={21} /></span></div><div className="news-body"><span className="micro-label">UNITED JOURNAL <span>/ {index + 1}</span></span><h3>{item.title}</h3><p>{item.excerpt}</p><span className="read-more">Читати новину <ArrowRight size={17} /></span></div></a>}</Tilt>)}</div>
       </section>
 
       <section className="start-section" id="start"><div className="start section page-width" data-reveal><SectionLabel number="03">НОВА ІСТОРІЯ ЗА ТРИ КРОКИ</SectionLabel>
-        <div className="start-grid"><div className="start-heading"><h2>ТВІЙ СВІТ.<br />ТВОЇ ПРАВИЛА.<br /><span className="gold">ТВІЙ СТАРТ.</span></h2><p>Не спостерігай за чужими історіями.<br />Почни свою.</p><div className="start-orbit" aria-hidden="true"><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="orbit orbit-three" /><img src={data.builder?.logo||"/assets/logo.png"} alt="" /><span className="orbit-star">✳</span><span className="orbit-caption">YOUR NEXT CHAPTER</span></div></div>
+        <div className="start-grid"><div className="start-heading"><h2>ТВІЙ СВІТ.<br />ТВОЇ ПРАВИЛА.<br /><span className="gold">ТВІЙ СТАРТ.</span></h2><p>Не спостерігай за чужими історіями.<br />Почни свою.</p><div className="start-orbit" aria-hidden="true"><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="orbit orbit-three" /><img src={data.builder?.logo||"/assets/logo.webp"} alt="" /><span className="orbit-star">✳</span><span className="orbit-caption">YOUR NEXT CHAPTER</span></div></div>
           <div className="steps"><div className="step step-featured"><div className="step-top"><span className="step-num">01</span><Download size={24} /></div><h3>Завантаж лаунчер</h3><p>Твій ключ до світу United Ukraine.<br />Усе необхідне для початку гри.</p>{data.launcher.downloadUrl?<a className="btn primary" href={data.launcher.downloadUrl} target="_blank" rel="noreferrer"><Download size={18}/>Завантажити лаунчер<ArrowUpRight size={18}/></a>:<button className="btn primary" disabled><Download size={18}/>Посилання ще не задане</button>}<small><Monitor size={14} />Для Windows{data.launcher.version?` · v${data.launcher.version}`:''}</small></div>
             <div className="step"><span className="step-num">02</span><div><h3>Встанови гру</h3><p>Відкрий лаунчер і виконай прості інструкції встановлення.</p></div><ArrowDown size={20} /></div>
             <div className="step"><span className="step-num">03</span><div><h3>Увійди у свій світ</h3><p>Приєднуйся до сервера та напиши перший розділ своєї історії.</p><button className="text-link" onClick={copy}>{copied ? 'Адресу скопійовано' : 'Скопіювати IP сервера'}{copied ? <Check size={16} /> : <Copy size={16} />}</button></div><ArrowUpRight size={20} /></div>
