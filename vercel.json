@@ -9,6 +9,7 @@
     "ADMIN_BRIDGE_ID": "united-main"
   },
   "rewrites": [
+    { "source": "/api/donation", "destination": "/api/site?scope=donation" },
     { "source": "/media/news/:id.mp4", "destination": "/api/media?video=:id" },
     { "source": "/Project/background.png", "destination": "/api/media?asset=project-background" },
     { "source": "/Project/android-logo.webp", "destination": "/api/media?asset=android-logo" },
