@@ -437,14 +437,14 @@
     {
       "id": 73,
       "name": null,
-      "image": "/wiki/skins/73-1.webp",
-      "variant": 1
+      "image": "/wiki/skins/73.webp",
+      "variant": null
     },
     {
       "id": 73,
       "name": null,
-      "image": "/wiki/skins/73.webp",
-      "variant": null
+      "image": "/wiki/skins/73-1.webp",
+      "variant": 1
     },
     {
       "id": 75,
@@ -935,14 +935,14 @@
     {
       "id": 156,
       "name": null,
-      "image": "/wiki/skins/156-1.webp",
-      "variant": 1
+      "image": "/wiki/skins/156.webp",
+      "variant": null
     },
     {
       "id": 156,
       "name": null,
-      "image": "/wiki/skins/156.webp",
-      "variant": null
+      "image": "/wiki/skins/156-1.webp",
+      "variant": 1
     },
     {
       "id": 157,
@@ -1373,14 +1373,14 @@
     {
       "id": 228,
       "name": null,
-      "image": "/wiki/skins/228-1.webp",
-      "variant": 1
+      "image": "/wiki/skins/228.webp",
+      "variant": null
     },
     {
       "id": 228,
       "name": null,
-      "image": "/wiki/skins/228.webp",
-      "variant": null
+      "image": "/wiki/skins/228-1.webp",
+      "variant": 1
     },
     {
       "id": 229,
@@ -1601,14 +1601,14 @@
     {
       "id": 265,
       "name": null,
-      "image": "/wiki/skins/265-1.webp",
-      "variant": 1
+      "image": "/wiki/skins/265.webp",
+      "variant": null
     },
     {
       "id": 265,
       "name": null,
-      "image": "/wiki/skins/265.webp",
-      "variant": null
+      "image": "/wiki/skins/265-1.webp",
+      "variant": 1
     },
     {
       "id": 266,
@@ -4614,6 +4614,36 @@
       "id": 17876,
       "name": null,
       "image": "/wiki/skins/17876.webp",
+      "variant": null
+    },
+    {
+      "id": 17877,
+      "name": null,
+      "image": "/wiki/skins/17877.webp",
+      "variant": null
+    },
+    {
+      "id": 17878,
+      "name": null,
+      "image": "/wiki/skins/17878.webp",
+      "variant": null
+    },
+    {
+      "id": 17879,
+      "name": null,
+      "image": "/wiki/skins/17879.webp",
+      "variant": null
+    },
+    {
+      "id": 17880,
+      "name": null,
+      "image": "/wiki/skins/17880.webp",
+      "variant": null
+    },
+    {
+      "id": 17881,
+      "name": null,
+      "image": "/wiki/skins/17881.webp",
       "variant": null
     },
     {
